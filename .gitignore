@@ -27,9 +27,13 @@
 *.opendb
 *.VC.db
 
+
 # OS generated files
 .DS_Store
 Thumbs.db
 
 /[Aa]ssets/Thirdparty/
+
+.vscode/
+*.slnx
 

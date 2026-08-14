@@ -1,10 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Pure data holder for a mesh's merged face-adjacency graph.
-/// Populated by ClimbableSurfaceBuilder (editor) or FaceGraphBuilder (runtime).
-/// No logic lives here — the player controller reads this to walk across faces.
-/// </summary>
 public class ClimbableSurface : MonoBehaviour
 {
     [System.Serializable]
