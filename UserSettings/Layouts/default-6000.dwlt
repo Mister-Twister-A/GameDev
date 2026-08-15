@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1145
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Console
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,14 +246,14 @@ MonoBehaviour:
     y: 719
     width: 1466
     height: 370
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -790,24 +790,9 @@ MonoBehaviour:
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
-      - m_rawData: 568105589213755810
-      - m_rawData: 568105589213755820
-      - m_rawData: 568105589213755824
-      - m_rawData: 568105589213755848
-      - m_rawData: 568105589213755858
-      - m_rawData: 568105589213755862
-      - m_rawData: 568105589213755914
-      - m_rawData: 568105589213755918
-      - m_rawData: 568105589213755922
-      - m_rawData: 568105589213755926
-      - m_rawData: 568105589213755952
-      - m_rawData: 568105589213755956
-      - m_rawData: 568105589213755960
-      - m_rawData: 568105589213755964
-      - m_rawData: 568105589213755968
-      - m_rawData: 568105589213755972
+      - m_rawData: 568105589213749140
+      - m_rawData: 568105589213749144
       - m_rawData: 568105589213755986
-      - m_rawData: 568105584918841730
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -825,7 +810,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootEntityId:
@@ -1291,9 +1276,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 147.5148, y: -175.43265, z: -627.7572}
+    m_Target: {x: -542.01996, y: -306.7836, z: 254.81801}
     speed: 2
-    m_Value: {x: 147.5148, y: -175.43265, z: -627.7572}
+    m_Value: {x: -542.01996, y: -306.7836, z: 254.81801}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1340,9 +1325,9 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.018972108, y: 0.9831014, z: -0.1381069, w: 0.120839015}
+    m_Target: {x: 0.20242386, y: -0.52047604, z: 0.13076307, w: 0.8194919}
     speed: 2
-    m_Value: {x: 0.018972108, y: 0.9831014, z: -0.1381069, w: 0.120839015}
+    m_Value: {x: -0.20242387, y: 0.52047604, z: -0.13076307, w: -0.819492}
   m_Size:
     m_Target: 338.23462
     speed: 2
@@ -1404,7 +1389,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 743
+    y: 810
     width: 1465
     height: 344
   m_SerializedDataModeController:
@@ -1433,7 +1418,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/EnemyScripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1443,7 +1428,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/EnemyScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/usio/Titan test
   m_LockTracker:
@@ -1452,18 +1437,21 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_rawData: 568105584918842564
+    - m_rawData: 568105584918842586
     m_LastClickedID:
-      m_rawData: 568105584918842564
+      m_rawData: 568105584918842586
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842228
-    - m_rawData: 568105584918842230
-    - m_rawData: 568105584918842232
-    - m_rawData: 568105584918842234
-    - m_rawData: 568105584918842236
-    - m_rawData: 568105584918842238
-    - m_rawData: 568105584918842240
+    - m_rawData: 568105584918842286
+    - m_rawData: 568105584918842288
+    - m_rawData: 568105584918842290
+    - m_rawData: 568105584918842292
+    - m_rawData: 568105584918842294
+    - m_rawData: 568105584918842296
+    - m_rawData: 568105584918842298
+    - m_rawData: 568105584918842300
+    - m_rawData: 568105584918842302
+    - m_rawData: 568105584918842304
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1497,13 +1485,16 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842228
-    - m_rawData: 568105584918842230
-    - m_rawData: 568105584918842232
-    - m_rawData: 568105584918842234
-    - m_rawData: 568105584918842236
-    - m_rawData: 568105584918842238
-    - m_rawData: 568105584918842240
+    - m_rawData: 568105584918842286
+    - m_rawData: 568105584918842288
+    - m_rawData: 568105584918842290
+    - m_rawData: 568105584918842292
+    - m_rawData: 568105584918842294
+    - m_rawData: 568105584918842296
+    - m_rawData: 568105584918842298
+    - m_rawData: 568105584918842300
+    - m_rawData: 568105584918842302
+    - m_rawData: 568105584918842304
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1532,9 +1523,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_rawData: 568105584918841730
+    - m_rawData: 568105589213749144
     m_LastClickedEntityId:
-      m_rawData: 568105584918841730
+      m_rawData: 568105589213749144
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_rawData: 0
@@ -1593,7 +1584,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 810
+    y: 743
     width: 1465
     height: 344
   m_SerializedDataModeController:
@@ -1659,7 +1650,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectEntityId:
     m_rawData: 0
-  m_LastVerticalScrollValue: 159
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

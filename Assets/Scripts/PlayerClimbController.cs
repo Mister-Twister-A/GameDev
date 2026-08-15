@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerClimbController : MonoBehaviour
+public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 {
     public enum State { Normal, Climbing }
 
@@ -25,6 +25,11 @@ public class PlayerClimbController : MonoBehaviour
     public LayerMask climbableLayer;
     public float surfaceOffset;
     public float edgeEpsilon = 0.0001f;
+
+    [Header("Navigation")]
+    public ClimbableSurface CurrentSurface => currentSurface;
+    public int CurrentFaceIndex => currentFaceIndex;
+    public Vector3 Position => transform.position;
 
     State state = State.Normal;
     ClimbableSurface currentSurface;
