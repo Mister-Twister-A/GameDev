@@ -71,18 +71,11 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     private bool CheckGround()
     {
-        Vector3 origin = transform.position - groundCheckOffset;
-        if (Physics.SphereCast(
-            transform.position, 
-            groundCheckRadius, 
-            Vector3.down, 
-            out RaycastHit hit, 
-            groundCheckDistance, 
-            groundLayer
-        ))
+        //Vector3 origin = transform.position - groundCheckOffset;
+        if (Physics.SphereCast(transform.position, groundCheckRadius, Vector3.down, out RaycastHit hit, groundCheckDistance, groundLayer))
         {
-            // This will print exactly what object the sphere is touching
-            Debug.Log($"SphereCast hit: {hit.collider.name} on layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
+            
+            //Debug.Log($"SphereCast hit: {hit.collider.name} on layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
             return true;
         }
         return false;
