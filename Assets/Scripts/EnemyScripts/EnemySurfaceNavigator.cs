@@ -70,30 +70,30 @@ public class EnemySurfaceNavigator : MonoBehaviour
     }
 
     void FollowPath()
-{
-    if (path == null || path.Count == 0) return;
+    {
+        if (path == null || path.Count == 0) return;
 
-    var actualCurrentFace = new FaceRef(self.CurrentSurface, self.CurrentFaceIndex);
-    var actualGoalFace = new FaceRef(target.CurrentSurface, target.CurrentFaceIndex);
+        var actualCurrentFace = new FaceRef(self.CurrentSurface, self.CurrentFaceIndex);
+        var actualGoalFace = new FaceRef(target.CurrentSurface, target.CurrentFaceIndex);
 
-    if (actualCurrentFace.IsValid && actualCurrentFace == actualGoalFace){
-        self.MoveTowards(target.Position, moveSpeed);
-        return;
+        if (actualCurrentFace.IsValid && actualCurrentFace == actualGoalFace){
+            self.MoveTowards(target.Position, moveSpeed);
+            return;
+        }
+
+        if (pathIndex >= path.Count - 1){
+            repathTimer = 0f;
+            return;
+        }
+
+        FaceRef nextFace = path[pathIndex + 1];
+        Vector3 waypoint = EdgeCrossingPoint(path[pathIndex], nextFace);
+
+        self.MoveTowards(waypoint, moveSpeed);
+
+        if (HasReachedWaypoint(waypoint))
+            pathIndex++;
     }
-
-    if (pathIndex >= path.Count - 1){
-        repathTimer = 0f;
-        return;
-    }
-
-    FaceRef nextFace = path[pathIndex + 1];
-    Vector3 waypoint = EdgeCrossingPoint(path[pathIndex], nextFace);
-
-    self.MoveTowards(waypoint, moveSpeed);
-
-    if (HasReachedWaypoint(waypoint))
-        pathIndex++;
-}
 
     bool HasReachedWaypoint(Vector3 waypoint)
     {

@@ -19,6 +19,13 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     public float airDrag = 3f;
     public float gravity = -9.81f;
 
+    public bool isGrounded;
+    [SerializeField] private Vector3 groundCheckOffset;
+    [SerializeField] private LayerMask groundLayer;
+
+    [SerializeField] private float groundCheckRadius = 0.3f;
+    [SerializeField] private float groundCheckDistance = 0.3f;
+
     public float rotationSpeed = 10f;
 
     [Header("Climbing")]
@@ -42,6 +49,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         if (controller == null) controller = GetComponent<CharacterController>();
         surfaceOffset = controller.height * 0.5f;
+        groundCheckOffset = new Vector3(0f,controller.height * 0.5f,0f);
     }
 
     void Update()
@@ -49,9 +57,9 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (state == State.Normal) NormalUpdate();
         else ClimbingUpdate();
 
-        bool grounded = state == State.Climbing || (state == State.Normal && controller.isGrounded);
+        isGrounded = state == State.Climbing || (state == State.Normal && CheckGround());
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             ExitClimbState();
             verticalVelocity = transform.up * jumpForce;
@@ -59,6 +67,25 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
             Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
             transform.rotation = tgtRotation;
         }
+    }
+
+    private bool CheckGround()
+    {
+        Vector3 origin = transform.position - groundCheckOffset;
+        if (Physics.SphereCast(
+            transform.position, 
+            groundCheckRadius, 
+            Vector3.down, 
+            out RaycastHit hit, 
+            groundCheckDistance, 
+            groundLayer
+        ))
+        {
+            // This will print exactly what object the sphere is touching
+            Debug.Log($"SphereCast hit: {hit.collider.name} on layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
+            return true;
+        }
+        return false;
     }
 
     void NormalUpdate()
@@ -392,6 +419,19 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     float Cross2D(Vector2 a, Vector2 b)
     {
         return a.x * b.y - a.y * b.x;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Vector3 startOrigin = transform.position - groundCheckOffset;
+        Vector3 endOrigin = startOrigin + (Vector3.down * groundCheckDistance);
+
+        Gizmos.color = isGrounded ? Color.green : Color.red;
+        Gizmos.DrawWireSphere(startOrigin, groundCheckRadius);
+
+        Gizmos.DrawWireSphere(endOrigin, groundCheckRadius);
+
+        Gizmos.DrawLine(startOrigin, endOrigin);
     }
 }
 
