@@ -88,6 +88,7 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         path = Pathfinder.FindPath(start, goal);
         //Debug.Log(path.Count);
+        //test
         pathIndex = 0;
     }
     private void FollowPath()
