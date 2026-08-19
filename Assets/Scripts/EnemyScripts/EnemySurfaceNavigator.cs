@@ -68,7 +68,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
             return;
         }
 
-        var newPath = SurfaceFacePathfinder.FindPath(start, goal);
+        var newPath = Pathfinder.FindPath(start, goal);
         if (newPath != null){
             path = newPath;
             pathIndex = 0;

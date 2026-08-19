@@ -17,7 +17,7 @@ public class EnemyGroundNavigator : MonoBehaviour
 
     private ISurfaceWalker self;
     private EnemyClimbController climbController;
-    private List<int> path;
+    private List<GroundNodeRef> path;
     private int pathIndex;
     private float repathTimer;
     private int lastStartNode = -1;
@@ -60,42 +60,39 @@ public class EnemyGroundNavigator : MonoBehaviour
         FollowPath();
     }
 
-    private void Repath()
-    {
-        int startNode = FindNearestNode(self.Position);
-        int goalNode = FindNearestNode(target.position);
+    private void Repath(){
+        int startIndex = FindNearestNode(self.Position);
+        int goalIndex = FindNearestNode(target.position);
 
-        if (startNode < 0 || goalNode < 0) return;
+        if (startIndex < 0 || goalIndex < 0) return;
 
-        if (hasLastPath && startNode == lastStartNode && goalNode == lastGoalNode && path != null)
+        if (hasLastPath &&
+            startIndex == lastStartNode &&
+            goalIndex == lastGoalNode &&
+            path != null)
             return;
 
-        lastStartNode = startNode;
-        lastGoalNode = goalNode;
+        lastStartNode = startIndex;
+        lastGoalNode = goalIndex;
         hasLastPath = true;
 
-        if (startNode == goalNode)
+        GroundNodeRef start = new(groundGraph, startIndex);
+        GroundNodeRef goal = new(groundGraph, goalIndex);
+
+        if (start == goal)
         {
-            path = new List<int> { startNode };
+            path = new List<GroundNodeRef> { start };
             pathIndex = 0;
             return;
         }
 
-        List<int> newPath = GroundPathfinder.FindPath(groundGraph, startNode, goalNode);
-
-        if (newPath != null)
-        {
-            path = newPath;
-            pathIndex = 0;
-        }
-        else
-        {
-            path = null;
-        }
+        path = Pathfinder.FindPath(start, goal);
+        //Debug.Log(path.Count);
+        pathIndex = 0;
     }
-
     private void FollowPath()
     {
+        //Debug.Log("following target");
         float distanceToTarget = Vector3.Distance(self.Position, target.position);
 
         if (distanceToTarget <= directChaseDistance)
@@ -112,7 +109,7 @@ public class EnemyGroundNavigator : MonoBehaviour
             return;
         }
 
-        Vector3 waypoint = groundGraph.Nodes[path[pathIndex + 1]].position;
+        Vector3 waypoint = path[pathIndex + 1].WorldPosition;
 
         self.MoveTowards(waypoint, moveSpeed);
 

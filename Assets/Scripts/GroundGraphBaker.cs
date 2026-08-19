@@ -88,30 +88,23 @@ public class GroundGraphBaker : MonoBehaviour
     return nodes;
 }
 
-    private void BuildConnections(List<GroundNode> nodes)
-    {
-        float maxDistanceSqr =maxLinkDistance * maxLinkDistance;
+    private void BuildConnections(List<GroundNode> nodes){   
+        float maxDistanceSqr = maxLinkDistance * maxLinkDistance;
 
-        for (int i = 0; i < nodes.Count; i++)
-        {
+        for (int i = 0; i < nodes.Count; i++){
             GroundNode a = nodes[i];
 
-            for (int j = i + 1; j < nodes.Count; j++)
-            {
+            for (int j = i + 1; j < nodes.Count; j++){
                 GroundNode b = nodes[j];
+                Vector3 difference = b.position - a.position;
 
-                Vector3 difference =b.position - a.position;
+                if (difference.sqrMagnitude > maxDistanceSqr) continue;
+                if (!CanWalkBetween(a.position, b.position)) continue;
 
-                if (difference.sqrMagnitude > maxDistanceSqr)
-                    continue;
+                float cost = difference.magnitude;
 
-                if (!CanWalkBetween(a.position, b.position))
-                {
-                    continue;
-                }
-
-                a.neighbors.Add(j);
-                b.neighbors.Add(i);
+                a.edges.Add(new GroundEdge(j, cost));
+                b.edges.Add(new GroundEdge(i, cost));
             }
         }
     }
