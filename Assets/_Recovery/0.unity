@@ -786,6 +786,68 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5481670689821487056, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+--- !u!1 &163809759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163809760}
+  m_Layer: 7
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &163809760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163809759}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.032, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1240631335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &174315756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174315757}
+  m_Layer: 7
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &174315757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174315756}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.032, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2120419634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189455426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4643329528095515197, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -1103,97 +1165,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4912470471621919257, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
---- !u!1 &195745038
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 195745039}
-  - component: {fileID: 195745041}
-  - component: {fileID: 195745040}
-  m_Layer: 7
-  m_Name: enemyModel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &195745039
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195745038}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1660548028}
-  m_Father: {fileID: 1686426591}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &195745040
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195745038}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e18ded4b611aa8f4a9f0f261d2f29537, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &195745041
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195745038}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &208916911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6400,27 +6371,27 @@ MonoBehaviour:
     neighbors: be090000bf090000c00900000b0a00000d0a00005a0a00005b0a00005c0a0000
   - position: {x: -32, y: -14.279128, z: -128.00002}
     neighbors: bf090000c0090000c10900000c0a00000e0a00005b0a00005c0a00005d0a0000
-  - position: {x: -31.999996, y: -14.144001, z: -124.00001}
+  - position: {x: -31.999996, y: -14.128187, z: -124.00001}
     neighbors: c0090000c1090000c20900000d0a00000f0a00005c0a00005d0a00005e0a0000
-  - position: {x: -32, y: -13.886596, z: -120.00001}
+  - position: {x: -32, y: -13.881647, z: -120.00001}
     neighbors: c1090000c2090000c30900000e0a0000100a00005d0a00005e0a00005f0a0000
-  - position: {x: -32, y: -13.60981, z: -116.00001}
+  - position: {x: -32, y: -13.60486, z: -116.00001}
     neighbors: c2090000c3090000c40900000f0a0000110a00005e0a00005f0a0000600a0000
-  - position: {x: -32, y: -13.29675, z: -112}
+  - position: {x: -32, y: -13.253433, z: -112}
     neighbors: c3090000c4090000c5090000100a0000120a00005f0a0000600a0000610a0000
-  - position: {x: -32, y: -12.963743, z: -108}
+  - position: {x: -32, y: -12.939064, z: -108}
     neighbors: c4090000c5090000c6090000110a0000130a0000600a0000610a0000620a0000
-  - position: {x: -32, y: -12.597501, z: -104.00001}
+  - position: {x: -32, y: -12.631986, z: -104.00001}
     neighbors: c5090000c6090000c7090000120a0000140a0000610a0000620a0000630a0000
-  - position: {x: -32.000004, y: -12.199649, z: -100.00001}
+  - position: {x: -32.000004, y: -12.214731, z: -100.00001}
     neighbors: c6090000c7090000c8090000130a0000150a0000620a0000630a0000640a0000
-  - position: {x: -32, y: -11.822538, z: -96}
+  - position: {x: -32, y: -11.823212, z: -96}
     neighbors: c7090000c8090000c9090000140a0000160a0000630a0000640a0000650a0000
-  - position: {x: -32, y: -11.386651, z: -92}
+  - position: {x: -32, y: -11.387062, z: -92}
     neighbors: c8090000c9090000ca090000150a0000170a0000640a0000650a0000660a0000
-  - position: {x: -32, y: -10.933179, z: -88}
+  - position: {x: -32, y: -10.935121, z: -88}
     neighbors: c9090000ca090000cb090000160a0000180a0000650a0000660a0000670a0000
-  - position: {x: -32, y: -10.44662, z: -84}
+  - position: {x: -32, y: -10.445112, z: -84}
     neighbors: ca090000cb090000cc090000170a0000190a0000660a0000670a0000680a0000
   - position: {x: -32, y: -9.934515, z: -80}
     neighbors: cb090000cc090000cd090000180a00001a0a0000670a0000680a0000690a0000
@@ -6558,27 +6529,27 @@ MonoBehaviour:
     neighbors: 0b0a00000c0a00000d0a00005a0a00005c0a0000ab0a0000ac0a0000ad0a0000
   - position: {x: -28, y: -14.350359, z: -128.00002}
     neighbors: 0c0a00000d0a00000e0a00005b0a00005d0a0000ac0a0000ad0a0000ae0a0000
-  - position: {x: -28, y: -14.243109, z: -124.00001}
+  - position: {x: -28, y: -14.23204, z: -124.00001}
     neighbors: 0d0a00000e0a00000f0a00005c0a00005e0a0000ad0a0000ae0a0000af0a0000
-  - position: {x: -28, y: -14.011984, z: -120.00001}
+  - position: {x: -28, y: -14.020859, z: -120.00001}
     neighbors: 0e0a00000f0a0000100a00005d0a00005f0a0000ae0a0000af0a0000b00a0000
-  - position: {x: -28, y: -13.76156, z: -116.00001}
+  - position: {x: -28, y: -13.7513075, z: -116.00001}
     neighbors: 0f0a0000100a0000110a00005e0a0000600a0000af0a0000b00a0000b10a0000
-  - position: {x: -28, y: -13.473688, z: -112}
+  - position: {x: -28, y: -13.408955, z: -112}
     neighbors: 100a0000110a0000120a00005f0a0000610a0000b00a0000b10a0000b20a0000
-  - position: {x: -28, y: -13.131052, z: -108}
+  - position: {x: -28, y: -13.130552, z: -108}
     neighbors: 110a0000120a0000130a0000600a0000620a0000b10a0000b20a0000b30a0000
-  - position: {x: -28, y: -12.761657, z: -104.00001}
+  - position: {x: -28, y: -12.848154, z: -104.00001}
     neighbors: 120a0000130a0000140a0000610a0000630a0000b20a0000b30a0000b40a0000
-  - position: {x: -28, y: -12.418637, z: -100.00001}
+  - position: {x: -28, y: -12.401924, z: -100.00001}
     neighbors: 130a0000140a0000150a0000620a0000640a0000b30a0000b40a0000b50a0000
-  - position: {x: -28, y: -12.015016, z: -95.99999}
+  - position: {x: -28, y: -12.017922, z: -95.99999}
     neighbors: 140a0000150a0000160a0000630a0000650a0000b40a0000b50a0000b60a0000
-  - position: {x: -28, y: -11.618103, z: -91.99999}
+  - position: {x: -28, y: -11.616913, z: -91.99999}
     neighbors: 150a0000160a0000170a0000640a0000660a0000b50a0000b60a0000b70a0000
-  - position: {x: -28, y: -11.18913, z: -88}
+  - position: {x: -28, y: -11.192078, z: -88}
     neighbors: 160a0000170a0000180a0000650a0000670a0000b60a0000b70a0000b80a0000
-  - position: {x: -28, y: -10.737245, z: -84}
+  - position: {x: -28, y: -10.732084, z: -84}
     neighbors: 170a0000180a0000190a0000660a0000680a0000b70a0000b80a0000b90a0000
   - position: {x: -28, y: -10.2493925, z: -80}
     neighbors: 180a0000190a00001a0a0000670a0000690a0000b80a0000b90a0000ba0a0000
@@ -6720,27 +6691,27 @@ MonoBehaviour:
     neighbors: 5a0a00005b0a00005c0a0000ab0a0000ad0a0000fe0a0000ff0a0000000b0000
   - position: {x: -24, y: -14.421591, z: -128.00003}
     neighbors: 5b0a00005c0a00005d0a0000ac0a0000ae0a0000ff0a0000000b0000010b0000
-  - position: {x: -24, y: -14.323876, z: -124.00001}
+  - position: {x: -24, y: -14.303271, z: -124.00001}
     neighbors: 5c0a00005d0a00005e0a0000ad0a0000af0a0000000b0000010b0000020b0000
-  - position: {x: -24, y: -14.128851, z: -120.00001}
+  - position: {x: -24, y: -14.079447, z: -120.00001}
     neighbors: 5d0a00005e0a00005f0a0000ae0a0000b00a0000010b0000020b0000030b0000
-  - position: {x: -24.000002, y: -13.879967, z: -116.00001}
+  - position: {x: -24.000002, y: -13.897755, z: -116.00001}
     neighbors: 5e0a00005f0a0000600a0000af0a0000b10a0000020b0000030b0000040b0000
-  - position: {x: -23.999998, y: -13.631083, z: -112}
+  - position: {x: -23.999998, y: -13.601453, z: -112}
     neighbors: 5f0a0000600a0000610a0000b00a0000b20a0000030b0000040b0000050b0000
-  - position: {x: -24.000002, y: -13.32843, z: -108}
+  - position: {x: -24.000002, y: -13.333705, z: -108}
     neighbors: 600a0000610a0000620a0000b10a0000b30a0000040b0000050b0000060b0000
-  - position: {x: -24, y: -13.006508, z: -104.00001}
+  - position: {x: -24, y: -13.026928, z: -104.00001}
     neighbors: 610a0000620a0000630a0000b20a0000b40a0000050b0000060b0000070b0000
-  - position: {x: -24, y: -12.691801, z: -100}
+  - position: {x: -24, y: -12.693644, z: -100}
     neighbors: 620a0000630a0000640a0000b30a0000b50a0000060b0000070b0000080b0000
-  - position: {x: -24.000002, y: -12.28487, z: -96.00001}
+  - position: {x: -24.000002, y: -12.295939, z: -96.00001}
     neighbors: 630a0000640a0000650a0000b40a0000b60a0000070b0000080b0000090b0000
-  - position: {x: -23.999998, y: -11.8666115, z: -92}
+  - position: {x: -23.999998, y: -11.890111, z: -92}
     neighbors: 640a0000650a0000660a0000b50a0000b70a0000080b0000090b00000a0b0000
-  - position: {x: -24, y: -11.464116, z: -87.99999}
+  - position: {x: -24, y: -11.469749, z: -87.99999}
     neighbors: 650a0000660a0000670a0000b60a0000b80a0000090b00000a0b00000b0b0000
-  - position: {x: -24, y: -11.02787, z: -84}
+  - position: {x: -24, y: -11.021214, z: -84}
     neighbors: 660a0000670a0000680a0000b70a0000b90a00000a0b00000b0b00000c0b0000
   - position: {x: -24, y: -10.568517, z: -80}
     neighbors: 670a0000680a0000690a0000b80a0000ba0a00000b0b00000c0b00000d0b0000
@@ -6886,27 +6857,27 @@ MonoBehaviour:
     neighbors: ab0a0000ac0a0000ad0a0000fe0a0000000b0000530b0000540b0000550b0000
   - position: {x: -20.000002, y: -14.492823, z: -128.00002}
     neighbors: ac0a0000ad0a0000ae0a0000ff0a0000010b0000540b0000550b0000560b0000
-  - position: {x: -19.999998, y: -14.395107, z: -124.00001}
+  - position: {x: -19.999998, y: -14.374503, z: -124.00001}
     neighbors: ad0a0000ae0a0000af0a0000000b0000020b0000550b0000560b0000570b0000
-  - position: {x: -19.999998, y: -14.238151, z: -120.00001}
+  - position: {x: -19.999998, y: -14.193442, z: -120.00001}
     neighbors: ae0a0000af0a0000b00a0000010b0000030b0000560b0000570b0000580b0000
-  - position: {x: -20, y: -13.996834, z: -116.00001}
+  - position: {x: -20, y: -13.965117, z: -116.00001}
     neighbors: af0a0000b00a0000b10a0000020b0000040b0000570b0000580b0000590b0000
-  - position: {x: -20, y: -13.739919, z: -112}
+  - position: {x: -20, y: -13.762998, z: -112}
     neighbors: b00a0000b10a0000b20a0000030b0000050b0000580b0000590b00005a0b0000
-  - position: {x: -20, y: -13.4550705, z: -108}
+  - position: {x: -20, y: -13.498722, z: -108}
     neighbors: b10a0000b20a0000b30a0000040b0000060b0000590b00005a0b00005b0b0000
-  - position: {x: -20.000002, y: -13.1517105, z: -104}
+  - position: {x: -20.000002, y: -13.2167015, z: -104}
     neighbors: b20a0000b30a0000b40a0000050b0000070b00005a0b00005b0b00005c0b0000
-  - position: {x: -19.999998, y: -12.86421, z: -100}
+  - position: {x: -19.999998, y: -12.887108, z: -100}
     neighbors: b30a0000b40a0000b50a0000060b0000080b00005b0b00005c0b00005d0b0000
-  - position: {x: -20, y: -12.54415, z: -96}
+  - position: {x: -20, y: -12.549047, z: -96}
     neighbors: b40a0000b50a0000b60a0000070b0000090b00005c0b00005d0b00005e0b0000
-  - position: {x: -20, y: -12.14162, z: -91.99999}
+  - position: {x: -20, y: -12.1495075, z: -91.99999}
     neighbors: b50a0000b60a0000b70a0000080b00000a0b00005d0b00005e0b00005f0b0000
-  - position: {x: -20, y: -11.739104, z: -88.00001}
+  - position: {x: -20, y: -11.749775, z: -88.00001}
     neighbors: b60a0000b70a0000b80a0000090b00000b0b00005e0b00005f0b0000600b0000
-  - position: {x: -20, y: -11.318495, z: -84}
+  - position: {x: -20, y: -11.311835, z: -84}
     neighbors: b70a0000b80a0000b90a00000a0b00000c0b00005f0b0000600b0000610b0000
   - position: {x: -20, y: -10.861041, z: -80}
     neighbors: b80a0000b90a0000ba0a00000b0b00000d0b0000600b0000610b0000620b0000
@@ -7056,27 +7027,27 @@ MonoBehaviour:
     neighbors: fe0a0000ff0a0000000b0000530b0000550b0000ab0b0000ac0b0000ad0b0000
   - position: {x: -16.000002, y: -14.5640545, z: -128.00002}
     neighbors: ff0a0000000b0000010b0000540b0000560b0000ac0b0000ad0b0000ae0b0000
-  - position: {x: -16, y: -14.466339, z: -124.00001}
+  - position: {x: -16, y: -14.445734, z: -124.00001}
     neighbors: 000b0000010b0000020b0000550b0000570b0000ad0b0000ae0b0000af0b0000
-  - position: {x: -16.000002, y: -14.332213, z: -120.00001}
+  - position: {x: -16.000002, y: -14.296095, z: -120.00001}
     neighbors: 010b0000020b0000030b0000560b0000580b0000ae0b0000af0b0000b00b0000
-  - position: {x: -16, y: -14.113702, z: -116.00001}
+  - position: {x: -16, y: -14.125616, z: -116.00001}
     neighbors: 020b0000030b0000040b0000570b0000590b0000af0b0000b00b0000b10b0000
-  - position: {x: -16, y: -13.850504, z: -112}
+  - position: {x: -16, y: -13.9031105, z: -112}
     neighbors: 030b0000040b0000050b0000580b00005a0b0000b00b0000b10b0000b20b0000
-  - position: {x: -16, y: -13.6284895, z: -107.99999}
+  - position: {x: -16, y: -13.65891, z: -107.99999}
     neighbors: 040b0000050b0000060b0000590b00005b0b0000b10b0000b20b0000b30b0000
-  - position: {x: -16.000002, y: -13.373013, z: -104.000015}
+  - position: {x: -16.000002, y: -13.414633, z: -104.000015}
     neighbors: 050b0000060b0000070b00005a0b00005c0b0000b20b0000b30b0000b40b0000
-  - position: {x: -16, y: -13.079451, z: -100.00001}
+  - position: {x: -16, y: -13.102344, z: -100.00001}
     neighbors: 060b0000070b0000080b00005b0b00005d0b0000b30b0000b40b0000b50b0000
-  - position: {x: -16, y: -12.763039, z: -96}
+  - position: {x: -16, y: -12.782257, z: -96}
     neighbors: 070b0000080b0000090b00005c0b00005e0b0000b40b0000b50b0000b60b0000
-  - position: {x: -16, y: -12.416632, z: -92.00001}
+  - position: {x: -16, y: -12.358131, z: -92.00001}
     neighbors: 080b0000090b00000a0b00005d0b00005f0b0000b50b0000b60b0000b70b0000
-  - position: {x: -16, y: -12.0141, z: -87.99999}
+  - position: {x: -16, y: -11.987611, z: -87.99999}
     neighbors: 090b00000a0b00000b0b00005e0b0000600b0000b60b0000b70b0000b80b0000
-  - position: {x: -16, y: -11.609119, z: -84}
+  - position: {x: -16, y: -11.602455, z: -84}
     neighbors: 0a0b00000b0b00000c0b00005f0b0000610b0000b70b0000b80b0000b90b0000
   - position: {x: -16, y: -11.115896, z: -80}
     neighbors: 0b0b00000c0b00000d0b0000600b0000620b0000b80b0000b90b0000ba0b0000
@@ -7232,27 +7203,27 @@ MonoBehaviour:
     neighbors: 530b0000540b0000550b0000ab0b0000ad0b0000060c0000070c0000080c0000
   - position: {x: -12.000002, y: -14.5787945, z: -128.00002}
     neighbors: 540b0000550b0000560b0000ac0b0000ae0b0000070c0000080c0000090c0000
-  - position: {x: -12.000002, y: -14.537571, z: -124.00001}
+  - position: {x: -12.000002, y: -14.495289, z: -124.00001}
     neighbors: 550b0000560b0000570b0000ad0b0000af0b0000080c0000090c00000a0c0000
-  - position: {x: -12, y: -14.426277, z: -120.00001}
+  - position: {x: -12, y: -14.32139, z: -120.00001}
     neighbors: 560b0000570b0000580b0000ae0b0000b00b0000090c00000a0c00000b0c0000
-  - position: {x: -12, y: -14.240974, z: -116.00001}
+  - position: {x: -12, y: -14.210463, z: -116.00001}
     neighbors: 570b0000580b0000590b0000af0b0000b10b00000a0c00000b0c00000c0c0000
-  - position: {x: -12, y: -14.026527, z: -112}
+  - position: {x: -12, y: -14.051202, z: -112}
     neighbors: 580b0000590b00005a0b0000b00b0000b20b00000b0c00000c0c00000d0c0000
-  - position: {x: -12, y: -13.804561, z: -108}
+  - position: {x: -12, y: -13.80406, z: -108}
     neighbors: 590b00005a0b00005b0b0000b10b0000b30b00000c0c00000d0c00000e0c0000
-  - position: {x: -12, y: -13.579612, z: -104}
+  - position: {x: -12, y: -13.559199, z: -104}
     neighbors: 5a0b00005b0b00005c0b0000b20b0000b40b00000d0c00000e0c00000f0c0000
-  - position: {x: -12, y: -13.281187, z: -100}
+  - position: {x: -12, y: -13.308412, z: -100}
     neighbors: 5b0b00005c0b00005d0b0000b30b0000b50b00000e0c00000f0c0000100c0000
-  - position: {x: -12.000002, y: -12.962669, z: -96}
+  - position: {x: -12.000002, y: -12.988327, z: -96}
     neighbors: 5c0b00005d0b00005e0b0000b40b0000b60b00000f0c0000100c0000110c0000
-  - position: {x: -12, y: -12.623685, z: -92.00001}
+  - position: {x: -12, y: -12.614248, z: -92.00001}
     neighbors: 5d0b00005e0b00005f0b0000b50b0000b70b0000100c0000110c0000120c0000
-  - position: {x: -12, y: -12.2847, z: -88}
+  - position: {x: -12, y: -12.222216, z: -88}
     neighbors: 5e0b00005f0b0000600b0000b60b0000b80b0000110c0000120c0000130c0000
-  - position: {x: -12, y: -11.886594, z: -84}
+  - position: {x: -12, y: -11.893089, z: -84}
     neighbors: 5f0b0000600b0000610b0000b70b0000b90b0000120c0000130c0000140c0000
   - position: {x: -12, y: -11.4261265, z: -80}
     neighbors: 600b0000610b0000620b0000b80b0000ba0b0000130c0000140c0000150c0000
@@ -7414,27 +7385,27 @@ MonoBehaviour:
     neighbors: ab0b0000ac0b0000ad0b0000060c0000080c0000640c0000650c0000660c0000
   - position: {x: -8.000001, y: -14.60652, z: -128.00002}
     neighbors: ac0b0000ad0b0000ae0b0000070c0000090c0000650c0000660c0000670c0000
-  - position: {x: -8.000001, y: -14.603186, z: -124.00001}
+  - position: {x: -8.000001, y: -14.568142, z: -124.00001}
     neighbors: ad0b0000ae0b0000af0b0000080c00000a0c0000660c0000670c0000680c0000
-  - position: {x: -8.000001, y: -14.526279, z: -120.00001}
+  - position: {x: -8.000001, y: -14.45562, z: -120.00001}
     neighbors: ae0b0000af0b0000b00b0000090c00000b0c0000670c0000680c0000690c0000
-  - position: {x: -8, y: -14.336243, z: -116.00001}
+  - position: {x: -8, y: -14.3188305, z: -116.00001}
     neighbors: af0b0000b00b0000b10b00000a0c00000c0c0000680c0000690c00006a0c0000
-  - position: {x: -8.000002, y: -14.170837, z: -112}
+  - position: {x: -8.000002, y: -14.167153, z: -112}
     neighbors: b00b0000b10b0000b20b00000b0c00000d0c0000690c00006a0c00006b0c0000
-  - position: {x: -8.000002, y: -13.948871, z: -108}
+  - position: {x: -8.000002, y: -13.949211, z: -108}
     neighbors: b10b0000b20b0000b30b00000c0c00000e0c00006a0c00006b0c00006c0c0000
-  - position: {x: -8.000001, y: -13.720862, z: -104.00001}
+  - position: {x: -8.000001, y: -13.703766, z: -104.00001}
     neighbors: b20b0000b30b0000b40b00000d0c00000f0c00006b0c00006c0c00006d0c0000
-  - position: {x: -8.000001, y: -13.482925, z: -100.00001}
+  - position: {x: -8.000001, y: -13.470919, z: -100.00001}
     neighbors: b30b0000b40b0000b50b00000e0c0000100c00006c0c00006d0c00006e0c0000
-  - position: {x: -8.000001, y: -13.162298, z: -96}
+  - position: {x: -8.000001, y: -13.194396, z: -96}
     neighbors: b40b0000b50b0000b60b00000f0c0000110c00006d0c00006e0c00006f0c0000
-  - position: {x: -8, y: -12.823314, z: -92}
+  - position: {x: -8, y: -12.8338785, z: -92}
     neighbors: b50b0000b60b0000b70b0000100c0000120c00006e0c00006f0c0000700c0000
-  - position: {x: -8.000002, y: -12.48433, z: -88.00001}
+  - position: {x: -8.000002, y: -12.441848, z: -88.00001}
     neighbors: b60b0000b70b0000b80b0000110c0000130c00006f0c0000700c0000710c0000
-  - position: {x: -8.000001, y: -12.145666, z: -84}
+  - position: {x: -8.000001, y: -12.138838, z: -84}
     neighbors: b70b0000b80b0000b90b0000120c0000140c0000700c0000710c0000720c0000
   - position: {x: -8.000001, y: -11.736147, z: -80}
     neighbors: b80b0000b90b0000ba0b0000130c0000150c0000710c0000720c0000730c0000
@@ -7602,27 +7573,27 @@ MonoBehaviour:
     neighbors: 060c0000070c0000080c0000640c0000660c0000c90c0000ca0c0000cb0c0000
   - position: {x: -4.000001, y: -14.641119, z: -128.00002}
     neighbors: 070c0000080c0000090c0000650c0000670c0000ca0c0000cb0c0000cc0c0000
-  - position: {x: -4.000001, y: -14.641119, z: -124.00001}
+  - position: {x: -4.000001, y: -14.625011, z: -124.00001}
     neighbors: 080c0000090c00000a0c0000660c0000680c0000cb0c0000cc0c0000cd0c0000
-  - position: {x: -4.000001, y: -14.600727, z: -120.00001}
+  - position: {x: -4.000001, y: -14.4904995, z: -120.00001}
     neighbors: 090c00000a0c00000b0c0000670c0000690c0000cc0c0000cd0c0000ce0c0000
-  - position: {x: -4.000001, y: -14.431511, z: -116.00001}
+  - position: {x: -4.000001, y: -14.419804, z: -116.00001}
     neighbors: 0a0c00000b0c00000c0c0000680c00006a0c0000cd0c0000ce0c0000cf0c0000
-  - position: {x: -4.000001, y: -14.270812, z: -112}
+  - position: {x: -4.000001, y: -14.2681265, z: -112}
     neighbors: 0b0c00000c0c00000d0c0000690c00006b0c0000ce0c0000cf0c0000d00c0000
-  - position: {x: -4.000001, y: -14.091673, z: -108}
+  - position: {x: -4.000001, y: -14.094361, z: -108}
     neighbors: 0c0c00000d0c00000e0c00006a0c00006c0c0000cf0c0000d00c0000d10c0000
-  - position: {x: -4.000001, y: -13.862959, z: -104.00001}
+  - position: {x: -4.000001, y: -13.848333, z: -104.00001}
     neighbors: 0d0c00000e0c00000f0c00006b0c00006d0c0000d00c0000d10c0000d20c0000
-  - position: {x: -4.000001, y: -13.635073, z: -100.00001}
+  - position: {x: -4.000001, y: -13.615485, z: -100.00001}
     neighbors: 0e0c00000f0c0000100c00006c0c00006e0c0000d10c0000d20c0000d30c0000
-  - position: {x: -4, y: -13.380961, z: -96}
+  - position: {x: -4, y: -13.382637, z: -96}
     neighbors: 0f0c0000100c0000110c00006d0c00006f0c0000d20c0000d30c0000d40c0000
-  - position: {x: -4.000001, y: -13.057264, z: -92}
+  - position: {x: -4.000001, y: -13.05351, z: -92}
     neighbors: 100c0000110c0000120c00006e0c0000700c0000d30c0000d40c0000d50c0000
-  - position: {x: -4.000001, y: -12.733568, z: -88}
+  - position: {x: -4.000001, y: -12.721098, z: -88}
     neighbors: 110c0000120c0000130c00006f0c0000710c0000d40c0000d50c0000d60c0000
-  - position: {x: -4.000001, y: -12.40987, z: -84}
+  - position: {x: -4.000001, y: -12.407836, z: -84}
     neighbors: 120c0000130c0000140c0000700c0000720c0000d50c0000d60c0000d70c0000
   - position: {x: -4.000001, y: -12.043751, z: -80.00001}
     neighbors: 130c0000140c0000150c0000710c0000730c0000d60c0000d70c0000d80c0000
@@ -7804,27 +7775,27 @@ MonoBehaviour:
     neighbors: 640c0000650c0000660c0000c90c0000cb0c00002e0d00002f0d0000300d0000
   - position: {x: -0.00000047683716, y: -14.675716, z: -128.00002}
     neighbors: 650c0000660c0000670c0000ca0c0000cc0c00002f0d0000300d0000310d0000
-  - position: {x: -0.0000009536743, y: -14.675716, z: -124.00001}
+  - position: {x: -0.0000009536743, y: -14.65961, z: -124.00001}
     neighbors: 660c0000670c0000680c0000cb0c0000cd0c0000300d0000310d0000320d0000
-  - position: {x: -0.0000019073486, y: -14.661776, z: -120.00001}
-    neighbors: 670c0000680c0000690c0000cc0c0000310d0000320d0000
-  - position: {x: -0.0000019073486, y: -14.5321045, z: -116.00001}
-    neighbors: 680c0000690c00006a0c0000cf0c0000330d0000340d0000
-  - position: {x: 0.00000047683716, y: -14.370243, z: -112}
+  - position: {x: -0.0000019073486, y: -14.5637, z: -120.00001}
+    neighbors: 670c0000680c0000690c0000cc0c0000ce0c0000310d0000320d0000330d0000
+  - position: {x: -0.0000019073486, y: -14.507801, z: -116.00001}
+    neighbors: 680c0000690c00006a0c0000cd0c0000cf0c0000320d0000330d0000340d0000
+  - position: {x: 0.00000047683716, y: -14.369101, z: -112}
     neighbors: 690c00006a0c00006b0c0000ce0c0000d00c0000330d0000340d0000350d0000
-  - position: {x: 0, y: -14.208365, z: -108}
+  - position: {x: 0, y: -14.217423, z: -108}
     neighbors: 6a0c00006b0c00006c0c0000cf0c0000d10c0000340d0000350d0000360d0000
-  - position: {x: 0.00000047683716, y: -14.022825, z: -104.00001}
+  - position: {x: 0.00000047683716, y: -13.9929, z: -104.00001}
     neighbors: 6b0c00006c0c00006d0c0000d00c0000d20c0000350d0000360d0000370d0000
-  - position: {x: -0.00000047683716, y: -13.79278, z: -100.00001}
+  - position: {x: -0.00000047683716, y: -13.760052, z: -100.00001}
     neighbors: 6c0c00006d0c00006e0c0000d10c0000d30c0000360d0000370d0000380d0000
-  - position: {x: -0.0000009536743, y: -13.556484, z: -96}
+  - position: {x: -0.0000009536743, y: -13.527204, z: -96}
     neighbors: 6d0c00006e0c00006f0c0000d20c0000d40c0000370d0000380d0000390d0000
-  - position: {x: 0, y: -13.320189, z: -92.00001}
+  - position: {x: 0, y: -13.29763, z: -92.00001}
     neighbors: 6e0c00006f0c0000700c0000d30c0000d50c0000380d0000390d00003a0d0000
-  - position: {x: 0, y: -12.997772, z: -88}
+  - position: {x: 0, y: -12.985302, z: -88}
     neighbors: 6f0c0000700c0000710c0000d40c0000d60c0000390d00003a0d00003b0d0000
-  - position: {x: 0, y: -12.674075, z: -84}
+  - position: {x: 0, y: -12.672041, z: -84}
     neighbors: 700c0000710c0000720c0000d50c0000d70c00003a0d00003b0d00003c0d0000
   - position: {x: 0, y: -12.311522, z: -80}
     neighbors: 710c0000720c0000730c0000d60c0000d80c00003b0d00003c0d00003d0d0000
@@ -8006,27 +7977,27 @@ MonoBehaviour:
     neighbors: c90c0000ca0c0000cb0c00002e0d0000300d0000930d0000940d0000950d0000
   - position: {x: 4.0000005, y: -14.710314, z: -128.00002}
     neighbors: ca0c0000cb0c0000cc0c00002f0d0000310d0000940d0000950d0000960d0000
-  - position: {x: 3.9999998, y: -14.710315, z: -124.00001}
+  - position: {x: 3.9999998, y: -14.694208, z: -124.00001}
     neighbors: cb0c0000cc0c0000cd0c0000300d0000320d0000950d0000960d0000970d0000
-  - position: {x: 4, y: -14.708286, z: -120.00001}
-    neighbors: cc0c0000cd0c0000310d0000960d0000970d0000
-  - position: {x: 4, y: -14.591431, z: -116.00001}
-    neighbors: ce0c0000cf0c0000340d0000980d0000990d0000
-  - position: {x: 4, y: -14.462173, z: -112}
+  - position: {x: 4, y: -14.641328, z: -120.00001}
+    neighbors: cc0c0000cd0c0000ce0c0000310d0000330d0000960d0000970d0000980d0000
+  - position: {x: 4, y: -14.559582, z: -116.00001}
+    neighbors: cd0c0000ce0c0000cf0c0000320d0000340d0000970d0000980d0000990d0000
+  - position: {x: 4, y: -14.454622, z: -112}
     neighbors: ce0c0000cf0c0000d00c0000330d0000350d0000980d0000990d00009a0d0000
-  - position: {x: 4, y: -14.30212, z: -108}
+  - position: {x: 4, y: -14.316229, z: -108}
     neighbors: cf0c0000d00c0000d10c0000340d0000360d0000990d00009a0d00009b0d0000
-  - position: {x: 4.0000005, y: -14.148865, z: -104.00001}
+  - position: {x: 4.0000005, y: -14.137521, z: -104.00001}
     neighbors: d00c0000d10c0000d20c0000350d0000370d00009a0d00009b0d00009c0d0000
-  - position: {x: 4.0000005, y: -13.945071, z: -100.00001}
+  - position: {x: 4.0000005, y: -13.904619, z: -100.00001}
     neighbors: d10c0000d20c0000d30c0000360d0000380d00009b0d00009c0d00009d0d0000
-  - position: {x: 4.0000005, y: -13.710777, z: -96}
+  - position: {x: 4.0000005, y: -13.677995, z: -96}
     neighbors: d20c0000d30c0000d40c0000370d0000390d00009c0d00009d0d00009e0d0000
-  - position: {x: 4, y: -13.474482, z: -92}
+  - position: {x: 4, y: -13.451954, z: -92}
     neighbors: d30c0000d40c0000d50c0000380d00003a0d00009d0d00009e0d00009f0d0000
-  - position: {x: 4, y: -13.238187, z: -88}
+  - position: {x: 4, y: -13.225912, z: -88}
     neighbors: d40c0000d50c0000d60c0000390d00003b0d00009e0d00009f0d0000a00d0000
-  - position: {x: 4.000001, y: -12.93828, z: -84}
+  - position: {x: 4.000001, y: -12.936245, z: -84}
     neighbors: d50c0000d60c0000d70c00003a0d00003c0d00009f0d0000a00d0000a10d0000
   - position: {x: 4, y: -12.574476, z: -80}
     neighbors: d60c0000d70c0000d80c00003b0d00003d0d0000a00d0000a10d0000a20d0000
@@ -8208,27 +8179,27 @@ MonoBehaviour:
     neighbors: 2e0d00002f0d0000300d0000930d0000950d0000f80d0000f90d0000fa0d0000
   - position: {x: 8, y: -14.735703, z: -128.00002}
     neighbors: 2f0d0000300d0000310d0000940d0000960d0000f90d0000fa0d0000fb0d0000
-  - position: {x: 8, y: -14.735703, z: -124.00001}
+  - position: {x: 8, y: -14.721643, z: -124.00001}
     neighbors: 300d0000310d0000320d0000950d0000970d0000fa0d0000fb0d0000fc0d0000
-  - position: {x: 8.000001, y: -14.735703, z: -120.00001}
-    neighbors: 310d0000320d0000960d0000fb0d0000fc0d0000fd0d0000
-  - position: {x: 8.000001, y: -14.618847, z: -116.00001}
-    neighbors: 330d0000340d0000990d0000fc0d0000fd0d0000fe0d0000
-  - position: {x: 8, y: -14.52636, z: -112}
+  - position: {x: 8.000001, y: -14.667824, z: -120.00001}
+    neighbors: 310d0000320d0000330d0000960d0000980d0000fb0d0000fc0d0000fd0d0000
+  - position: {x: 8.000001, y: -14.614004, z: -116.00001}
+    neighbors: 320d0000330d0000340d0000970d0000990d0000fc0d0000fd0d0000fe0d0000
+  - position: {x: 8, y: -14.539299, z: -112}
     neighbors: 330d0000340d0000350d0000980d00009a0d0000fd0d0000fe0d0000ff0d0000
-  - position: {x: 8, y: -14.40301, z: -108}
+  - position: {x: 8, y: -14.400907, z: -108}
     neighbors: 340d0000350d0000360d0000990d00009b0d0000fe0d0000ff0d0000000e0000
-  - position: {x: 8, y: -14.253107, z: -104.00001}
+  - position: {x: 8, y: -14.262514, z: -104.00001}
     neighbors: 350d0000360d0000370d00009a0d00009c0d0000ff0d0000000e0000010e0000
-  - position: {x: 8, y: -14.079966, z: -100.00001}
+  - position: {x: 8, y: -14.076846, z: -100.00001}
     neighbors: 360d0000370d0000380d00009b0d00009d0d0000000e0000010e0000020e0000
-  - position: {x: 8, y: -13.870362, z: -96}
+  - position: {x: 8, y: -13.868725, z: -96}
     neighbors: 370d0000380d0000390d00009c0d00009e0d0000010e0000020e0000030e0000
-  - position: {x: 7.999999, y: -13.660759, z: -91.99999}
+  - position: {x: 7.999999, y: -13.660603, z: -91.99999}
     neighbors: 380d0000390d00003a0d00009d0d00009f0d0000020e0000030e0000040e0000
-  - position: {x: 8, y: -13.413744, z: -88}
+  - position: {x: 8, y: -13.409843, z: -88}
     neighbors: 390d00003a0d00003b0d00009e0d0000a00d0000030e0000040e0000050e0000
-  - position: {x: 8.000001, y: -13.164846, z: -84}
+  - position: {x: 8.000001, y: -13.159867, z: -84}
     neighbors: 3a0d00003b0d00003c0d00009f0d0000a10d0000040e0000050e0000060e0000
   - position: {x: 8.000002, y: -12.843581, z: -80}
     neighbors: 3b0d00003c0d00003d0d0000a00d0000a20d0000050e0000060e0000070e0000
@@ -8410,27 +8381,27 @@ MonoBehaviour:
     neighbors: 930d0000940d0000950d0000f80d0000fa0d00005d0e00005e0e00005f0e0000
   - position: {x: 12, y: -14.735703, z: -128.00002}
     neighbors: 940d0000950d0000960d0000f90d0000fb0d00005e0e00005f0e0000600e0000
-  - position: {x: 12, y: -14.735703, z: -124.00001}
+  - position: {x: 12, y: -14.728556, z: -124.00001}
     neighbors: 950d0000960d0000970d0000fa0d0000fc0d00005f0e0000600e0000610e0000
-  - position: {x: 12, y: -14.735703, z: -120.00001}
+  - position: {x: 12, y: -14.710367, z: -120.00001}
     neighbors: 960d0000970d0000980d0000fb0d0000fd0d0000600e0000610e0000620e0000
-  - position: {x: 12, y: -14.65529, z: -116.00001}
+  - position: {x: 12, y: -14.656548, z: -116.00001}
     neighbors: 970d0000980d0000990d0000fc0d0000fe0d0000610e0000620e0000630e0000
-  - position: {x: 12.000001, y: -14.588736, z: -112}
+  - position: {x: 12.000001, y: -14.602728, z: -112}
     neighbors: 980d0000990d00009a0d0000fd0d0000ff0d0000620e0000630e0000640e0000
-  - position: {x: 12.000001, y: -14.496344, z: -108.00001}
+  - position: {x: 12.000001, y: -14.484102, z: -108.00001}
     neighbors: 990d00009a0d00009b0d0000fe0d0000000e0000630e0000640e0000650e0000
-  - position: {x: 12, y: -14.367015, z: -104.00001}
+  - position: {x: 12, y: -14.345709, z: -104.00001}
     neighbors: 9a0d00009b0d00009c0d0000ff0d0000010e0000640e0000650e0000660e0000
-  - position: {x: 12, y: -14.215171, z: -100.00001}
+  - position: {x: 12, y: -14.220275, z: -100.00001}
     neighbors: 9b0d00009c0d00009d0d0000000e0000020e0000650e0000660e0000670e0000
-  - position: {x: 12, y: -14.005568, z: -96}
+  - position: {x: 12, y: -14.027445, z: -96}
     neighbors: 9c0d00009d0d00009e0d0000010e0000030e0000660e0000670e0000680e0000
-  - position: {x: 12, y: -13.80414, z: -92}
+  - position: {x: 12, y: -13.811627, z: -92}
     neighbors: 9d0d00009e0d00009f0d0000020e0000040e0000670e0000680e0000690e0000
-  - position: {x: 12, y: -13.591347, z: -87.99999}
+  - position: {x: 12, y: -13.560831, z: -87.99999}
     neighbors: 9e0d00009f0d0000a00d0000030e0000050e0000680e0000690e00006a0e0000
-  - position: {x: 11.999999, y: -13.342451, z: -84}
+  - position: {x: 11.999999, y: -13.337471, z: -84}
     neighbors: 9f0d0000a00d0000a10d0000040e0000060e0000690e00006a0e00006b0e0000
   - position: {x: 11.999999, y: -13.093272, z: -79.99999}
     neighbors: a00d0000a10d0000a20d0000050e0000070e00006a0e00006b0e00006c0e0000
@@ -8612,27 +8583,27 @@ MonoBehaviour:
     neighbors: f80d0000f90d0000fa0d00005d0e00005f0e0000c20e0000c30e0000c40e0000
   - position: {x: 16, y: -14.735703, z: -128.00002}
     neighbors: f90d0000fa0d0000fb0d00005e0e0000600e0000c30e0000c40e0000c50e0000
-  - position: {x: 15.999999, y: -14.735703, z: -124.00001}
+  - position: {x: 15.999999, y: -14.728556, z: -124.00001}
     neighbors: fa0d0000fb0d0000fc0d00005f0e0000610e0000c40e0000c50e0000c60e0000
-  - position: {x: 16.000002, y: -14.723545, z: -120.00001}
+  - position: {x: 16.000002, y: -14.713401, z: -120.00001}
     neighbors: fb0d0000fc0d0000fd0d0000600e0000620e0000c50e0000c60e0000c70e0000
-  - position: {x: 16.000002, y: -14.661482, z: -116.00001}
+  - position: {x: 16.000002, y: -14.698246, z: -116.00001}
     neighbors: fc0d0000fd0d0000fe0d0000610e0000630e0000c60e0000c70e0000c80e0000
-  - position: {x: 16.000002, y: -14.652494, z: -112.00001}
+  - position: {x: 16.000002, y: -14.645272, z: -112.00001}
     neighbors: fd0d0000fe0d0000ff0d0000620e0000640e0000c70e0000c80e0000c90e0000
-  - position: {x: 16, y: -14.559364, z: -108}
+  - position: {x: 16, y: -14.567297, z: -108}
     neighbors: fe0d0000ff0d0000000e0000630e0000650e0000c80e0000c90e0000ca0e0000
-  - position: {x: 16.000002, y: -14.466328, z: -104.00001}
+  - position: {x: 16.000002, y: -14.428904, z: -104.00001}
     neighbors: ff0d0000000e0000010e0000640e0000660e0000c90e0000ca0e0000cb0e0000
-  - position: {x: 16, y: -14.331019, z: -100.00001}
+  - position: {x: 16, y: -14.303488, z: -100.00001}
     neighbors: 000e0000010e0000020e0000650e0000670e0000ca0e0000cb0e0000cc0e0000
-  - position: {x: 16, y: -14.140774, z: -96}
+  - position: {x: 16, y: -14.178483, z: -96}
     neighbors: 010e0000020e0000030e0000660e0000680e0000cb0e0000cc0e0000cd0e0000
-  - position: {x: 16.000002, y: -13.948389, z: -92}
+  - position: {x: 16.000002, y: -13.961797, z: -92}
     neighbors: 020e0000030e0000040e0000670e0000690e0000cc0e0000cd0e0000ce0e0000
-  - position: {x: 16.000002, y: -13.768951, z: -88}
+  - position: {x: 16.000002, y: -13.738436, z: -88}
     neighbors: 030e0000040e0000050e0000680e00006a0e0000cd0e0000ce0e0000cf0e0000
-  - position: {x: 16.000002, y: -13.520055, z: -84}
+  - position: {x: 16.000002, y: -13.515076, z: -84}
     neighbors: 040e0000050e0000060e0000690e00006b0e0000ce0e0000cf0e0000d00e0000
   - position: {x: 16, y: -13.272977, z: -80}
     neighbors: 050e0000060e0000070e00006a0e00006c0e0000cf0e0000d00e0000d10e0000
@@ -8781,60 +8752,60 @@ MonoBehaviour:
   - position: {x: 20.000004, y: -14.735703, z: -196.00003}
     neighbors: 4d0e00004e0e00004f0e0000b20e0000b40e0000170f0000180f0000190f0000
   - position: {x: 20, y: -14.735703, z: -192.00002}
-    neighbors: 4e0e00004f0e0000500e0000b30e0000b50e0000180f0000190f0000
+    neighbors: 4e0e00004f0e0000500e0000b30e0000b50e0000180f0000190f00001a0f0000
   - position: {x: 20.000002, y: -14.735703, z: -188.00002}
-    neighbors: 4f0e0000500e0000510e0000b40e0000b60e0000190f0000
+    neighbors: 4f0e0000500e0000510e0000b40e0000b60e0000190f00001a0f00001b0f0000
   - position: {x: 20.000002, y: -14.735703, z: -184.00003}
-    neighbors: 500e0000510e0000520e0000b50e0000b70e0000
+    neighbors: 500e0000510e0000520e0000b50e0000b70e00001a0f00001b0f00001c0f0000
   - position: {x: 20.000002, y: -14.735703, z: -180.00002}
-    neighbors: 510e0000520e0000530e0000b60e0000b80e0000
+    neighbors: 510e0000520e0000530e0000b60e0000b80e00001b0f00001c0f00001d0f0000
   - position: {x: 20.000002, y: -14.735703, z: -176.00002}
-    neighbors: 520e0000530e0000540e0000b70e0000b90e0000
+    neighbors: 520e0000530e0000540e0000b70e0000b90e00001c0f00001d0f00001e0f0000
   - position: {x: 20.000002, y: -14.735703, z: -172.00005}
-    neighbors: 530e0000540e0000550e0000b80e0000ba0e0000
+    neighbors: 530e0000540e0000550e0000b80e0000ba0e00001d0f00001e0f00001f0f0000
   - position: {x: 20.000002, y: -14.735703, z: -168.00003}
-    neighbors: 540e0000550e0000560e0000b90e0000bb0e0000
+    neighbors: 540e0000550e0000560e0000b90e0000bb0e00001e0f00001f0f0000200f0000
   - position: {x: 20.000002, y: -14.735703, z: -164.00002}
-    neighbors: 550e0000560e0000570e0000ba0e0000bc0e0000
+    neighbors: 550e0000560e0000570e0000ba0e0000bc0e00001f0f0000200f0000210f0000
   - position: {x: 20.000002, y: -14.735703, z: -160.00002}
-    neighbors: 560e0000570e0000580e0000bb0e0000bd0e0000
+    neighbors: 560e0000570e0000580e0000bb0e0000bd0e0000200f0000210f0000220f0000
   - position: {x: 20.000004, y: -14.735703, z: -156.00002}
-    neighbors: 570e0000580e0000590e0000bc0e0000be0e0000
+    neighbors: 570e0000580e0000590e0000bc0e0000be0e0000210f0000220f0000230f0000
   - position: {x: 20.000004, y: -14.735703, z: -152.00002}
-    neighbors: 580e0000590e00005a0e0000bd0e0000bf0e0000
+    neighbors: 580e0000590e00005a0e0000bd0e0000bf0e0000220f0000230f0000240f0000
   - position: {x: 20.000002, y: -14.735703, z: -148}
-    neighbors: 590e00005a0e00005b0e0000be0e0000c00e0000
+    neighbors: 590e00005a0e00005b0e0000be0e0000c00e0000230f0000240f0000250f0000
   - position: {x: 20.000002, y: -14.735703, z: -144.00003}
-    neighbors: 5a0e00005b0e00005c0e0000bf0e0000c10e0000260f0000
+    neighbors: 5a0e00005b0e00005c0e0000bf0e0000c10e0000240f0000250f0000260f0000
   - position: {x: 20.000004, y: -14.735703, z: -140.00003}
-    neighbors: 5b0e00005c0e00005d0e0000c00e0000c20e0000260f0000270f0000
+    neighbors: 5b0e00005c0e00005d0e0000c00e0000c20e0000250f0000260f0000270f0000
   - position: {x: 20, y: -14.735703, z: -136.00002}
     neighbors: 5c0e00005d0e00005e0e0000c10e0000c30e0000260f0000270f0000280f0000
   - position: {x: 20.000002, y: -14.735703, z: -132.00002}
     neighbors: 5d0e00005e0e00005f0e0000c20e0000c40e0000270f0000280f0000290f0000
   - position: {x: 20.000002, y: -14.735703, z: -128.00002}
     neighbors: 5e0e00005f0e0000600e0000c30e0000c50e0000280f0000290f00002a0f0000
-  - position: {x: 20, y: -14.735703, z: -124.00001}
+  - position: {x: 20, y: -14.728556, z: -124.00001}
     neighbors: 5f0e0000600e0000610e0000c40e0000c60e0000290f00002a0f00002b0f0000
-  - position: {x: 20.000002, y: -14.686062, z: -120.00001}
+  - position: {x: 20.000002, y: -14.713401, z: -120.00001}
     neighbors: 600e0000610e0000620e0000c50e0000c70e00002a0f00002b0f00002c0f0000
-  - position: {x: 20, y: -14.667673, z: -116.00001}
+  - position: {x: 20, y: -14.698246, z: -116.00001}
     neighbors: 610e0000620e0000630e0000c60e0000c80e00002b0f00002c0f00002d0f0000
-  - position: {x: 20.000002, y: -14.658686, z: -112}
+  - position: {x: 20.000002, y: -14.683092, z: -112}
     neighbors: 620e0000630e0000640e0000c70e0000c90e00002c0f00002d0f00002e0f0000
-  - position: {x: 20.000002, y: -14.624345, z: -108}
+  - position: {x: 20.000002, y: -14.633996, z: -108}
     neighbors: 630e0000640e0000650e0000c80e0000ca0e00002d0f00002e0f00002f0f0000
-  - position: {x: 20.000004, y: -14.530035, z: -104.00001}
+  - position: {x: 20.000004, y: -14.512098, z: -104.00001}
     neighbors: 640e0000650e0000660e0000c90e0000cb0e00002e0f00002f0f0000300f0000
-  - position: {x: 20.000004, y: -14.436313, z: -100.00001}
+  - position: {x: 20.000004, y: -14.3867, z: -100.00001}
     neighbors: 650e0000660e0000670e0000ca0e0000cc0e00002f0f0000300f0000310f0000
-  - position: {x: 20.000002, y: -14.275978, z: -96}
+  - position: {x: 20.000002, y: -14.263823, z: -96}
     neighbors: 660e0000670e0000680e0000cb0e0000cd0e0000300f0000310f0000320f0000
-  - position: {x: 20.000002, y: -14.092638, z: -92}
+  - position: {x: 20.000002, y: -14.133873, z: -92}
     neighbors: 670e0000680e0000690e0000cc0e0000ce0e0000310f0000320f0000330f0000
-  - position: {x: 20.000002, y: -13.91938, z: -88}
+  - position: {x: 20.000002, y: -13.91604, z: -88}
     neighbors: 680e0000690e00006a0e0000cd0e0000cf0e0000320f0000330f0000340f0000
-  - position: {x: 20.000004, y: -13.697659, z: -84}
+  - position: {x: 20.000004, y: -13.69268, z: -84}
     neighbors: 690e00006a0e00006b0e0000ce0e0000d00e0000330f0000340f0000350f0000
   - position: {x: 20, y: -13.450581, z: -80}
     neighbors: 6a0e00006b0e00006c0e0000cf0e0000d10e0000340f0000350f0000360f0000
@@ -8983,60 +8954,60 @@ MonoBehaviour:
   - position: {x: 24.000002, y: -14.735703, z: -196.00003}
     neighbors: b20e0000b30e0000b40e0000170f0000190f00007c0f00007d0f00007e0f0000
   - position: {x: 24, y: -14.735703, z: -192.00002}
-    neighbors: b30e0000b40e0000b50e0000180f00007d0f00007e0f0000
+    neighbors: b30e0000b40e0000b50e0000180f00001a0f00007d0f00007e0f00007f0f0000
   - position: {x: 24.000002, y: -14.735703, z: -188.00002}
-    neighbors: 1b0f00007f0f0000800f0000
+    neighbors: b40e0000b50e0000b60e0000190f00001b0f00007e0f00007f0f0000800f0000
   - position: {x: 24.000002, y: -14.735703, z: -184.00002}
-    neighbors: 1a0f00001c0f00007f0f0000800f0000810f0000
+    neighbors: b50e0000b60e0000b70e00001a0f00001c0f00007f0f0000800f0000810f0000
   - position: {x: 24.000002, y: -14.735703, z: -180.00002}
-    neighbors: 1b0f00001d0f0000800f0000810f0000820f0000
+    neighbors: b60e0000b70e0000b80e00001b0f00001d0f0000800f0000810f0000820f0000
   - position: {x: 24.000002, y: -14.735703, z: -176.00003}
-    neighbors: 1c0f00001e0f0000810f0000820f0000830f0000
+    neighbors: b70e0000b80e0000b90e00001c0f00001e0f0000810f0000820f0000830f0000
   - position: {x: 24.000002, y: -14.735703, z: -172.00003}
-    neighbors: 1d0f00001f0f0000820f0000830f0000840f0000
+    neighbors: b80e0000b90e0000ba0e00001d0f00001f0f0000820f0000830f0000840f0000
   - position: {x: 24.000002, y: -14.735703, z: -168.00005}
-    neighbors: 1e0f0000200f0000830f0000840f0000850f0000
+    neighbors: b90e0000ba0e0000bb0e00001e0f0000200f0000830f0000840f0000850f0000
   - position: {x: 24.000002, y: -14.735703, z: -164.00002}
-    neighbors: 1f0f0000210f0000840f0000850f0000860f0000
+    neighbors: ba0e0000bb0e0000bc0e00001f0f0000210f0000840f0000850f0000860f0000
   - position: {x: 24.000002, y: -14.735703, z: -160.00002}
-    neighbors: 200f0000220f0000850f0000860f0000870f0000
+    neighbors: bb0e0000bc0e0000bd0e0000200f0000220f0000850f0000860f0000870f0000
   - position: {x: 24.000002, y: -14.735703, z: -156.00002}
-    neighbors: 210f0000230f0000860f0000870f0000880f0000
+    neighbors: bc0e0000bd0e0000be0e0000210f0000230f0000860f0000870f0000880f0000
   - position: {x: 24.000002, y: -14.735703, z: -152.00002}
-    neighbors: 220f0000240f0000870f0000880f0000890f0000
+    neighbors: bd0e0000be0e0000bf0e0000220f0000240f0000870f0000880f0000890f0000
   - position: {x: 24.000002, y: -14.735703, z: -148.00002}
-    neighbors: 230f0000880f0000890f0000
+    neighbors: be0e0000bf0e0000c00e0000230f0000250f0000880f0000890f00008a0f0000
   - position: {x: 24.000002, y: -14.735703, z: -143.55334}
-    neighbors: 260f00008a0f00008b0f0000
+    neighbors: bf0e0000c00e0000c10e0000240f0000260f0000890f00008a0f00008b0f0000
   - position: {x: 24.000002, y: -14.735703, z: -140.00003}
-    neighbors: c00e0000c10e0000c20e0000250f0000270f00008b0f00008c0f0000
+    neighbors: c00e0000c10e0000c20e0000250f0000270f00008a0f00008b0f00008c0f0000
   - position: {x: 24.000002, y: -14.735703, z: -136.00002}
     neighbors: c10e0000c20e0000c30e0000260f0000280f00008b0f00008c0f00008d0f0000
   - position: {x: 24.000002, y: -14.735703, z: -132.00002}
     neighbors: c20e0000c30e0000c40e0000270f0000290f00008c0f00008d0f00008e0f0000
   - position: {x: 24.000002, y: -14.735703, z: -128.00002}
     neighbors: c30e0000c40e0000c50e0000280f00002a0f00008d0f00008e0f00008f0f0000
-  - position: {x: 24.000002, y: -14.735703, z: -124.00001}
+  - position: {x: 24.000002, y: -14.728556, z: -124.00001}
     neighbors: c40e0000c50e0000c60e0000290f00002b0f00008e0f00008f0f0000900f0000
-  - position: {x: 24.000004, y: -14.682851, z: -120.00001}
+  - position: {x: 24.000004, y: -14.713401, z: -120.00001}
     neighbors: c50e0000c60e0000c70e00002a0f00002c0f00008f0f0000900f0000910f0000
-  - position: {x: 24.000002, y: -14.673864, z: -116.00001}
+  - position: {x: 24.000002, y: -14.698246, z: -116.00001}
     neighbors: c60e0000c70e0000c80e00002b0f00002d0f0000900f0000910f0000920f0000
-  - position: {x: 24.000002, y: -14.664878, z: -112.00001}
+  - position: {x: 24.000002, y: -14.683092, z: -112.00001}
     neighbors: c70e0000c80e0000c90e00002c0f00002e0f0000910f0000920f0000930f0000
-  - position: {x: 24.000002, y: -14.655891, z: -108.00001}
+  - position: {x: 24.000002, y: -14.667937, z: -108.00001}
     neighbors: c80e0000c90e0000ca0e00002d0f00002f0f0000920f0000930f0000940f0000
-  - position: {x: 24, y: -14.5950165, z: -104.00001}
+  - position: {x: 24, y: -14.595293, z: -104.00001}
     neighbors: c90e0000ca0e0000cb0e00002e0f0000300f0000930f0000940f0000950f0000
-  - position: {x: 24.000002, y: -14.500708, z: -100.00001}
+  - position: {x: 24.000002, y: -14.476784, z: -100.00001}
     neighbors: ca0e0000cb0e0000cc0e00002f0f0000310f0000940f0000950f0000960f0000
-  - position: {x: 24.000002, y: -14.406398, z: -96}
+  - position: {x: 24.000002, y: -14.394641, z: -96}
     neighbors: cb0e0000cc0e0000cd0e0000300f0000320f0000950f0000960f0000970f0000
-  - position: {x: 24.000004, y: -14.236887, z: -92.00001}
+  - position: {x: 24.000004, y: -14.252026, z: -92.00001}
     neighbors: cc0e0000cd0e0000ce0e0000310f0000330f0000960f0000970f0000980f0000
-  - position: {x: 24.000002, y: -14.063628, z: -88}
+  - position: {x: 24.000002, y: -14.082512, z: -88}
     neighbors: cd0e0000ce0e0000cf0e0000320f0000340f0000970f0000980f0000990f0000
-  - position: {x: 24.000002, y: -13.875263, z: -84}
+  - position: {x: 24.000002, y: -13.870283, z: -84}
     neighbors: ce0e0000cf0e0000d00e0000330f0000350f0000980f0000990f00009a0f0000
   - position: {x: 24.000002, y: -13.628185, z: -80}
     neighbors: cf0e0000d00e0000d10e0000340f0000360f0000990f00009a0f00009b0f0000
@@ -9185,9 +9156,9 @@ MonoBehaviour:
   - position: {x: 28.000002, y: -14.735703, z: -196.00003}
     neighbors: 170f0000180f0000190f00007c0f00007e0f0000e10f0000e20f0000e30f0000
   - position: {x: 28.000002, y: -14.735703, z: -192.00002}
-    neighbors: 180f0000190f00007d0f0000e20f0000e30f0000
+    neighbors: 180f0000190f00001a0f00007d0f00007f0f0000e20f0000e30f0000e40f0000
   - position: {x: 28.000002, y: -14.735703, z: -188.00002}
-    neighbors: 1a0f00001b0f0000800f0000e40f0000e50f0000
+    neighbors: 190f00001a0f00001b0f00007e0f0000800f0000e30f0000e40f0000e50f0000
   - position: {x: 28.000004, y: -14.735703, z: -184.00003}
     neighbors: 1a0f00001b0f00001c0f00007f0f0000810f0000e40f0000e50f0000e60f0000
   - position: {x: 28.000004, y: -14.735703, z: -180.00002}
@@ -9207,38 +9178,38 @@ MonoBehaviour:
   - position: {x: 28.000004, y: -14.735703, z: -152.00002}
     neighbors: 220f0000230f0000240f0000870f0000890f0000ec0f0000ed0f0000ee0f0000
   - position: {x: 28.000002, y: -14.735703, z: -148.00002}
-    neighbors: 230f0000240f0000880f0000ed0f0000ee0f0000
+    neighbors: 230f0000240f0000250f0000880f00008a0f0000ed0f0000ee0f0000ef0f0000
   - position: {x: 28.000006, y: -14.735703, z: -143.55334}
-    neighbors: 250f00008b0f0000ef0f0000f00f0000
+    neighbors: 240f0000250f0000260f0000890f00008b0f0000ee0f0000ef0f0000f00f0000
   - position: {x: 28.000004, y: -14.735703, z: -140.00003}
-    neighbors: 250f0000260f0000270f00008a0f00008c0f0000f00f0000f10f0000
+    neighbors: 250f0000260f0000270f00008a0f00008c0f0000ef0f0000f00f0000f10f0000
   - position: {x: 28.000002, y: -14.735703, z: -136.00002}
     neighbors: 260f0000270f0000280f00008b0f00008d0f0000f00f0000f10f0000f20f0000
   - position: {x: 28.000004, y: -14.735703, z: -132.00002}
     neighbors: 270f0000280f0000290f00008c0f00008e0f0000f10f0000f20f0000f30f0000
   - position: {x: 28.000004, y: -14.735703, z: -128.00002}
     neighbors: 280f0000290f00002a0f00008d0f00008f0f0000f20f0000f30f0000f40f0000
-  - position: {x: 28.000004, y: -14.735703, z: -124.00001}
+  - position: {x: 28.000004, y: -14.728556, z: -124.00001}
     neighbors: 290f00002a0f00002b0f00008e0f0000900f0000f30f0000f40f0000f50f0000
-  - position: {x: 28.000004, y: -14.689041, z: -120.00001}
+  - position: {x: 28.000004, y: -14.713401, z: -120.00001}
     neighbors: 2a0f00002b0f00002c0f00008f0f0000910f0000f40f0000f50f0000f60f0000
-  - position: {x: 28.000004, y: -14.680056, z: -116.00001}
+  - position: {x: 28.000004, y: -14.698246, z: -116.00001}
     neighbors: 2b0f00002c0f00002d0f0000900f0000920f0000f50f0000f60f0000f70f0000
-  - position: {x: 28.000004, y: -14.671069, z: -112}
+  - position: {x: 28.000004, y: -14.683092, z: -112}
     neighbors: 2c0f00002d0f00002e0f0000910f0000930f0000f60f0000f70f0000f80f0000
-  - position: {x: 28.000004, y: -14.662083, z: -108}
+  - position: {x: 28.000004, y: -14.667937, z: -108}
     neighbors: 2d0f00002e0f00002f0f0000920f0000940f0000f70f0000f80f0000f90f0000
-  - position: {x: 28.000002, y: -14.653097, z: -104.00001}
+  - position: {x: 28.000002, y: -14.654495, z: -104.00001}
     neighbors: 2e0f00002f0f0000300f0000930f0000950f0000f80f0000f90f0000fa0f0000
-  - position: {x: 28.000002, y: -14.565687, z: -100.00001}
+  - position: {x: 28.000002, y: -14.579884, z: -100.00001}
     neighbors: 2f0f0000300f0000310f0000940f0000960f0000f90f0000fa0f0000fb0f0000
-  - position: {x: 28.000004, y: -14.469503, z: -95.99999}
+  - position: {x: 28.000004, y: -14.4850235, z: -95.99999}
     neighbors: 300f0000310f0000320f0000950f0000970f0000fa0f0000fb0f0000fc0f0000
-  - position: {x: 28.000004, y: -14.367628, z: -92}
+  - position: {x: 28.000004, y: -14.380076, z: -92}
     neighbors: 310f0000320f0000330f0000960f0000980f0000fb0f0000fc0f0000fd0f0000
-  - position: {x: 28.000004, y: -14.208956, z: -88}
+  - position: {x: 28.000004, y: -14.206837, z: -88}
     neighbors: 320f0000330f0000340f0000970f0000990f0000fc0f0000fd0f0000fe0f0000
-  - position: {x: 28.000004, y: -14.034721, z: -84}
+  - position: {x: 28.000004, y: -14.033598, z: -84}
     neighbors: 330f0000340f0000350f0000980f00009a0f0000fd0f0000fe0f0000ff0f0000
   - position: {x: 28.000002, y: -13.833416, z: -80}
     neighbors: 340f0000350f0000360f0000990f00009b0f0000fe0f0000ff0f000000100000
@@ -9387,9 +9358,9 @@ MonoBehaviour:
   - position: {x: 32.000004, y: -14.735703, z: -196.00003}
     neighbors: 7c0f00007d0f00007e0f0000e10f0000e30f0000461000004710000048100000
   - position: {x: 32, y: -14.735703, z: -192.00002}
-    neighbors: 7d0f00007e0f0000e20f00004710000048100000
+    neighbors: 7d0f00007e0f00007f0f0000e20f0000e40f0000471000004810000049100000
   - position: {x: 32.000004, y: -14.735703, z: -188.00002}
-    neighbors: 7f0f0000800f0000e50f0000491000004a100000
+    neighbors: 7e0f00007f0f0000800f0000e30f0000e50f000048100000491000004a100000
   - position: {x: 32.000004, y: -14.735703, z: -184}
     neighbors: 7f0f0000800f0000810f0000e40f0000e60f0000491000004a1000004b100000
   - position: {x: 32.000004, y: -14.735703, z: -180.00002}
@@ -9409,38 +9380,38 @@ MonoBehaviour:
   - position: {x: 32.000004, y: -14.735703, z: -152.00002}
     neighbors: 870f0000880f0000890f0000ec0f0000ee0f0000511000005210000053100000
   - position: {x: 32.000004, y: -14.735703, z: -148.00002}
-    neighbors: 880f0000890f0000ed0f00005210000053100000
+    neighbors: 880f0000890f00008a0f0000ed0f0000ef0f0000521000005310000054100000
   - position: {x: 32.000004, y: -14.735703, z: -143.55334}
-    neighbors: 8a0f0000f00f00005410000055100000
+    neighbors: 890f00008a0f00008b0f0000ee0f0000f00f0000531000005410000055100000
   - position: {x: 32.000004, y: -14.735703, z: -140.00003}
-    neighbors: 8a0f00008b0f00008c0f0000ef0f0000f10f00005510000056100000
+    neighbors: 8a0f00008b0f00008c0f0000ef0f0000f10f0000541000005510000056100000
   - position: {x: 32, y: -14.735703, z: -136.00002}
     neighbors: 8b0f00008c0f00008d0f0000f00f0000f20f0000551000005610000057100000
   - position: {x: 32.000004, y: -14.735703, z: -132.00002}
     neighbors: 8c0f00008d0f00008e0f0000f10f0000f30f0000561000005710000058100000
   - position: {x: 32.000004, y: -14.735703, z: -128.00002}
     neighbors: 8d0f00008e0f00008f0f0000f20f0000f40f0000571000005810000059100000
-  - position: {x: 32.000004, y: -14.735703, z: -124.00001}
+  - position: {x: 32.000004, y: -14.728556, z: -124.00001}
     neighbors: 8e0f00008f0f0000900f0000f30f0000f50f000058100000591000005a100000
-  - position: {x: 32.000004, y: -14.695233, z: -120.00001}
+  - position: {x: 32.000004, y: -14.713401, z: -120.00001}
     neighbors: 8f0f0000900f0000910f0000f40f0000f60f0000591000005a1000005b100000
-  - position: {x: 32.000004, y: -14.686247, z: -116.00001}
+  - position: {x: 32.000004, y: -14.698246, z: -116.00001}
     neighbors: 900f0000910f0000920f0000f50f0000f70f00005a1000005b1000005c100000
-  - position: {x: 32.000004, y: -14.677261, z: -112}
+  - position: {x: 32.000004, y: -14.683092, z: -112}
     neighbors: 910f0000920f0000930f0000f60f0000f80f00005b1000005c1000005d100000
-  - position: {x: 32.000004, y: -14.668274, z: -108}
+  - position: {x: 32.000004, y: -14.66943, z: -108}
     neighbors: 920f0000930f0000940f0000f70f0000f90f00005c1000005d1000005e100000
-  - position: {x: 32.000004, y: -14.659288, z: -104.000015}
+  - position: {x: 32.000004, y: -14.661617, z: -104.000015}
     neighbors: 930f0000940f0000950f0000f80f0000fa0f00005d1000005e1000005f100000
-  - position: {x: 32.000004, y: -14.630669, z: -100.00001}
+  - position: {x: 32.000004, y: -14.653805, z: -100.00001}
     neighbors: 940f0000950f0000960f0000f90f0000fb0f00005e1000005f10000060100000
-  - position: {x: 32.000004, y: -14.532397, z: -96}
+  - position: {x: 32.000004, y: -14.559418, z: -96}
     neighbors: 950f0000960f0000970f0000fa0f0000fc0f00005f1000006010000061100000
-  - position: {x: 32.000004, y: -14.4332905, z: -92}
+  - position: {x: 32.000004, y: -14.463837, z: -92}
     neighbors: 960f0000970f0000980f0000fb0f0000fd0f0000601000006110000062100000
-  - position: {x: 32.000004, y: -14.342295, z: -88}
+  - position: {x: 32.000004, y: -14.341386, z: -88}
     neighbors: 970f0000980f0000990f0000fc0f0000fe0f0000611000006210000063100000
-  - position: {x: 32.000004, y: -14.16927, z: -84}
+  - position: {x: 32.000004, y: -14.168146, z: -84}
     neighbors: 980f0000990f00009a0f0000fd0f0000ff0f0000621000006310000064100000
   - position: {x: 32.000004, y: -13.969149, z: -80}
     neighbors: 990f00009a0f00009b0f0000fe0f000000100000631000006410000065100000
@@ -9589,9 +9560,9 @@ MonoBehaviour:
   - position: {x: 36, y: -14.735703, z: -196.00003}
     neighbors: e10f0000e20f0000e30f00004610000048100000ab100000ac100000ad100000
   - position: {x: 36.000004, y: -14.735703, z: -192.00002}
-    neighbors: e20f0000e30f000047100000ac100000ad100000
+    neighbors: e20f0000e30f0000e40f00004710000049100000ac100000ad100000ae100000
   - position: {x: 36.000004, y: -14.735703, z: -188.00002}
-    neighbors: e40f0000e50f00004a100000ae100000af100000
+    neighbors: e30f0000e40f0000e50f0000481000004a100000ad100000ae100000af100000
   - position: {x: 36.000004, y: -14.735703, z: -184.00003}
     neighbors: e40f0000e50f0000e60f0000491000004b100000ae100000af100000b0100000
   - position: {x: 36.000004, y: -14.735703, z: -180.00003}
@@ -9611,38 +9582,38 @@ MonoBehaviour:
   - position: {x: 36.000004, y: -14.735703, z: -152.00002}
     neighbors: ec0f0000ed0f0000ee0f00005110000053100000b6100000b7100000b8100000
   - position: {x: 36.000004, y: -14.735703, z: -148.00002}
-    neighbors: ed0f0000ee0f000052100000b7100000b8100000
+    neighbors: ed0f0000ee0f0000ef0f00005210000054100000b7100000b8100000b9100000
   - position: {x: 36, y: -14.735703, z: -143.55334}
-    neighbors: ef0f000055100000b9100000ba100000
+    neighbors: ee0f0000ef0f0000f00f00005310000055100000b8100000b9100000ba100000
   - position: {x: 36.000004, y: -14.735703, z: -140.00003}
-    neighbors: ef0f0000f00f0000f10f00005410000056100000ba100000bb100000
+    neighbors: ef0f0000f00f0000f10f00005410000056100000b9100000ba100000bb100000
   - position: {x: 36.000004, y: -14.735703, z: -136.00002}
     neighbors: f00f0000f10f0000f20f00005510000057100000ba100000bb100000bc100000
   - position: {x: 36.000004, y: -14.735703, z: -132.00002}
     neighbors: f10f0000f20f0000f30f00005610000058100000bb100000bc100000bd100000
   - position: {x: 36.000008, y: -14.735703, z: -128.00002}
     neighbors: f20f0000f30f0000f40f00005710000059100000bc100000bd100000be100000
-  - position: {x: 36, y: -14.735703, z: -124.00001}
+  - position: {x: 36, y: -14.728556, z: -124.00001}
     neighbors: f30f0000f40f0000f50f0000581000005a100000bd100000be100000bf100000
-  - position: {x: 36.000004, y: -14.701425, z: -120.00001}
+  - position: {x: 36.000004, y: -14.713401, z: -120.00001}
     neighbors: f40f0000f50f0000f60f0000591000005b100000be100000bf100000c0100000
-  - position: {x: 36.000004, y: -14.692438, z: -116.00001}
+  - position: {x: 36.000004, y: -14.698246, z: -116.00001}
     neighbors: f50f0000f60f0000f70f00005a1000005c100000bf100000c0100000c1100000
-  - position: {x: 36.000004, y: -14.683453, z: -112}
+  - position: {x: 36.000004, y: -14.684364, z: -112}
     neighbors: f60f0000f70f0000f80f00005b1000005d100000c0100000c1100000c2100000
-  - position: {x: 36.000004, y: -14.674465, z: -108}
+  - position: {x: 36.000004, y: -14.676552, z: -108}
     neighbors: f70f0000f80f0000f90f00005c1000005e100000c1100000c2100000c3100000
-  - position: {x: 36.000004, y: -14.66548, z: -104.00001}
+  - position: {x: 36.000004, y: -14.668739, z: -104.00001}
     neighbors: f80f0000f90f0000fa0f00005d1000005f100000c2100000c3100000c4100000
-  - position: {x: 36.000004, y: -14.65675, z: -100}
+  - position: {x: 36.000004, y: -14.660927, z: -100}
     neighbors: f90f0000fa0f0000fb0f00005e10000060100000c3100000c4100000c5100000
-  - position: {x: 36.000008, y: -14.609697, z: -96}
+  - position: {x: 36.000008, y: -14.653114, z: -96}
     neighbors: fa0f0000fb0f0000fc0f00005f10000061100000c4100000c5100000c6100000
-  - position: {x: 36.000004, y: -14.518042, z: -92}
+  - position: {x: 36.000004, y: -14.549349, z: -92}
     neighbors: fb0f0000fc0f0000fd0f00006010000062100000c5100000c6100000c7100000
-  - position: {x: 36.000004, y: -14.427046, z: -88}
+  - position: {x: 36.000004, y: -14.442652, z: -88}
     neighbors: fc0f0000fd0f0000fe0f00006110000063100000c6100000c7100000c8100000
-  - position: {x: 36.000004, y: -14.303818, z: -84}
+  - position: {x: 36.000004, y: -14.302694, z: -84}
     neighbors: fd0f0000fe0f0000ff0f00006210000064100000c7100000c8100000c9100000
   - position: {x: 36.000004, y: -14.103697, z: -80}
     neighbors: fe0f0000ff0f0000001000006310000065100000c8100000c9100000ca100000
@@ -9791,9 +9762,9 @@ MonoBehaviour:
   - position: {x: 40.000004, y: -14.735703, z: -196.00003}
     neighbors: 461000004710000048100000ab100000ad100000101100001111000012110000
   - position: {x: 40.000004, y: -14.735703, z: -192.00002}
-    neighbors: 4710000048100000ac1000001111000012110000
+    neighbors: 471000004810000049100000ac100000ae100000111100001211000013110000
   - position: {x: 40.000004, y: -14.735703, z: -188.00002}
-    neighbors: 491000004a100000af1000001311000014110000
+    neighbors: 48100000491000004a100000ad100000af100000121100001311000014110000
   - position: {x: 40.000004, y: -14.735703, z: -184.00002}
     neighbors: 491000004a1000004b100000ae100000b0100000131100001411000015110000
   - position: {x: 40.000004, y: -14.735703, z: -180.00002}
@@ -9813,38 +9784,38 @@ MonoBehaviour:
   - position: {x: 40.000004, y: -14.735703, z: -152.00002}
     neighbors: 511000005210000053100000b6100000b81000001b1100001c1100001d110000
   - position: {x: 40, y: -14.735703, z: -148.00002}
-    neighbors: 5210000053100000b71000001c1100001d110000
+    neighbors: 521000005310000054100000b7100000b91000001c1100001d1100001e110000
   - position: {x: 40.000004, y: -14.735703, z: -143.55334}
-    neighbors: 54100000ba1000001e1100001f110000
+    neighbors: 531000005410000055100000b8100000ba1000001d1100001e1100001f110000
   - position: {x: 40, y: -14.735703, z: -140.00003}
-    neighbors: 541000005510000056100000b9100000bb1000001f11000020110000
+    neighbors: 541000005510000056100000b9100000bb1000001e1100001f11000020110000
   - position: {x: 40.000004, y: -14.735703, z: -136.00002}
     neighbors: 551000005610000057100000ba100000bc1000001f1100002011000021110000
   - position: {x: 40.000004, y: -14.735703, z: -132.00002}
     neighbors: 561000005710000058100000bb100000bd100000201100002111000022110000
   - position: {x: 40.000004, y: -14.735703, z: -128.00002}
     neighbors: 571000005810000059100000bc100000be100000211100002211000023110000
-  - position: {x: 40.000004, y: -14.720867, z: -124.00001}
+  - position: {x: 40.000004, y: -14.728556, z: -124.00001}
     neighbors: 58100000591000005a100000bd100000bf100000221100002311000024110000
-  - position: {x: 40.000004, y: -14.707616, z: -119.99999}
+  - position: {x: 40.000004, y: -14.713401, z: -119.99999}
     neighbors: 591000005a1000005b100000be100000c0100000231100002411000025110000
-  - position: {x: 40, y: -14.698629, z: -116.00001}
+  - position: {x: 40, y: -14.699298, z: -116.00001}
     neighbors: 5a1000005b1000005c100000bf100000c1100000241100002511000026110000
-  - position: {x: 40.000004, y: -14.689644, z: -111.99999}
+  - position: {x: 40.000004, y: -14.691485, z: -111.99999}
     neighbors: 5b1000005c1000005d100000c0100000c2100000251100002611000027110000
-  - position: {x: 40.000004, y: -14.680724, z: -108}
+  - position: {x: 40.000004, y: -14.683673, z: -108}
     neighbors: 5c1000005d1000005e100000c1100000c3100000261100002711000028110000
-  - position: {x: 40.000004, y: -14.672912, z: -104}
+  - position: {x: 40.000004, y: -14.675861, z: -104}
     neighbors: 5d1000005e1000005f100000c2100000c4100000271100002811000029110000
-  - position: {x: 40.000004, y: -14.665099, z: -100.00001}
+  - position: {x: 40.000004, y: -14.668049, z: -100.00001}
     neighbors: 5e1000005f10000060100000c3100000c510000028110000291100002a110000
-  - position: {x: 40.000004, y: -14.657288, z: -96}
+  - position: {x: 40.000004, y: -14.660236, z: -96}
     neighbors: 5f1000006010000061100000c4100000c6100000291100002a1100002b110000
-  - position: {x: 40.000004, y: -14.616378, z: -92}
+  - position: {x: 40.000004, y: -14.652424, z: -92}
     neighbors: 601000006110000062100000c5100000c71000002a1100002b1100002c110000
-  - position: {x: 40.000004, y: -14.519263, z: -88}
+  - position: {x: 40.000004, y: -14.53928, z: -88}
     neighbors: 611000006210000063100000c6100000c81000002b1100002c1100002d110000
-  - position: {x: 40.000004, y: -14.42215, z: -84}
+  - position: {x: 40.000004, y: -14.425415, z: -84}
     neighbors: 621000006310000064100000c7100000c91000002c1100002d1100002e110000
   - position: {x: 40.000004, y: -14.252031, z: -80}
     neighbors: 631000006410000065100000c8100000ca1000002d1100002e1100002f110000
@@ -9993,9 +9964,9 @@ MonoBehaviour:
   - position: {x: 44, y: -14.735703, z: -196.00003}
     neighbors: ab100000ac100000ad1000001011000012110000751100007611000077110000
   - position: {x: 44, y: -14.735703, z: -192.00002}
-    neighbors: ac100000ad100000111100007611000077110000
+    neighbors: ac100000ad100000ae1000001111000013110000761100007711000078110000
   - position: {x: 44.000004, y: -14.735703, z: -188.00002}
-    neighbors: ae100000af100000141100007811000079110000
+    neighbors: ad100000ae100000af1000001211000014110000771100007811000079110000
   - position: {x: 44.000004, y: -14.735703, z: -184.00002}
     neighbors: ae100000af100000b0100000131100001511000078110000791100007a110000
   - position: {x: 44.000004, y: -14.735703, z: -180.00002}
@@ -10015,38 +9986,38 @@ MonoBehaviour:
   - position: {x: 44.000004, y: -14.735703, z: -152.00002}
     neighbors: b6100000b7100000b81000001b1100001d110000801100008111000082110000
   - position: {x: 44.000004, y: -14.735703, z: -148.00002}
-    neighbors: b7100000b81000001c1100008111000082110000
+    neighbors: b7100000b8100000b91000001c1100001e110000811100008211000083110000
   - position: {x: 44.000004, y: -14.735703, z: -143.55334}
-    neighbors: b91000001f1100008311000084110000
+    neighbors: b8100000b9100000ba1000001d1100001f110000821100008311000084110000
   - position: {x: 44.000004, y: -14.735703, z: -140.00003}
-    neighbors: b9100000ba100000bb1000001e110000201100008411000085110000
+    neighbors: b9100000ba100000bb1000001e11000020110000831100008411000085110000
   - position: {x: 44.000004, y: -14.735703, z: -136.00002}
     neighbors: ba100000bb100000bc1000001f11000021110000841100008511000086110000
   - position: {x: 44.000004, y: -14.735703, z: -132.00002}
     neighbors: bb100000bc100000bd1000002011000022110000851100008611000087110000
   - position: {x: 44.000004, y: -14.735703, z: -128.00003}
     neighbors: bc100000bd100000be1000002111000023110000861100008711000088110000
-  - position: {x: 44.000004, y: -14.722794, z: -124.00001}
+  - position: {x: 44.000004, y: -14.728556, z: -124.00001}
     neighbors: bd100000be100000bf1000002211000024110000871100008811000089110000
-  - position: {x: 44, y: -14.713808, z: -120.00001}
+  - position: {x: 44, y: -14.714232, z: -120.00001}
     neighbors: be100000bf100000c0100000231100002511000088110000891100008a110000
-  - position: {x: 44.000004, y: -14.704822, z: -116.00001}
+  - position: {x: 44.000004, y: -14.70642, z: -116.00001}
     neighbors: bf100000c0100000c11000002411000026110000891100008a1100008b110000
-  - position: {x: 44, y: -14.696886, z: -112}
+  - position: {x: 44, y: -14.698607, z: -112}
     neighbors: c0100000c1100000c210000025110000271100008a1100008b1100008c110000
-  - position: {x: 44.000004, y: -14.6890745, z: -108.00001}
+  - position: {x: 44.000004, y: -14.690795, z: -108.00001}
     neighbors: c1100000c2100000c310000026110000281100008b1100008c1100008d110000
-  - position: {x: 44.000004, y: -14.681262, z: -104.00001}
+  - position: {x: 44.000004, y: -14.682983, z: -104.00001}
     neighbors: c2100000c3100000c410000027110000291100008c1100008d1100008e110000
-  - position: {x: 44.000004, y: -14.6734495, z: -100.00001}
+  - position: {x: 44.000004, y: -14.675171, z: -100.00001}
     neighbors: c3100000c4100000c5100000281100002a1100008d1100008e1100008f110000
-  - position: {x: 44.000004, y: -14.665637, z: -96}
+  - position: {x: 44.000004, y: -14.667358, z: -96}
     neighbors: c4100000c5100000c6100000291100002b1100008e1100008f11000090110000
-  - position: {x: 44, y: -14.657825, z: -92}
+  - position: {x: 44, y: -14.659546, z: -92}
     neighbors: c5100000c6100000c71000002a1100002c1100008f1100009011000091110000
-  - position: {x: 44.000004, y: -14.623059, z: -88.00001}
+  - position: {x: 44.000004, y: -14.643076, z: -88.00001}
     neighbors: c6100000c7100000c81000002b1100002d110000901100009111000092110000
-  - position: {x: 44.000004, y: -14.525945, z: -84}
+  - position: {x: 44.000004, y: -14.529211, z: -84}
     neighbors: c7100000c8100000c91000002c1100002e110000911100009211000093110000
   - position: {x: 44.000004, y: -14.395601, z: -80}
     neighbors: c8100000c9100000ca1000002d1100002f110000921100009311000094110000
@@ -10195,9 +10166,9 @@ MonoBehaviour:
   - position: {x: 48, y: -14.735703, z: -196.00003}
     neighbors: 1011000011110000121100007511000077110000da110000db110000dc110000
   - position: {x: 48, y: -14.735703, z: -192.00002}
-    neighbors: 111100001211000076110000db110000dc110000
+    neighbors: 1111000012110000131100007611000078110000db110000dc110000dd110000
   - position: {x: 48.000008, y: -14.735703, z: -188.00002}
-    neighbors: 131100001411000079110000dd110000de110000
+    neighbors: 1211000013110000141100007711000079110000dc110000dd110000de110000
   - position: {x: 48.000004, y: -14.735703, z: -184.00002}
     neighbors: 131100001411000015110000781100007a110000dd110000de110000df110000
   - position: {x: 48.000004, y: -14.735703, z: -180.00002}
@@ -10217,38 +10188,38 @@ MonoBehaviour:
   - position: {x: 48.000004, y: -14.735703, z: -152.00002}
     neighbors: 1b1100001c1100001d1100008011000082110000e5110000e6110000e7110000
   - position: {x: 48.000008, y: -14.735703, z: -148.00003}
-    neighbors: 1c1100001d11000081110000e6110000e7110000
+    neighbors: 1c1100001d1100001e1100008111000083110000e6110000e7110000e8110000
   - position: {x: 48, y: -14.735703, z: -143.55334}
-    neighbors: 1e11000084110000e9110000
+    neighbors: 1d1100001e1100001f1100008211000084110000e7110000e8110000e9110000
   - position: {x: 48, y: -14.735703, z: -140.00003}
-    neighbors: 1e1100001f110000201100008311000085110000e9110000ea110000
+    neighbors: 1e1100001f110000201100008311000085110000e8110000e9110000ea110000
   - position: {x: 48, y: -14.735703, z: -136.00002}
     neighbors: 1f11000020110000211100008411000086110000e9110000ea110000eb110000
   - position: {x: 48, y: -14.735703, z: -132.00002}
     neighbors: 2011000021110000221100008511000087110000ea110000eb110000ec110000
   - position: {x: 48.000008, y: -14.735703, z: -128.00002}
     neighbors: 2111000022110000231100008611000088110000eb110000ec110000ed110000
-  - position: {x: 48.000004, y: -14.728985, z: -124.00001}
+  - position: {x: 48.000004, y: -14.729166, z: -124.00001}
     neighbors: 2211000023110000241100008711000089110000ec110000ed110000ee110000
-  - position: {x: 48, y: -14.720862, z: -120.00001}
+  - position: {x: 48, y: -14.721354, z: -120.00001}
     neighbors: 231100002411000025110000881100008a110000ed110000ee110000ef110000
-  - position: {x: 48.000004, y: -14.71305, z: -116.00001}
+  - position: {x: 48.000004, y: -14.713542, z: -116.00001}
     neighbors: 241100002511000026110000891100008b110000ee110000ef110000f0110000
-  - position: {x: 48.000004, y: -14.705237, z: -112}
+  - position: {x: 48.000004, y: -14.7057295, z: -112}
     neighbors: 2511000026110000271100008a1100008c110000ef110000f0110000f1110000
-  - position: {x: 48, y: -14.697425, z: -108}
+  - position: {x: 48, y: -14.697917, z: -108}
     neighbors: 2611000027110000281100008b1100008d110000f0110000f1110000f2110000
-  - position: {x: 48.000004, y: -14.689613, z: -104.00001}
+  - position: {x: 48.000004, y: -14.6901045, z: -104.00001}
     neighbors: 2711000028110000291100008c1100008e110000f1110000f2110000f3110000
-  - position: {x: 48, y: -14.681801, z: -100.00001}
+  - position: {x: 48, y: -14.682293, z: -100.00001}
     neighbors: 28110000291100002a1100008d1100008f110000f2110000f3110000f4110000
-  - position: {x: 48.000004, y: -14.673988, z: -96}
+  - position: {x: 48.000004, y: -14.67448, z: -96}
     neighbors: 291100002a1100002b1100008e11000090110000f3110000f4110000f5110000
-  - position: {x: 48.000008, y: -14.666176, z: -92}
+  - position: {x: 48.000008, y: -14.666668, z: -92}
     neighbors: 2a1100002b1100002c1100008f11000091110000f4110000f5110000f6110000
-  - position: {x: 48, y: -14.658363, z: -88}
+  - position: {x: 48, y: -14.658855, z: -88}
     neighbors: 2b1100002c1100002d1100009011000092110000f5110000f6110000f7110000
-  - position: {x: 48.000008, y: -14.62974, z: -84}
+  - position: {x: 48.000008, y: -14.633007, z: -84}
     neighbors: 2c1100002d1100002e1100009111000093110000f6110000f7110000f8110000
   - position: {x: 48, y: -14.499395, z: -80}
     neighbors: 2d1100002e1100002f1100009211000094110000f7110000f8110000f9110000
@@ -10397,9 +10368,9 @@ MonoBehaviour:
   - position: {x: 52.000004, y: -14.735703, z: -196.00003}
     neighbors: 751100007611000077110000da110000dc1100003f1200004012000041120000
   - position: {x: 52.000008, y: -14.735703, z: -192.00002}
-    neighbors: 7611000077110000db1100004012000041120000
+    neighbors: 761100007711000078110000db110000dd110000401200004112000042120000
   - position: {x: 52.000008, y: -14.735703, z: -188.00002}
-    neighbors: 7811000079110000de1100004212000043120000
+    neighbors: 771100007811000079110000dc110000de110000411200004212000043120000
   - position: {x: 52.000008, y: -14.735703, z: -184.00003}
     neighbors: 78110000791100007a110000dd110000df110000421200004312000044120000
   - position: {x: 52.000008, y: -14.735703, z: -180.00002}
@@ -10419,11 +10390,11 @@ MonoBehaviour:
   - position: {x: 52.000004, y: -14.735703, z: -152.00002}
     neighbors: 801100008111000082110000e5110000e71100004a1200004b1200004c120000
   - position: {x: 52.000004, y: -14.735703, z: -148.00002}
-    neighbors: 8111000082110000e61100004b1200004c120000
+    neighbors: 811100008211000083110000e6110000e81100004b1200004c1200004d120000
   - position: {x: 52.000008, y: -14.735703, z: -143.55334}
-    neighbors: e91100004d1200004e120000
+    neighbors: 821100008311000084110000e7110000e91100004c1200004d1200004e120000
   - position: {x: 52.000008, y: -14.735703, z: -140.00003}
-    neighbors: 831100008411000085110000e8110000ea1100004e1200004f120000
+    neighbors: 831100008411000085110000e8110000ea1100004d1200004e1200004f120000
   - position: {x: 52.000004, y: -14.735703, z: -136.00002}
     neighbors: 841100008511000086110000e9110000eb1100004e1200004f12000050120000
   - position: {x: 52.000004, y: -14.735703, z: -132.00002}
@@ -10599,9 +10570,9 @@ MonoBehaviour:
   - position: {x: 56.000004, y: -14.735703, z: -196.00003}
     neighbors: da110000db110000dc1100003f12000041120000a4120000a5120000a6120000
   - position: {x: 56.000004, y: -14.735703, z: -192.00002}
-    neighbors: db110000dc11000040120000a5120000a6120000
+    neighbors: db110000dc110000dd1100004012000042120000a5120000a6120000a7120000
   - position: {x: 56.000004, y: -14.735703, z: -188.00002}
-    neighbors: dd110000de11000043120000a7120000a8120000
+    neighbors: dc110000dd110000de1100004112000043120000a6120000a7120000a8120000
   - position: {x: 56.000004, y: -14.735703, z: -184.00002}
     neighbors: dd110000de110000df1100004212000044120000a7120000a8120000a9120000
   - position: {x: 56.000004, y: -14.735703, z: -180.00002}
@@ -10621,11 +10592,11 @@ MonoBehaviour:
   - position: {x: 56.000004, y: -14.735703, z: -152.00002}
     neighbors: e5110000e6110000e71100004a1200004c120000af120000b0120000b1120000
   - position: {x: 56.000004, y: -14.735703, z: -148.00002}
-    neighbors: e6110000e71100004b120000b0120000b1120000
+    neighbors: e6110000e7110000e81100004b1200004d120000b0120000b1120000b2120000
   - position: {x: 56.000004, y: -14.735703, z: -143.55334}
-    neighbors: e81100004e120000b2120000b3120000
+    neighbors: e7110000e8110000e91100004c1200004e120000b1120000b2120000b3120000
   - position: {x: 56.000004, y: -14.735703, z: -140.00003}
-    neighbors: e8110000e9110000ea1100004d1200004f120000b3120000b4120000
+    neighbors: e8110000e9110000ea1100004d1200004f120000b2120000b3120000b4120000
   - position: {x: 56.000004, y: -14.735703, z: -136.00002}
     neighbors: e9110000ea110000eb1100004e12000050120000b3120000b4120000b5120000
   - position: {x: 56.000004, y: -14.735703, z: -132.00002}
@@ -10801,9 +10772,9 @@ MonoBehaviour:
   - position: {x: 60.000008, y: -14.735703, z: -196.00003}
     neighbors: 3f1200004012000041120000a4120000a6120000091300000a1300000b130000
   - position: {x: 60, y: -14.735703, z: -192.00002}
-    neighbors: 4012000041120000a51200000a1300000b130000
+    neighbors: 401200004112000042120000a5120000a71200000a1300000b130000
   - position: {x: 60.000004, y: -14.735703, z: -188}
-    neighbors: 4212000043120000a8120000
+    neighbors: 411200004212000043120000a6120000a81200000b130000
   - position: {x: 60.000004, y: -14.735703, z: -184.00002}
     neighbors: 421200004312000044120000a7120000a9120000
   - position: {x: 60.000008, y: -14.735703, z: -180}
@@ -10823,11 +10794,11 @@ MonoBehaviour:
   - position: {x: 60.000004, y: -14.735703, z: -152.00002}
     neighbors: 4a1200004b1200004c120000af120000b1120000
   - position: {x: 60.000008, y: -14.735703, z: -148.00002}
-    neighbors: 4b1200004c120000b0120000
+    neighbors: 4b1200004c1200004d120000b0120000b21200000c130000
   - position: {x: 60.000008, y: -14.735703, z: -143.55334}
-    neighbors: 4d120000b31200000c1300000d130000
+    neighbors: 4c1200004d1200004e120000b1120000b31200000c1300000d130000
   - position: {x: 60.000004, y: -14.735703, z: -140.00003}
-    neighbors: 4d1200004e1200004f120000b2120000b41200000d1300000e130000
+    neighbors: 4d1200004e1200004f120000b2120000b41200000c1300000d1300000e130000
   - position: {x: 60.000004, y: -14.735703, z: -136.00002}
     neighbors: 4e1200004f12000050120000b3120000b51200000d1300000e1300000f130000
   - position: {x: 60, y: -14.735703, z: -132.00002}
@@ -11003,11 +10974,11 @@ MonoBehaviour:
   - position: {x: 64, y: -14.735703, z: -196.00003}
     neighbors: a4120000a5120000a6120000091300000b130000631300006413000065130000
   - position: {x: 64, y: -14.735703, z: -192.00002}
-    neighbors: a5120000a61200000a1300006413000065130000
+    neighbors: a5120000a6120000a71200000a1300006413000065130000
   - position: {x: 64, y: -14.735703, z: -143.55334}
-    neighbors: b21200000d1300006613000067130000
+    neighbors: b1120000b2120000b31200000d1300006613000067130000
   - position: {x: 64, y: -14.735703, z: -140.00003}
-    neighbors: b2120000b3120000b41200000c1300000e1300006713000068130000
+    neighbors: b2120000b3120000b41200000c1300000e130000661300006713000068130000
   - position: {x: 64, y: -14.735703, z: -136.00002}
     neighbors: b3120000b4120000b51200000d1300000f130000671300006813000069130000
   - position: {x: 64, y: -14.735703, z: -132.00002}
@@ -11185,9 +11156,9 @@ MonoBehaviour:
   - position: {x: 67.99999, y: -14.735703, z: -192.00002}
     neighbors: 0a1300000b13000064130000be130000bf130000
   - position: {x: 68, y: -14.735703, z: -143.55334}
-    neighbors: 0c13000067130000c0130000c1130000
+    neighbors: 0c1300000d13000067130000c0130000c1130000
   - position: {x: 67.99999, y: -14.735703, z: -140.00003}
-    neighbors: 0c1300000d1300000e1300006613000068130000c1130000c2130000
+    neighbors: 0c1300000d1300000e1300006613000068130000c0130000c1130000c2130000
   - position: {x: 67.99999, y: -14.735703, z: -136.00002}
     neighbors: 0d1300000e1300000f1300006713000069130000c1130000c2130000c3130000
   - position: {x: 68, y: -14.735703, z: -132.00002}
@@ -11365,9 +11336,9 @@ MonoBehaviour:
   - position: {x: 72, y: -14.735703, z: -192.00002}
     neighbors: 6413000065130000be1300001814000019140000
   - position: {x: 72, y: -14.735703, z: -143.55334}
-    neighbors: 66130000c11300001a1400001b140000
+    neighbors: 6613000067130000c11300001a1400001b140000
   - position: {x: 72, y: -14.735703, z: -140.00003}
-    neighbors: 661300006713000068130000c0130000c21300001b1400001c140000
+    neighbors: 661300006713000068130000c0130000c21300001a1400001b1400001c140000
   - position: {x: 72, y: -14.735703, z: -136.00002}
     neighbors: 671300006813000069130000c1130000c31300001b1400001c1400001d140000
   - position: {x: 72, y: -14.735703, z: -132.00002}
@@ -11545,9 +11516,9 @@ MonoBehaviour:
   - position: {x: 76, y: -14.735703, z: -192.00002}
     neighbors: be130000bf130000181400007214000073140000
   - position: {x: 76, y: -14.735703, z: -143.55334}
-    neighbors: c01300001b1400007414000075140000
+    neighbors: c0130000c11300001b1400007414000075140000
   - position: {x: 76, y: -14.735703, z: -140.00005}
-    neighbors: c0130000c1130000c21300001a1400001c1400007514000076140000
+    neighbors: c0130000c1130000c21300001a1400001c140000741400007514000076140000
   - position: {x: 76, y: -14.735703, z: -136.00002}
     neighbors: c1130000c2130000c31300001b1400001d140000751400007614000077140000
   - position: {x: 75.99999, y: -14.735703, z: -132.00002}
@@ -11725,9 +11696,9 @@ MonoBehaviour:
   - position: {x: 80, y: -14.735703, z: -192.00002}
     neighbors: 181400001914000072140000cc140000cd140000
   - position: {x: 80.00001, y: -14.735703, z: -143.55334}
-    neighbors: 1a14000075140000ce140000cf140000
+    neighbors: 1a1400001b14000075140000ce140000cf140000
   - position: {x: 80, y: -14.735703, z: -140.00003}
-    neighbors: 1a1400001b1400001c1400007414000076140000cf140000d0140000
+    neighbors: 1a1400001b1400001c1400007414000076140000ce140000cf140000d0140000
   - position: {x: 80.00001, y: -14.735703, z: -136.00003}
     neighbors: 1b1400001c1400001d1400007514000077140000cf140000d0140000d1140000
   - position: {x: 80, y: -14.735703, z: -132.00002}
@@ -11905,9 +11876,9 @@ MonoBehaviour:
   - position: {x: 83.99999, y: -14.735703, z: -192.00002}
     neighbors: 7214000073140000cc1400002615000027150000
   - position: {x: 84, y: -14.735703, z: -143.55334}
-    neighbors: 74140000cf1400002815000029150000
+    neighbors: 7414000075140000cf1400002815000029150000
   - position: {x: 83.99999, y: -14.735703, z: -140.00003}
-    neighbors: 741400007514000076140000ce140000d0140000291500002a150000
+    neighbors: 741400007514000076140000ce140000d014000028150000291500002a150000
   - position: {x: 84, y: -14.735703, z: -136.00002}
     neighbors: 751400007614000077140000cf140000d1140000291500002a1500002b150000
   - position: {x: 84, y: -14.735703, z: -132.00002}
@@ -12085,9 +12056,9 @@ MonoBehaviour:
   - position: {x: 87.99999, y: -14.735703, z: -192.00002}
     neighbors: cc140000cd140000261500008015000081150000
   - position: {x: 87.99999, y: -14.735703, z: -143.55334}
-    neighbors: ce1400002915000083150000
+    neighbors: ce140000cf140000291500008215000083150000
   - position: {x: 87.99999, y: -14.735703, z: -140.00003}
-    neighbors: ce140000cf140000d0140000281500002a1500008315000084150000
+    neighbors: ce140000cf140000d0140000281500002a150000821500008315000084150000
   - position: {x: 87.99999, y: -14.735703, z: -136.00002}
     neighbors: cf140000d0140000d1140000291500002b150000831500008415000085150000
   - position: {x: 87.99999, y: -14.735703, z: -132.00002}
@@ -12265,9 +12236,9 @@ MonoBehaviour:
   - position: {x: 92, y: -14.735703, z: -192.00002}
     neighbors: 261500002715000080150000da150000db150000
   - position: {x: 92, y: -14.735703, z: -143.55334}
-    neighbors: 83150000dd150000
+    neighbors: 281500002915000083150000dc150000dd150000
   - position: {x: 92, y: -14.735703, z: -140.00003}
-    neighbors: 28150000291500002a1500008215000084150000dd150000de150000
+    neighbors: 28150000291500002a1500008215000084150000dc150000dd150000de150000
   - position: {x: 92, y: -14.735703, z: -136.00002}
     neighbors: 291500002a1500002b1500008315000085150000dd150000de150000df150000
   - position: {x: 92, y: -14.735703, z: -132.00002}
@@ -12445,9 +12416,9 @@ MonoBehaviour:
   - position: {x: 95.99999, y: -14.735703, z: -192.00002}
     neighbors: 8015000081150000da1500003416000035160000
   - position: {x: 96, y: -14.735703, z: -143.55334}
-    neighbors: dd1500003616000037160000
+    neighbors: 8215000083150000dd1500003616000037160000
   - position: {x: 96, y: -14.735703, z: -140.00003}
-    neighbors: 821500008315000084150000dc150000de1500003716000038160000
+    neighbors: 821500008315000084150000dc150000de150000361600003716000038160000
   - position: {x: 96, y: -14.735703, z: -136.00002}
     neighbors: 831500008415000085150000dd150000df150000371600003816000039160000
   - position: {x: 96, y: -14.735703, z: -132.00002}
@@ -12623,9 +12594,9 @@ MonoBehaviour:
   - position: {x: 100, y: -14.735703, z: -196.00003}
     neighbors: d9150000da150000db15000033160000351600008d1600008e1600008f160000
   - position: {x: 99.99999, y: -14.735703, z: -192.00002}
-    neighbors: da150000db150000341600008e1600008f160000
+    neighbors: da150000db150000341600008e1600008f16000090160000
   - position: {x: 100, y: -14.735703, z: -143.55334}
-    neighbors: dc150000371600009c160000
+    neighbors: dc150000dd150000371600009a1600009b1600009c160000
   - position: {x: 100, y: -14.735703, z: -140.00003}
     neighbors: dc150000dd150000de15000036160000381600009b1600009c1600009d160000
   - position: {x: 100, y: -14.735703, z: -136.00002}
@@ -12805,7 +12776,7 @@ MonoBehaviour:
   - position: {x: 103.99999, y: -14.735703, z: -192.00002}
     neighbors: 34160000351600008e16000090160000f3160000f4160000f5160000
   - position: {x: 104, y: -14.672699, z: -188.00002}
-    neighbors: 8f16000091160000f4160000f5160000f6160000
+    neighbors: 351600008f16000091160000f4160000f5160000f6160000
   - position: {x: 104, y: -14.615778, z: -184}
     neighbors: 9016000092160000f5160000f6160000f7160000
   - position: {x: 104.00001, y: -14.647293, z: -180.00002}
@@ -12825,9 +12796,9 @@ MonoBehaviour:
   - position: {x: 104, y: -14.627076, z: -152.00002}
     neighbors: 981600009a160000fd160000fe160000ff160000
   - position: {x: 104, y: -14.620488, z: -148.00002}
-    neighbors: 991600009b160000fe160000ff16000000170000
+    neighbors: 36160000991600009b160000fe160000ff16000000170000
   - position: {x: 104, y: -14.715006, z: -144.00003}
-    neighbors: 371600009a1600009c160000ff1600000017000001170000
+    neighbors: 36160000371600009a1600009c160000ff1600000017000001170000
   - position: {x: 104, y: -14.735703, z: -140.00003}
     neighbors: 3616000037160000381600009b1600009d160000001700000117000002170000
   - position: {x: 104, y: -14.735703, z: -136.00002}
@@ -19313,7 +19284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySurfaceNavigator
   targetBehaviour: {fileID: 311080679}
-  moveSpeed: 4
+  moveSpeed: 3
   repathInterval: 0.5
   waypointReachedDistance: 0.3
 --- !u!114 &555378519
@@ -20079,6 +20050,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &716184231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716184232}
+  - component: {fileID: 716184234}
+  - component: {fileID: 716184233}
+  m_Layer: 7
+  m_Name: enemyModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716184232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716184231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 959967819}
+  m_Father: {fileID: 2000536393}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &716184233
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716184231}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e18ded4b611aa8f4a9f0f261d2f29537, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &716184234
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716184231}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &717604384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -959013602841717634, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -20332,119 +20394,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &866473432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 866473436}
-  - component: {fileID: 866473435}
-  - component: {fileID: 866473434}
-  - component: {fileID: 866473433}
-  m_Layer: 6
-  m_Name: wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &866473433
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866473432}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &866473434
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866473432}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &866473435
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866473432}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &866473436
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866473432}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.76, y: -11.61663, z: -118.1}
-  m_LocalScale: {x: 7.5571, y: 7.3245764, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -21168,6 +21117,96 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2085957136122219501, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+--- !u!1 &959967818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959967819}
+  - component: {fileID: 959967821}
+  - component: {fileID: 959967820}
+  m_Layer: 7
+  m_Name: head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959967819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959967818}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.029999971, y: 0.82099986, z: 0.23600006}
+  m_LocalScale: {x: -0.15532, y: 0.584, z: 0.43337}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 716184232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &959967820
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959967818}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &959967821
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959967818}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1052023565
 GameObject:
   m_ObjectHideFlags: 0
@@ -23169,6 +23208,216 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1240631330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240631335}
+  - component: {fileID: 1240631334}
+  - component: {fileID: 1240631333}
+  - component: {fileID: 1240631332}
+  - component: {fileID: 1240631331}
+  m_Layer: 7
+  m_Name: enemyWalker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1240631331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240631330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c69d7ca33a47156b8fa4fd9322f3ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGroundNavigator
+  target: {fileID: 311080678}
+  groundGraph: {fileID: 208916913}
+  moveSpeed: 3
+  repathInterval: 0.5
+  waypointReachedDistance: 0.5
+  directChaseDistance: 1.5
+--- !u!114 &1240631332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240631330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddd0c6380ef46e11b6e19325ab26b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySurfaceNavigator
+  targetBehaviour: {fileID: 311080679}
+  moveSpeed: 4
+  repathInterval: 0.5
+  waypointReachedDistance: 0.3
+--- !u!114 &1240631333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240631330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
+  controller: {fileID: 1240631334}
+  enemyModel: {fileID: 2124577121}
+  walkSpeed: 5
+  climbSpeed: 4
+  gravity: -20
+  airDrag: 3
+  rotationSpeed: 10
+  climbableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  surfaceOffset: 0
+  edgeEpsilon: 0.0001
+--- !u!143 &1240631334
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240631330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1240631335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240631330}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -11.71, z: -120.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 163809760}
+  - {fileID: 2124577121}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1280544730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280544731}
+  - component: {fileID: 1280544733}
+  - component: {fileID: 1280544732}
+  m_Layer: 7
+  m_Name: head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1280544731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280544730}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.029999971, y: 0.82099986, z: 0.23600006}
+  m_LocalScale: {x: -0.15532, y: 0.584, z: 0.43337}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2018550113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1280544732
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280544730}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1280544733
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280544730}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1363389926
 GameObject:
   m_ObjectHideFlags: 0
@@ -24246,7 +24495,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9222175348383371259, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
---- !u!1 &1630561120
+--- !u!1 &1719521217
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24254,7 +24503,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1630561121}
+  - component: {fileID: 1719521218}
   m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -24262,230 +24511,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1630561121
+--- !u!4 &1719521218
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630561120}
+  m_GameObject: {fileID: 1719521217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1686426591}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1660548027
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660548028}
-  - component: {fileID: 1660548030}
-  - component: {fileID: 1660548029}
-  m_Layer: 7
-  m_Name: head
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1660548028
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660548027}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.029999971, y: 0.82099986, z: 0.23600006}
-  m_LocalScale: {x: -0.15532, y: 0.584, z: 0.43337}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 195745039}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1660548029
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660548027}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1660548030
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660548027}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1686426586
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1686426591}
-  - component: {fileID: 1686426590}
-  - component: {fileID: 1686426589}
-  - component: {fileID: 1686426588}
-  - component: {fileID: 1686426587}
-  m_Layer: 7
-  m_Name: enemyWalker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1686426587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686426586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c69d7ca33a47156b8fa4fd9322f3ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyGroundNavigator
-  target: {fileID: 311080678}
-  groundGraph: {fileID: 208916913}
-  moveSpeed: 5
-  repathInterval: 0.5
-  waypointReachedDistance: 0.5
-  directChaseDistance: 1
---- !u!114 &1686426588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686426586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eddd0c6380ef46e11b6e19325ab26b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySurfaceNavigator
-  targetBehaviour: {fileID: 311080679}
-  moveSpeed: 3
-  repathInterval: 0.5
-  waypointReachedDistance: 0.3
---- !u!114 &1686426589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686426586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
-  controller: {fileID: 1686426590}
-  enemyModel: {fileID: 195745039}
-  walkSpeed: 5
-  climbSpeed: 4
-  gravity: -20
-  airDrag: 3
-  rotationSpeed: 10
-  climbableLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  surfaceOffset: 0
-  edgeEpsilon: 0.0001
---- !u!143 &1686426590
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686426586}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1686426591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686426586}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9, y: -10.73, z: -120.71}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1630561121}
-  - {fileID: 195745039}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2000536393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761585138 stripped
 GameObject:
@@ -28632,6 +28671,288 @@ MonoBehaviour:
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffffffffffff
   triangleToFace: 000000000000000001000000010000000200000002000000030000000300000004000000040000000500000005000000
+--- !u!1 &1994582997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994582998}
+  - component: {fileID: 1994583000}
+  - component: {fileID: 1994582999}
+  m_Layer: 7
+  m_Name: head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1994582998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994582997}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.029999971, y: 0.82099986, z: 0.23600006}
+  m_LocalScale: {x: -0.15532, y: 0.584, z: 0.43337}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2124577121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1994582999
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994582997}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1994583000
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994582997}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2000536389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000536393}
+  - component: {fileID: 2000536392}
+  - component: {fileID: 2000536391}
+  - component: {fileID: 2000536390}
+  m_Layer: 7
+  m_Name: enemyClimber (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2000536390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000536389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddd0c6380ef46e11b6e19325ab26b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySurfaceNavigator
+  targetBehaviour: {fileID: 311080679}
+  moveSpeed: 3
+  repathInterval: 0.5
+  waypointReachedDistance: 0.3
+--- !u!114 &2000536391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000536389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
+  controller: {fileID: 2000536392}
+  enemyModel: {fileID: 716184232}
+  walkSpeed: 5
+  climbSpeed: 3
+  gravity: -9.81
+  airDrag: 3
+  rotationSpeed: 10
+  climbableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  surfaceOffset: 0
+  edgeEpsilon: 0.0001
+--- !u!143 &2000536392
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000536389}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2000536393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000536389}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.32, y: 33.08, z: -102.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1719521218}
+  - {fileID: 716184232}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2018550112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018550113}
+  - component: {fileID: 2018550115}
+  - component: {fileID: 2018550114}
+  m_Layer: 7
+  m_Name: enemyModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2018550113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018550112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1280544731}
+  m_Father: {fileID: 2120419634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2018550114
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018550112}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e18ded4b611aa8f4a9f0f261d2f29537, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2018550115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018550112}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2026039184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8660170253807844976, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -29494,6 +29815,198 @@ MonoBehaviour:
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffffffffffff
   triangleToFace: 000000000000000001000000010000000200000002000000030000000300000004000000040000000500000005000000
+--- !u!1 &2120419630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120419634}
+  - component: {fileID: 2120419633}
+  - component: {fileID: 2120419632}
+  - component: {fileID: 2120419631}
+  m_Layer: 7
+  m_Name: enemyClimber (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120419631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120419630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddd0c6380ef46e11b6e19325ab26b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySurfaceNavigator
+  targetBehaviour: {fileID: 311080679}
+  moveSpeed: 3
+  repathInterval: 0.5
+  waypointReachedDistance: 0.3
+--- !u!114 &2120419632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120419630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
+  controller: {fileID: 2120419633}
+  enemyModel: {fileID: 2018550113}
+  walkSpeed: 5
+  climbSpeed: 3
+  gravity: -9.81
+  airDrag: 3
+  rotationSpeed: 10
+  climbableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  surfaceOffset: 0
+  edgeEpsilon: 0.0001
+--- !u!143 &2120419633
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120419630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2120419634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120419630}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.07, y: -7.000001, z: -102.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 174315757}
+  - {fileID: 2018550113}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124577120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124577121}
+  - component: {fileID: 2124577123}
+  - component: {fileID: 2124577122}
+  m_Layer: 7
+  m_Name: enemyModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124577121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124577120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1994582998}
+  m_Father: {fileID: 1240631335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2124577122
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124577120}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e18ded4b611aa8f4a9f0f261d2f29537, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2124577123
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124577120}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2130990393 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7717221283737856046, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -29810,8 +30323,10 @@ SceneRoots:
   - {fileID: 1886004528}
   - {fileID: 311080678}
   - {fileID: 555378521}
+  - {fileID: 2120419634}
+  - {fileID: 2000536393}
   - {fileID: 398576418}
-  - {fileID: 1686426591}
+  - {fileID: 1240631335}
   - {fileID: 1090190351}
   - {fileID: 496819413}
   - {fileID: 109955993}
@@ -29820,4 +30335,3 @@ SceneRoots:
   - {fileID: 324745167}
   - {fileID: 208916914}
   - {fileID: 713220758}
-  - {fileID: 866473436}

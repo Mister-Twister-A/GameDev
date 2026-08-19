@@ -12,6 +12,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
     public float waypointReachedDistance = 0.3f;
 
     private ISurfaceWalker self;
+    private EnemyClimbController climbController;
     private List<FaceRef> path;
     private int pathIndex;
     private float repathTimer;
@@ -23,6 +24,10 @@ public class EnemySurfaceNavigator : MonoBehaviour
     {
         self = GetComponent<ISurfaceWalker>();
         target = targetBehaviour as ISurfaceLocator;
+        climbController = GetComponent<EnemyClimbController>();
+
+        if (climbController == null)
+            Debug.LogError($"{name}: EnemySurfaceNavigator needs an EnemyClimbController on the same object.");
 
         if (self == null)
             Debug.LogError($"{name}: EnemySurfaceNavigator needs a component implementing ISurfaceWalker on the same object.");
@@ -34,6 +39,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
     {
         if (self == null || target == null) return;
 
+        if(!climbController.IsClimbing) return;
         repathTimer -= Time.deltaTime;
         if (repathTimer <= 0f){
             Repath();
