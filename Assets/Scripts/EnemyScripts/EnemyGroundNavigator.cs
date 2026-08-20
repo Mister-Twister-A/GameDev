@@ -42,12 +42,15 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         if (target == null)
             Debug.LogError($"{name}: EnemyGroundNavigator has no target assigned.");
+
+        
     }
 
     private void Update()
     {
         if (self == null || groundGraph == null || target == null) return;
         if(climbController.IsClimbing == true) return;
+        target = climbController.CurrentTarget;
 
         repathTimer -= Time.deltaTime;
 

@@ -9,12 +9,20 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public CharacterController controller;
     [SerializeField] private Transform enemyModel;
 
+    public Transform CurrentTarget;
+    public PlayerClimbController playerController;
+
+    private Transform EntryPoint;
+
     [Header("Movement")]
     public float walkSpeed = 5f;
     public float climbSpeed = 4f;
     public float gravity = -9.81f;
     public float airDrag = 3f;
     public float rotationSpeed = 10f;
+
+    [SerializeField] private float retargetInterval = 0.4f;
+    
 
     [Header("Climbing")]
     public LayerMask climbableLayer;
@@ -58,12 +66,41 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     {
         if (controller == null) controller = GetComponent<CharacterController>();
         surfaceOffset = controller.height * 0.5f;
-    }
 
+        var markerGO = new GameObject($"{name}_EntryMarker")
+        {
+            hideFlags = HideFlags.HideInHierarchy
+        };
+        EntryPoint = markerGO.transform;
+    }
+    private float retargetTimer;
     void Update()
     {
+        retargetTimer -= Time.deltaTime;
+        if (retargetTimer <= 0f)
+        {
+            retargetTimer = retargetInterval;
+            RefreshTarget();
+        }
         if (state == State.Normal) NormalUpdate();
         else ClimbingUpdate();
+    }
+
+    private void RefreshTarget()
+    {
+        var playerisclimbing = playerController.IsClimbing;
+        if(state == State.Normal && playerisclimbing && playerController.CurrentSurface != null 
+        && ClimbEntryPointRegestry.Instance.TryFindNearestEntryOnSurface(
+            playerController.CurrentSurface, playerController.transform.position,
+            out FaceRef entryFace, out GroundNodeRef entryNode))
+        {
+            EntryPoint.position = entryNode.WorldPosition;
+            CurrentTarget = EntryPoint;
+        }
+        else
+        {
+            CurrentTarget = playerController.transform;
+        }
     }
 
     void NormalUpdate()

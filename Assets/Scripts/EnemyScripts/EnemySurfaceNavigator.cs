@@ -31,6 +31,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
 
         if (self == null)
             Debug.LogError($"{name}: EnemySurfaceNavigator needs a component implementing ISurfaceWalker on the same object.");
+            
         if (targetBehaviour != null && target == null)
             Debug.LogError($"{name}: targetBehaviour does not implement ISurfaceLocator.");
     }

@@ -12,6 +12,8 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     [SerializeField] private Transform playerModel;
 
+    public bool IsClimbing => state == State.Climbing;
+
     [Header("Movement")]
     public float walkSpeed = 5f;
     public float climbSpeed = 4f;
@@ -39,6 +41,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     public Vector3 Position => transform.position;
 
     State state = State.Normal;
+
     ClimbableSurface currentSurface;
     int currentFaceIndex = -1;
     Vector3 verticalVelocity;

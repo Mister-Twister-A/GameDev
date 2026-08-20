@@ -60,4 +60,29 @@ public class ClimbEntryPointRegestry : MonoBehaviour
  
         return found;
     }
+    public bool TryFindNearestEntryOnSurface(ClimbableSurface surface, Vector3 fromWorldPosition,
+        out FaceRef entryFace, out GroundNodeRef groundNode)
+    {
+        entryFace = default;
+        groundNode = default;
+ 
+        float bestSqrDist = float.MaxValue;
+        bool found = false;
+ 
+        foreach (var (face, node) in entries)
+        {
+            if (face.surface != surface) continue;
+            if (!node.IsValid) continue;
+ 
+            float sqrDist = (face.WorldPosition - fromWorldPosition).sqrMagnitude;
+            if (sqrDist >= bestSqrDist) continue;
+ 
+            bestSqrDist = sqrDist;
+            entryFace = face;
+            groundNode = node;
+            found = true;
+        }
+ 
+        return found;
+    }
 }

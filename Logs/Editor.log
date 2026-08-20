@@ -1396,3 +1396,2883 @@ Total: 51.744556 ms (FindLiveObjects: 0.617577 ms CreateObjectMapping: 1.664169 
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
+
+Asset Pipeline Refresh (id=25386bd36698e4e25bda4dda01dbfd83): Total: 0.496 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=494 ms
+		Asset DB Callback time: managed=0 ms, native=1 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 1.714ms
+	ApplyChangesToAssetFolders: 0.942ms
+	Scan: 484.295ms
+	Collect global state as custom dependencies: 0.369ms
+	GatherAllCurrentPrimaryImportResultRevisions: 3.475ms
+	UnloadStreamsBegin: 0.919ms
+	UnloadStreamsEnd: 0.083ms
+	Untracked: 3.242ms
+
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 17.3035ms
+Starting: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Tools/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /home/usio/Titan test
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 2.6067ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 156.2432ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 40.9495ms
+ExitCode: 0 Duration: 2s875ms
+[715/937    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[929/937    2s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll (+2 others)
+[930/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[931/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[932/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[933/937    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[934/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[935/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[936/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+*** Tundra build success (2.76 seconds), 9 items updated, 937 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 172573348
+Total cache size after purge 172573348, took 00:00:01.3587204
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 2.17 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.378 seconds
+Domain Reload Profiling: 5931ms
+	BeginReloadAssembly (2854ms)
+		DisableScriptedObjects (519ms)
+		CreateAndSetChildDomain (1275ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (103ms)
+	LoadAllAssembliesAndSetupDomain (568ms)
+		LoadAssemblies (595ms)
+		AnalyzeDomain (238ms)
+			TypeCache.Refresh (21ms)
+			BuildScriptInfoCaches (184ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (2380ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (474ms)
+			ProcessInitializeOnLoadAttributes (526ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (622ms)
+
+Asset Pipeline Refresh (id=f0fa0c68cc87bbb6981e6514443b2294): Total: 11.596 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3755 ms
+		Asset DB Callback time: managed=87 ms, native=11 ms
+		Scripting: domain reloads=1, domain reload time=3940 ms, compile time=3799 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=2, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 3.261ms
+	ApplyChangesToAssetFolders: 1.230ms
+	Scan: 925.945ms
+	Collect global state as custom dependencies: 7.950ms
+	OnSourceAssetsModified: 6.979ms
+	CategorizeScriptCompilationAssets: 1.216ms
+	ProcessAssetsWithTransientArtifactChanges: 26.924ms
+	CategorizeAssets: 180.726ms
+	CompileScripts: 3798.912ms
+	ImportOutOfDateAssets: 2457.693ms (2406.655ms without children)
+		CollectScriptTypesHashes: 6.451ms
+		ReloadNativeAssets: 0.979ms
+		UnloadImportedAssets: 0.373ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.066ms
+		ImportSchedulerStart: 48.564ms
+	PostProcessAllAssets: 87.136ms
+		PostProcessCallbackCreateDeferredMaterials 1.339ms
+		XRBuildSystem.XRAssetImported 0.905ms
+		SpeedTreeImporter.PostprocessAllAssets 0.616ms
+		MonoPostProcessAllAssets: 83.321ms
+			AssetPostprocessor.OnPostprocessAllAssets 21.381ms
+			SyncVS.PostprocessSyncProject 12.517ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.695ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.178ms
+			AssetChangedListener.OnPostprocessAllAssets 5.910ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.878ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.877ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.857ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.330ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.110ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.948ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.904ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.651ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.638ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.513ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.365ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.354ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.345ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.323ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.322ms
+			CinemachineSettings.OnPostprocessAllAssets 0.285ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.283ms
+			PostProcessor.OnPostprocessAllAssets 0.280ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.276ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.243ms
+			AssetEvents.OnPostprocessAllAssets 0.219ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.191ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.177ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.166ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.150ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.125ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.124ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.091ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.075ms
+	PostAssetChangesProfiler: 4.463ms
+	GatherAllCurrentPrimaryImportResultRevisions: 5.383ms
+	UnloadStreamsBegin: 6.144ms
+	PersistCurrentRevisions: 0.177ms
+	GenerateScriptTypeHashes: 5.571ms
+	GenerateScriptTypeSerializationHashes: 9.895ms
+	Untracked: 4073.107ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+AssetDatabase: script compilation time: 0.052481s
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 21.0921ms
+Starting: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Tools/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /home/usio/Titan test
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 2.0148ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 147.6342ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 94.1942ms
+ExitCode: 0 Duration: 4s59ms
+[715/937    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[929/937    3s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll (+2 others)
+[930/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[931/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[932/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[933/937    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[934/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[935/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[936/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (3.88 seconds), 9 items updated, 937 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 172573348
+Total cache size after purge 172573348, took 00:00:01.3552154
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 2.64 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.784 seconds
+Domain Reload Profiling: 5927ms
+	BeginReloadAssembly (2266ms)
+		DisableScriptedObjects (323ms)
+		CreateAndSetChildDomain (1266ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (158ms)
+	LoadAllAssembliesAndSetupDomain (688ms)
+		LoadAssemblies (590ms)
+		AnalyzeDomain (270ms)
+			TypeCache.Refresh (22ms)
+			BuildScriptInfoCaches (204ms)
+			ResolveRequiredComponents (38ms)
+	FinalizeReload (2785ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (601ms)
+			ProcessInitializeOnLoadAttributes (612ms)
+			ProcessInitializeOnLoadMethodAttributes (148ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (3ms)
+		AwakeInstancesAfterBackupRestoration (742ms)
+
+Asset Pipeline Refresh (id=ac22eee63f25391daa91b88ef6b63728): Total: 13.643 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=5055 ms
+		Asset DB Callback time: managed=106 ms, native=13 ms
+		Scripting: domain reloads=1, domain reload time=3335 ms, compile time=5126 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=4, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokeCustomDependenciesCallbacks: 0.075ms
+	InvokePackagesCallback: 6.711ms
+	ApplyChangesToAssetFolders: 5.931ms
+	Scan: 1740.973ms
+	Collect global state as custom dependencies: 9.545ms
+	OnSourceAssetsModified: 47.753ms
+	CategorizeScriptCompilationAssets: 1.431ms
+	ProcessAssetsWithTransientArtifactChanges: 14.108ms
+	CategorizeAssets: 192.463ms
+	CompileScripts: 5125.990ms
+	ImportOutOfDateAssets: 2860.292ms (2809.668ms without children)
+		CollectScriptTypesHashes: 13.971ms
+		ReloadNativeAssets: 1.393ms
+		UnloadImportedAssets: 0.363ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.938ms
+		ImportSchedulerStart: 47.744ms
+	PostProcessAllAssets: 63.476ms
+		PostProcessCallbackCreateDeferredMaterials 1.116ms
+		XRBuildSystem.XRAssetImported 0.893ms
+		ShaderAssetModifiedCallback 0.202ms
+		MonoPostProcessAllAssets: 60.175ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.256ms
+			SyncVS.PostprocessSyncProject 7.447ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.815ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.736ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.056ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.823ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.667ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.328ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			CinemachineSettings.OnPostprocessAllAssets 0.292ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.291ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.233ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.174ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.146ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.123ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	PostAssetChangesProfiler: 3.866ms
+	GatherAllCurrentPrimaryImportResultRevisions: 13.667ms
+	UnloadStreamsBegin: 1.009ms
+	PersistCurrentRevisions: 0.166ms
+	GenerateScriptTypeHashes: 3.993ms
+	GenerateScriptTypeSerializationHashes: 6.483ms
+	Untracked: 3539.239ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.545 seconds
+Domain Reload Profiling: 4597ms
+	BeginReloadAssembly (1639ms)
+		DisableScriptedObjects (123ms)
+		CreateAndSetChildDomain (1114ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (281ms)
+		LoadAssemblies (343ms)
+		AnalyzeDomain (44ms)
+			TypeCache.Refresh (11ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (2582ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (660ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (802ms)
+
+Asset Pipeline Refresh (id=800865010125b174387205f03a468d32): Total: 5.062 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2870 ms
+		Asset DB Callback time: managed=65 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=2122 ms, compile time=4 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 4.569ms
+	ApplyChangesToAssetFolders: 0.611ms
+	Collect global state as custom dependencies: 4.051ms
+	ProcessAssetsWithTransientArtifactChanges: 3.899ms
+	CategorizeAssets: 120.497ms
+	CompileScripts: 3.539ms
+	ImportOutOfDateAssets: 2636.457ms (2601.983ms without children)
+		CollectScriptTypesHashes: 2.709ms
+		ReloadNativeAssets: 1.226ms
+		UnloadImportedAssets: 0.212ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.030ms
+		ImportSchedulerStart: 31.944ms
+	PostProcessAllAssets: 65.070ms
+		MonoPostProcessAllAssets: 65.062ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 22.115ms
+			SyncVS.PostprocessSyncProject 13.436ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.693ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 3.639ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.871ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.470ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.719ms
+			CinemachineSettings.OnPostprocessAllAssets 0.713ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.655ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.596ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.517ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.403ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.373ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.269ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	GatherAllCurrentPrimaryImportResultRevisions: 1.656ms
+	PersistCurrentRevisions: 0.160ms
+	GenerateScriptTypeHashes: 6.699ms
+	GenerateScriptTypeSerializationHashes: 11.717ms
+	Untracked: 2216.487ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            40.368 ms
+	Integration:            637.804 ms
+	Integration of assets:  0.057 ms
+	Thread Wait Time:       0.056 ms
+	Total Operation Time:   678.285 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            39.689 ms
+	Integration:            334.922 ms
+	Integration of assets:  0.062 ms
+	Thread Wait Time:       -0.039 ms
+	Total Operation Time:   374.634 ms
+Unloading 26 unused Assets / (6.8 MB). Loaded Objects now: 9773.
+Memory consumption went from 486.5 MB to 479.7 MB.
+Total: 57.466606 ms (FindLiveObjects: 0.583181 ms CreateObjectMapping: 1.574819 ms MarkObjects: 53.868502 ms  DeleteObjects: 1.437360 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.404 seconds
+Domain Reload Profiling: 3733ms
+	BeginReloadAssembly (878ms)
+		DisableScriptedObjects (61ms)
+		CreateAndSetChildDomain (542ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (375ms)
+		LoadAssemblies (144ms)
+		AnalyzeDomain (68ms)
+			TypeCache.Refresh (19ms)
+			ResolveRequiredComponents (39ms)
+	FinalizeReload (2406ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (88ms)
+			ProcessInitializeOnLoadAttributes (593ms)
+			ProcessInitializeOnLoadMethodAttributes (118ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (668ms)
+
+Asset Pipeline Refresh (id=1c2c7f7ed083dd0e095729511e1b4b40): Total: 4.197 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2719 ms
+		Asset DB Callback time: managed=74 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1398 ms, compile time=4 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 1.393ms
+	ApplyChangesToAssetFolders: 0.682ms
+	Collect global state as custom dependencies: 5.224ms
+	ProcessAssetsWithTransientArtifactChanges: 0.525ms
+	CategorizeAssets: 110.337ms
+	CompileScripts: 3.609ms
+	ImportOutOfDateAssets: 2505.388ms (2434.506ms without children)
+		CollectScriptTypesHashes: 1.640ms
+		ReloadNativeAssets: 1.993ms
+		UnloadImportedAssets: 0.245ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.131ms
+		ImportSchedulerStart: 67.458ms
+	PostProcessAllAssets: 74.148ms
+		MonoPostProcessAllAssets: 74.137ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 23.691ms
+			SyncVS.PostprocessSyncProject 12.778ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.242ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 3.700ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.544ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.383ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.778ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			CinemachineSettings.OnPostprocessAllAssets 0.682ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.633ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.565ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.555ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.365ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.357ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.274ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	GatherAllCurrentPrimaryImportResultRevisions: 2.797ms
+	UnloadStreamsBegin: 0.315ms
+	PersistCurrentRevisions: 0.451ms
+	GenerateScriptTypeHashes: 7.106ms
+	GenerateScriptTypeSerializationHashes: 12.562ms
+	Untracked: 1487.193ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            53.288 ms
+	Integration:            616.810 ms
+	Integration of assets:  0.044 ms
+	Thread Wait Time:       -0.027 ms
+	Total Operation Time:   670.115 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            36.934 ms
+	Integration:            288.304 ms
+	Integration of assets:  0.037 ms
+	Thread Wait Time:       -0.016 ms
+	Total Operation Time:   325.258 ms
+Unloading 21 unused Assets / (439.3 KB). Loaded Objects now: 9777.
+Memory consumption went from 480.8 MB to 480.4 MB.
+Total: 32.615414 ms (FindLiveObjects: 0.620250 ms CreateObjectMapping: 1.672258 ms MarkObjects: 29.866246 ms  DeleteObjects: 0.454726 ms)
+
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.261 seconds
+Domain Reload Profiling: 3596ms
+	BeginReloadAssembly (854ms)
+		DisableScriptedObjects (53ms)
+		CreateAndSetChildDomain (516ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (193ms)
+	LoadAllAssembliesAndSetupDomain (263ms)
+		LoadAssemblies (181ms)
+		AnalyzeDomain (49ms)
+			TypeCache.Refresh (15ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (2262ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (496ms)
+			ProcessInitializeOnLoadMethodAttributes (179ms)
+			AfterProcessingInitializeOnLoad (5ms)
+		AwakeInstancesAfterBackupRestoration (600ms)
+
+Asset Pipeline Refresh (id=ff15ab5ab9dbf4df39a577a8c763109a): Total: 3.999 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2491 ms
+		Asset DB Callback time: managed=118 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1385 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.838ms
+	ApplyChangesToAssetFolders: 0.753ms
+	Collect global state as custom dependencies: 5.707ms
+	ProcessAssetsWithTransientArtifactChanges: 0.452ms
+	CategorizeAssets: 71.072ms
+	CompileScripts: 2.398ms
+	ImportOutOfDateAssets: 2319.527ms (2279.400ms without children)
+		CollectScriptTypesHashes: 1.521ms
+		ReloadNativeAssets: 0.897ms
+		UnloadImportedAssets: 0.348ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.031ms
+		ImportSchedulerStart: 37.789ms
+	PostProcessAllAssets: 118.920ms
+		MonoPostProcessAllAssets: 118.909ms
+			SyncVS.PostprocessSyncProject 90.899ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.039ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.019ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.934ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.859ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.766ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.328ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.312ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.288ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.288ms
+			CinemachineSettings.OnPostprocessAllAssets 0.287ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.275ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.184ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.153ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.672ms
+	UnloadStreamsBegin: 0.194ms
+	PersistCurrentRevisions: 0.183ms
+	GenerateScriptTypeHashes: 3.700ms
+	GenerateScriptTypeSerializationHashes: 6.121ms
+	Untracked: 1473.987ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            22.735 ms
+	Integration:            716.836 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       -0.007 ms
+	Total Operation Time:   739.587 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00000] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:83 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:75 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 83)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            33.966 ms
+	Integration:            406.908 ms
+	Integration of assets:  0.053 ms
+	Thread Wait Time:       0.077 ms
+	Total Operation Time:   441.004 ms
+Unloading 21 unused Assets / (210.4 KB). Loaded Objects now: 9779.
+Memory consumption went from 470.6 MB to 470.4 MB.
+Total: 64.804289 ms (FindLiveObjects: 0.963981 ms CreateObjectMapping: 2.777583 ms MarkObjects: 60.738320 ms  DeleteObjects: 0.320729 ms)
+
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.060 seconds
+Domain Reload Profiling: 3335ms
+	BeginReloadAssembly (916ms)
+		DisableScriptedObjects (125ms)
+		CreateAndSetChildDomain (520ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (278ms)
+		LoadAssemblies (186ms)
+		AnalyzeDomain (82ms)
+			TypeCache.Refresh (16ms)
+			ResolveRequiredComponents (58ms)
+	FinalizeReload (2061ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (552ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (512ms)
+
+Asset Pipeline Refresh (id=04c263de274b5309780aa3ab95c9d2ad): Total: 3.646 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2288 ms
+		Asset DB Callback time: managed=41 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1314 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.742ms
+	ApplyChangesToAssetFolders: 0.617ms
+	Collect global state as custom dependencies: 4.381ms
+	ProcessAssetsWithTransientArtifactChanges: 0.400ms
+	CategorizeAssets: 97.066ms
+	CompileScripts: 2.029ms
+	ImportOutOfDateAssets: 2114.102ms (2077.380ms without children)
+		CollectScriptTypesHashes: 1.454ms
+		ReloadNativeAssets: 1.164ms
+		UnloadImportedAssets: 0.221ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.677ms
+		ImportSchedulerStart: 34.621ms
+	PostProcessAllAssets: 41.415ms
+		MonoPostProcessAllAssets: 41.388ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.021ms
+			SyncVS.PostprocessSyncProject 8.227ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.222ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.858ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.944ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.731ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.444ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.353ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			CinemachineSettings.OnPostprocessAllAssets 0.341ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.326ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.268ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.207ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.181ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.132ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.544ms
+	UnloadStreamsBegin: 0.291ms
+	PersistCurrentRevisions: 0.173ms
+	GenerateScriptTypeHashes: 5.530ms
+	GenerateScriptTypeSerializationHashes: 9.374ms
+	Untracked: 1381.596ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            17.262 ms
+	Integration:            546.727 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       0.099 ms
+	Total Operation Time:   564.110 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            32.196 ms
+	Integration:            269.630 ms
+	Integration of assets:  0.045 ms
+	Thread Wait Time:       0.017 ms
+	Total Operation Time:   301.888 ms
+Unloading 21 unused Assets / (344.1 KB). Loaded Objects now: 9773.
+Memory consumption went from 469.8 MB to 469.5 MB.
+Total: 28.944472 ms (FindLiveObjects: 0.600941 ms CreateObjectMapping: 1.493999 ms MarkObjects: 26.667145 ms  DeleteObjects: 0.180447 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.526 seconds
+Domain Reload Profiling: 3628ms
+	BeginReloadAssembly (805ms)
+		DisableScriptedObjects (144ms)
+		CreateAndSetChildDomain (468ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (225ms)
+		LoadAssemblies (129ms)
+		AnalyzeDomain (46ms)
+			TypeCache.Refresh (14ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (2527ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (96ms)
+			ProcessInitializeOnLoadAttributes (483ms)
+			ProcessInitializeOnLoadMethodAttributes (206ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (908ms)
+
+Asset Pipeline Refresh (id=4903389d179fa3f74ad870436055cce9): Total: 4.030 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2800 ms
+		Asset DB Callback time: managed=74 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1150 ms, compile time=4 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.767ms
+	ApplyChangesToAssetFolders: 0.581ms
+	Collect global state as custom dependencies: 4.015ms
+	ProcessAssetsWithTransientArtifactChanges: 0.361ms
+	CategorizeAssets: 94.386ms
+	CompileScripts: 3.672ms
+	ImportOutOfDateAssets: 2625.645ms (2556.098ms without children)
+		CollectScriptTypesHashes: 2.179ms
+		ReloadNativeAssets: 1.944ms
+		UnloadImportedAssets: 0.183ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.052ms
+		ImportSchedulerStart: 66.300ms
+	PostProcessAllAssets: 74.594ms
+		MonoPostProcessAllAssets: 74.584ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 21.708ms
+			SyncVS.PostprocessSyncProject 14.740ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.384ms
+			AssetChangedListener.OnPostprocessAllAssets 6.085ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 4.205ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.139ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.993ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.830ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.644ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.538ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.276ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 1.154ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.738ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.645ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.641ms
+			CinemachineSettings.OnPostprocessAllAssets 0.629ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.573ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.561ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.517ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.391ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.341ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.320ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.309ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.308ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.297ms
+			PostProcessor.OnPostprocessAllAssets 0.254ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.249ms
+			AssetEvents.OnPostprocessAllAssets 0.235ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.233ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.203ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.121ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.116ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.105ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.091ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.076ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.396ms
+	UnloadStreamsBegin: 0.190ms
+	PersistCurrentRevisions: 0.420ms
+	GenerateScriptTypeHashes: 6.643ms
+	GenerateScriptTypeSerializationHashes: 11.338ms
+	Untracked: 1221.326ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            19.453 ms
+	Integration:            597.083 ms
+	Integration of assets:  0.031 ms
+	Thread Wait Time:       -0.011 ms
+	Total Operation Time:   616.556 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            36.421 ms
+	Integration:            366.702 ms
+	Integration of assets:  0.056 ms
+	Thread Wait Time:       0.053 ms
+	Total Operation Time:   403.232 ms
+Unloading 21 unused Assets / (334.5 KB). Loaded Objects now: 9775.
+Memory consumption went from 468.9 MB to 468.6 MB.
+Total: 25.313942 ms (FindLiveObjects: 0.424916 ms CreateObjectMapping: 1.091377 ms MarkObjects: 23.399048 ms  DeleteObjects: 0.396182 ms)
+
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 36.7951ms
+Starting: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Tools/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /home/usio/Titan test
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 2.6071ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 112.4425ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 113.8124ms
+ExitCode: 0 Duration: 1s559ms
+[715/937    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[929/937    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll (+2 others)
+[931/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[932/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[935/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[936/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+*** Tundra build success (1.35 seconds), 6 items updated, 937 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 172573348
+Total cache size after purge 172573348, took 00:00:00.7475945
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.285 seconds
+Domain Reload Profiling: 4329ms
+	BeginReloadAssembly (1317ms)
+		DisableScriptedObjects (183ms)
+		CreateAndSetChildDomain (667ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (193ms)
+	LoadAllAssembliesAndSetupDomain (506ms)
+		LoadAssemblies (233ms)
+		AnalyzeDomain (285ms)
+			TypeCache.Refresh (24ms)
+				TypeCache.ScanAssembly (8ms)
+			BuildScriptInfoCaches (225ms)
+			ResolveRequiredComponents (31ms)
+	FinalizeReload (2287ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (297ms)
+			ProcessInitializeOnLoadAttributes (497ms)
+			ProcessInitializeOnLoadMethodAttributes (140ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (597ms)
+
+Asset Pipeline Refresh (id=46a0e195a02fb1e7cbc9fb9e9e036313): Total: 8.766 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=4156 ms
+		Asset DB Callback time: managed=66 ms, native=15 ms
+		Scripting: domain reloads=1, domain reload time=2152 ms, compile time=2374 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 6.943ms
+	ApplyChangesToAssetFolders: 1.134ms
+	Scan: 1551.463ms
+	Collect global state as custom dependencies: 10.003ms
+	OnSourceAssetsModified: 4.222ms
+	ProcessAssetsWithTransientArtifactChanges: 12.928ms
+	CategorizeAssets: 140.646ms
+	CompileScripts: 2374.242ms
+	ImportOutOfDateAssets: 2351.227ms (2309.542ms without children)
+		CollectScriptTypesHashes: 18.218ms
+		ReloadNativeAssets: 1.324ms
+		UnloadImportedAssets: 0.432ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.836ms
+		ImportSchedulerStart: 39.002ms
+	PostProcessAllAssets: 67.444ms
+		XRBuildSystem.XRAssetImported 0.652ms
+		PostProcessCallbackCreateDeferredMaterials 0.376ms
+		RaytracingShaderImportPostprocess 0.198ms
+		SpeedTreeImporter.PostprocessAllAssets 0.166ms
+		ShaderAssetModifiedCallback 0.130ms
+		MonoPostProcessAllAssets: 64.793ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 11.097ms
+			SyncVS.PostprocessSyncProject 8.333ms
+			AssetChangedListener.OnPostprocessAllAssets 6.091ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.998ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.691ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.133ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.982ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.705ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.312ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.007ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.941ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.825ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.695ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.659ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.550ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.362ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.360ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.359ms
+			PostProcessor.OnPostprocessAllAssets 0.329ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.319ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.316ms
+			CinemachineSettings.OnPostprocessAllAssets 0.306ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.265ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.261ms
+			AssetEvents.OnPostprocessAllAssets 0.247ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.240ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.211ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.200ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.178ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.159ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.137ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.130ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.128ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.108ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.098ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.071ms
+	PostAssetChangesProfiler: 6.367ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.866ms
+	UnloadStreamsBegin: 0.588ms
+	PersistCurrentRevisions: 0.156ms
+	GenerateScriptTypeHashes: 3.840ms
+	GenerateScriptTypeSerializationHashes: 6.525ms
+	Untracked: 2216.734ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.095 seconds
+Domain Reload Profiling: 3516ms
+	BeginReloadAssembly (954ms)
+		DisableScriptedObjects (182ms)
+		CreateAndSetChildDomain (563ms)
+	RebuildCommonClasses (16ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (117ms)
+	LoadAllAssembliesAndSetupDomain (320ms)
+		LoadAssemblies (173ms)
+		AnalyzeDomain (45ms)
+			TypeCache.Refresh (12ms)
+			ResolveRequiredComponents (27ms)
+	FinalizeReload (2097ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (404ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (581ms)
+
+Asset Pipeline Refresh (id=dbae849a2c8ab66698430a50688ca70d): Total: 3.983 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2432 ms
+		Asset DB Callback time: managed=81 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1465 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 1.136ms
+	ApplyChangesToAssetFolders: 0.457ms
+	Collect global state as custom dependencies: 3.504ms
+	CategorizeScriptCompilationAssets: 0.230ms
+	ProcessAssetsWithTransientArtifactChanges: 0.852ms
+	CategorizeAssets: 68.231ms
+	CompileScripts: 2.385ms
+	ImportOutOfDateAssets: 2195.578ms (2120.176ms without children)
+		CollectScriptTypesHashes: 1.271ms
+		ReloadNativeAssets: 1.313ms
+		UnloadImportedAssets: 0.158ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.955ms
+		ImportSchedulerStart: 72.930ms
+	PostProcessAllAssets: 81.650ms
+		MonoPostProcessAllAssets: 81.639ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 23.562ms
+			SyncVS.PostprocessSyncProject 18.184ms
+			AssetChangedListener.OnPostprocessAllAssets 6.091ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.998ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.691ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 5.099ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.180ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.741ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.705ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.605ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.312ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.825ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.816ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.689ms
+			CinemachineSettings.OnPostprocessAllAssets 0.668ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.659ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.635ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.581ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.550ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.387ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.360ms
+			PostProcessor.OnPostprocessAllAssets 0.329ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.320ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.319ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.319ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.316ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.265ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.261ms
+			AssetEvents.OnPostprocessAllAssets 0.247ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.200ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.178ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.137ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.130ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.108ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.098ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.071ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.368ms
+	PersistCurrentRevisions: 0.403ms
+	GenerateScriptTypeHashes: 4.800ms
+	GenerateScriptTypeSerializationHashes: 7.726ms
+	Untracked: 1622.671ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            17.695 ms
+	Integration:            587.746 ms
+	Integration of assets:  0.009 ms
+	Thread Wait Time:       -0.001 ms
+	Total Operation Time:   605.449 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00057] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:91 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:77 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 91)
+
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00057] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:91 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:77 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 91)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00057] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:91 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:77 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 91)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EnemyClimbController.RefreshTarget () [0x00057] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:91 
+  at EnemyClimbController.Update () [0x0002b] in /home/usio/Titan test/Assets/Scripts/EnemyScripts/EnemyClimbController.cs:77 
+
+(Filename: Assets/Scripts/EnemyScripts/EnemyClimbController.cs Line: 91)
+
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            34.166 ms
+	Integration:            299.072 ms
+	Integration of assets:  0.054 ms
+	Thread Wait Time:       -0.035 ms
+	Total Operation Time:   333.257 ms
+Unloading 22 unused Assets / (485.2 KB). Loaded Objects now: 9788.
+Memory consumption went from 473.2 MB to 472.7 MB.
+Total: 34.261531 ms (FindLiveObjects: 0.634737 ms CreateObjectMapping: 1.598461 ms MarkObjects: 31.316745 ms  DeleteObjects: 0.709744 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+
+Asset Pipeline Refresh (id=5389c6d55727e2453a9f31572b511879): Total: 0.354 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=353 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 0.537ms
+	ApplyChangesToAssetFolders: 0.436ms
+	Scan: 348.277ms
+	Collect global state as custom dependencies: 0.225ms
+	GatherAllCurrentPrimaryImportResultRevisions: 1.236ms
+	UnloadStreamsBegin: 0.311ms
+	UnloadStreamsEnd: 0.101ms
+	Untracked: 2.154ms
+
+
+Asset Pipeline Refresh (id=f64b4d4888b2cd3e1977fb968a250316): Total: 0.307 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=305 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 0.796ms
+	ApplyChangesToAssetFolders: 0.551ms
+	Scan: 302.030ms
+	Collect global state as custom dependencies: 0.157ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.743ms
+	UnloadStreamsEnd: 0.177ms
+	Untracked: 1.978ms
+
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 17.3912ms
+Starting: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Tools/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /home/usio/Titan test
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 8.0070ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 61.3917ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 63.4129ms
+ExitCode: 0 Duration: 1s756ms
+[715/937    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[929/937    1s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll (+2 others)
+[931/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[932/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[935/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[936/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (1.63 seconds), 6 items updated, 937 evaluated
+Total cache size 172573348
+Total cache size after purge 172573348, took 00:00:00.2267041
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.749 seconds
+Domain Reload Profiling: 4690ms
+	BeginReloadAssembly (1218ms)
+		DisableScriptedObjects (136ms)
+		CreateAndSetChildDomain (574ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (91ms)
+	LoadAllAssembliesAndSetupDomain (603ms)
+		LoadAssemblies (379ms)
+		AnalyzeDomain (271ms)
+			TypeCache.Refresh (20ms)
+			BuildScriptInfoCaches (221ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (2751ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (461ms)
+			ProcessInitializeOnLoadAttributes (467ms)
+			ProcessInitializeOnLoadMethodAttributes (123ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (578ms)
+
+Asset Pipeline Refresh (id=a9a0f88d57dc6741ca0a4aa733b85e98): Total: 8.592 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3980 ms
+		Asset DB Callback time: managed=142 ms, native=27 ms
+		Scripting: domain reloads=1, domain reload time=1985 ms, compile time=2457 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 1.031ms
+	ApplyChangesToAssetFolders: 0.887ms
+	Scan: 876.588ms
+	Collect global state as custom dependencies: 5.218ms
+	OnSourceAssetsModified: 10.406ms
+	CategorizeScriptCompilationAssets: 0.069ms
+	ProcessAssetsWithTransientArtifactChanges: 9.840ms
+	CategorizeAssets: 175.035ms
+	CompileScripts: 2456.826ms
+	ImportOutOfDateAssets: 2821.663ms (2773.484ms without children)
+		CollectScriptTypesHashes: 1.908ms
+		ReloadNativeAssets: 2.103ms
+		UnloadImportedAssets: 0.561ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.175ms
+		ImportSchedulerStart: 44.281ms
+	PostProcessAllAssets: 154.111ms
+		PostProcessCallbackCreateDeferredMaterials 8.439ms
+		XRBuildSystem.XRAssetImported 0.941ms
+		RaytracingShaderImportPostprocess 0.418ms
+		ShaderAssetModifiedCallback 0.119ms
+		MonoPostProcessAllAssets: 137.172ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 27.804ms
+			SyncVS.PostprocessSyncProject 20.945ms
+			AssetChangedListener.OnPostprocessAllAssets 14.265ms
+			AssetPostprocessor.OnPostprocessAllAssets 11.941ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 10.596ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 6.397ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 6.266ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.764ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 2.725ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.968ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.869ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.464ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.298ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.112ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 1.048ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.043ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.826ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.675ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.614ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.589ms
+			PostProcessor.OnPostprocessAllAssets 0.582ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.543ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.494ms
+			AssetEvents.OnPostprocessAllAssets 0.454ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.409ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.400ms
+			CinemachineSettings.OnPostprocessAllAssets 0.394ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.364ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.364ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.345ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.314ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.215ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.189ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.179ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.175ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.147ms
+	PostAssetChangesProfiler: 4.249ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.828ms
+	PersistCurrentRevisions: 0.220ms
+	GenerateScriptTypeHashes: 4.713ms
+	GenerateScriptTypeSerializationHashes: 7.845ms
+	Untracked: 2071.725ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.943 seconds
+Domain Reload Profiling: 3794ms
+	BeginReloadAssembly (1524ms)
+		DisableScriptedObjects (428ms)
+		CreateAndSetChildDomain (606ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (235ms)
+		LoadAssemblies (464ms)
+		AnalyzeDomain (46ms)
+			TypeCache.Refresh (12ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (1944ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (379ms)
+			ProcessInitializeOnLoadMethodAttributes (108ms)
+			AfterProcessingInitializeOnLoad (5ms)
+		AwakeInstancesAfterBackupRestoration (577ms)
+
+Asset Pipeline Refresh (id=5e9df727afbc977499a39d6efaa965d8): Total: 4.145 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2214 ms
+		Asset DB Callback time: managed=42 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1886 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.993ms
+	ApplyChangesToAssetFolders: 0.870ms
+	Collect global state as custom dependencies: 2.554ms
+	ProcessAssetsWithTransientArtifactChanges: 0.415ms
+	CategorizeAssets: 59.861ms
+	CompileScripts: 1.844ms
+	ImportOutOfDateAssets: 2016.103ms (1959.421ms without children)
+		CollectScriptTypesHashes: 1.626ms
+		ReloadNativeAssets: 1.075ms
+		UnloadImportedAssets: 0.197ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.662ms
+		ImportSchedulerStart: 54.713ms
+	PostProcessAllAssets: 42.005ms
+		MonoPostProcessAllAssets: 41.996ms
+			AssetChangedListener.OnPostprocessAllAssets 14.265ms
+			AssetPostprocessor.OnPostprocessAllAssets 11.941ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 11.185ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 10.596ms
+			SyncVS.PostprocessSyncProject 7.508ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 6.266ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 2.725ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.209ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.869ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.857ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.759ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.112ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.043ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.702ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.675ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.614ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.589ms
+			PostProcessor.OnPostprocessAllAssets 0.582ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.543ms
+			AssetEvents.OnPostprocessAllAssets 0.454ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.409ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.400ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.364ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.345ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.342ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.342ms
+			CinemachineSettings.OnPostprocessAllAssets 0.331ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.314ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.271ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.268ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.194ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.179ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.175ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.147ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.145ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.132ms
+	GatherAllCurrentPrimaryImportResultRevisions: 1.236ms
+	PersistCurrentRevisions: 0.292ms
+	GenerateScriptTypeHashes: 3.407ms
+	GenerateScriptTypeSerializationHashes: 5.765ms
+	Untracked: 2016.367ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            17.455 ms
+	Integration:            662.221 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       -0.015 ms
+	Total Operation Time:   679.684 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            41.493 ms
+	Integration:            316.447 ms
+	Integration of assets:  0.063 ms
+	Thread Wait Time:       0.047 ms
+	Total Operation Time:   358.049 ms
+Unloading 22 unused Assets / (1.1 MB). Loaded Objects now: 9784.
+Memory consumption went from 472.2 MB to 471.1 MB.
+Total: 34.637902 ms (FindLiveObjects: 0.644516 ms CreateObjectMapping: 1.578054 ms MarkObjects: 31.697146 ms  DeleteObjects: 0.716112 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+
+Asset Pipeline Refresh (id=548e44c9dd1487936a8a9251415aed45): Total: 0.316 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=314 ms
+		Asset DB Callback time: managed=0 ms, native=1 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 1.530ms
+	ApplyChangesToAssetFolders: 0.611ms
+	Scan: 305.847ms
+	Collect global state as custom dependencies: 0.254ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.880ms
+	UnloadStreamsBegin: 1.190ms
+	UnloadStreamsEnd: 0.193ms
+	Untracked: 3.979ms
+
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 2.25 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.233 seconds
+Domain Reload Profiling: 3810ms
+	BeginReloadAssembly (1035ms)
+		DisableScriptedObjects (115ms)
+		CreateAndSetChildDomain (666ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (116ms)
+	LoadAllAssembliesAndSetupDomain (327ms)
+		LoadAssemblies (209ms)
+		AnalyzeDomain (42ms)
+			TypeCache.Refresh (11ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (2234ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (566ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (658ms)
+
+Asset Pipeline Refresh (id=fcd0b3f0eecf80d34baa9275b0aca55d): Total: 4.466 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2543 ms
+		Asset DB Callback time: managed=80 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1801 ms, compile time=42 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.619ms
+	ApplyChangesToAssetFolders: 0.585ms
+	Collect global state as custom dependencies: 4.260ms
+	ProcessAssetsWithTransientArtifactChanges: 0.650ms
+	CategorizeAssets: 114.616ms
+	CompileScripts: 41.782ms
+	ImportOutOfDateAssets: 2339.524ms (2266.416ms without children)
+		CollectScriptTypesHashes: 1.636ms
+		ReloadNativeAssets: 1.686ms
+		UnloadImportedAssets: 0.292ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.020ms
+		ImportSchedulerStart: 70.062ms
+	PostProcessAllAssets: 80.030ms
+		MonoPostProcessAllAssets: 80.019ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 22.604ms
+			SyncVS.PostprocessSyncProject 16.660ms
+			AssetChangedListener.OnPostprocessAllAssets 14.265ms
+			AssetPostprocessor.OnPostprocessAllAssets 11.941ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 10.596ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 6.266ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 4.317ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.134ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 2.725ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.869ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.800ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.443ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.112ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.043ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.847ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.675ms
+			CinemachineSettings.OnPostprocessAllAssets 0.665ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.637ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.629ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.614ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.589ms
+			PostProcessor.OnPostprocessAllAssets 0.582ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.567ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.543ms
+			AssetEvents.OnPostprocessAllAssets 0.454ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.409ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.400ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.372ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.364ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.362ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.345ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.314ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.298ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.179ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.175ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.147ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.383ms
+	PersistCurrentRevisions: 0.364ms
+	GenerateScriptTypeHashes: 7.101ms
+	GenerateScriptTypeSerializationHashes: 12.191ms
+	Untracked: 1879.918ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            17.105 ms
+	Integration:            645.328 ms
+	Integration of assets:  0.031 ms
+	Thread Wait Time:       -0.022 ms
+	Total Operation Time:   662.442 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            33.540 ms
+	Integration:            262.721 ms
+	Integration of assets:  0.048 ms
+	Thread Wait Time:       0.062 ms
+	Total Operation Time:   296.373 ms
+Unloading 21 unused Assets / (0.6 MB). Loaded Objects now: 9786.
+Memory consumption went from 471.2 MB to 470.6 MB.
+Total: 44.390831 ms (FindLiveObjects: 0.582586 ms CreateObjectMapping: 1.606929 ms MarkObjects: 41.725748 ms  DeleteObjects: 0.472919 ms)
+
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 16.2313ms
+Starting: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Tools/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /home/usio/Titan test
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 16.6905ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 88.8994ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 89.7235ms
+ExitCode: 0 Duration: 1s71ms
+[715/937    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[929/937    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll (+2 others)
+[931/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp.dll, with 134 defines and 344 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[932/937    0s] ILPostProcess Library/Bee/artifacts/2400b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll, with 132 defines and 368 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[935/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[936/937    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+*** Tundra build success (0.95 seconds), 6 items updated, 937 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 172573348
+Total cache size after purge 172573348, took 00:00:00.7867843
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Refreshing native plugins compatible for Editor in 2.21 ms, found 0 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.362 seconds
+Domain Reload Profiling: 5808ms
+	BeginReloadAssembly (1864ms)
+		DisableScriptedObjects (383ms)
+		CreateAndSetChildDomain (633ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (222ms)
+	LoadAllAssembliesAndSetupDomain (1332ms)
+		LoadAssemblies (1527ms)
+		AnalyzeDomain (287ms)
+			TypeCache.Refresh (48ms)
+			BuildScriptInfoCaches (210ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (2363ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (306ms)
+			ProcessInitializeOnLoadAttributes (535ms)
+			ProcessInitializeOnLoadMethodAttributes (112ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (602ms)
+Refreshing native plugins compatible for Editor in 2.36 ms, found 0 plugins.
+
+Asset Pipeline Refresh (id=c9eb2380747e5ad3bb6adc4e083f4f21): Total: 8.911 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3344 ms
+		Asset DB Callback time: managed=115 ms, native=9 ms
+		Scripting: domain reloads=1, domain reload time=3520 ms, compile time=1921 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 1.043ms
+	ApplyChangesToAssetFolders: 0.941ms
+	Scan: 717.455ms
+	Collect global state as custom dependencies: 5.932ms
+	OnSourceAssetsModified: 1.290ms
+	CategorizeScriptCompilationAssets: 0.070ms
+	ProcessAssetsWithTransientArtifactChanges: 15.927ms
+	CategorizeAssets: 80.021ms
+	CompileScripts: 1920.856ms
+	ImportOutOfDateAssets: 2470.554ms (2394.620ms without children)
+		CollectScriptTypesHashes: 1.869ms
+		ReloadNativeAssets: 2.148ms
+		UnloadImportedAssets: 0.457ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.272ms
+		ImportSchedulerStart: 72.016ms
+	PostProcessAllAssets: 118.661ms
+		XRBuildSystem.XRAssetImported 1.208ms
+		PostProcessCallbackCreateDeferredMaterials 0.687ms
+		ShaderAssetModifiedCallback 0.310ms
+		MonoPostProcessAllAssets: 114.335ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 17.094ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 13.804ms
+			AssetChangedListener.OnPostprocessAllAssets 11.749ms
+			AssetPostprocessor.OnPostprocessAllAssets 9.341ms
+			SyncVS.PostprocessSyncProject 7.546ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 4.573ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.931ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 3.522ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.469ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.985ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.267ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.220ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.118ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.081ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.831ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.773ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.657ms
+			CinemachineSettings.OnPostprocessAllAssets 0.621ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.580ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.565ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.531ms
+			AssetEvents.OnPostprocessAllAssets 0.511ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.422ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.388ms
+			PostProcessor.OnPostprocessAllAssets 0.382ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.376ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.366ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.308ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.301ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.281ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.242ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.224ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.212ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.165ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.153ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.140ms
+	PostAssetChangesProfiler: 4.520ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.519ms
+	UnloadStreamsBegin: 0.712ms
+	PersistCurrentRevisions: 0.358ms
+	GenerateScriptTypeHashes: 4.540ms
+	GenerateScriptTypeSerializationHashes: 7.451ms
+	Untracked: 3566.655ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_video_sync 
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Native extension for LinuxStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.821 seconds
+Domain Reload Profiling: 2890ms
+	BeginReloadAssembly (787ms)
+		DisableScriptedObjects (125ms)
+		CreateAndSetChildDomain (465ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (192ms)
+		LoadAssemblies (107ms)
+		AnalyzeDomain (44ms)
+			TypeCache.Refresh (10ms)
+			ResolveRequiredComponents (27ms)
+	FinalizeReload (1822ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (120ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (471ms)
+
+Asset Pipeline Refresh (id=20603fe88d39b1f31b1949f1bfe8ce8c): Total: 3.205 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2047 ms
+		Asset DB Callback time: managed=50 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1105 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 0.511ms
+	ApplyChangesToAssetFolders: 0.447ms
+	Collect global state as custom dependencies: 2.512ms
+	ProcessAssetsWithTransientArtifactChanges: 0.394ms
+	CategorizeAssets: 82.872ms
+	CompileScripts: 1.952ms
+	ImportOutOfDateAssets: 1897.174ms (1846.630ms without children)
+		CollectScriptTypesHashes: 0.656ms
+		ReloadNativeAssets: 2.115ms
+		UnloadImportedAssets: 0.128ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.054ms
+		ImportSchedulerStart: 47.209ms
+	PostProcessAllAssets: 50.227ms
+		MonoPostProcessAllAssets: 50.220ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 13.804ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.469ms
+			AssetChangedListener.OnPostprocessAllAssets 11.749ms
+			AssetPostprocessor.OnPostprocessAllAssets 9.341ms
+			SyncVS.PostprocessSyncProject 7.592ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 3.522ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.469ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.902ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.962ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.220ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.118ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.947ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.831ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.796ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.773ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.657ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.531ms
+			AssetEvents.OnPostprocessAllAssets 0.511ms
+			CinemachineSettings.OnPostprocessAllAssets 0.504ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.472ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.422ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.388ms
+			PostProcessor.OnPostprocessAllAssets 0.382ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.373ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.362ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.308ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.281ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.276ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.274ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.242ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.224ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.212ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.197ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.153ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.142ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.140ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.284ms
+	PersistCurrentRevisions: 0.311ms
+	GenerateScriptTypeHashes: 5.643ms
+	GenerateScriptTypeSerializationHashes: 9.621ms
+	Untracked: 1166.252ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            16.295 ms
+	Integration:            603.893 ms
+	Integration of assets:  0.017 ms
+	Thread Wait Time:       0.024 ms
+	Total Operation Time:   620.229 ms
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "enemySmall/hutbox"
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            33.424 ms
+	Integration:            268.440 ms
+	Integration of assets:  0.050 ms
+	Thread Wait Time:       0.060 ms
+	Total Operation Time:   301.975 ms
+Unloading 22 unused Assets / (0.6 MB). Loaded Objects now: 9790.
+Memory consumption went from 471.5 MB to 470.8 MB.
+Total: 43.697315 ms (FindLiveObjects: 0.588953 ms CreateObjectMapping: 1.499844 ms MarkObjects: 41.037379 ms  DeleteObjects: 0.568552 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Importing 'GUID: 99c9720ab356a0642a771bea13969a05 - Path: Assets/Scenes/SampleScene.unity' with importer (DefaultImporter)
+Imported 'GUID: 99c9720ab356a0642a771bea13969a05' -> (Import Result ID: '7c52d487ea8741d4e250d754b22b9ea7') in 0.017 seconds [static dependencies only]. Details - ImportResultOutputID=378ca25c6c95e370f41ed482e616ed68 DependenciesID=ee644b00c7ec8f27bb857f67ff3724df StaticDependenciesID=125b8cfe80a69aa66a8c801143ae11f9 
+
+Asset Pipeline Refresh (id=a53533741878d074c9eae3f1e8ce064e): Total: 0.344 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=238 ms
+		Asset DB Callback time: managed=85 ms, native=15 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1480, non-scripts=2684
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 3
+	ApplyChangesToAssetFolders: 0.271ms
+	Scan: 16.612ms
+	Collect global state as custom dependencies: 0.228ms
+	OnSourceAssetsModified: 1.708ms
+	ProcessAssetsWithTransientArtifactChanges: 0.645ms
+	CategorizeAssets: 39.566ms
+	ImportOutOfDateAssets: 130.100ms (20.681ms without children)
+		ImportManagerImport: 28.068ms (3.019ms without children)
+			UpdateCategorizedAssets: 0.385ms
+		ReloadNativeAssets: 0.130ms
+		UnloadImportedAssets: 0.273ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.081ms
+		InitializingProgressBar: 0.345ms
+		ImportSchedulerStart: 79.517ms
+	PostProcessAllAssets: 94.073ms
+		XRBuildSystem.XRAssetImported 6.926ms
+		PostProcessCallbackCreateDeferredMaterials 0.064ms
+		MonoPostProcessAllAssets: 84.348ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 20.795ms
+			AssetChangedListener.OnPostprocessAllAssets 16.327ms
+			AssetPostprocessor.OnPostprocessAllAssets 15.990ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 5.036ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 4.519ms
+			SyncVS.PostprocessSyncProject 2.848ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 2.020ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.976ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.510ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.232ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 1.127ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 1.046ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 1.020ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.918ms
+			PostProcessor.OnPostprocessAllAssets 0.840ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.632ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.588ms
+			AssetEvents.OnPostprocessAllAssets 0.498ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.484ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.402ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.396ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.395ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.329ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.173ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.152ms
+	PostAssetChangesProfiler: 5.622ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.448ms
+	UnloadStreamsBegin: 0.283ms
+	PersistCurrentRevisions: 0.639ms
+	Untracked: 53.327ms
+
