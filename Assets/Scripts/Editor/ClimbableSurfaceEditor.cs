@@ -30,6 +30,90 @@ public class ClimbableSurfaceEditor : Editor
                 $"{surface.faces.Length} faces, {surface.triangleToFace?.Length ?? 0} triangles mapped.",
                 MessageType.Info);
         }
+
+        DrawEntryPointTools(surface);
+    }
+
+    private void DrawEntryPointTools(ClimbableSurface surface)
+    {
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Entry Point Tools", EditorStyles.boldLabel);
+
+        int entryCount = 0;
+        int unlinkedCount = 0;
+        if (surface.faces != null)
+        {
+            foreach (var f in surface.faces)
+            {
+                if (!f.IsEntryPoint) continue;
+                entryCount++;
+                if (!f.HasLinkedGroundNode) unlinkedCount++;
+            }
+        }
+
+        EditorGUILayout.LabelField($"Entry faces: {entryCount}  (unlinked: {unlinkedCount})");
+
+        using (new EditorGUI.DisabledScope(entryCount == 0))
+        {
+            if (GUILayout.Button("Auto-Link Unlinked Entry Faces to Nearest Ground Node"))
+                AutoLinkEntries(surface, onlyUnlinked: true);
+
+            if (GUILayout.Button("Re-Link All Entry Faces to Nearest Ground Node"))
+                AutoLinkEntries(surface, onlyUnlinked: false);
+        }
+    }
+
+private const float MaxEntryLinkDistance = 5f;
+
+    private static void AutoLinkEntries(ClimbableSurface surface, bool onlyUnlinked)
+    {
+        var graphs = FindObjectsByType<GroundNodeGraph>(FindObjectsInactive.Exclude);
+        if (graphs.Length == 0)
+        {
+            EditorUtility.DisplayDialog("No Ground Graphs Found","There's no GroundNodeGraph in the scene to link against.", "OK");
+            return;
+        }
+
+        Undo.RecordObject(surface, "Auto-Link Climb Entry Points");
+
+        int linked = 0;
+
+        for (int i = 0; i < surface.faces.Length; i++)
+        {
+            var face = surface.faces[i];
+            if (!face.IsEntryPoint) continue;
+            if (onlyUnlinked && face.HasLinkedGroundNode) continue;
+
+            Vector3 centroid = surface.GetFaceWorldCentroid(i);
+
+            GroundNodeGraph bestGraph = null;
+            int bestIndex = -1;
+            float bestSqrDist = MaxEntryLinkDistance * MaxEntryLinkDistance;
+
+            foreach (var graph in graphs)
+            {
+                for (int n = 0; n < graph.Nodes.Count; n++)
+                {
+                    float sqrDist = (graph.Nodes[n].position - centroid).sqrMagnitude;
+                    if (sqrDist >= bestSqrDist) continue;
+
+                    bestSqrDist = sqrDist;
+                    bestGraph = graph;
+                    bestIndex = n;
+                }
+            }
+
+            if (bestGraph != null)
+            {
+                face.linkedGroundGraph = bestGraph;
+                face.linkedGroundNodeIndex = bestIndex;
+                linked++;
+            }
+        }
+
+        EditorUtility.SetDirty(surface);
+
+        Debug.Log($"[ClimbableSurfaceEditor] Linked {linked} entry face(s) on '{surface.name}' " + $"(search radius {MaxEntryLinkDistance}m). Faces with no ground node within range were left unlinked.");
     }
 
     [MenuItem("GameObject/Climbable/Build Face Graph", false, 10)]

@@ -10,7 +10,10 @@ public class ClimbableSurface : MonoBehaviour
         public int[] neighborIndices;      
 
         public ClimbableSurface[] externalNeighborSurface; 
-        public int[] externalNeighborFace;                 
+        public int[] externalNeighborFace;    
+        public FaceFlags flags = FaceFlags.None;
+        public GroundNodeGraph linkedGroundGraph;
+        public int linkedGroundNodeIndex = -1;             
 
         public Face(Vector3 normal, Vector3[] vertices, int[] neighborIndices)
         {
@@ -22,6 +25,11 @@ public class ClimbableSurface : MonoBehaviour
             externalNeighborFace = new int[vertices.Length];
             for (int i = 0; i < externalNeighborFace.Length; i++) externalNeighborFace[i] = -1;
         }
+        public bool IsEntryPoint => (flags & FaceFlags.EntryPoint) != 0;
+
+        public bool HasLinkedGroundNode =>linkedGroundGraph != null && linkedGroundNodeIndex >= 0 && linkedGroundNodeIndex < linkedGroundGraph.Nodes.Count;
+
+        public GroundNodeRef LinkedGroundNode =>HasLinkedGroundNode? new GroundNodeRef(linkedGroundGraph, linkedGroundNodeIndex): default;
     }
 
     [Tooltip("Merged faces of the mesh (e.g. 6 for a cube, regardless of triangle count).")]
@@ -36,8 +44,7 @@ public class ClimbableSurface : MonoBehaviour
         return triangleToFace[triangleIndex];
     }
 
-    public bool IsValid()
-    {
+    public bool IsValid(){
         if (faces == null || faces.Length == 0) return false;
         foreach (var f in faces)
         {
@@ -46,6 +53,14 @@ public class ClimbableSurface : MonoBehaviour
             if (f.vertices.Length < 3) return false;
         }
         return true;
+    }
+
+    public Vector3 GetFaceWorldCentroid(int faceIndex){
+        var face = faces[faceIndex];
+        Vector3 c = Vector3.zero;
+        for (int i = 0; i < face.vertices.Length; i++)
+            c += transform.TransformPoint(face.vertices[i]);
+        return c / face.vertices.Length;
     }
 
 #if UNITY_EDITOR
@@ -104,6 +119,16 @@ public class ClimbableSurface : MonoBehaviour
 
                 Gizmos.DrawLine(centroids[i], oc);
             }
+        }
+        Gizmos.color = Color.orange;
+        for (int i = 0; i < faces.Length; i++){
+            var face = faces[i];
+            if (!face.IsEntryPoint) continue;
+
+            Gizmos.DrawWireSphere(centroids[i], 0.18f);
+
+            if (face.HasLinkedGroundNode)
+                Gizmos.DrawLine(centroids[i], face.LinkedGroundNode.WorldPosition);
         }
     }
 #endif

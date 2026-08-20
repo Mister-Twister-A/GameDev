@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1145
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,14 +246,14 @@ MonoBehaviour:
     y: 773
     width: 1464
     height: 316
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -791,7 +791,7 @@ MonoBehaviour:
         m_rawData: 0
       m_ExpandedIDs:
       - m_rawData: 568105589213755986
-      - m_rawData: 568105584918841914
+      - m_rawData: 568105584918841924
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -809,7 +809,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootEntityId:
@@ -1275,9 +1275,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -86.34448, y: -26.710787, z: -68.27322}
+    m_Target: {x: 20.018679, y: -48.548912, z: -203.40965}
     speed: 2
-    m_Value: {x: -86.34448, y: -26.710787, z: -68.27322}
+    m_Value: {x: 20.018679, y: -48.548912, z: -203.40965}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1324,13 +1324,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.0791572, y: 0.5073017, z: -0.04924526, w: -0.85706884}
+    m_Target: {x: 0.017618185, y: 0.97468317, z: -0.21250723, w: 0.071737915}
     speed: 2
-    m_Value: {x: -0.0791572, y: 0.5073017, z: -0.04924526, w: -0.85706884}
+    m_Value: {x: 0.017618185, y: 0.97468317, z: -0.21250725, w: 0.07173792}
   m_Size:
-    m_Target: 66.15531
+    m_Target: 52.84104
     speed: 2
-    m_Value: 66.15531
+    m_Value: 52.84104
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 797
+    y: 864
     width: 1463
     height: 290
   m_SerializedDataModeController:
@@ -1436,21 +1436,21 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_rawData: 568105584918843016
+    - m_rawData: 568105584918842930
     m_LastClickedID:
-      m_rawData: 568105584918843016
+      m_rawData: 568105584918842930
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842582
-    - m_rawData: 568105584918842584
-    - m_rawData: 568105584918842586
-    - m_rawData: 568105584918842588
-    - m_rawData: 568105584918842590
-    - m_rawData: 568105584918842592
     - m_rawData: 568105584918842594
     - m_rawData: 568105584918842596
     - m_rawData: 568105584918842598
     - m_rawData: 568105584918842600
+    - m_rawData: 568105584918842602
+    - m_rawData: 568105584918842604
+    - m_rawData: 568105584918842606
+    - m_rawData: 568105584918842608
+    - m_rawData: 568105584918842610
+    - m_rawData: 568105584918842612
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1484,16 +1484,16 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842582
-    - m_rawData: 568105584918842584
-    - m_rawData: 568105584918842586
-    - m_rawData: 568105584918842588
-    - m_rawData: 568105584918842590
-    - m_rawData: 568105584918842592
     - m_rawData: 568105584918842594
     - m_rawData: 568105584918842596
     - m_rawData: 568105584918842598
     - m_rawData: 568105584918842600
+    - m_rawData: 568105584918842602
+    - m_rawData: 568105584918842604
+    - m_rawData: 568105584918842606
+    - m_rawData: 568105584918842608
+    - m_rawData: 568105584918842610
+    - m_rawData: 568105584918842612
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 864
+    y: 797
     width: 1463
     height: 290
   m_SerializedDataModeController:

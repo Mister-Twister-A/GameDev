@@ -2,6 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Flags] public enum FaceFlags
+{
+    None        = 0,
+    EntryPoint  = 1 << 0,
+    NoTraverse  = 1 << 1,
+    Slow        = 1 << 2,
+}
+
 public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
 {
     public ClimbableSurface surface;
@@ -20,6 +28,7 @@ public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
         faceIndex < surface.faces.Length;
 
     public ClimbableSurface.Face Face => surface.faces[faceIndex];
+    public bool IsEntryPoint => IsValid && Face.IsEntryPoint;
 
     public Vector3 WorldPosition => WorldCentroid();
 
@@ -34,12 +43,12 @@ public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
         return sum / verts.Length;
     }
 
-    public Vector3 WorldNormal() =>
-        surface.transform.TransformDirection(Face.normal).normalized;
+    public Vector3 WorldNormal() => surface.transform.TransformDirection(Face.normal).normalized;
 
     public void GetEdges(List<PathEdge<FaceRef>> edges)
     {
         if (!IsValid) return;
+        if ((Face.flags & FaceFlags.NoTraverse) != 0) return;
 
         var face = Face;
         int edgeCount = face.neighborIndices != null ? face.neighborIndices.Length : 0;
@@ -49,6 +58,7 @@ public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
             FaceRef neighbor = GetNeighbor(i);
 
             if (!neighbor.IsValid) continue;
+            if ((neighbor.Face.flags & FaceFlags.NoTraverse) != 0) continue;
 
             edges.Add(new PathEdge<FaceRef>(
                 neighbor,
@@ -78,8 +88,16 @@ public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
             : default;
     }
 
-    private float GetEdgeCost(int edgeIndex, FaceRef neighbor) =>
-        Vector3.Distance(WorldPosition, neighbor.WorldPosition);
+    private const float SlowCostMultiplier = 2.5f;
+    private float GetEdgeCost(int edgeIndex, FaceRef neighbor)
+    {
+        float dist = Vector3.Distance(WorldPosition, neighbor.WorldPosition);
+
+        if ((neighbor.Face.flags & FaceFlags.Slow) != 0)   
+        dist *= SlowCostMultiplier;                     
+
+        return dist;
+    }
 
     public bool Equals(FaceRef other) =>
         surface == other.surface && faceIndex == other.faceIndex;
