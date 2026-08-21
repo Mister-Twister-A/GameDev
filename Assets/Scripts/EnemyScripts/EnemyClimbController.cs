@@ -20,6 +20,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public float gravity = -9.81f;
     public float airDrag = 3f;
     public float rotationSpeed = 10f;
+    public float jumpForce = 6f;
 
     [SerializeField] private float retargetInterval = 0.4f;
     
@@ -28,6 +29,9 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public LayerMask climbableLayer;
     public float surfaceOffset;
     public float edgeEpsilon = 0.0001f;
+
+    [SerializeField] private float ArrivalThreshold = 0.3f;
+    [SerializeField] private float WallPushDistance = 0.5f;
 
     State state = State.Normal;
     ClimbableSurface currentSurface;
@@ -94,8 +98,20 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             playerController.CurrentSurface, playerController.transform.position,
             out FaceRef entryFace, out GroundNodeRef entryNode))
         {
-            EntryPoint.position = entryNode.WorldPosition;
+            bool reachedGroundNode =(transform.position - entryNode.WorldPosition).sqrMagnitude<= ArrivalThreshold * ArrivalThreshold;
+
+            EntryPoint.position = reachedGroundNode ? entryFace.WorldPosition - entryFace.WorldNormal() * WallPushDistance : entryNode.WorldPosition;
             CurrentTarget = EntryPoint;
+            //Debug.Log($"reachedGroundNode={reachedGroundNode} target={EntryPoint.position} dist={(transform.position - EntryPoint.position).magnitude}");
+        }
+        else if (state == State.Climbing && !playerisclimbing)
+        {
+            ExitClimbState();
+            verticalVelocity = transform.up * jumpForce;
+            Vector3 currentEuler = transform.rotation.eulerAngles;
+            Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
+            transform.rotation = tgtRotation;
+            CurrentTarget = playerController.transform;
         }
         else
         {

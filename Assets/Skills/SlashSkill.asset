@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SlashSkill
   m_EditorClassIdentifier: Assembly-CSharp::SlashSkill
   skillName: SlashSkill
-  cooldown: 0
+  cooldown: 1
   hitboxPrefab: {fileID: 3735298145516147414, guid: f26556111f76941a59b5dceea11971a4, type: 3}
   spawnDistance: 1
   duration: 0.1

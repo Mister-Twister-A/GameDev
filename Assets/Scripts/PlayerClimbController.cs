@@ -12,6 +12,8 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     [SerializeField] private Transform playerModel;
 
+    private SkillUser skillUser;
+
     public bool IsClimbing => state == State.Climbing;
 
     [Header("Movement")]
@@ -53,6 +55,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (controller == null) controller = GetComponent<CharacterController>();
         surfaceOffset = controller.height * 0.5f;
         groundCheckOffset = new Vector3(0f,controller.height * 0.5f,0f);
+        skillUser = GetComponentInChildren<SkillUser>();
     }
 
     void Update()
@@ -61,6 +64,11 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         else ClimbingUpdate();
 
         isGrounded = state == State.Climbing || (state == State.Normal && CheckGround());
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null)
+        {
+            skillUser.TryUseSkill();
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {

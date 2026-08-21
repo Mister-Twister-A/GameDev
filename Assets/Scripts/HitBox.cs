@@ -8,7 +8,9 @@ public class HitBox : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-         if (owner != null && other.gameObject == owner) return;
+        if (owner != null && other.gameObject == owner) return;
+        Debug.Log(other.name);
+        Debug.Log(owner.name);
 
         if (other.TryGetComponent<HurtBox>(out HurtBox hurtbox))
         {

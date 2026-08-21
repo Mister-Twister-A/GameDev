@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class TestEnemy : EnemyData
 {
-    public float speed = 3f;
-    public float walkDistance = 5f;
+    
+    public Transform player;
+    public float slashRange = 2f;
 
-    private Vector3 startPosition;
-    private bool movingRight = true;
+    private SkillUser skillUser;
 
     void Start()
     {
-        startPosition = transform.position; 
+        skillUser = GetComponentInChildren<SkillUser>();
     }
 
     void Update()
@@ -24,25 +24,12 @@ public class TestEnemy : EnemyData
 
     public override void Behaviour()
     {
-        float rightLimit = startPosition.x + walkDistance;
-        float leftLimit = startPosition.x - walkDistance;
-
-        if (movingRight)
+        float dist = Vector3.Distance(transform.position, player.position);
+        if (dist <= slashRange)
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            if (transform.position.x >= rightLimit)
+            if (skillUser != null)
             {
-                movingRight = false;
-                Flip();
-            }
-        }
-        else
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            if (transform.position.x <= leftLimit)
-            {
-                movingRight = true;
-                Flip();
+                skillUser.TryUseSkill();
             }
         }
     }
