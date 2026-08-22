@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -70.39995, y: -80.721436, z: -35.942165}
+    m_Target: {x: 280.78458, y: -122.17285, z: 305.76968}
     speed: 2
     m_Value: {x: -70.39995, y: -80.721436, z: -35.942165}
   m_RenderMode: 0
@@ -1331,11 +1331,11 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.28155652, y: 0.34660333, z: -0.11216971, w: -0.88807243}
+    m_Target: {x: 0.124376036, y: 0.2375763, z: -0.02818939, w: 0.96334577}
     speed: 2
     m_Value: {x: -0.28155652, y: 0.3466033, z: -0.112169705, w: -0.8880724}
   m_Size:
-    m_Target: 63.619034
+    m_Target: 255.86714
     speed: 2
     m_Value: 63.619034
   m_Ortho:
@@ -1448,16 +1448,16 @@ MonoBehaviour:
       m_rawData: 568105584918843064
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842636
-    - m_rawData: 568105584918842638
-    - m_rawData: 568105584918842640
-    - m_rawData: 568105584918842642
-    - m_rawData: 568105584918842644
-    - m_rawData: 568105584918842646
-    - m_rawData: 568105584918842648
-    - m_rawData: 568105584918842650
-    - m_rawData: 568105584918842652
-    - m_rawData: 568105584918842654
+    - m_rawData: 568105584918842664
+    - m_rawData: 568105584918842666
+    - m_rawData: 568105584918842668
+    - m_rawData: 568105584918842670
+    - m_rawData: 568105584918842672
+    - m_rawData: 568105584918842674
+    - m_rawData: 568105584918842676
+    - m_rawData: 568105584918842678
+    - m_rawData: 568105584918842680
+    - m_rawData: 568105584918842682
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1491,16 +1491,16 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842636
-    - m_rawData: 568105584918842638
-    - m_rawData: 568105584918842640
-    - m_rawData: 568105584918842642
-    - m_rawData: 568105584918842644
-    - m_rawData: 568105584918842646
-    - m_rawData: 568105584918842648
-    - m_rawData: 568105584918842650
-    - m_rawData: 568105584918842652
-    - m_rawData: 568105584918842654
+    - m_rawData: 568105584918842664
+    - m_rawData: 568105584918842666
+    - m_rawData: 568105584918842668
+    - m_rawData: 568105584918842670
+    - m_rawData: 568105584918842672
+    - m_rawData: 568105584918842674
+    - m_rawData: 568105584918842676
+    - m_rawData: 568105584918842678
+    - m_rawData: 568105584918842680
+    - m_rawData: 568105584918842682
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

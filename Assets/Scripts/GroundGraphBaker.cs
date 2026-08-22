@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Unity.AI.Navigation;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -14,7 +15,9 @@ public class GroundGraphBaker : MonoBehaviour
 
     [Header("Sampling")]
     [SerializeField]private float gridSpacing = 2f;
-    [SerializeField]private float sampleRadius = 0.5f;
+    [SerializeField] private NavMeshSurface navMeshSurface;
+    [SerializeField] private float navMeshConfirmRadius = 0.15f;
+    [SerializeField] private float minSurfaceSeparation = 0.3f;
     [SerializeField]private int navMeshAreaMask = NavMesh.AllAreas;
     [SerializeField] private LayerMask groundMask;
 
@@ -40,6 +43,12 @@ public class GroundGraphBaker : MonoBehaviour
             return;
         }
 
+        if (navMeshSurface == null)
+        {
+            Debug.LogError("GroundGraphBaker: No NavMeshSurface assigned.", this);
+            return;
+        }
+
         List<GroundNode> nodes = GenerateNodes();
 
         BuildConnections(nodes);
@@ -53,41 +62,71 @@ public class GroundGraphBaker : MonoBehaviour
 #endif
     }
 
-   private List<GroundNode> GenerateNodes(){
-    List<GroundNode> nodes = new();
-
-    Bounds bounds = new Bounds(boundsCenter,boundsSize);
-
-    for (float x = bounds.min.x;x <= bounds.max.x;x += gridSpacing)
+   private List<GroundNode> GenerateNodes()
     {
-        for (float z = bounds.min.z;z <= bounds.max.z;z += gridSpacing)
+        List<GroundNode> nodes = new();
+ 
+        Bounds bounds = new Bounds(boundsCenter, boundsSize);
+ 
+        NavMeshQueryFilter filter = new NavMeshQueryFilter
         {
-            Vector3 rayStart = new Vector3(x,bounds.max.y + 1f,z);
-
-            float rayDistance =bounds.size.y + 2f;
-
-            if (!Physics.Raycast(rayStart,Vector3.down,out RaycastHit groundHit,rayDistance,groundMask,QueryTriggerInteraction.Ignore))
+            agentTypeID = navMeshSurface.agentTypeID,
+            areaMask = navMeshAreaMask
+        };
+ 
+        NavMeshBuildSettings buildSettings = NavMesh.GetSettingsByID(navMeshSurface.agentTypeID);
+        //float maxWalkableSlope = buildSettings.agentSlope;
+ 
+        const float skinWidth = 0.02f;
+ 
+        for (float x = bounds.min.x; x <= bounds.max.x; x += gridSpacing)
+        {
+            for (float z = bounds.min.z; z <= bounds.max.z; z += gridSpacing)
             {
-                continue;
+                List<RaycastHit> columnHits = CollectColumnSurfaces(x, z, bounds, skinWidth);
+ 
+                foreach (RaycastHit hit in columnHits)
+                {
+                   if (Vector3.Angle(hit.normal, Vector3.up) > 89f)
+                        continue;
+ 
+                    if (!NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, navMeshConfirmRadius, filter))
+                        continue;
+ 
+                    nodes.Add(new GroundNode
+                    {
+                        position = navHit.position
+                    });
+                }
             }
-
-            Vector3 surfacePosition = groundHit.point;
-
-            if (!NavMesh.SamplePosition(surfacePosition,out NavMeshHit navHit,sampleRadius,navMeshAreaMask))
-            {
-                continue;
-            }
-
-            nodes.Add(new GroundNode
-            {
-                position = navHit.position
-            });
         }
+ 
+        return nodes;
     }
-
-    return nodes;
-}
-
+    private List<RaycastHit> CollectColumnSurfaces(float x, float z, Bounds bounds, float skinWidth)
+    {
+        List<RaycastHit> hits = new();
+ 
+        Vector3 origin = new Vector3(x, bounds.max.y, z);
+        float remaining = bounds.size.y;
+ 
+        while (remaining > 0f)
+        {
+            if (!Physics.Raycast(origin, Vector3.down, out RaycastHit hit, remaining, groundMask, QueryTriggerInteraction.Ignore))
+                break;
+ 
+            if (hits.Count == 0 || (hits[^1].point.y - hit.point.y) >= minSurfaceSeparation)
+            {
+                hits.Add(hit);
+            }
+ 
+            float traveled = origin.y - hit.point.y;
+            remaining -= traveled + skinWidth;
+            origin = hit.point - Vector3.up * skinWidth;
+        }
+ 
+        return hits;
+    }
     private void BuildConnections(List<GroundNode> nodes){   
         float maxDistanceSqr = maxLinkDistance * maxLinkDistance;
 
@@ -110,7 +149,13 @@ public class GroundGraphBaker : MonoBehaviour
     }
 
     private bool CanWalkBetween(Vector3 start, Vector3 end){
-        if (NavMesh.Raycast(start, end, out _, navMeshAreaMask))
+
+        NavMeshQueryFilter filter = new NavMeshQueryFilter
+        {
+            agentTypeID = navMeshSurface.agentTypeID,
+            areaMask = navMeshAreaMask
+        };
+        if (NavMesh.Raycast(start, end, out _, filter))
             return false;
 
         Vector3 direction = end - start;
