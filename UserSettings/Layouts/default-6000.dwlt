@@ -790,7 +790,15 @@ MonoBehaviour:
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
+      - m_rawData: 568105589213739026
       - m_rawData: 568105589213755986
+      - m_rawData: 568105584918841700
+      - m_rawData: 568105584918841726
+      - m_rawData: 568105584918841770
+      - m_rawData: 568105584918841780
+      - m_rawData: 568105584918841946
+      - m_rawData: 568105584918842030
+      - m_rawData: 568105584918842062
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1274,9 +1282,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -99.61991, y: -25.051004, z: -80.496254}
+    m_Target: {x: -70.39995, y: -80.721436, z: -35.942165}
     speed: 2
-    m_Value: {x: -99.61991, y: -25.051004, z: -80.496254}
+    m_Value: {x: -70.39995, y: -80.721436, z: -35.942165}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1323,13 +1331,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.045914564, y: 0.5960393, z: -0.036784027, w: -0.80119586}
+    m_Target: {x: -0.28155652, y: 0.34660333, z: -0.11216971, w: -0.88807243}
     speed: 2
-    m_Value: {x: -0.045914564, y: 0.5960393, z: -0.036784027, w: -0.80119586}
+    m_Value: {x: -0.28155652, y: 0.3466033, z: -0.112169705, w: -0.8880724}
   m_Size:
-    m_Target: 52.84104
+    m_Target: 63.619034
     speed: 2
-    m_Value: 52.84104
+    m_Value: 63.619034
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1416,7 +1424,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/EnemyScripts
+    - Assets/Skills
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1426,30 +1434,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/EnemyScripts
+  - Assets/Skills
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/usio/Titan test
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
+    scrollPos: {x: 0, y: 70}
     m_SelectedIDs:
-    - m_rawData: 568105584918842968
+    - m_rawData: 568105584918843064
     m_LastClickedID:
-      m_rawData: 568105584918842968
+      m_rawData: 568105584918843064
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842604
-    - m_rawData: 568105584918842606
-    - m_rawData: 568105584918842608
-    - m_rawData: 568105584918842610
-    - m_rawData: 568105584918842612
-    - m_rawData: 568105584918842614
-    - m_rawData: 568105584918842616
-    - m_rawData: 568105584918842618
-    - m_rawData: 568105584918842620
-    - m_rawData: 568105584918842622
+    - m_rawData: 568105584918842636
+    - m_rawData: 568105584918842638
+    - m_rawData: 568105584918842640
+    - m_rawData: 568105584918842642
+    - m_rawData: 568105584918842644
+    - m_rawData: 568105584918842646
+    - m_rawData: 568105584918842648
+    - m_rawData: 568105584918842650
+    - m_rawData: 568105584918842652
+    - m_rawData: 568105584918842654
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1483,16 +1491,16 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842604
-    - m_rawData: 568105584918842606
-    - m_rawData: 568105584918842608
-    - m_rawData: 568105584918842610
-    - m_rawData: 568105584918842612
-    - m_rawData: 568105584918842614
-    - m_rawData: 568105584918842616
-    - m_rawData: 568105584918842618
-    - m_rawData: 568105584918842620
-    - m_rawData: 568105584918842622
+    - m_rawData: 568105584918842636
+    - m_rawData: 568105584918842638
+    - m_rawData: 568105584918842640
+    - m_rawData: 568105584918842642
+    - m_rawData: 568105584918842644
+    - m_rawData: 568105584918842646
+    - m_rawData: 568105584918842648
+    - m_rawData: 568105584918842650
+    - m_rawData: 568105584918842652
+    - m_rawData: 568105584918842654
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1521,9 +1529,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_rawData: 568105584918842020
+    - m_rawData: 568105584918842030
     m_LastClickedEntityId:
-      m_rawData: 568105584918842020
+      m_rawData: 568105584918842030
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_rawData: 0
@@ -1648,7 +1656,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectEntityId:
     m_rawData: 0
-  m_LastVerticalScrollValue: 386
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

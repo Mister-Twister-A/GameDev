@@ -161,6 +161,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         controller.enabled = true;
         currentSurface = null;
         currentFaceIndex = -1;
+        transform.parent = null;
     }
 
     void ClimbingUpdate()

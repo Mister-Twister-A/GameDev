@@ -42,7 +42,6 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         if (target == null)
             Debug.LogError($"{name}: EnemyGroundNavigator has no target assigned.");
-
         
     }
 

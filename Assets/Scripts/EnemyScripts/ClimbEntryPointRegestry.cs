@@ -65,24 +65,38 @@ public class ClimbEntryPointRegestry : MonoBehaviour
     {
         entryFace = default;
         groundNode = default;
- 
+
         float bestSqrDist = float.MaxValue;
         bool found = false;
- 
-        foreach (var (face, node) in entries)
+
+        foreach (var (face, cachedNode) in entries)   
         {
             if (face.surface != surface) continue;
-            if (!node.IsValid) continue;
- 
+
             float sqrDist = (face.WorldPosition - fromWorldPosition).sqrMagnitude;
             if (sqrDist >= bestSqrDist) continue;
- 
+
+            GroundNodeRef node = cachedNode;  
+
+            if (surface.isDynamic)             
+            {
+                GroundNodeGraph graph = face.Face.linkedGroundGraph;
+                if (graph == null) continue;
+
+                int nearestIndex = graph.FindNearestNodeIndex(face.WorldPosition);
+                if (nearestIndex < 0) continue;
+
+                node = new GroundNodeRef(graph, nearestIndex);
+            }
+
+            if (!node.IsValid) continue;   
+
             bestSqrDist = sqrDist;
             entryFace = face;
             groundNode = node;
             found = true;
         }
- 
+
         return found;
     }
 }

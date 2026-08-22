@@ -19,6 +19,25 @@ public class GroundNodeGraph : MonoBehaviour
 
     public GroundNode GetNode(int index) => nodes[index];
 
+    public int FindNearestNodeIndex(Vector3 worldPosition)
+    {
+        if (nodes == null || nodes.Count == 0) return -1;
+
+        int bestIndex = -1;
+        float bestSqrDist = float.MaxValue;
+
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            float sqrDist = (nodes[i].position - worldPosition).sqrMagnitude;
+            if (sqrDist >= bestSqrDist) continue;
+
+            bestSqrDist = sqrDist;
+            bestIndex = i;
+        }
+
+        return bestIndex;
+    }   
+
     private void OnDrawGizmosSelected()
     {
         if (nodes == null) return;

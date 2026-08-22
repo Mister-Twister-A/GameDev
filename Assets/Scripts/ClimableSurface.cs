@@ -37,6 +37,8 @@ public class ClimbableSurface : MonoBehaviour
 
     [Tooltip("Maps mesh.triangles triangle index -> index into 'faces'. Length = triangleCount.")]
     public int[] triangleToFace = System.Array.Empty<int>();
+
+    public bool isDynamic = false; 
     public int GetFaceFromTriangle(int triangleIndex)
     {
         if (triangleToFace == null || triangleIndex < 0 || triangleIndex >= triangleToFace.Length)

@@ -73,7 +73,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
         var markerGO = new GameObject($"{name}_EntryMarker")
         {
-            hideFlags = HideFlags.HideInHierarchy
+           // hideFlags = HideFlags.HideInHierarchy
         };
         EntryPoint = markerGO.transform;
     }
@@ -99,7 +99,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             out FaceRef entryFace, out GroundNodeRef entryNode))
         {
             bool reachedGroundNode =(transform.position - entryNode.WorldPosition).sqrMagnitude<= ArrivalThreshold * ArrivalThreshold;
-
+            Debug.Log(reachedGroundNode);
             EntryPoint.position = reachedGroundNode ? entryFace.WorldPosition - entryFace.WorldNormal() * WallPushDistance : entryNode.WorldPosition;
             CurrentTarget = EntryPoint;
             //Debug.Log($"reachedGroundNode={reachedGroundNode} target={EntryPoint.position} dist={(transform.position - EntryPoint.position).magnitude}");
@@ -184,6 +184,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         controller.enabled = true;
         currentSurface = null;
         currentFaceIndex = -1;
+        transform.parent = null;
     }
     public void DetachFromSurface(float launchForce = 0f)
     {
