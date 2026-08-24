@@ -15,6 +15,8 @@ public class EnemyGroundNavigator : MonoBehaviour
     public float waypointReachedDistance = 0.5f;
     public float directChaseDistance = 1.5f;
 
+    [SerializeField] private Vector3 nodeFindOffset;
+
     private ISurfaceWalker self;
     private EnemyClimbController climbController;
     private List<GroundNodeRef> path;
@@ -24,7 +26,7 @@ public class EnemyGroundNavigator : MonoBehaviour
     private int lastGoalNode = -1;
     private bool hasLastPath;
 
-    
+    [SerializeField] private bool IsTitan = false;
 
     private void Awake()
     {
@@ -48,14 +50,17 @@ public class EnemyGroundNavigator : MonoBehaviour
     private void Update()
     {
         if (self == null || groundGraph == null || target == null) return;
-        if(climbController.IsClimbing == true) return;
-        target = climbController.CurrentTarget;
+        if(!IsTitan){
+            if(climbController.IsClimbing == true) return;
+            target = climbController.CurrentTarget;
+        }
 
         repathTimer -= Time.deltaTime;
 
         if (repathTimer <= 0f)
         {
             Repath();
+            //Debug.Log("did a reapth");
             repathTimer = repathInterval;
         }
 
@@ -63,8 +68,10 @@ public class EnemyGroundNavigator : MonoBehaviour
     }
 
     private void Repath(){
-        int startIndex = FindNearestNode(self.Position);
+        int startIndex = FindNearestNode(self.Position + nodeFindOffset);
         int goalIndex = FindNearestNode(target.position);
+        Debug.Log(self.Position + " "+  IsTitan);
+        Debug.Log("3 " + goalIndex);
 
         if (startIndex < 0 || goalIndex < 0) return;
 
@@ -89,8 +96,7 @@ public class EnemyGroundNavigator : MonoBehaviour
         }
 
         path = Pathfinder.FindPath(start, goal);
-        //Debug.Log(path.Count);
-        //test
+        Debug.Log(path.Count);
         pathIndex = 0;
     }
     private void FollowPath()

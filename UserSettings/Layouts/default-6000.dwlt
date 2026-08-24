@@ -785,20 +785,25 @@ MonoBehaviour:
     m_DynamicPanelBehaviorModified: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 26}
       m_SelectedIDs: []
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
-      - m_rawData: 568105589213739026
+      - m_rawData: 568105589213755734
+      - m_rawData: 568105589213755738
+      - m_rawData: 568105589213755748
+      - m_rawData: 568105589213755752
+      - m_rawData: 568105589213755772
+      - m_rawData: 568105589213755776
+      - m_rawData: 568105589213755786
+      - m_rawData: 568105589213755790
+      - m_rawData: 568105589213755904
       - m_rawData: 568105589213755986
-      - m_rawData: 568105584918841700
-      - m_rawData: 568105584918841726
+      - m_rawData: 568105584918841702
       - m_rawData: 568105584918841770
-      - m_rawData: 568105584918841780
-      - m_rawData: 568105584918841946
-      - m_rawData: 568105584918842030
-      - m_rawData: 568105584918842062
+      - m_rawData: 568105584918841928
+      - m_rawData: 568105584918842088
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -816,7 +821,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootEntityId:
@@ -1282,9 +1287,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 280.78458, y: -122.17285, z: 305.76968}
+    m_Target: {x: -15.348661, y: 0.044543087, z: -116.89313}
     speed: 2
-    m_Value: {x: -70.39995, y: -80.721436, z: -35.942165}
+    m_Value: {x: -15.348661, y: 0.044543087, z: -116.89313}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1331,13 +1336,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.124376036, y: 0.2375763, z: -0.02818939, w: 0.96334577}
+    m_Target: {x: 0.03510775, y: -0.7311239, z: -0.042709783, w: -0.6805597}
     speed: 2
-    m_Value: {x: -0.28155652, y: 0.3466033, z: -0.112169705, w: -0.8880724}
+    m_Value: {x: -0.03510775, y: 0.7311239, z: 0.04270978, w: 0.6805597}
   m_Size:
-    m_Target: 255.86714
+    m_Target: 8.474458
     speed: 2
-    m_Value: 63.619034
+    m_Value: 8.474458
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1424,7 +1429,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Skills
+    - Assets/Scripts/EnemyScripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1434,7 +1439,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Skills
+  - Assets/Scripts/EnemyScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/usio/Titan test
   m_LockTracker:
@@ -1443,9 +1448,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 70}
     m_SelectedIDs:
-    - m_rawData: 568105584918843064
+    - m_rawData: 568105584918843008
     m_LastClickedID:
-      m_rawData: 568105584918843064
+      m_rawData: 568105584918843008
     m_ExpandedIDs:
     - m_rawData: 0
     - m_rawData: 568105584918842664
@@ -1529,10 +1534,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_rawData: 568105584918842030
+    - m_rawData: 568105584918842088
     m_LastClickedEntityId:
-      m_rawData: 568105584918842030
-    m_HadKeyboardFocusLastEvent: 1
+      m_rawData: 568105584918842088
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_rawData: 0
     - m_rawData: 0

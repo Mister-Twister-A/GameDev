@@ -145,7 +145,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         Vector3 horizontalVel = move + new Vector3(verticalVelocity.x, 0f, verticalVelocity.z);
         horizontalVel = Vector3.ClampMagnitude(horizontalVel, walkSpeed);
 
-        controller.Move((horizontalVel + Vector3.up * verticalVelocity.y) * Time.deltaTime);
+        controller.Move((horizontalVel + Vector3.up * verticalVelocity.y) * Time.deltaTime); 
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -172,7 +172,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         state = State.Climbing;
         currentSurface = surface;
         currentFaceIndex = faceIndex;
-        controller.enabled = false;
+        //controller.enabled = false;
 
         transform.position = point + normal * surfaceOffset;
         AlignToNormal(normal);
@@ -181,7 +181,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     void ExitClimbState()
     {
         state = State.Normal;
-        controller.enabled = true;
+        //controller.enabled = true;
         currentSurface = null;
         currentFaceIndex = -1;
         transform.parent = null;

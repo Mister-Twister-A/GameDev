@@ -150276,7 +150276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
-  controller: {fileID: 398576417}
+  controller: {fileID: 0}
   enemyModel: {fileID: 1087021889}
   CurrentTarget: {fileID: 0}
   playerController: {fileID: 0}
@@ -151006,7 +151006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
-  controller: {fileID: 555378520}
+  controller: {fileID: 0}
   enemyModel: {fileID: 593723441}
   CurrentTarget: {fileID: 0}
   playerController: {fileID: 0}
@@ -301548,7 +301548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e6d81bd943d957b14de5b163ed955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyClimbController
-  controller: {fileID: 1686426590}
+  controller: {fileID: 0}
   enemyModel: {fileID: 195745039}
   CurrentTarget: {fileID: 311080678}
   playerController: {fileID: 311080679}
@@ -301582,7 +301582,7 @@ CharacterController:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
@@ -308412,7 +308412,6 @@ SceneRoots:
   - {fileID: 598569953}
   - {fileID: 1372232022}
   - {fileID: 1886004528}
-  - {fileID: 311080678}
   - {fileID: 555378521}
   - {fileID: 398576418}
   - {fileID: 1686426591}
@@ -308428,3 +308427,4 @@ SceneRoots:
   - {fileID: 866473436}
   - {fileID: 1405727017}
   - {fileID: 728124989}
+  - {fileID: 311080678}

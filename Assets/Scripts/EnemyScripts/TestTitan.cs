@@ -1,0 +1,70 @@
+using UnityEngine;
+public class EnemyGroundWalker : MonoBehaviour, ISurfaceWalker
+{
+    [Header("Ground Check")]
+    public LayerMask groundMask = ~0;
+
+    public float rayStartHeight = 1f;
+    public float rayMaxDistance = 3f;
+    public float groundSnapLerp = 15f;
+
+    [Header("Facing")]
+    public Transform modelRoot;
+    public float turnSpeed = 8f;    public float yawOffset = 0f;
+
+    [Header("Pivot Offset")]
+    public float pivotHeightAboveFeet = 0f;
+
+    public Vector3 Position => transform.position;
+
+    public ClimbableSurface CurrentSurface => throw new System.NotImplementedException();
+
+    public int CurrentFaceIndex => throw new System.NotImplementedException();
+
+    public void MoveTowards(Vector3 worldTargetPoint, float speed)
+    {
+        Vector3 toTarget = worldTargetPoint - transform.position;
+        Vector3 flatDir = Vector3.ProjectOnPlane(toTarget, Vector3.up);
+        //Debug.Log("1 " + worldTargetPoint);
+
+        if (flatDir.sqrMagnitude > 0.0001f)
+            flatDir.Normalize();
+
+        Vector3 horizontalDelta = flatDir * speed * Time.deltaTime;
+        Vector3 nextPos = transform.position + horizontalDelta;
+
+        nextPos = ApplyGroundHeight(nextPos);
+       // Debug.Log("2 " + nextPos);
+
+        transform.position = nextPos;
+
+        FaceDirection(flatDir);
+    }
+
+    private Vector3 ApplyGroundHeight(Vector3 candidatePos)
+    {
+        Vector3 rayOrigin = candidatePos + Vector3.up * rayStartHeight;
+
+        if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit,
+                rayStartHeight + rayMaxDistance, groundMask, QueryTriggerInteraction.Ignore))
+        {
+            float targetY = hit.point.y + pivotHeightAboveFeet;
+            float newY = Mathf.Lerp(candidatePos.y, targetY, groundSnapLerp * Time.deltaTime);
+            return new Vector3(candidatePos.x, newY, candidatePos.z);
+        }
+
+        return candidatePos;
+    }
+
+    private void FaceDirection(Vector3 flatDir)
+    {
+        if (flatDir.sqrMagnitude <= 0.0001f) return;
+
+        Transform model = modelRoot != null ? modelRoot : transform;
+        float targetYaw = Quaternion.LookRotation(flatDir, Vector3.up).eulerAngles.y + yawOffset;
+        Vector3 currentEuler = model.eulerAngles;
+        float newYaw = Mathf.LerpAngle(currentEuler.y, targetYaw, turnSpeed * Time.deltaTime);
+
+        model.rotation = Quaternion.Euler(currentEuler.x, newYaw, currentEuler.z);
+    }
+}

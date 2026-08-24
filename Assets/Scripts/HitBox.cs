@@ -9,8 +9,6 @@ public class HitBox : MonoBehaviour
     {
 
         if (owner != null && other.gameObject == owner) return;
-        Debug.Log(other.name);
-        Debug.Log(owner.name);
 
         if (other.TryGetComponent<HurtBox>(out HurtBox hurtbox))
         {
