@@ -29,7 +29,7 @@ public class TestEnemy : EnemyData
         {
             if (skillUser != null)
             {
-                skillUser.TryUseSkill();
+                skillUser.TryUseSkill(0);
             }
         }
     }

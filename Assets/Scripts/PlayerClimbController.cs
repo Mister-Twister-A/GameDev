@@ -67,7 +67,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null)
         {
-            skillUser.TryUseSkill();
+            skillUser.TryUseSkill(0);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -159,6 +159,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         state = State.Normal;
         controller.enabled = true;
+        if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterPlayerExit();
         currentSurface = null;
         currentFaceIndex = -1;
         transform.parent = null;
@@ -259,7 +260,8 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         currentSurface = neighborSurface;
         currentFaceIndex = resolvedNeighborIndex;
 
-        transform.SetParent(neighborSurface.transform, true);
+        //transform.SetParent(neighborSurface.transform, true);
+        neighborSurface.climbableSurfaceHolder.RegisterPlayerEnter(neighborSurface.transform, gameObject.transform);
         AlignToNormal(neighborNormal);
 
         float remaining = 1f - t;

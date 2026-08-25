@@ -70,8 +70,8 @@ public class EnemyGroundNavigator : MonoBehaviour
     private void Repath(){
         int startIndex = FindNearestNode(self.Position + nodeFindOffset);
         int goalIndex = FindNearestNode(target.position);
-        Debug.Log(self.Position + " "+  IsTitan);
-        Debug.Log("3 " + goalIndex);
+        //Debug.Log(self.Position + " "+  IsTitan);
+        //Debug.Log("3 " + goalIndex);
 
         if (startIndex < 0 || goalIndex < 0) return;
 
@@ -96,7 +96,7 @@ public class EnemyGroundNavigator : MonoBehaviour
         }
 
         path = Pathfinder.FindPath(start, goal);
-        Debug.Log(path.Count);
+        //Debug.Log(path.Count);
         pathIndex = 0;
     }
     private void FollowPath()

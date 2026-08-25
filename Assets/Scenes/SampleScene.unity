@@ -119,6 +119,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17059398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17059400}
+  - component: {fileID: 17059399}
+  m_Layer: 0
+  m_Name: random climable objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17059399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17059398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9234703f7717138e997354b26e0b90b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurfaceHolder
+  curPlayerTarget: {fileID: 0}
+  curPart: {fileID: 0}
+  curPartClimbableSurface: {fileID: 0}
+--- !u!4 &17059400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17059398}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07508, y: -13.80345, z: -98.18233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1235188629}
+  - {fileID: 598569953}
+  - {fileID: 1372232022}
+  - {fileID: 1886004528}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77355375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534169233038169174, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -136,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.5101351, y: 0.49833035, z: -0.70102}
     vertices:
@@ -523,6 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0, y: -1, z: -0}
     vertices:
@@ -571,9 +624,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffff
-    flags: 0
-    linkedGroundGraph: {fileID: 0}
-    linkedGroundNodeIndex: 0
+    flags: 1
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3622
   - normal: {x: 0.75293416, y: 0.04326313, z: 0.65667224}
     vertices:
     - {x: -0.0002, y: 0.0334, z: 0.1315}
@@ -599,9 +652,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffff
-    flags: 0
-    linkedGroundGraph: {fileID: 0}
-    linkedGroundNodeIndex: 0
+    flags: 1
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3622
   - normal: {x: -0.7579732, y: 0.10495501, z: 0.64378655}
     vertices:
     - {x: -0.0433, y: 0.036, z: 0.0803}
@@ -669,9 +722,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffff
-    flags: 0
-    linkedGroundGraph: {fileID: 0}
-    linkedGroundNodeIndex: 0
+    flags: 1
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3622
   - normal: {x: -0.99341834, y: 0.06085816, z: -0.09703779}
     vertices:
     - {x: -0.0383, y: 0.033, z: -0.031}
@@ -683,9 +736,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffff
-    flags: 0
-    linkedGroundGraph: {fileID: 0}
-    linkedGroundNodeIndex: 0
+    flags: 1
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3621
   - normal: {x: -0.96503323, y: 0.1894262, z: -0.18118642}
     vertices:
     - {x: -0.0383, y: 0.033, z: -0.031}
@@ -698,8 +751,8 @@ MonoBehaviour:
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffff
     flags: 1
-    linkedGroundGraph: {fileID: 208916913}
-    linkedGroundNodeIndex: 3684
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3621
   - normal: {x: -0.00917609, y: 0.99532384, z: -0.09615757}
     vertices:
     - {x: 0.0378, y: 0.0337, z: -0.0313}
@@ -757,9 +810,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     externalNeighborFace: ffffffffffffffffffffffffffffffff
-    flags: 0
-    linkedGroundGraph: {fileID: 0}
-    linkedGroundNodeIndex: 0
+    flags: 1
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3621
   - normal: {x: -0.73928094, y: 0.2265056, z: 0.63416}
     vertices:
     - {x: -0.0375, y: 0.0724, z: 0.0741}
@@ -896,6 +949,93 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5481670689821487056, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+--- !u!1 &177569956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+  m_PrefabInstance: {fileID: 1908145459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &177569958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177569956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c69d7ca33a47156b8fa4fd9322f3ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGroundNavigator
+  target: {fileID: 311080678}
+  groundGraph: {fileID: 596422843}
+  moveSpeed: 3
+  repathInterval: 0.5
+  waypointReachedDistance: 0.5
+  directChaseDistance: 0
+  nodeFindOffset: {x: 0, y: -27, z: 0}
+  IsTitan: 1
+--- !u!114 &177569959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177569956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d7160f93e1ccbc5b4c1ac7f95aed5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestTitan
+  enemyName: 
+  health: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rayStartHeight: 1
+  rayMaxDistance: 300
+  groundSnapLerp: 15
+  expCoolDown: 3
+  modelRoot: {fileID: 0}
+  turnSpeed: 8
+  yawOffset: 180
+  pivotHeightAboveFeet: 27
+--- !u!4 &177569960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8879528566716807029, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+  m_PrefabInstance: {fileID: 1908145459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &177569961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177569956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9234703f7717138e997354b26e0b90b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurfaceHolder
+  curPlayerTarget: {fileID: 0}
+  curPart: {fileID: 0}
+  curPartClimbableSurface: {fileID: 0}
+--- !u!114 &177569962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177569956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e042273a735cb535a1289db03abec55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillUser
+  skills:
+  - skill: {fileID: 11400000, guid: f323fdc6df36361b1aa8f4ca58310cce, type: 2}
+    collisionTags:
+    - enemy
+    cooldownTimer: 0
 --- !u!1 &189455426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4643329528095515197, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -913,6 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0, y: -1, z: -0}
     vertices:
@@ -1391,7 +1532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e042273a735cb535a1289db03abec55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillUser
-  equippedSkill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
+  skills:
+  - skill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
+    collisionTags:
+    - enemy
+    cooldownTimer: 0
 --- !u!1 &208916911
 GameObject:
   m_ObjectHideFlags: 0
@@ -149436,6 +149581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.74750715, y: 0.0764421, z: 0.6598407}
     vertices:
@@ -149831,6 +149977,7 @@ GameObject:
   - component: {fileID: 311080678}
   - component: {fileID: 311080675}
   - component: {fileID: 311080679}
+  - component: {fileID: 311080680}
   m_Layer: 0
   m_Name: playerCharater
   m_TagString: Player
@@ -149913,6 +150060,20 @@ MonoBehaviour:
     m_Bits: 8
   surfaceOffset: 0.05
   edgeEpsilon: 0.0001
+--- !u!114 &311080680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311080673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974236acbf52a31f88152045541ef63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  enemyName: player
+  health: 100
 --- !u!1001 &324745167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150600,7 +150761,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e042273a735cb535a1289db03abec55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillUser
-  equippedSkill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
+  skills:
+  - skill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
+    collisionTags:
+    - Player
+    cooldownTimer: 0
 --- !u!1 &496819409
 GameObject:
   m_ObjectHideFlags: 0
@@ -150750,6 +150915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.7209467, y: -0.11015695, z: 0.68417925}
     vertices:
@@ -151066,6 +151232,132 @@ Transform:
   - {fileID: 593723441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &584879271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584879272}
+  - component: {fileID: 584879277}
+  - component: {fileID: 584879276}
+  - component: {fileID: 584879275}
+  - component: {fileID: 584879274}
+  m_Layer: 9
+  m_Name: weakpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584879272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00006929195, y: 0.0006206972, z: 0.04226049}
+  m_LocalScale: {x: 0.00076994183, y: 0.00076994195, z: 0.00076994195}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 177569960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584879274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3849676d386de7dd0aedb713fa59355b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HurtBox
+--- !u!64 &584879275
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &584879276
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d1a5903867c8f0a4a8a94c3fe36dad11, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &584879277
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &587360084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5576790395929063191, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -151083,6 +151375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.7209468, y: -0.11015693, z: 0.68417925}
     vertices:
@@ -295670,6 +295963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0, y: -0, z: 1}
     vertices:
@@ -295832,12 +296126,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598569948}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.2, y: -13.260001, z: -91.44359}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.12492, y: 0.54344845, z: 6.738739}
   m_LocalScale: {x: 4.52944, y: 4.2866, z: 4.094973}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 17059400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627042635
 GameObject:
@@ -296059,7 +296353,7 @@ GameObject:
   - component: {fileID: 716444027}
   m_Layer: 9
   m_Name: hurtbox
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296204,6 +296498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.5395911, y: 0.6126332, z: -0.5775136}
     vertices:
@@ -296682,6 +296977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.23813742, y: 0.9260527, z: -0.29277453}
     vertices:
@@ -297076,6 +297372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.028910438, y: -0.893899, z: -0.44733506}
     vertices:
@@ -297772,6 +298069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.5662584, y: 0.058888007, z: -0.82212144}
     vertices:
@@ -299190,6 +299488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 1, y: 0, z: 0}
     vertices:
@@ -299406,6 +299705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.30067918, y: 0.10276701, z: 0.9481725}
     vertices:
@@ -299806,12 +300106,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235188625}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38, y: -11.090001, z: -108.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.45508, y: 2.7134485, z: -9.917671}
   m_LocalScale: {x: 4.52944, y: 4.2866, z: 4.094973}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 17059400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1235188630
 MonoBehaviour:
@@ -299825,6 +300125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0, y: -0, z: 1}
     vertices:
@@ -299836,8 +300137,8 @@ MonoBehaviour:
     externalNeighborSurface: []
     externalNeighborFace: 
     flags: 1
-    linkedGroundGraph: {fileID: 208916913}
-    linkedGroundNodeIndex: 3085
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3031
   - normal: {x: 0, y: 1, z: 0}
     vertices:
     - {x: 0.5, y: 0.5, z: 0.5}
@@ -299860,8 +300161,8 @@ MonoBehaviour:
     externalNeighborSurface: []
     externalNeighborFace: 
     flags: 1
-    linkedGroundGraph: {fileID: 208916913}
-    linkedGroundNodeIndex: 3084
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3029
   - normal: {x: 0, y: -1, z: 0}
     vertices:
     - {x: 0.5, y: -0.5, z: -0.5}
@@ -299884,8 +300185,8 @@ MonoBehaviour:
     externalNeighborSurface: []
     externalNeighborFace: 
     flags: 1
-    linkedGroundGraph: {fileID: 208916913}
-    linkedGroundNodeIndex: 2994
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3030
   - normal: {x: 1, y: 0, z: 0}
     vertices:
     - {x: 0.5, y: -0.5, z: -0.5}
@@ -299896,8 +300197,8 @@ MonoBehaviour:
     externalNeighborSurface: []
     externalNeighborFace: 
     flags: 1
-    linkedGroundGraph: {fileID: 208916913}
-    linkedGroundNodeIndex: 3178
+    linkedGroundGraph: {fileID: 596422843}
+    linkedGroundNodeIndex: 3121
   triangleToFace: 000000000000000001000000010000000200000002000000030000000300000004000000040000000500000005000000
   isDynamic: 0
 --- !u!64 &1235188631
@@ -299985,6 +300286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0, y: -0, z: 1}
     vertices:
@@ -300147,12 +300449,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372232017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.2, y: -13.260001, z: -87.49358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.12492, y: 0.54344845, z: 10.688744}
   m_LocalScale: {x: 4.52944, y: 12.964822, z: 4.094973}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 17059400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404809524
 GameObject:
@@ -300405,6 +300707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.24536644, y: 0.08528551, z: -0.9656716}
     vertices:
@@ -300708,7 +301011,7 @@ GameObject:
   - component: {fileID: 1491132121}
   m_Layer: 9
   m_Name: hurtbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300997,6 +301300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.23813748, y: 0.92605275, z: -0.29277453}
     vertices:
@@ -301520,6 +301824,8 @@ MonoBehaviour:
   repathInterval: 0.5
   waypointReachedDistance: 0.5
   directChaseDistance: 1
+  nodeFindOffset: {x: 0, y: 0, z: 0}
+  IsTitan: 0
 --- !u!114 &1686426588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301582,7 +301888,7 @@ CharacterController:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
@@ -301600,7 +301906,7 @@ Transform:
   m_GameObject: {fileID: 1686426586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9, y: -10.73, z: -120.71}
+  m_LocalPosition: {x: -6.9, y: -12.69, z: -120.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301620,7 +301926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c46420ad992c96e840975954a08b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestEnemy
-  enemyName: 
+  enemyName: walker
   health: 50
   player: {fileID: 311080678}
   slashRange: 2
@@ -301737,6 +302043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 1, y: 0, z: 0}
     vertices:
@@ -301948,12 +302255,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886004524}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.75, y: -8.200001, z: -91.84358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.82508, y: 5.603449, z: 6.338745}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 17059400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1886004529
 MonoBehaviour:
@@ -301967,6 +302274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 0.29316622, y: -0.95091045, z: -0.099110804}
     vertices:
@@ -306726,11 +307034,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8879528566716807029, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 584879272}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 897350647}
+    - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177569959}
+    - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177569958}
+    - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177569961}
+    - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177569962}
     - targetCorrespondingSourceObject: {fileID: 8230192803570288750, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1522320857}
@@ -306861,6 +307184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 1, y: 0, z: 0}
     vertices:
@@ -306977,6 +307301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.7847644, y: -0.22305597, z: -0.57826537}
     vertices:
@@ -307929,6 +308254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: 1, y: 0, z: 0}
     vertices:
@@ -308045,6 +308371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e836be02d74330a9f9b219a68d8765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurface
+  climbableSurfaceHolder: {fileID: 0}
   faces:
   - normal: {x: -0.74750715, y: 0.0764421, z: 0.6598407}
     vertices:
@@ -308408,10 +308735,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1235188629}
-  - {fileID: 598569953}
-  - {fileID: 1372232022}
-  - {fileID: 1886004528}
   - {fileID: 555378521}
   - {fileID: 398576418}
   - {fileID: 1686426591}
@@ -308428,3 +308751,4 @@ SceneRoots:
   - {fileID: 1405727017}
   - {fileID: 728124989}
   - {fileID: 311080678}
+  - {fileID: 17059400}

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1145
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -785,7 +785,7 @@ MonoBehaviour:
     m_DynamicPanelBehaviorModified: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 26}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: []
       m_LastClickedID:
         m_rawData: 0
@@ -794,14 +794,9 @@ MonoBehaviour:
       - m_rawData: 568105589213755738
       - m_rawData: 568105589213755748
       - m_rawData: 568105589213755752
-      - m_rawData: 568105589213755772
-      - m_rawData: 568105589213755776
-      - m_rawData: 568105589213755786
-      - m_rawData: 568105589213755790
       - m_rawData: 568105589213755904
       - m_rawData: 568105589213755986
       - m_rawData: 568105584918841702
-      - m_rawData: 568105584918841770
       - m_rawData: 568105584918841928
       - m_rawData: 568105584918842088
       m_RenameOverlay:
@@ -821,7 +816,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootEntityId:
@@ -1287,9 +1282,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -15.348661, y: 0.044543087, z: -116.89313}
+    m_Target: {x: -28.177507, y: -10.866202, z: -132.7961}
     speed: 2
-    m_Value: {x: -15.348661, y: 0.044543087, z: -116.89313}
+    m_Value: {x: -28.177507, y: -10.866202, z: -132.7961}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1336,13 +1331,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.03510775, y: -0.7311239, z: -0.042709783, w: -0.6805597}
+    m_Target: {x: 0.01648986, y: -0.71694684, z: 0.022067042, w: 0.6971655}
     speed: 2
-    m_Value: {x: -0.03510775, y: 0.7311239, z: 0.04270978, w: 0.6805597}
+    m_Value: {x: -0.01648986, y: 0.71694684, z: -0.022067042, w: -0.6971655}
   m_Size:
-    m_Target: 8.474458
+    m_Target: 27.813251
     speed: 2
-    m_Value: 8.474458
+    m_Value: 27.813251
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1448,21 +1443,21 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 70}
     m_SelectedIDs:
-    - m_rawData: 568105584918843008
+    - m_rawData: 568105584918843016
     m_LastClickedID:
-      m_rawData: 568105584918843008
+      m_rawData: 568105584918843016
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842664
-    - m_rawData: 568105584918842666
-    - m_rawData: 568105584918842668
-    - m_rawData: 568105584918842670
-    - m_rawData: 568105584918842672
     - m_rawData: 568105584918842674
     - m_rawData: 568105584918842676
     - m_rawData: 568105584918842678
     - m_rawData: 568105584918842680
     - m_rawData: 568105584918842682
+    - m_rawData: 568105584918842684
+    - m_rawData: 568105584918842686
+    - m_rawData: 568105584918842688
+    - m_rawData: 568105584918842690
+    - m_rawData: 568105584918842692
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1496,16 +1491,16 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918842664
-    - m_rawData: 568105584918842666
-    - m_rawData: 568105584918842668
-    - m_rawData: 568105584918842670
-    - m_rawData: 568105584918842672
     - m_rawData: 568105584918842674
     - m_rawData: 568105584918842676
     - m_rawData: 568105584918842678
     - m_rawData: 568105584918842680
     - m_rawData: 568105584918842682
+    - m_rawData: 568105584918842684
+    - m_rawData: 568105584918842686
+    - m_rawData: 568105584918842688
+    - m_rawData: 568105584918842690
+    - m_rawData: 568105584918842692
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1533,10 +1528,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_rawData: 568105584918842088
+    m_SelectedInstanceIDs: []
     m_LastClickedEntityId:
-      m_rawData: 568105584918842088
+      m_rawData: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_rawData: 0

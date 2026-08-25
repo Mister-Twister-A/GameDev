@@ -99,7 +99,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             out FaceRef entryFace, out GroundNodeRef entryNode))
         {
             bool reachedGroundNode =(transform.position - entryNode.WorldPosition).sqrMagnitude<= ArrivalThreshold * ArrivalThreshold;
-            Debug.Log(reachedGroundNode);
+            //Debug.Log(reachedGroundNode);
             EntryPoint.position = reachedGroundNode ? entryFace.WorldPosition - entryFace.WorldNormal() * WallPushDistance : entryNode.WorldPosition;
             CurrentTarget = EntryPoint;
             //Debug.Log($"reachedGroundNode={reachedGroundNode} target={EntryPoint.position} dist={(transform.position - EntryPoint.position).magnitude}");

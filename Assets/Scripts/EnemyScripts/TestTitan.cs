@@ -1,5 +1,5 @@
 using UnityEngine;
-public class EnemyGroundWalker : MonoBehaviour, ISurfaceWalker
+public class TestTitan: EnemyData, ISurfaceWalker
 {
     [Header("Ground Check")]
     public LayerMask groundMask = ~0;
@@ -7,6 +7,13 @@ public class EnemyGroundWalker : MonoBehaviour, ISurfaceWalker
     public float rayStartHeight = 1f;
     public float rayMaxDistance = 3f;
     public float groundSnapLerp = 15f;
+
+    [Header("Attack")]
+    public float expCoolDown = 3f;
+
+    private ClimbableSurfaceHolder climbableSurfaceHolder;
+
+    private SkillUser skillUser;
 
     [Header("Facing")]
     public Transform modelRoot;
@@ -20,6 +27,12 @@ public class EnemyGroundWalker : MonoBehaviour, ISurfaceWalker
     public ClimbableSurface CurrentSurface => throw new System.NotImplementedException();
 
     public int CurrentFaceIndex => throw new System.NotImplementedException();
+
+    private void Awake()
+    {
+        climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
+        skillUser = GetComponent<SkillUser>();
+    }
 
     public void MoveTowards(Vector3 worldTargetPoint, float speed)
     {
@@ -66,5 +79,23 @@ public class EnemyGroundWalker : MonoBehaviour, ISurfaceWalker
         float newYaw = Mathf.LerpAngle(currentEuler.y, targetYaw, turnSpeed * Time.deltaTime);
 
         model.rotation = Quaternion.Euler(currentEuler.x, newYaw, currentEuler.z);
+    }
+    
+    private void Update()
+    {
+        Behaviour();
+    }
+
+    public override void Behaviour()
+    {
+        if (climbableSurfaceHolder.curPlayerTarget == null) return;
+        if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
+
+        skillUser.TryUseSkill(0);
+    }
+
+    public override void OnDeath()
+    {
+        
     }
 }

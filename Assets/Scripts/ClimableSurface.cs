@@ -13,7 +13,8 @@ public class ClimbableSurface : MonoBehaviour
         public int[] externalNeighborFace;    
         public FaceFlags flags = FaceFlags.None;
         public GroundNodeGraph linkedGroundGraph;
-        public int linkedGroundNodeIndex = -1;             
+        public int linkedGroundNodeIndex = -1;   
+    
 
         public Face(Vector3 normal, Vector3[] vertices, int[] neighborIndices)
         {
@@ -31,6 +32,8 @@ public class ClimbableSurface : MonoBehaviour
 
         public GroundNodeRef LinkedGroundNode =>HasLinkedGroundNode? new GroundNodeRef(linkedGroundGraph, linkedGroundNodeIndex): default;
     }
+
+    public ClimbableSurfaceHolder climbableSurfaceHolder;      
 
     [Tooltip("Merged faces of the mesh (e.g. 6 for a cube, regardless of triangle count).")]
     public Face[] faces = System.Array.Empty<Face>();
@@ -63,6 +66,12 @@ public class ClimbableSurface : MonoBehaviour
         for (int i = 0; i < face.vertices.Length; i++)
             c += transform.TransformPoint(face.vertices[i]);
         return c / face.vertices.Length;
+    }
+
+    private void Awake()
+    {
+        climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
+        if (climbableSurfaceHolder == null) climbableSurfaceHolder = GetComponentInParent<ClimbableSurfaceHolder>();
     }
 
 #if UNITY_EDITOR
