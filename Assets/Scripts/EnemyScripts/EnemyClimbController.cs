@@ -36,7 +36,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     State state = State.Normal;
     ClimbableSurface currentSurface;
     int currentFaceIndex = -1;
-    Vector3 verticalVelocity;
+    public Vector3 verticalVelocity;
     Vector3 desiredWorldDirection = Vector3.zero;
     float desiredSpeed = 0f;
 
@@ -169,19 +169,20 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
     void EnterClimbState(ClimbableSurface surface, int faceIndex, Vector3 point, Vector3 normal)
     {
+        if(surface.climbableSurfaceHolder.unClimbable) return;
         state = State.Climbing;
         currentSurface = surface;
         currentFaceIndex = faceIndex;
-        //controller.enabled = false;
+        controller.enabled = false;
 
         transform.position = point + normal * surfaceOffset;
         AlignToNormal(normal);
     }
 
-    void ExitClimbState()
+    public void ExitClimbState()
     {
         state = State.Normal;
-        //controller.enabled = true;
+        controller.enabled = true;
         currentSurface = null;
         currentFaceIndex = -1;
         transform.parent = null;

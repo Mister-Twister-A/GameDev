@@ -46,7 +46,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     ClimbableSurface currentSurface;
     int currentFaceIndex = -1;
-    Vector3 verticalVelocity;
+    public Vector3 verticalVelocity;
 
     void Reset() => controller = GetComponent<CharacterController>();
 
@@ -146,6 +146,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     void EnterClimbState(ClimbableSurface surface,int faceIndex,Vector3 point,Vector3 normal)
     {
+        if(surface.climbableSurfaceHolder.unClimbable) return;
         state = State.Climbing;
         currentSurface = surface;
         currentFaceIndex = faceIndex;
@@ -155,7 +156,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         AlignToNormal(normal);
     }
 
-    void ExitClimbState()
+    public void ExitClimbState()
     {
         state = State.Normal;
         controller.enabled = true;

@@ -14,6 +14,7 @@ public class TestTitan: EnemyData, ISurfaceWalker
     private ClimbableSurfaceHolder climbableSurfaceHolder;
 
     private SkillUser skillUser;
+    [SerializeField] private float explosionForce = 30f;
 
     [Header("Facing")]
     public Transform modelRoot;
@@ -91,11 +92,45 @@ public class TestTitan: EnemyData, ISurfaceWalker
         if (climbableSurfaceHolder.curPlayerTarget == null) return;
         if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
 
-        skillUser.TryUseSkill(0);
+        //skillUser.TryUseSkill(0);
     }
 
     public override void OnDeath()
     {
-        
+        climbableSurfaceHolder.unClimbable = true;
+
+        PlayerClimbController[] playerClimbControllers = GetComponentsInChildren<PlayerClimbController>();
+        EnemyClimbController[] enemyClimbControllers = GetComponentsInChildren<EnemyClimbController>();
+
+        foreach(PlayerClimbController player in playerClimbControllers)
+        {
+            player.ExitClimbState();
+            Vector3 currentEuler = player.transform.rotation.eulerAngles;
+            Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
+            player.transform.rotation = tgtRotation;
+            Vector3 direction = player.transform.position - transform.position;
+            if(direction.y < 0)
+            {
+                direction.y = 0;
+            }
+            player.verticalVelocity = direction.normalized * explosionForce;
+        }
+
+        foreach(EnemyClimbController enemy in enemyClimbControllers)
+        {
+            enemy.ExitClimbState();
+            EnemySurfaceNavigator nav=  enemy.transform.GetComponent<EnemySurfaceNavigator>();
+            if(nav) nav.InvalidatePath();
+            Vector3 currentEuler = enemy.transform.rotation.eulerAngles;
+            Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
+            enemy.transform.rotation = tgtRotation;
+            Vector3 direction = enemy.transform.position - transform.position;
+            if(direction.y < 0)
+            {
+                direction.y = 0;
+            }
+            enemy.verticalVelocity = direction.normalized * explosionForce;
+        }
+        Destroy(gameObject);
     }
 }

@@ -112,6 +112,16 @@ public class EnemySurfaceNavigator : MonoBehaviour
         return planarOffset.magnitude <= waypointReachedDistance;
     }
 
+    public void InvalidatePath()
+    {
+        path = null;
+        pathIndex = 0;
+        hasLastPath = false;
+        lastStart = default;
+        lastGoal = default;
+        repathTimer = 0f;
+    }
+
 
     Vector3 EdgeCrossingPoint(FaceRef from, FaceRef to)
     {

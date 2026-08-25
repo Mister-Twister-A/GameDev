@@ -8,6 +8,8 @@ public class ClimbableSurfaceHolder : MonoBehaviour
 
     public ClimbableSurface curPartClimbableSurface;
 
+    public bool unClimbable = false;
+
     public void RegisterPlayerEnter(Transform _curPart, Transform player)
     {
         curPart = _curPart;

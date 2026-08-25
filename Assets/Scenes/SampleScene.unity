@@ -151,6 +151,7 @@ MonoBehaviour:
   curPlayerTarget: {fileID: 0}
   curPart: {fileID: 0}
   curPartClimbableSurface: {fileID: 0}
+  unClimbable: 0
 --- !u!4 &17059400
 Transform:
   m_ObjectHideFlags: 0
@@ -995,6 +996,7 @@ MonoBehaviour:
   rayMaxDistance: 300
   groundSnapLerp: 15
   expCoolDown: 3
+  explosionForce: 45
   modelRoot: {fileID: 0}
   turnSpeed: 8
   yawOffset: 180
@@ -1019,6 +1021,7 @@ MonoBehaviour:
   curPlayerTarget: {fileID: 0}
   curPart: {fileID: 0}
   curPartClimbableSurface: {fileID: 0}
+  unClimbable: 0
 --- !u!114 &177569962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillUser
   skills:
-  - skill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
+  - skill: {fileID: 11400000, guid: e2421eddcfc48eee5a55edad5fbad3af, type: 2}
     collisionTags:
     - enemy
     cooldownTimer: 0
@@ -150060,6 +150063,7 @@ MonoBehaviour:
     m_Bits: 8
   surfaceOffset: 0.05
   edgeEpsilon: 0.0001
+  verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &311080680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150455,6 +150459,7 @@ MonoBehaviour:
   edgeEpsilon: 0.0001
   ArrivalThreshold: 0.3
   WallPushDistance: 0.5
+  verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!143 &398576417
 CharacterController:
   m_ObjectHideFlags: 0
@@ -151190,6 +151195,7 @@ MonoBehaviour:
   edgeEpsilon: 0.0001
   ArrivalThreshold: 0.3
   WallPushDistance: 0.5
+  verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!143 &555378520
 CharacterController:
   m_ObjectHideFlags: 0
@@ -151245,6 +151251,7 @@ GameObject:
   - component: {fileID: 584879276}
   - component: {fileID: 584879275}
   - component: {fileID: 584879274}
+  - component: {fileID: 584879278}
   m_Layer: 9
   m_Name: weakpoint
   m_TagString: Untagged
@@ -151358,6 +151365,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584879271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &584879278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584879271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8f1d60cc1108621bd23a8e45a12434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeakPointTest
+  enemyName: weakpoint
+  health: 20
 --- !u!1 &587360084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5576790395929063191, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -301872,6 +301893,7 @@ MonoBehaviour:
   edgeEpsilon: 0.0001
   ArrivalThreshold: 2
   WallPushDistance: 0.5
+  verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!143 &1686426590
 CharacterController:
   m_ObjectHideFlags: 0
