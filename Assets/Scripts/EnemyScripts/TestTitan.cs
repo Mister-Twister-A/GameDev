@@ -39,7 +39,6 @@ public class TestTitan: EnemyData, ISurfaceWalker
     {
         Vector3 toTarget = worldTargetPoint - transform.position;
         Vector3 flatDir = Vector3.ProjectOnPlane(toTarget, Vector3.up);
-        //Debug.Log("1 " + worldTargetPoint);
 
         if (flatDir.sqrMagnitude > 0.0001f)
             flatDir.Normalize();
@@ -48,7 +47,6 @@ public class TestTitan: EnemyData, ISurfaceWalker
         Vector3 nextPos = transform.position + horizontalDelta;
 
         nextPos = ApplyGroundHeight(nextPos);
-       // Debug.Log("2 " + nextPos);
 
         transform.position = nextPos;
 

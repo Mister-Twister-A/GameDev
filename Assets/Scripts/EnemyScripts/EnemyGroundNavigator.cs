@@ -60,7 +60,6 @@ public class EnemyGroundNavigator : MonoBehaviour
         if (repathTimer <= 0f)
         {
             Repath();
-            //Debug.Log("did a reapth");
             repathTimer = repathInterval;
         }
 
@@ -70,8 +69,6 @@ public class EnemyGroundNavigator : MonoBehaviour
     private void Repath(){
         int startIndex = FindNearestNode(self.Position + nodeFindOffset);
         int goalIndex = FindNearestNode(target.position);
-        //Debug.Log(self.Position + " "+  IsTitan);
-        //Debug.Log("3 " + goalIndex);
 
         if (startIndex < 0 || goalIndex < 0) return;
 
