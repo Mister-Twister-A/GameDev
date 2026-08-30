@@ -9,12 +9,12 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     [Header("References")]
     public CharacterController controller;
     public ThirdPersonCam camera;
-
     [SerializeField] private Transform playerModel;
 
     private SkillUser skillUser;
 
     public bool IsClimbing => state == State.Climbing;
+
 
     [Header("Movement")]
     public float walkSpeed = 5f;
@@ -46,6 +46,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     ClimbableSurface currentSurface;
     int currentFaceIndex = -1;
+    Vector3 localSurfacePoint;
     public Vector3 verticalVelocity;
 
     void Reset() => controller = GetComponent<CharacterController>();
@@ -153,6 +154,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         controller.enabled = false;
 
         transform.position = point + normal * surfaceOffset;
+        localSurfacePoint = surface.transform.InverseTransformPoint(point);
         AlignToNormal(normal);
     }
 
@@ -163,11 +165,23 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterPlayerExit();
         currentSurface = null;
         currentFaceIndex = -1;
-        transform.parent = null;
     }
 
     void ClimbingUpdate()
     {
+        if (currentSurface == null)
+        {
+            ExitClimbState();
+            return;
+        }
+        if (currentSurface != null && currentFaceIndex >= 0)
+        {
+            Vector3 normal = currentSurface.transform.TransformDirection(
+                currentSurface.faces[currentFaceIndex].normal).normalized;
+
+            transform.position = currentSurface.transform.TransformPoint(localSurfacePoint) + normal * surfaceOffset;
+            AlignToNormal(normal);
+        }
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
@@ -212,6 +226,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (IsInsideFace(face, targetLocal))
         {
             transform.position =currentSurface.transform.TransformPoint(targetLocal) +normal * surfaceOffset;
+            localSurfacePoint = targetLocal;
             return;
         }
 
@@ -242,6 +257,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (resolvedNeighborIndex < 0)
         {
             transform.position = crossingWorld + normal * surfaceOffset;
+            localSurfacePoint = currentSurface.transform.InverseTransformPoint(crossingWorld);
             return;
         }
 
@@ -257,7 +273,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         Vector3 snappedWorld =neighborSurface.transform.TransformPoint(snappedLocal);
 
         transform.position =snappedWorld + neighborNormal * surfaceOffset;
-
+        localSurfacePoint = snappedLocal;
         currentSurface = neighborSurface;
         currentFaceIndex = resolvedNeighborIndex;
 

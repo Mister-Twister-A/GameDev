@@ -40,6 +40,8 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     Vector3 desiredWorldDirection = Vector3.zero;
     float desiredSpeed = 0f;
 
+    Vector3 localSurfacePoint;
+
     public State CurrentBehaviourState => state;
     public bool IsClimbing => state == State.Climbing;
 
@@ -47,6 +49,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public ClimbableSurface CurrentSurface => currentSurface;
     public int CurrentFaceIndex => currentFaceIndex;
     public Vector3 Position => transform.position;
+
     public void MoveTowards(Vector3 worldTargetPoint, float speed)
     {
         Vector3 toTarget = worldTargetPoint - transform.position;
@@ -73,7 +76,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
         var markerGO = new GameObject($"{name}_EntryMarker")
         {
-           // hideFlags = HideFlags.HideInHierarchy
+            hideFlags = HideFlags.HideInHierarchy
         };
         EntryPoint = markerGO.transform;
     }
@@ -176,6 +179,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         controller.enabled = false;
 
         transform.position = point + normal * surfaceOffset;
+        localSurfacePoint = surface.transform.InverseTransformPoint(point);
         AlignToNormal(normal);
     }
 
@@ -185,7 +189,6 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         controller.enabled = true;
         currentSurface = null;
         currentFaceIndex = -1;
-        transform.parent = null;
     }
     public void DetachFromSurface(float launchForce = 0f)
     {
@@ -200,6 +203,16 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     void ClimbingUpdate()
     {
         //Debug.Log($"sqrMgnt {desiredWorldDirection.sqrMagnitude}");
+
+        if (currentSurface != null && currentFaceIndex >= 0)
+        {
+            Vector3 normal = currentSurface.transform.TransformDirection(
+                currentSurface.faces[currentFaceIndex].normal).normalized;
+
+            transform.position = currentSurface.transform.TransformPoint(localSurfacePoint) + normal * surfaceOffset;
+            AlignToNormal(normal);
+        }
+
         if (desiredWorldDirection.sqrMagnitude < 0.00001f){ 
             return;
         }
@@ -244,6 +257,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         if (IsInsideFace(face, targetLocal))
         {
             transform.position = currentSurface.transform.TransformPoint(targetLocal) + normal * surfaceOffset;
+            localSurfacePoint = targetLocal;
             return;
         }
 
@@ -274,6 +288,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         if (resolvedNeighborIndex < 0)
         {
             transform.position = crossingWorld + normal * surfaceOffset;
+            localSurfacePoint = currentSurface.transform.InverseTransformPoint(crossingWorld);
             return;
         }
 
@@ -289,11 +304,11 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         Vector3 snappedWorld = neighborSurface.transform.TransformPoint(snappedLocal);
 
         transform.position = snappedWorld + neighborNormal * surfaceOffset;
-
+        localSurfacePoint = snappedLocal;
         currentSurface = neighborSurface;
         currentFaceIndex = resolvedNeighborIndex;
 
-        transform.SetParent(neighborSurface.transform, true);
+        //transform.SetParent(neighborSurface.transform, true);
         AlignToNormal(neighborNormal);
 
         float remaining = 1f - t;

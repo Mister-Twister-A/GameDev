@@ -13,7 +13,7 @@ public class ClimbableSurfaceHolder : MonoBehaviour
     public void RegisterPlayerEnter(Transform _curPart, Transform player)
     {
         curPart = _curPart;
-        player.transform.SetParent(_curPart, true);
+       // player.transform.SetParent(_curPart, true);
         curPartClimbableSurface = _curPart.GetComponent<ClimbableSurface>();
         curPlayerTarget = player.GetComponent<PlayerClimbController>();
     }
