@@ -97,6 +97,9 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        Vector2 inputDir = Vector2.ClampMagnitude(new Vector2(h, v), 1f);
+        h = inputDir.x;
+        v = inputDir.y;
        //Vector3 move = (transform.right * h + transform.forward * v) * walkSpeed;
         Vector3 right = Vector3.Cross(transform.up, camera.MovementDirection).normalized;
         Vector3 move = (camera.MovementDirection * v + right * h) * walkSpeed;
@@ -184,6 +187,9 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         }
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        Vector2 inputDir = Vector2.ClampMagnitude(new Vector2(h, v), 1f);
+        h = inputDir.x;
+        v = inputDir.y;
 
         if (h == 0f && v == 0f) return;
 

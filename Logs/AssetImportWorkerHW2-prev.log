@@ -1917,3 +1917,23 @@ Memory consumption went from 235.3 MB to 227.9 MB.
 Total: 13.322668 ms (FindLiveObjects: 1.532629 ms CreateObjectMapping: 2.580708 ms MarkObjects: 5.691037 ms  DeleteObjects: 3.516497 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 3.45 ms, found 0 plugins.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8217.
+Memory consumption went from 231.4 MB to 228.7 MB.
+Total: 107.367743 ms (FindLiveObjects: 3.828448 ms CreateObjectMapping: 1.817220 ms MarkObjects: 100.326043 ms  DeleteObjects: 1.389949 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=36, old size=0, incomplete=0]
+Vulkan PSO: Saved size[36] path[/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin] success=1 headerChanged=1 sizeChanged=1
