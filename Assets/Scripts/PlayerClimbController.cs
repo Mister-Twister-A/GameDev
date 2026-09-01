@@ -41,6 +41,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     public ClimbableSurface CurrentSurface => currentSurface;
     public int CurrentFaceIndex => currentFaceIndex;
     public Vector3 Position => transform.position;
+    public Transform Transform_ => transform;
 
     State state = State.Normal;
 
@@ -165,7 +166,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         state = State.Normal;
         controller.enabled = true;
-        if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterPlayerExit();
+        if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterClimberExit(this);
         currentSurface = null;
         currentFaceIndex = -1;
     }
@@ -284,7 +285,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         currentFaceIndex = resolvedNeighborIndex;
 
         //transform.SetParent(neighborSurface.transform, true);
-        neighborSurface.climbableSurfaceHolder.RegisterPlayerEnter(neighborSurface.transform, gameObject.transform);
+        neighborSurface.climbableSurfaceHolder.RegisterClimberEnter(neighborSurface.transform, this);
         AlignToNormal(neighborNormal);
 
         float remaining = 1f - t;

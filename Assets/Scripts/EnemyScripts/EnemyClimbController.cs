@@ -30,6 +30,8 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public float surfaceOffset;
     public float edgeEpsilon = 0.0001f;
 
+    public Transform Transform_ => transform;
+
     [SerializeField] private float ArrivalThreshold = 0.3f;
     [SerializeField] private float WallPushDistance = 0.5f;
 
@@ -187,6 +189,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     {
         state = State.Normal;
         controller.enabled = true;
+        if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterClimberExit(this);
         currentSurface = null;
         currentFaceIndex = -1;
     }
@@ -309,6 +312,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         currentFaceIndex = resolvedNeighborIndex;
 
         //transform.SetParent(neighborSurface.transform, true);
+        neighborSurface.climbableSurfaceHolder.RegisterClimberEnter(neighborSurface.transform, this);
         AlignToNormal(neighborNormal);
 
         float remaining = 1f - t;

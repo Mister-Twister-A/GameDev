@@ -1,27 +1,41 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ClimbableSurfaceHolder : MonoBehaviour
 {
-    public PlayerClimbController curPlayerTarget;
-
-    public Transform curPart;
-
-    public ClimbableSurface curPartClimbableSurface;
+    public class ClimbEntry
+    {
+        public ISurfaceLocator controller;
+        public Transform part;
+        public ClimbableSurface climbableSurface;
+    }
+    private Dictionary<ISurfaceLocator, ClimbEntry> activeClimbers = new();
 
     public bool unClimbable = false;
+    public bool IsAnyoneClimbing => activeClimbers.Count > 0;
+    public ICollection<ClimbEntry> ActiveClimbers => activeClimbers.Values;
 
-    public void RegisterPlayerEnter(Transform _curPart, Transform player)
+    public void RegisterClimberEnter(Transform part, ISurfaceLocator climber)
     {
-        curPart = _curPart;
-       // player.transform.SetParent(_curPart, true);
-        curPartClimbableSurface = _curPart.GetComponent<ClimbableSurface>();
-        curPlayerTarget = player.GetComponent<PlayerClimbController>();
+        if (unClimbable || climber == null) return;
+
+        activeClimbers[climber] = new ClimbEntry
+        {
+            controller = climber,
+            part = part,
+            climbableSurface = part.GetComponent<ClimbableSurface>()
+        };
     }
 
-    public void RegisterPlayerExit()
+    public void RegisterClimberExit(ISurfaceLocator climber)
     {
-        curPart = null;
-        curPlayerTarget = null;
-        curPartClimbableSurface = null;
+        if (climber != null) activeClimbers.Remove(climber);
     }
+
+    public bool TryGetEntry(ISurfaceLocator climber, out ClimbEntry entry)
+    {
+        return activeClimbers.TryGetValue(climber, out entry);
+    }
+
+    
 }

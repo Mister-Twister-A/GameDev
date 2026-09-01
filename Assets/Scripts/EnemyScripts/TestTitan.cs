@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 public class TestTitan: EnemyData, ISurfaceWalker
 {
@@ -28,6 +29,8 @@ public class TestTitan: EnemyData, ISurfaceWalker
     public ClimbableSurface CurrentSurface => throw new System.NotImplementedException();
 
     public int CurrentFaceIndex => throw new System.NotImplementedException();
+
+    public Transform Transform_ => transform;
 
     private void Awake()
     {
@@ -87,8 +90,9 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
     public override void Behaviour()
     {
-        if (climbableSurfaceHolder.curPlayerTarget == null) return;
-        if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
+        // if (climbableSurfaceHolder.curPlayerTarget == null) return;
+        // if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
+        if(!climbableSurfaceHolder.IsAnyoneClimbing) return;
 
         //skillUser.TryUseSkill(0);
     }
@@ -96,39 +100,43 @@ public class TestTitan: EnemyData, ISurfaceWalker
     public override void OnDeath()
     {
         climbableSurfaceHolder.unClimbable = true;
-
-        PlayerClimbController[] playerClimbControllers = GetComponentsInChildren<PlayerClimbController>();
-        EnemyClimbController[] enemyClimbControllers = GetComponentsInChildren<EnemyClimbController>();
-
-        foreach(PlayerClimbController player in playerClimbControllers)
+        ICollection<ClimbableSurfaceHolder.ClimbEntry> ActiveClimbers = new List<ClimbableSurfaceHolder.ClimbEntry>(climbableSurfaceHolder.ActiveClimbers);;
+        foreach (ClimbableSurfaceHolder.ClimbEntry entry in ActiveClimbers)
         {
-            player.ExitClimbState();
-            Vector3 currentEuler = player.transform.rotation.eulerAngles;
-            Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
-            player.transform.rotation = tgtRotation;
-            Vector3 direction = player.transform.position - transform.position;
-            if(direction.y < 0)
+            if(entry.controller is PlayerClimbController player)
             {
-                direction.y = 0;
+                player.ExitClimbState();
+                Vector3 currentEuler = player.transform.rotation.eulerAngles;
+                Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
+                player.transform.rotation = tgtRotation;
+                Vector3 direction = player.transform.position - transform.position;
+                if(direction.y < 0)
+                {
+                    direction.y = 0;
+                }
+                player.verticalVelocity = direction.normalized * explosionForce;
             }
-            player.verticalVelocity = direction.normalized * explosionForce;
+            else if(entry.controller is EnemyClimbController enemy)
+            {
+                enemy.ExitClimbState();
+                EnemySurfaceNavigator nav=  enemy.transform.GetComponent<EnemySurfaceNavigator>();
+                if(nav) nav.InvalidatePath();
+                Vector3 currentEuler = enemy.transform.rotation.eulerAngles;
+                Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
+                enemy.transform.rotation = tgtRotation;
+                Vector3 direction = enemy.transform.position - transform.position;
+                if(direction.y < 0)
+                {
+                    direction.y = 0;
+                }
+                enemy.verticalVelocity = direction.normalized * explosionForce;
+            }
+            else
+            {
+                Debug.Log("Unknown ISurfaceLocator controller type");
+            }
         }
 
-        foreach(EnemyClimbController enemy in enemyClimbControllers)
-        {
-            enemy.ExitClimbState();
-            EnemySurfaceNavigator nav=  enemy.transform.GetComponent<EnemySurfaceNavigator>();
-            if(nav) nav.InvalidatePath();
-            Vector3 currentEuler = enemy.transform.rotation.eulerAngles;
-            Quaternion tgtRotation = Quaternion.Euler(0f, currentEuler.y, 0f);
-            enemy.transform.rotation = tgtRotation;
-            Vector3 direction = enemy.transform.position - transform.position;
-            if(direction.y < 0)
-            {
-                direction.y = 0;
-            }
-            enemy.verticalVelocity = direction.normalized * explosionForce;
-        }
         Destroy(gameObject);
     }
 }
