@@ -148,9 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9234703f7717138e997354b26e0b90b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurfaceHolder
-  curPlayerTarget: {fileID: 0}
-  curPart: {fileID: 0}
-  curPartClimbableSurface: {fileID: 0}
   unClimbable: 0
 --- !u!4 &17059400
 Transform:
@@ -968,6 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGroundNavigator
   target: {fileID: 311080678}
+  Mode: 0
   groundGraph: {fileID: 596422843}
   moveSpeed: 3
   repathInterval: 0.5
@@ -987,8 +985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d7160f93e1ccbc5b4c1ac7f95aed5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestTitan
-  enemyName: 
-  health: 0
+  enemyName: Titan
+  health: 10
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1001,6 +999,10 @@ MonoBehaviour:
   turnSpeed: 8
   yawOffset: 180
   pivotHeightAboveFeet: 27
+  curPlayerTarget: {fileID: 311080678}
+  waitTime: 2
+  wanderDistance: 15
+  wanderConeAngle: 60
 --- !u!4 &177569960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8879528566716807029, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
@@ -1018,9 +1020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9234703f7717138e997354b26e0b90b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClimbableSurfaceHolder
-  curPlayerTarget: {fileID: 0}
-  curPart: {fileID: 0}
-  curPartClimbableSurface: {fileID: 0}
   unClimbable: 0
 --- !u!114 &177569962
 MonoBehaviour:
@@ -301864,6 +301863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGroundNavigator
   target: {fileID: 311080678}
+  Mode: 0
   groundGraph: {fileID: 208916913}
   moveSpeed: 5
   repathInterval: 0.5

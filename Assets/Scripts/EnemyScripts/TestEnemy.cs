@@ -36,6 +36,13 @@ public class TestEnemy : EnemyData
 
     public override void OnDeath()
     {
+        if (TryGetComponent<EnemyClimbController>(out EnemyClimbController enemyClimbController))
+        {
+            if (enemyClimbController.CurrentSurface != null)
+            {
+                enemyClimbController.CurrentSurface.climbableSurfaceHolder.RegisterClimberExit(enemyClimbController);
+            }
+        }
         Destroy(gameObject);
     }
 

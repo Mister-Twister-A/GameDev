@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class EnemyGroundNavigator : MonoBehaviour
 {
+    public enum NavMode { Chase, Wander }
+    
     [Header("Target")]
     public Transform target;
+    public NavMode Mode = NavMode.Chase;
 
     [Header("Graph")]
     public GroundNodeGraph groundGraph;
@@ -65,7 +68,16 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         FollowPath();
     }
-
+    public void SetTarget(Transform newTarget, NavMode mode)
+    {
+        if (target != newTarget)
+        {
+            target = newTarget;
+            hasLastPath = false; 
+        }
+ 
+        Mode = mode;
+    }
     private void Repath(){
         int startIndex = FindNearestNode(self.Position + nodeFindOffset);
         int goalIndex = FindNearestNode(target.position);

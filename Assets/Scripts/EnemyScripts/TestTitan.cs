@@ -32,10 +32,35 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
     public Transform Transform_ => transform;
 
+    [Header("Misc")]
+
+    [SerializeField] public Transform curPlayerTarget;
+
+    private EnemyGroundNavigator enemyGroundNavigator;
+    private Transform wanderPointTransform;
+
+    [SerializeField] private float waitTime = 2f;
+    private float waitTimer;
+    private bool waiting;
+    [SerializeField] private float wanderDistance = 15f;
+    [SerializeField] private float wanderConeAngle = 150f;
+
     private void Awake()
     {
         climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
+        if(climbableSurfaceHolder == null) Debug.Log($"Titan {gameObject.name} did not find cimbablesurfaceHolder component");
+
         skillUser = GetComponent<SkillUser>();
+        if(skillUser == null) Debug.Log($"Titan {gameObject.name} did not find skillUser component");
+
+        enemyGroundNavigator = GetComponent<EnemyGroundNavigator>();
+        if(enemyGroundNavigator == null) Debug.Log($"Titan {gameObject.name} did not find enemygroundNavigator component");
+
+        var marker = new GameObject($"{name}_WanderPoint");
+        wanderPointTransform = marker.transform;
+
+        waiting = true;
+        waitTimer = 0f;
     }
 
     public void MoveTowards(Vector3 worldTargetPoint, float speed)
@@ -92,9 +117,46 @@ public class TestTitan: EnemyData, ISurfaceWalker
     {
         // if (climbableSurfaceHolder.curPlayerTarget == null) return;
         // if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
-        if(!climbableSurfaceHolder.IsAnyoneClimbing) return;
+        if(!climbableSurfaceHolder.IsAnyoneClimbing){
+            enemyGroundNavigator.SetTarget(curPlayerTarget, EnemyGroundNavigator.NavMode.Chase);
+            return;
+        }
 
+        Debug.Log(waiting + " " +  waitTimer);
+        if (waiting)
+        {
+            waitTimer -= Time.deltaTime;
+            if (waitTimer <= 0f) PickNewWanderPoint();
+            return;
+        }
+        float dist = Vector3.Distance(transform.position, wanderPointTransform.position);
+        if (dist <= 3f)
+        {
+            waiting = true;
+            waitTimer = waitTime;
+        }
         //skillUser.TryUseSkill(0);
+    }
+    private void PickNewWanderPoint()
+    {
+        waiting = false;
+ 
+        float halfAngle = wanderConeAngle * 0.5f;
+        float randomAngle = Random.Range(-halfAngle, halfAngle);
+ 
+        Vector3 forward = transform.forward;
+        forward.y = 0f;
+        if (forward.sqrMagnitude < 0.0001f)
+            forward = Vector3.forward;
+        forward.Normalize();
+ 
+        Vector3 direction = Quaternion.AngleAxis(randomAngle, Vector3.up) * forward;
+        Vector3 point = transform.position + direction * wanderDistance;
+        point.y = transform.position.y; 
+ 
+        wanderPointTransform.position = point;
+ 
+        enemyGroundNavigator.SetTarget(wanderPointTransform, EnemyGroundNavigator.NavMode.Wander);
     }
 
     public override void OnDeath()
