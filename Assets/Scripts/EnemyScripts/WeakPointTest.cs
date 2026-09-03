@@ -14,6 +14,11 @@ public class WeakPointTest : EnemyData
         Behaviour();
     }
 
+    public override void Spawn(Transform pos)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void OnDeath()
     {
         EnemyData data = transform.parent.GetComponentInParent<EnemyData>();

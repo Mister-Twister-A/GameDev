@@ -12,4 +12,9 @@ public class PlayerData : EnemyData
     {
         Application.Quit();
     }
+
+    public override void Spawn(Transform pos)
+    {
+        throw new System.NotImplementedException();
+    }
 }

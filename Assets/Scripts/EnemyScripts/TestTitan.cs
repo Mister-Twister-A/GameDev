@@ -113,6 +113,11 @@ public class TestTitan: EnemyData, ISurfaceWalker
         Behaviour();
     }
 
+    public override void Spawn(Transform pos)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void Behaviour()
     {
         // if (climbableSurfaceHolder.curPlayerTarget == null) return;

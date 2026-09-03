@@ -11,6 +11,7 @@ public class TestEnemy : EnemyData
     void Start()
     {
         skillUser = GetComponentInChildren<SkillUser>();
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -46,10 +47,8 @@ public class TestEnemy : EnemyData
         Destroy(gameObject);
     }
 
-    private void Flip()
+    public override void Spawn(Transform pos)
     {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        Instantiate(gameObject, pos.position, Quaternion.identity);
     }
 }

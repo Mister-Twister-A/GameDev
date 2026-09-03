@@ -43,16 +43,19 @@ public class EnemyGroundNavigator : MonoBehaviour
             Debug.LogError($"{name}: EnemyGroundNavigator needs a component implementing ISurfaceWalker on the same object.");
 
         if (groundGraph == null)
-            Debug.LogError($"{name}: EnemyGroundNavigator has no GroundNodeGraph assigned.");
+        {
+            Debug.LogError($"{name}: EnemyGroundNavigator assigning GroundGraph by tag.");
+            groundGraph = GameObject.FindWithTag("GroundGraphSmall").GetComponent<GroundNodeGraph>();
+        }
+            
 
-        if (target == null)
-            Debug.LogError($"{name}: EnemyGroundNavigator has no target assigned.");
-        
+        // if (target == null)
+        //     Debug.LogError($"{name}: EnemyGroundNavigator has no target assigned.");
     }
 
     private void Update()
     {
-        if (self == null || groundGraph == null || target == null) return;
+        if (self == null || groundGraph == null) return;
         if(!IsTitan){
             if(climbController.IsClimbing == true) return;
             target = climbController.CurrentTarget;

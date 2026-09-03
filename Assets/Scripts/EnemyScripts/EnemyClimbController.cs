@@ -81,6 +81,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             hideFlags = HideFlags.HideInHierarchy
         };
         EntryPoint = markerGO.transform;
+        if(playerController == null) playerController = GameObject.FindWithTag("Player").GetComponent<PlayerClimbController>();
     }
     private float retargetTimer;
     void Update()
