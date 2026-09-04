@@ -78,7 +78,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
         var markerGO = new GameObject($"{name}_EntryMarker")
         {
-            hideFlags = HideFlags.HideInHierarchy
+            //hideFlags = HideFlags.HideInHierarchy
         };
         EntryPoint = markerGO.transform;
         if(playerController == null) playerController = GameObject.FindWithTag("Player").GetComponent<PlayerClimbController>();
@@ -98,6 +98,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
     private void RefreshTarget()
     {
+        
         var playerisclimbing = playerController.IsClimbing;
         if(state == State.Normal && playerisclimbing && playerController.CurrentSurface != null 
         && ClimbEntryPointRegestry.Instance.TryFindNearestEntryOnSurface(
@@ -108,6 +109,11 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             //Debug.Log(reachedGroundNode);
             EntryPoint.position = reachedGroundNode ? entryFace.WorldPosition - entryFace.WorldNormal() * WallPushDistance : entryNode.WorldPosition;
             CurrentTarget = EntryPoint;
+            if (EntryPoint == null)
+        {
+            Debug.LogError($"{name}: EntryPoint not assigned!", this);
+            return;
+        }
             //Debug.Log($"reachedGroundNode={reachedGroundNode} target={EntryPoint.position} dist={(transform.position - EntryPoint.position).magnitude}");
         }
         else if (state == State.Climbing && !playerisclimbing)

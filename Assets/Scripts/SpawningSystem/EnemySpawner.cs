@@ -28,7 +28,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(spawnTimer < 0)
+        if(waveTimer <= 0)
+        {
+            curWave += 1;
+            GenerateWave();
+            waveTimer = waveInterval;
+            Debug.Log($"Generating Wave {curWave}");
+        }
+        if(spawnTimer <= 0)
         {
             if (enemiesToSpawn.Count > 0)
             {
@@ -50,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
 
     void GenerateWave()
     {
-        curCredits= curWave * 20;
+        curCredits= curWave * 10;
         GenerateEnemies();
 
         if(enemiesToSpawn.Count == 0) return;

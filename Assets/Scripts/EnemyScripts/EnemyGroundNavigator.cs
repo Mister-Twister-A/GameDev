@@ -44,7 +44,7 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         if (groundGraph == null)
         {
-            Debug.LogError($"{name}: EnemyGroundNavigator assigning GroundGraph by tag.");
+            Debug.Log($"{name}: EnemyGroundNavigator assigning GroundGraph by tag.");
             groundGraph = GameObject.FindWithTag("GroundGraphSmall").GetComponent<GroundNodeGraph>();
         }
             

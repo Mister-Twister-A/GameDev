@@ -364,7 +364,7 @@ MonoBehaviour:
   enemyModel: {fileID: 6608850261340490767}
   CurrentTarget: {fileID: 0}
   playerController: {fileID: 0}
-  walkSpeed: 5
+  walkSpeed: 10
   climbSpeed: 4
   gravity: -20
   airDrag: 3

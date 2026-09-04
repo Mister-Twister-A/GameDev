@@ -22,6 +22,11 @@ public class EnemySurfaceNavigator : MonoBehaviour
 
     void Awake()
     {
+        if(targetBehaviour == null)
+        {
+            targetBehaviour = GameObject.FindWithTag("Player").GetComponent<PlayerClimbController>();
+            Debug.Log($" {name}: Getting Target Behaviour by tag");
+        }
         self = GetComponent<ISurfaceWalker>();
         target = targetBehaviour as ISurfaceLocator;
         climbController = GetComponent<EnemyClimbController>();
