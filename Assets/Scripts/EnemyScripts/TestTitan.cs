@@ -12,8 +12,8 @@ public class TestTitan: EnemyData, ISurfaceWalker
     [Header("Attack")]
     public float expCoolDown = 3f;
 
-    private ClimbableSurfaceHolder climbableSurfaceHolder;
-
+    
+ 
     private SkillUser skillUser;
     [SerializeField] private float explosionForce = 30f;
 
@@ -35,8 +35,8 @@ public class TestTitan: EnemyData, ISurfaceWalker
     [Header("Misc")]
 
     [SerializeField] public Transform curPlayerTarget;
-
-    private EnemyGroundNavigator enemyGroundNavigator;
+    [SerializeField] private ClimbableSurfaceHolder climbableSurfaceHolder;
+    [SerializeField]private EnemyGroundNavigator enemyGroundNavigator;
     private Transform wanderPointTransform;
 
     [SerializeField] private float waitTime = 2f;
@@ -47,13 +47,13 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
     private void Awake()
     {
-        climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
+        //climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
         if(climbableSurfaceHolder == null) Debug.Log($"Titan {gameObject.name} did not find cimbablesurfaceHolder component");
 
         skillUser = GetComponent<SkillUser>();
         if(skillUser == null) Debug.Log($"Titan {gameObject.name} did not find skillUser component");
 
-        enemyGroundNavigator = GetComponent<EnemyGroundNavigator>();
+        //enemyGroundNavigator = GetComponent<EnemyGroundNavigator>();
         if(enemyGroundNavigator == null) Debug.Log($"Titan {gameObject.name} did not find enemygroundNavigator component");
 
         var marker = new GameObject($"{name}_WanderPoint");
@@ -127,7 +127,7 @@ public class TestTitan: EnemyData, ISurfaceWalker
             return;
         }
 
-        Debug.Log(waiting + " " +  waitTimer);
+       // Debug.Log(waiting + " " +  waitTimer);
         if (waiting)
         {
             waitTimer -= Time.deltaTime;
