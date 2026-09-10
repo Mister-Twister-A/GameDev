@@ -134,7 +134,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         if (state != State.Normal) return;
         if (((1 << hit.gameObject.layer) & climbableLayer) == 0) return;
-
+        
         var surface = hit.collider.GetComponent<ClimbableSurface>();
         if (surface == null || !surface.IsValid()) return;
 
@@ -145,6 +145,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
         int faceIndex = surface.GetFaceFromTriangle(rayHit.triangleIndex);
         if (faceIndex < 0) return;
+        if (surface.faces[faceIndex].IsUnwalkable) return; 
 
         EnterClimbState(surface, faceIndex, rayHit.point, rayHit.normal);
     }
@@ -239,13 +240,19 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
         int edge = FindCrossedEdge(face, currentLocal, targetLocal, out float t);
 
+        Vector3 crossingLocal;
         if (edge < 0)
         {
             edge = FindClosestEdge(face, targetLocal);
+            crossingLocal = ClosestPointOnEdge(face, edge, targetLocal);
             t = 1f;
         }
+        else
+        {
+            crossingLocal = Vector3.Lerp(currentLocal, targetLocal, t);
+        }
 
-        Vector3 crossingLocal =Vector3.Lerp(currentLocal, targetLocal, t);
+        //Vector3 crossingLocal =Vector3.Lerp(currentLocal, targetLocal, t);
         Vector3 crossingWorld =currentSurface.transform.TransformPoint(crossingLocal);
 
         int neighborIndex = face.neighborIndices[edge];
@@ -269,6 +276,13 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         }
 
         var neighbor = neighborSurface.faces[resolvedNeighborIndex];
+
+        if (neighbor.IsUnwalkable)
+        {
+            transform.position = crossingWorld + normal * surfaceOffset;
+            localSurfacePoint = currentSurface.transform.InverseTransformPoint(crossingWorld);
+            return;
+        }
 
         Vector3 neighborNormal =neighborSurface.transform.TransformDirection(neighbor.normal).normalized;
         Quaternion hinge =Quaternion.FromToRotation(normal, neighborNormal);

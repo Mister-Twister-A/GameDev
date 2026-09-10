@@ -12,6 +12,7 @@ public class ClimbableSurface : MonoBehaviour
         public ClimbableSurface[] externalNeighborSurface; 
         public int[] externalNeighborFace;    
         public FaceFlags flags = FaceFlags.None;
+        public bool IsUnwalkable => (flags & FaceFlags.NoTraverse) != 0;
         public GroundNodeGraph linkedGroundGraph;
         public int linkedGroundNodeIndex = -1;   
     
