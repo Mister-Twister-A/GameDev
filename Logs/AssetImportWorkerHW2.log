@@ -3300,3 +3300,13 @@ Importing 'GUID: fd4b11fce37687cb3b98679e08f4f41a - Path: Assets/Scenes/MissionT
 Imported 'GUID: fd4b11fce37687cb3b98679e08f4f41a' -> (Import Result ID: 'c3b86da5d1d3ee9d7f394c6f16930d13') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed8adafebd6df17feb96a021290fb710 DependenciesID=bb34cf2c842f670597eb0ca867bdb260 StaticDependenciesID=ee80cfacab43ea6b8d55a602cf475d39 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=270796, old size=270796, incomplete=0]
+Vulkan PSO: Pipeline cache has not changed skipping save handle[56bacfa0]
+Internal: Possible leak. All render target surfaces should be removed from IdMap when destructed using RenderTargetMap::Remove(RenderSurfaceBase* rs).

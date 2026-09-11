@@ -8223,3 +8223,52 @@ Unloading 17 unused Assets / (332.4 KB). Loaded Objects now: 10378.
 Memory consumption went from 382.9 MB to 382.5 MB.
 Total: 56.033439 ms (FindLiveObjects: 0.462387 ms CreateObjectMapping: 1.205681 ms MarkObjects: 54.003933 ms  DeleteObjects: 0.358886 ms)
 
+
+Asset Pipeline Refresh (id=e8decbccc9f7a8eaf9ade4b9534f1ecb): Total: 0.594 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=584 ms
+		Asset DB Callback time: managed=0 ms, native=3 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1490, non-scripts=2732
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 3.560ms
+	ApplyChangesToAssetFolders: 1.659ms
+	Scan: 552.310ms
+	Collect global state as custom dependencies: 2.794ms
+	GatherAllCurrentPrimaryImportResultRevisions: 5.930ms
+	UnloadStreamsBegin: 3.462ms
+	UnloadStreamsEnd: 0.101ms
+	Untracked: 20.402ms
+
+MonoPathRemapper: Attempts to remap: 213594; Successful remaps: 56
+Serialized file version minimum: 22, current 23
+[LAYOUT] About to save layout /home/usio/Titan test/UserSettings/Layouts/default-6000.dwlt
+[LAYOUT] About to save layout /home/usio/.config/unity3d/Preferences/Editor-5.x/Layouts/current/default-6000.dwlt
+Shutting down MSBuild server...
+Shutting down VB/C# compiler server...
+VB/C# compiler server shut down successfully.
+MSBuild server shut down successfully.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8 channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+AcceleratorClientConnectionCallback - disconnected - :0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+Cleanup mono
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 139
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1789054266685,"processId":1086213,"allocatedMemory":54622435,"memoryLabels":[{"Default":345188},{"Permanent":16152},{"Thread":1051832},{"Manager":813945},{"VertexData":8},{"Geometry":408},{"Texture":24},{"Shader":855331},{"Material":24},{"GfxDevice":37176},{"Animation":93432},{"Audio":1272},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":11824},{"Input":60256},{"JobScheduler":256},{"TextLib":33603},{"Mono":80},{"MonoCode":192},{"ScriptingNativeRuntime":155088},{"BaseObject":1624968},{"Resource":1032},{"Renderer":3072},{"Transform":4717},{"File":51333},{"WebCam":80},{"Culling":32},{"Terrain":11346},{"Wind":24},{"String":51968},{"StaticString":4140},{"Utility":2674928},{"PoolAlloc":2152},{"AI":80},{"TypeTree":2382675},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7408},{"CloudService":11224},{"WebRequest":9953},{"VR":47018},{"SceneManager":640},{"Video":64},{"LazyScriptCache":32},{"NativeArray":33067832},{"Camera":17},{"Secure":8049},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57552},{"StaticSafetyDebugInfo":278528},{"Analytics":760},{"Hierarchy":1424},{"UIElements":1282864},{"CoreStats":13688},{"Identifiers":6768},{"Gui":4257890},{"EditorUtility":250276},{"VersionControl":8},{"Undo":963},{"AssetDatabase":5047571},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35346},{"Upm":1836},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":156},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2400},{"Windowing":480},{"Licensing":1096},{"AssetReference":32},{"IPCStream":32}]}
