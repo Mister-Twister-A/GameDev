@@ -6,7 +6,6 @@ public class SpikeSkillData : SkillData
 {
     [Header("Spike Prefab")]
     public GameObject spikePrefab;
-    [Tooltip("How far along the face normal the spike rises out of the surface.")]
     public float riseDistance = 1f;
     private ClimbableSurfaceHolder climbableSurfaceHolder;
 

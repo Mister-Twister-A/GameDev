@@ -120,14 +120,10 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
     public override void Behaviour()
     {
-        // if (climbableSurfaceHolder.curPlayerTarget == null) return;
-        // if(!climbableSurfaceHolder.curPlayerTarget.IsClimbing) return;
         if(!climbableSurfaceHolder.IsAnyoneClimbing){
             enemyGroundNavigator.SetTarget(curPlayerTarget, EnemyGroundNavigator.NavMode.Chase);
             return;
         }
-
-       // Debug.Log(waiting + " " +  waitTimer);
         if (waiting)
         {
             waitTimer -= Time.deltaTime;
