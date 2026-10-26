@@ -31,16 +31,17 @@ public class SkillUser : MonoBehaviour
         }
     }
 
-    public void TryUseSkill(int skillIndex)
+    public bool TryUseSkill(int skillIndex)
     {
-        if (hurtBox == null)return;
-        if (skillIndex < 0 || skillIndex >= skills.Count) return;
+        if (hurtBox == null)return false;
+        if (skillIndex < 0 || skillIndex >= skills.Count) return false;
 
         SkillSlot slot = skills[skillIndex];
 
-        if (slot.skill == null || slot.cooldownTimer > 0f) return;
+        if (slot.skill == null || slot.cooldownTimer > 0f) return false;
 
         slot.skill.Use(hurtBox.transform, slot.collisionTags);
         slot.cooldownTimer = slot.skill.cooldown;
+        return true;
     }
 }

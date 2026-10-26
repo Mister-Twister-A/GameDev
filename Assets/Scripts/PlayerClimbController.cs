@@ -10,6 +10,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     public CharacterController controller;
     public ThirdPersonCam camera;
     [SerializeField] private Transform playerModel;
+    [SerializeField] private PlayerAnimator playerAnimator;
 
     private SkillUser skillUser;
 
@@ -69,7 +70,9 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null)
         {
-            skillUser.TryUseSkill(0);
+            if(skillUser.TryUseSkill(0)){
+                playerAnimator.PlaySlashAnim();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
