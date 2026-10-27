@@ -10,7 +10,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     public CharacterController controller;
     public ThirdPersonCam camera;
     [SerializeField] private Transform playerModel;
-    [SerializeField] private PlayerAnimator playerAnimator;
+    [SerializeField] private Animator playerAnimator;
 
     private SkillUser skillUser;
 
@@ -71,7 +71,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null)
         {
             if(skillUser.TryUseSkill(0)){
-                playerAnimator.PlaySlashAnim();
+                playerAnimator.SetTrigger("Slash");
             }
         }
 
@@ -101,6 +101,8 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        if( h == 0f && v == 0f) playerAnimator.SetBool("Walking", false);
+        else playerAnimator.SetBool("Walking", true);
         Vector2 inputDir = Vector2.ClampMagnitude(new Vector2(h, v), 1f);
         h = inputDir.x;
         v = inputDir.y;
@@ -192,6 +194,8 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         }
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+        if( h == 0f && v == 0f) playerAnimator.SetBool("Walking", false);
+        else playerAnimator.SetBool("Walking", true);
         Vector2 inputDir = Vector2.ClampMagnitude(new Vector2(h, v), 1f);
         h = inputDir.x;
         v = inputDir.y;
