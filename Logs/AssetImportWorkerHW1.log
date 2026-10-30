@@ -1485,3 +1485,12 @@ Importing 'GUID: 9f01b78073e2f5c5f9c7ecd12b5f1455 - Path: Assets/Meshes/char2.co
 Imported 'GUID: 9f01b78073e2f5c5f9c7ecd12b5f1455' -> (Import Result ID: '0c129b86bd30efd42719c37700578138') in 0.558 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=71259ecfc2fc3355adb80df37d40d26d DependenciesID=da8a1a3286dd6b86686b99176da50b1b StaticDependenciesID=aab70578869343591a535915891a8db1 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 12
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=1035120, old size=1035119, incomplete=0]
+Vulkan PSO: Saved size[1035120] path[/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin] success=1 headerChanged=0 sizeChanged=1

@@ -186,3 +186,4 @@ params: {}
 [2026-10-27T10:31:02.727Z][INFO] project:list-packages --> 200 (312 ms)
 [2026-10-27T10:31:02.728Z][INFO] project:list-packages --> 200 (464 ms)
 [2026-10-27T10:31:02.728Z][INFO] config:project:get-registries --> 200 (11 ms)
+[2026-10-27T10:32:57.349Z][INFO] Received shutdown request (SIGINT), shutting down Unity Package Manager

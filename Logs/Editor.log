@@ -6820,3 +6820,35 @@ Importing 'GUID: 9f01b78073e2f5c5f9c7ecd12b5f1455 - Path: Assets/Meshes/char2.co
 Imported 'GUID: 9f01b78073e2f5c5f9c7ecd12b5f1455' -> (Import Result ID: 'f08afa55e478949547daa02474474002') in 0.008 seconds [static dependencies only]. Details - ImportResultOutputID=5a6bd5b75c5c5e5a33633c120f5b2789 DependenciesID=cc36bfe5b3d3b67907c7eb96e246df27 StaticDependenciesID=7ab0c7e32bbe4aeeee667e2112628dac 
 Asset Pipeline Refresh (id=2d8e488c46dd511d4aedd5e39e7c5748): Total: 0.193 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 [Worker1] Imported GUID: 9f01b78073e2f5c5f9c7ecd12b5f1455 - Path: Assets/Meshes/char2.controller - Importer: PreviewImporter -> (ImportResultId: '0c129b86bd30efd42719c37700578138') in 0.587141864 seconds
+Asset Pipeline Refresh (id=1021fdcc65e5bbb558099a7a781987f1): Total: 0.191 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+MonoPathRemapper: Attempts to remap: 90354; Successful remaps: 26
+Serialized file version minimum: 22, current 23
+[LAYOUT] About to save layout /home/usio/Titan test/UserSettings/Layouts/default-6000.dwlt
+[LAYOUT] About to save layout /home/usio/.config/unity3d/Preferences/Editor-5.x/Layouts/current/default-6000.dwlt
+Shutting down MSBuild server...
+Shutting down VB/C# compiler server...
+VB/C# compiler server shut down successfully.
+MSBuild server shut down successfully.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8 channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+AcceleratorClientConnectionCallback - disconnected - :0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+Cleanup mono
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 157
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=1049608, old size=1035119, incomplete=0]
+Vulkan PSO: Saved size[1049608] path[/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin] success=1 headerChanged=0 sizeChanged=1
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1793097177410,"processId":270311,"allocatedMemory":48384778,"memoryLabels":[{"Default":323137},{"Permanent":16152},{"Thread":1054072},{"Manager":813977},{"VertexData":8},{"Geometry":408},{"Texture":24},{"Shader":854179},{"Material":24},{"GfxDevice":41992},{"Animation":704232},{"Audio":1552},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":6504},{"Input":60256},{"JobScheduler":256},{"TextLib":18987},{"Mono":80},{"MonoCode":192},{"ScriptingNativeRuntime":155088},{"BaseObject":1624688},{"Resource":1032},{"Renderer":3072},{"Transform":4717},{"File":72136},{"WebCam":80},{"Culling":32},{"Terrain":11346},{"Wind":24},{"String":45157},{"StaticString":4140},{"Utility":2674928},{"PoolAlloc":2152},{"AI":80},{"TypeTree":382355},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7408},{"CloudService":9352},{"WebRequest":7973},{"VR":47018},{"SceneManager":640},{"Video":64},{"LazyScriptCache":32},{"NativeArray":33055900},{"Camera":17},{"Secure":7961},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57552},{"StaticSafetyDebugInfo":278528},{"Analytics":760},{"Hierarchy":1424},{"UIElements":1147016},{"CoreStats":13688},{"Identifiers":6768},{"Gui":268167},{"EditorUtility":176481},{"VersionControl":8},{"Undo":963},{"AssetDatabase":5047531},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35346},{"Upm":1836},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":156},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2400},{"Windowing":480},{"Licensing":1096},{"AssetReference":32},{"IPCStream":32}]}
