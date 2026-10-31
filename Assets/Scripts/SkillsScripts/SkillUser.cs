@@ -33,14 +33,33 @@ public class SkillUser : MonoBehaviour
 
     public bool TryUseSkill(int skillIndex)
     {
-        if (hurtBox == null)return false;
+        return TryUse(skillIndex, null);
+    }
+    public bool TryUseSkill(int skillIndex, Vector3 aimPoint)
+    {
+        return TryUse(skillIndex, aimPoint);
+    }
+
+    public SkillData GetSkill(int skillIndex)
+    {
+        if (skillIndex < 0 || skillIndex >= skills.Count) return null;
+        return skills[skillIndex] != null ? skills[skillIndex].skill : null;
+    }
+
+    private bool TryUse(int skillIndex, Vector3? aimPoint)
+    {
+        if (hurtBox == null) return false;
         if (skillIndex < 0 || skillIndex >= skills.Count) return false;
 
         SkillSlot slot = skills[skillIndex];
 
         if (slot.skill == null || slot.cooldownTimer > 0f) return false;
 
-        slot.skill.Use(hurtBox.transform, slot.collisionTags);
+        if (aimPoint.HasValue)
+            slot.skill.Use(hurtBox.transform, slot.collisionTags, aimPoint.Value);
+        else
+            slot.skill.Use(hurtBox.transform, slot.collisionTags);
+
         slot.cooldownTimer = slot.skill.cooldown;
         return true;
     }

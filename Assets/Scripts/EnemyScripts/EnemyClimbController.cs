@@ -21,8 +21,9 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public float airDrag = 3f;
     public float rotationSpeed = 10f;
     public float jumpForce = 6f;
-
+    public Vector3? FacingOverride;
     [SerializeField] private float retargetInterval = 0.4f;
+    
     
 
     [Header("Climbing")]
@@ -139,11 +140,16 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         float speed = Mathf.Min(desiredSpeed, walkSpeed);
         Vector3 move = flatDir * speed;
 
-        if (move.sqrMagnitude > 0.01f)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(flatDir, transform.up);
-            Transform model = enemyModel != null ? enemyModel : transform;
-            model.rotation = Quaternion.Slerp(model.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        if (move.sqrMagnitude > 0.01f || FacingOverride.HasValue)
+{
+            Vector3 faceDir = FacingOverride.HasValue? Vector3.ProjectOnPlane(FacingOverride.Value, transform.up): flatDir;
+
+            if (faceDir.sqrMagnitude > 0.0001f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(faceDir.normalized, transform.up);
+                Transform model = enemyModel != null ? enemyModel : transform;
+                model.rotation = Quaternion.Slerp(model.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
         }
 
         if (controller.isGrounded && verticalVelocity.y < 0) verticalVelocity = Vector3.zero;
@@ -233,7 +239,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         if (move.sqrMagnitude >= 0.0001f)
         {
             Vector3 normal = currentSurface.transform.TransformDirection(currentSurface.faces[currentFaceIndex].normal).normalized;
-            Vector3 forward = Vector3.ProjectOnPlane(move, normal);
+            Vector3 forward = Vector3.ProjectOnPlane(FacingOverride ?? move, normal);
             if (forward.sqrMagnitude >= 0.0001f)
             {
                 forward.Normalize();

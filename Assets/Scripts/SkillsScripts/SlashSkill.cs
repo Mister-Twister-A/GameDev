@@ -12,7 +12,7 @@ public class SlashSkill : SkillData
  
     public override void Use(Transform user, List<string> tags)
     {
-        GameObject instance = UnityEngine.Object.Instantiate(hitboxPrefab, user.transform);
+        GameObject instance = Instantiate(hitboxPrefab, user.transform);
         instance.transform.localPosition = Vector3.forward * spawnDistance;
         instance.transform.localRotation = Quaternion.identity;
         instance.transform.localScale = Vector3.one;
@@ -24,7 +24,7 @@ public class SlashSkill : SkillData
             hitBox.tagsToExclude = new List<string> (tags);
         }
  
-        UnityEngine.Object.Destroy(instance, duration);
+        Destroy(instance, duration);
     }
 }
  

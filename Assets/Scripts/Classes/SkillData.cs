@@ -8,4 +8,9 @@ public abstract class SkillData : ScriptableObject
     public string skillName;
     public float cooldown;
     public abstract void Use(Transform user, List<String> tags);
+
+    public virtual void Use(Transform user, List<String> tags, Vector3 aimPoint)
+    {
+        Use(user, tags);
+    }
 }
