@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class HurtBox : MonoBehaviour
 {
+    private EnemyData data;
+
+    private void Awake()
+    {
+        data = GetComponentInParent<EnemyData>();
+    }
+
     public void TakeDamage(float damage)
     {
-        
-        EnemyData data = GetComponentInParent<EnemyData>();
-        Debug.Log($" {data.transform.name} Took {damage} damage.");
-        if (data)
-        {
-            data.health -= damage;
-        }
+        if (data == null) return;
+
+        Debug.Log($"{data.transform.name} took {damage} damage.");
+        data.health -= damage;
     }
 }

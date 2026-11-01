@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestTitan
       objectReference: {fileID: 0}
+    - target: {fileID: 1334373892679134245, guid: 6110faf3d8cf2d0d7911ed559006667c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1859834161142019743, guid: 6110faf3d8cf2d0d7911ed559006667c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.55357
@@ -172379,7 +172383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemies:
-  - {fileID: 5101072317683986457, guid: 7b3b909ec35e168d3bb156145373b2c2, type: 3}
+  - {fileID: 1739981364110423415, guid: 882f64c417dc3941f8f8269197c60339, type: 3}
   - {fileID: 5101072317683986457, guid: 7b3b909ec35e168d3bb156145373b2c2, type: 3}
   enemiesToSpawn: []
   curCredits: 0
