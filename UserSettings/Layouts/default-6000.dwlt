@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1145
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -714,8 +714,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
-      - m_rawData: 568105589213754914
-      - m_rawData: 568105589213755954
+      - m_rawData: 568105589213755986
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1199,9 +1198,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 63.924927, y: -31.701376, z: -187.62851}
+    m_Target: {x: 35.684235, y: -42.527386, z: -182.18759}
     speed: 2
-    m_Value: {x: 63.924927, y: -31.701376, z: -187.62851}
+    m_Value: {x: 35.684235, y: -42.527386, z: -182.18759}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1248,9 +1247,9 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.016271513, y: 0.9836454, z: -0.119431466, w: 0.13413484}
+    m_Target: {x: -0.004928388, y: 0.98415416, z: -0.17534974, w: -0.027531201}
     speed: 2
-    m_Value: {x: 0.016271513, y: 0.9836453, z: -0.11943147, w: 0.13413484}
+    m_Value: {x: -0.004928388, y: 0.9841542, z: -0.17534974, w: -0.027531203}
   m_Size:
     m_Target: 44.50814
     speed: 2
@@ -1451,7 +1450,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/EnemyPrefabs
+    - Assets/Scripts/SkillsScripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1461,32 +1460,32 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/EnemyPrefabs
+  - Assets/Scripts/SkillsScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/usio/Titan test
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 58}
+    scrollPos: {x: 0, y: 66}
     m_SelectedIDs:
-    - m_rawData: 568105584918845414
+    - m_rawData: 568105584918843658
     m_LastClickedID:
-      m_rawData: 568105584918845414
+      m_rawData: 568105584918843658
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918843512
-    - m_rawData: 568105584918843514
-    - m_rawData: 568105584918843516
-    - m_rawData: 568105584918843518
-    - m_rawData: 568105584918843520
-    - m_rawData: 568105584918843522
-    - m_rawData: 568105584918843524
-    - m_rawData: 568105584918843526
-    - m_rawData: 568105584918843528
-    - m_rawData: 568105584918843530
-    - m_rawData: 568105584918843532
-    - m_rawData: 568105584918843534
+    - m_rawData: 568105584918843540
+    - m_rawData: 568105584918843542
+    - m_rawData: 568105584918843544
+    - m_rawData: 568105584918843546
+    - m_rawData: 568105584918843548
+    - m_rawData: 568105584918843550
+    - m_rawData: 568105584918843552
+    - m_rawData: 568105584918843554
+    - m_rawData: 568105584918843556
+    - m_rawData: 568105584918843558
+    - m_rawData: 568105584918843560
+    - m_rawData: 568105584918843562
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1520,18 +1519,18 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918843512
-    - m_rawData: 568105584918843514
-    - m_rawData: 568105584918843516
-    - m_rawData: 568105584918843518
-    - m_rawData: 568105584918843520
-    - m_rawData: 568105584918843522
-    - m_rawData: 568105584918843524
-    - m_rawData: 568105584918843526
-    - m_rawData: 568105584918843528
-    - m_rawData: 568105584918843530
-    - m_rawData: 568105584918843532
-    - m_rawData: 568105584918843534
+    - m_rawData: 568105584918843540
+    - m_rawData: 568105584918843542
+    - m_rawData: 568105584918843544
+    - m_rawData: 568105584918843546
+    - m_rawData: 568105584918843548
+    - m_rawData: 568105584918843550
+    - m_rawData: 568105584918843552
+    - m_rawData: 568105584918843554
+    - m_rawData: 568105584918843556
+    - m_rawData: 568105584918843558
+    - m_rawData: 568105584918843560
+    - m_rawData: 568105584918843562
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1559,9 +1558,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
+    m_SelectedInstanceIDs:
+    - m_rawData: 568105584918843754
     m_LastClickedEntityId:
-      m_rawData: 0
+      m_rawData: 568105584918843754
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_rawData: 0

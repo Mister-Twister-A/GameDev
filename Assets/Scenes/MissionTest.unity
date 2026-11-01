@@ -192,6 +192,12 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
     collisionTags:
     - Player
+    key: 323
+    cooldownTimer: 0
+  - skill: {fileID: 11400000, guid: af17f54606d7c17ad9a968b6f48e00aa, type: 2}
+    collisionTags:
+    - Player
+    key: 101
     cooldownTimer: 0
 --- !u!1 &464371621
 GameObject:
@@ -262,6 +268,10 @@ MonoBehaviour:
   surfaceOffset: 0.05
   edgeEpsilon: 0.0001
   verticalVelocity: {x: 0, y: 0, z: 0}
+  isAiming: 0
+  canAttachToSurfaces: 1
+  inputControlMultiplier: 1
+  leapTrigger: Backflip
 --- !u!143 &464371624
 CharacterController:
   m_ObjectHideFlags: 0
@@ -333525,6 +333535,9 @@ MonoBehaviour:
   collisionPadding: 0.15
   lockCursorOnStart: 1
   toggleCursorWithEscape: 1
+  aimShoulderOffset: {x: 0.7, y: 0.1, z: 0}
+  aimDistance: 2.8
+  aimBlendTime: 0.12
 --- !u!114 &2119156282
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -51,6 +51,14 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
     Vector3 localSurfacePoint;
     public Vector3 verticalVelocity;
 
+    [Header("Ability Hooks (driven by ability scripts)")]
+    [Tooltip("Model faces the camera direction instead of the move direction")]
+    public bool isAiming;
+    [Tooltip("False while leaping so the player doesn't instantly re-attach to the giant")]
+    public bool canAttachToSurfaces = true;
+    [Range(0f, 1f)] public float inputControlMultiplier = 1f;
+    public string leapTrigger = "Backflip";
+
     void Reset() => controller = GetComponent<CharacterController>();
 
     void Awake()
@@ -68,7 +76,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
         isGrounded = state == State.Climbing || (state == State.Normal && CheckGround());
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && skillUser != null && !skillUser.IsBusy)
         {
             if(skillUser.TryUseSkill(0)){
                 playerAnimator.SetTrigger("Slash");
@@ -103,8 +111,19 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         v = inputDir.y;
        //Vector3 move = (transform.right * h + transform.forward * v) * walkSpeed;
         Vector3 right = Vector3.Cross(transform.up, camera.MovementDirection).normalized;
-        Vector3 move = (camera.MovementDirection * v + right * h) * walkSpeed;
-         if (move.sqrMagnitude > 0.01f){
+        Vector3 move = (camera.MovementDirection * v + right * h) * walkSpeed * inputControlMultiplier;
+         if (isAiming)
+        {
+            // unscaled time so turning stays snappy during slow motion
+            Vector3 aimForward = Vector3.ProjectOnPlane(camera.transform.forward, transform.up);
+            if (aimForward.sqrMagnitude > 0.01f)
+            {
+                Quaternion aimRot = Quaternion.LookRotation(aimForward.normalized, transform.up);
+                float aimT = 1f - Mathf.Exp(-rotationSpeed * 2f * Time.unscaledDeltaTime);
+                playerModel.rotation = Quaternion.Slerp(playerModel.rotation, aimRot, aimT);
+            }
+        }
+        else if (move.sqrMagnitude > 0.01f){
             Vector3 forward = Vector3.ProjectOnPlane(move,transform.up).normalized;
 
             if (forward.sqrMagnitude > 0.01f){
@@ -132,7 +151,7 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (state != State.Normal) return;
+        if (state != State.Normal || !canAttachToSurfaces) return;
         if (((1 << hit.gameObject.layer) & climbableLayer) == 0) return;
         
         var surface = hit.collider.GetComponent<ClimbableSurface>();
@@ -170,6 +189,27 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         if (currentSurface != null) currentSurface.climbableSurfaceHolder.RegisterClimberExit(this);
         currentSurface = null;
         currentFaceIndex = -1;
+    }
+
+    /// <summary>Leaves climb mode (if climbing) and launches the player with the given world velocity.</summary>
+    public void LaunchLeap(Vector3 velocity)
+    {
+        ExitClimbState();
+        transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+        verticalVelocity = velocity;
+
+        if (playerAnimator != null && !string.IsNullOrEmpty(leapTrigger))
+            playerAnimator.SetTrigger(leapTrigger);
+    }
+
+    /// <summary>World-space normal of the face we're climbing, if any.</summary>
+    public bool TryGetSurfaceNormal(out Vector3 normal)
+    {
+        normal = Vector3.up;
+        if (state != State.Climbing || currentSurface == null || currentFaceIndex < 0) return false;
+
+        normal = currentSurface.transform.TransformDirection(currentSurface.faces[currentFaceIndex].normal).normalized;
+        return true;
     }
 
     void ClimbingUpdate()
@@ -481,4 +521,3 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         Gizmos.DrawLine(startOrigin, endOrigin);
     }
 }
-

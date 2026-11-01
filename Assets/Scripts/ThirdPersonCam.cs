@@ -43,9 +43,20 @@ public class ThirdPersonCam : MonoBehaviour
     public bool lockCursorOnStart = true;
     public bool toggleCursorWithEscape = true;
 
+    [Header("Aim Mode (over the shoulder)")]
+    public Vector3 aimShoulderOffset = new Vector3(0.7f, 0.1f, 0f);
+    public float aimDistance = 2.8f;
+    public float aimBlendTime = 0.12f;
+
     float yaw; 
     float pitch; 
     Vector3 positionVelocity;
+    float aimBlend;
+    bool aiming;
+
+    public Vector3 AimPivot { get; private set; }
+
+    public void SetAiming(bool value) => aiming = value;
 
     public Vector3 MovementDirection { get; private set; }
 
@@ -88,7 +99,13 @@ public class ThirdPersonCam : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 pivot = target.TransformPoint(pivotOffset);
+        // unscaled so aim blending isn't slowed by bullet time
+        aimBlend = Mathf.MoveTowards(aimBlend, aiming ? 1f : 0f, Time.unscaledDeltaTime / Mathf.Max(0.0001f, aimBlendTime));
+        float aimT = Mathf.SmoothStep(0f, 1f, aimBlend);
+
+        Vector3 pivot = target.TransformPoint(pivotOffset + aimShoulderOffset * aimT);
+        AimPivot = pivot;
+        float orbitDistance = Mathf.Lerp(distance, Mathf.Min(distance, aimDistance), aimT);
         Vector3 playerUp = target.up;
         Vector3 playerForward = Vector3.ProjectOnPlane(target.forward, playerUp).normalized;
 
@@ -119,24 +136,24 @@ public class ThirdPersonCam : MonoBehaviour
         Vector3 moveDir = Vector3.ProjectOnPlane(referenceForward * Mathf.Cos(yawRad) + referenceRight * Mathf.Sin(yawRad), referenceUp).normalized;
         MovementDirection = moveDir;
 
-        float finalDistance = distance;
+        float finalDistance = orbitDistance;
 
         if (collisionEnabled)
         {
-            if (Physics.SphereCast(pivot,collisionRadius,offsetDir,out RaycastHit hit,distance,collisionMask,QueryTriggerInteraction.Ignore))
+            if (Physics.SphereCast(pivot,collisionRadius,offsetDir,out RaycastHit hit,orbitDistance,collisionMask,QueryTriggerInteraction.Ignore))
             {
-                finalDistance = Mathf.Clamp(hit.distance - collisionPadding,0.1f,distance);
+                finalDistance = Mathf.Clamp(hit.distance - collisionPadding,0.1f,orbitDistance);
             }
         }
 
         Vector3 wantedPosition = pivot + offsetDir * finalDistance;
 
-        transform.position = Vector3.SmoothDamp(transform.position,wantedPosition,ref positionVelocity,positionSmoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position,wantedPosition,ref positionVelocity,positionSmoothTime,Mathf.Infinity,Time.unscaledDeltaTime);
 
         Vector3 lookTarget = pivot + lookAtOffset;
         Quaternion wantedRotation = Quaternion.LookRotation((lookTarget - transform.position).normalized,referenceUp);
 
-        float rotT = 1f - Mathf.Exp(-(1f / Mathf.Max(0.0001f, rotationSmoothTime)) *Time.deltaTime);
+        float rotT = 1f - Mathf.Exp(-(1f / Mathf.Max(0.0001f, rotationSmoothTime)) *Time.unscaledDeltaTime);
 
         transform.rotation = Quaternion.Slerp(transform.rotation,wantedRotation,rotT);
     }

@@ -8,17 +8,25 @@ using UnityEngine;
 /// </summary>
 public class SpearProjectile : MonoBehaviour
 {
+    [Header("Model")]
+    [Tooltip("Rotation applied on top of 'facing the flight direction'. Fixes models whose tip isn't along +Z. " +
+             "Tip along +Y: (90,0,0) | -Y: (-90,0,0) | +X: (0,-90,0) | -X: (0,90,0) | -Z: (0,180,0)")]
+    public Vector3 modelRotationOffset = Vector3.zero;
+
     [Header("Flight")]
     public float speed = 45f;
+    [Tooltip("0 = laser straight, 1 = full gravity")]
     public float gravityScale = 0.15f;
     public float radius = 0.15f;
     public float maxFlightTime = 4f;
+    [Tooltip("What the spear can stick into (ground, giant surface, enemies)")]
     public LayerMask stickMask = ~0;
 
     [Header("Explosion")]
     public float fuseTime = 1.2f;
     public float explosionRadius = 4f;
     [Range(0f, 1f)] public float edgeDamageMultiplier = 0.4f;
+    [Tooltip("Layers that contain HurtBoxes (enemies, giant weak points)")]
     public LayerMask damageMask = ~0;
     public GameObject explosionVfx;
 
@@ -31,6 +39,8 @@ public class SpearProjectile : MonoBehaviour
     private Vector3 velocity;
     private float flightTimer;
     private float fuseTimer;
+
+    // stuck-to-moving-surface data (local space, so non-uniform giant scale can't skew the spear)
     private Transform stuckTarget;
     private Vector3 stuckLocalPos;
     private Quaternion stuckLocalRot;
@@ -45,7 +55,7 @@ public class SpearProjectile : MonoBehaviour
         this.ignoredTags = ignoredTags;
         this.damage = damage;
         velocity = direction.normalized * speed;
-        transform.rotation = Quaternion.LookRotation(velocity);
+        FaceDirection(velocity);
     }
 
     private void Update()
@@ -72,6 +82,8 @@ public class SpearProjectile : MonoBehaviour
 
         int count = Physics.SphereCastNonAlloc(transform.position, radius, dir, sweepBuffer,
             dist, stickMask, QueryTriggerInteraction.Ignore);
+
+        // closest hit that isn't the owner / an ignored tag
         int best = -1;
         float bestDist = float.MaxValue;
         for (int i = 0; i < count; i++)
@@ -87,15 +99,21 @@ public class SpearProjectile : MonoBehaviour
         if (best >= 0)
         {
             RaycastHit hit = sweepBuffer[best];
+            // distance 0 = we started inside the collider, hit.point is garbage then
             Vector3 p = hit.distance > 0f ? hit.point : transform.position;
             transform.position = p;
-            transform.rotation = Quaternion.LookRotation(dir);
+            FaceDirection(dir);
             Stick(hit.collider.transform);
             return;
         }
 
         transform.position += step;
-        transform.rotation = Quaternion.LookRotation(velocity);
+        FaceDirection(velocity);
+    }
+
+    private void FaceDirection(Vector3 direction)
+    {
+        transform.rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(modelRotationOffset);
     }
 
     private void Stick(Transform target)
@@ -109,6 +127,7 @@ public class SpearProjectile : MonoBehaviour
 
     private void TickStuck()
     {
+        // target destroyed or deactivated (giant died / faded away) -> detonate where we are
         if (stuckTarget == null || !stuckTarget.gameObject.activeInHierarchy)
         {
             Explode();
@@ -142,6 +161,7 @@ public class SpearProjectile : MonoBehaviour
                 hurt = col.GetComponentInParent<HurtBox>();
             if (hurt == null) continue;
 
+            // one HurtBox = one hit per blast, even if it has several colliders
             if (!damagedThisBlast.Add(hurt)) continue;
 
             float d = Vector3.Distance(center, col.bounds.ClosestPoint(center));
@@ -176,5 +196,10 @@ public class SpearProjectile : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 0.4f, 0f, 0.4f);
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
+        
+        Vector3 flightDir = transform.rotation * (Quaternion.Inverse(Quaternion.Euler(modelRotationOffset)) * Vector3.forward);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawRay(transform.position, flightDir * 3f);
+        Gizmos.DrawWireSphere(transform.position + flightDir * 3f, 0.1f);
     }
 }
