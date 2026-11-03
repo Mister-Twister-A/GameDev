@@ -95,9 +95,15 @@ public class SpearLeapActivation : SkillActivation
         aimTimer += Time.unscaledDeltaTime;
 
         EaseTimeScale(d.slowScale, d.slowInTime);
+        UpdateAimLine();
 
         if (Landed()) { CancelAndRecover(); return; }
         if (!ctx.IsHeld || aimTimer >= d.maxAimTime) ThrowAndRecover();
+    }
+     private void UpdateAimLine()
+    {
+        Vector3 origin = ctx.UserTransform.TransformPoint(d.spawnOffset);
+        AimLine.Show(origin, GetAimPoint());
     }
 
     private void TickRecovering()
@@ -130,6 +136,7 @@ public class SpearLeapActivation : SkillActivation
 
     private void ClearPlayerFlags()
     {
+        AimLine.Hide();
         if (player == null) return;
         player.isAiming = false;
         player.inputControlMultiplier = 1f;

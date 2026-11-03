@@ -16,7 +16,7 @@ MonoBehaviour:
   cooldown: 3
   spearPrefab: {fileID: 3083784889396549224, guid: ce0beb8151ba41eb98b5e90f86aa768f, type: 3}
   damage: 25
-  spawnOffset: {x: 0, y: 1.4, z: 0.5}
+  spawnOffset: {x: 0, y: 0, z: 0}
   leapAndAim: 1
   backSpeed: 4.5
   upSpeed: 14

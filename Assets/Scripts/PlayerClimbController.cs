@@ -191,18 +191,16 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         currentFaceIndex = -1;
     }
 
-    /// <summary>Leaves climb mode (if climbing) and launches the player with the given world velocity.</summary>
     public void LaunchLeap(Vector3 velocity)
     {
         ExitClimbState();
         transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
         verticalVelocity = velocity;
 
-        if (playerAnimator != null && !string.IsNullOrEmpty(leapTrigger))
-            playerAnimator.SetTrigger(leapTrigger);
+        //if (playerAnimator != null && !string.IsNullOrEmpty(leapTrigger))
+        //    playerAnimator.SetTrigger(leapTrigger);
     }
 
-    /// <summary>World-space normal of the face we're climbing, if any.</summary>
     public bool TryGetSurfaceNormal(out Vector3 normal)
     {
         normal = Vector3.up;
