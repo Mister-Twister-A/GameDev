@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpearSkill
   m_EditorClassIdentifier: Assembly-CSharp::SpearSkillData
   skillName: Spear throw
-  cooldown: 10
+  cooldown: 3
   spearPrefab: {fileID: 3083784889396549224, guid: ce0beb8151ba41eb98b5e90f86aa768f, type: 3}
   damage: 25
   spawnOffset: {x: 0, y: 1.4, z: 0.5}
@@ -26,7 +26,7 @@ MonoBehaviour:
   slowScale: 0.2
   slowInTime: 0.1
   slowOutTime: 0.12
-  maxAimTime: 2.5
+  maxAimTime: 10
   aimMask:
     serializedVersion: 2
     m_Bits: 4294967295

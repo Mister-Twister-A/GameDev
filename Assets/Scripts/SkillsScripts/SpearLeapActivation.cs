@@ -139,7 +139,6 @@ public class SpearLeapActivation : SkillActivation
 
     private bool Landed()
     {
-        // grace period so we don't "land" on the frame we leave the ground
         return airTimer > 0.2f && (player.isGrounded || player.controller.isGrounded);
     }
 
@@ -147,7 +146,6 @@ public class SpearLeapActivation : SkillActivation
     {
         Transform cam = player.camera.transform;
 
-        // Cast from the point on the center ray at the player's depth, so the ray never hits stuff behind us
         float depth = Mathf.Max(0.5f, Vector3.Dot(player.camera.AimPivot - cam.position, cam.forward));
         Vector3 origin = cam.position + cam.forward * depth;
 
@@ -162,11 +160,13 @@ public class SpearLeapActivation : SkillActivation
         float speed = Mathf.Abs(1f - d.slowScale) / Mathf.Max(0.0001f, time);
         Time.timeScale = Mathf.MoveTowards(Time.timeScale, target, speed * Time.unscaledDeltaTime);
         Time.fixedDeltaTime = baseFixedDelta * Time.timeScale;
+        SlowMoScreenEffect.SetIntensity(Mathf.InverseLerp(1f, d.slowScale, Time.timeScale));
     }
 
     private void ResetTime()
     {
         Time.timeScale = 1f;
         if (baseFixedDelta > 0f) Time.fixedDeltaTime = baseFixedDelta;
+        SlowMoScreenEffect.SetIntensity(0f);
     }
 }

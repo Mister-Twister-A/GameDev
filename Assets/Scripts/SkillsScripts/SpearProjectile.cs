@@ -196,7 +196,6 @@ public class SpearProjectile : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 0.4f, 0f, 0.4f);
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
-        
         Vector3 flightDir = transform.rotation * (Quaternion.Inverse(Quaternion.Euler(modelRotationOffset)) * Vector3.forward);
         Gizmos.color = Color.cyan;
         Gizmos.DrawRay(transform.position, flightDir * 3f);
