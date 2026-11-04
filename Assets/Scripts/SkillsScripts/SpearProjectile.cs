@@ -1,37 +1,27 @@
 using System.Collections.Generic;
 using UnityEngine;
-
-/// <summary>
-/// Flies with a manual sphere sweep (no tunneling), sticks to whatever it hits,
-/// FOLLOWS that object if it moves (giants!), then explodes after a fuse.
-/// Prefab pivot should be at the spear TIP, +Z pointing along the shaft.
-/// </summary>
 public class SpearProjectile : MonoBehaviour
 {
     [Header("Model")]
-    [Tooltip("Rotation applied on top of 'facing the flight direction'. Fixes models whose tip isn't along +Z. " +
-             "Tip along +Y: (90,0,0) | -Y: (-90,0,0) | +X: (0,-90,0) | -X: (0,90,0) | -Z: (0,180,0)")]
     public Vector3 modelRotationOffset = Vector3.zero;
 
     [Header("Flight")]
     public float speed = 45f;
-    [Tooltip("0 = laser straight, 1 = full gravity")]
     public float gravityScale = 0.15f;
     public float radius = 0.15f;
     public float maxFlightTime = 4f;
-    [Tooltip("What the spear can stick into (ground, giant surface, enemies)")]
     public LayerMask stickMask = ~0;
 
     [Header("Explosion")]
     public float fuseTime = 1.2f;
+    public HitBox explosionHitBoxPrefab;
     public float explosionRadius = 4f;
-    [Range(0f, 1f)] public float edgeDamageMultiplier = 0.4f;
-    [Tooltip("Layers that contain HurtBoxes (enemies, giant weak points)")]
-    public LayerMask damageMask = ~0;
+    public float hitBoxLifetime = 0.2f;
     public GameObject explosionVfx;
 
     private enum State { Flying, Stuck, Done }
     private State state = State.Flying;
+    private bool launched;
 
     private Transform owner;
     private List<string> ignoredTags;
@@ -40,17 +30,25 @@ public class SpearProjectile : MonoBehaviour
     private float flightTimer;
     private float fuseTimer;
 
-    // stuck-to-moving-surface data (local space, so non-uniform giant scale can't skew the spear)
     private Transform stuckTarget;
     private Vector3 stuckLocalPos;
     private Quaternion stuckLocalRot;
 
     private static readonly RaycastHit[] sweepBuffer = new RaycastHit[16];
-    private static readonly Collider[] overlapBuffer = new Collider[64];
-    private static readonly HashSet<HurtBox> damagedThisBlast = new HashSet<HurtBox>();
+
+    private void Awake()
+    {
+        if (transform.parent != null && transform.parent.GetComponentInParent<SpearProjectile>() != null)
+        {
+            Debug.LogWarning($"{name}: nested SpearProjectile under '{transform.parent.name}'. " +
+                             "Remove this component from the child model.", this);
+            enabled = false;
+        }
+    }
 
     public void Launch(Vector3 direction, Transform owner, List<string> ignoredTags, float damage)
     {
+        launched = true;
         this.owner = owner;
         this.ignoredTags = ignoredTags;
         this.damage = damage;
@@ -60,6 +58,8 @@ public class SpearProjectile : MonoBehaviour
 
     private void Update()
     {
+        if (!launched) return; // never simulate a spear nobody launched
+
         switch (state)
         {
             case State.Flying: Fly(); break;
@@ -78,12 +78,12 @@ public class SpearProjectile : MonoBehaviour
         velocity += Physics.gravity * gravityScale * dt;
         Vector3 step = velocity * dt;
         float dist = step.magnitude;
+        if (dist < 0.0001f) return;
         Vector3 dir = step / dist;
 
         int count = Physics.SphereCastNonAlloc(transform.position, radius, dir, sweepBuffer,
             dist, stickMask, QueryTriggerInteraction.Ignore);
 
-        // closest hit that isn't the owner / an ignored tag
         int best = -1;
         float bestDist = float.MaxValue;
         for (int i = 0; i < count; i++)
@@ -99,7 +99,6 @@ public class SpearProjectile : MonoBehaviour
         if (best >= 0)
         {
             RaycastHit hit = sweepBuffer[best];
-            // distance 0 = we started inside the collider, hit.point is garbage then
             Vector3 p = hit.distance > 0f ? hit.point : transform.position;
             transform.position = p;
             FaceDirection(dir);
@@ -127,7 +126,6 @@ public class SpearProjectile : MonoBehaviour
 
     private void TickStuck()
     {
-        // target destroyed or deactivated (giant died / faded away) -> detonate where we are
         if (stuckTarget == null || !stuckTarget.gameObject.activeInHierarchy)
         {
             Explode();
@@ -148,27 +146,7 @@ public class SpearProjectile : MonoBehaviour
 
         Vector3 center = transform.position;
 
-        int count = Physics.OverlapSphereNonAlloc(center, explosionRadius, overlapBuffer,
-            damageMask, QueryTriggerInteraction.Collide);
-
-        damagedThisBlast.Clear();
-        for (int i = 0; i < count; i++)
-        {
-            Collider col = overlapBuffer[i];
-            if (IsIgnored(col)) continue;
-
-            if (!col.TryGetComponent(out HurtBox hurt))
-                hurt = col.GetComponentInParent<HurtBox>();
-            if (hurt == null) continue;
-
-            // one HurtBox = one hit per blast, even if it has several colliders
-            if (!damagedThisBlast.Add(hurt)) continue;
-
-            float d = Vector3.Distance(center, col.bounds.ClosestPoint(center));
-            float t = Mathf.Clamp01(d / explosionRadius);
-            float mult = Mathf.Lerp(1f, edgeDamageMultiplier, t);
-            hurt.TakeDamage(damage * mult);
-        }
+        SpawnExplosionHitBox(center);
 
         if (explosionVfx != null)
         {
@@ -177,6 +155,39 @@ public class SpearProjectile : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void SpawnExplosionHitBox(Vector3 center)
+    {
+        if (explosionHitBoxPrefab == null)
+        {
+            Debug.LogWarning($"{name}: explosionHitBoxPrefab is not assigned, the explosion deals no damage.", this);
+            return;
+        }
+
+        HitBox hitBox = Instantiate(explosionHitBoxPrefab, center, Quaternion.identity);
+        hitBox.attackDamage = Mathf.RoundToInt(damage);
+        hitBox.owner = owner != null ? owner.gameObject : null;
+        hitBox.tagsToExclude = ignoredTags != null ? new List<string>(ignoredTags) : new List<string>();
+
+        foreach (Collider c in hitBox.GetComponentsInChildren<Collider>())
+            c.isTrigger = true;
+
+        SphereCollider sphere = hitBox.GetComponentInChildren<SphereCollider>();
+        if (sphere != null)
+        {
+            Vector3 s = sphere.transform.lossyScale;
+            float authoredRadius = sphere.radius * Mathf.Max(s.x, Mathf.Max(s.y, s.z));
+            if (authoredRadius > 0.0001f)
+                hitBox.transform.localScale *= explosionRadius / authoredRadius;
+        }
+
+        if (!hitBox.TryGetComponent(out Rigidbody rb))
+            rb = hitBox.gameObject.AddComponent<Rigidbody>();
+        rb.isKinematic = true;
+        rb.useGravity = false;
+
+        Destroy(hitBox.gameObject, hitBoxLifetime);
     }
 
     private bool IsIgnored(Collider c)

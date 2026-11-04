@@ -146,11 +146,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 255
   fuseTime: 1.2
+  explosionHitBoxPrefab: {fileID: 2510960376795729308, guid: 83277d58cacc5d23fa8605e6d46c7f1c, type: 3}
   explosionRadius: 4
-  edgeDamageMultiplier: 0.4
-  damageMask:
-    serializedVersion: 2
-    m_Bits: 512
+  hitBoxLifetime: 0.2
   explosionVfx: {fileID: 0}
 --- !u!1 &5965483861000462799
 GameObject:

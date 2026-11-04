@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// CreateAssetMenu on the abstract SkillData does nothing (can't instantiate abstract SOs),
-// so every concrete skill gets its own menu entry.
 [CreateAssetMenu(fileName = "SpearSkill", menuName = "Scriptable Objects/Skills/Spear")]
 public class SpearSkillData : SkillData
 {
