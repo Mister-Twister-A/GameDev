@@ -1308,3 +1308,13 @@ Memory consumption went from 238.4 MB to 235.7 MB.
 Total: 24.052802 ms (FindLiveObjects: 0.983674 ms CreateObjectMapping: 1.203372 ms MarkObjects: 21.300463 ms  DeleteObjects: 0.559854 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=1175687, old size=1175687, incomplete=0]
+Vulkan PSO: Pipeline cache has not changed skipping save handle[e6021ec0]
+Internal: Possible leak. All render target surfaces should be removed from IdMap when destructed using RenderTargetMap::Remove(RenderSurfaceBase* rs).

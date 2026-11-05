@@ -114,7 +114,6 @@ public class PlayerClimbController : MonoBehaviour, ISurfaceLocator
         Vector3 move = (camera.MovementDirection * v + right * h) * walkSpeed * inputControlMultiplier;
          if (isAiming)
         {
-            // unscaled time so turning stays snappy during slow motion
             Vector3 aimForward = Vector3.ProjectOnPlane(camera.transform.forward, transform.up);
             if (aimForward.sqrMagnitude > 0.01f)
             {

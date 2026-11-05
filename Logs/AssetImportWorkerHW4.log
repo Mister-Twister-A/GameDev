@@ -744,3 +744,12 @@ Memory consumption went from 220.7 MB to 218.1 MB.
 Total: 21.660286 ms (FindLiveObjects: 0.533211 ms CreateObjectMapping: 1.078000 ms MarkObjects: 19.596828 ms  DeleteObjects: 0.450076 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=1175687, old size=1175687, incomplete=0]
+Vulkan PSO: Pipeline cache has not changed skipping save handle[bcbf5000]
