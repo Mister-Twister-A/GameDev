@@ -36,10 +36,8 @@ public class ClimbableSurface : MonoBehaviour
 
     public ClimbableSurfaceHolder climbableSurfaceHolder;      
 
-    [Tooltip("Merged faces of the mesh (e.g. 6 for a cube, regardless of triangle count).")]
     public Face[] faces = System.Array.Empty<Face>();
 
-    [Tooltip("Maps mesh.triangles triangle index -> index into 'faces'. Length = triangleCount.")]
     public int[] triangleToFace = System.Array.Empty<int>();
 
     public bool isDynamic = false; 
