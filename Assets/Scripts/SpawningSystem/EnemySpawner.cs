@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -13,79 +12,94 @@ public class EnemySpawner : MonoBehaviour
     public int curWave = 1;
     public Transform spawnLocation;
 
-    public float waveInterval;
+    public float waveInterval = 20f;
     public float spawnInterval;
 
+    public float creditMultiplier = 1f;
+
+    private Transform[] overridePoints;
+    private bool running;
     private float waveTimer;
     private float spawnTimer;
+    private readonly List<EnemyData> affordable = new List<EnemyData>();
 
+    public bool IsRunning => running;
 
-
-
-    private void Start() {
+    public void Begin(int startWave)
+    {
+        curWave = Mathf.Max(1, startWave);
+        enemiesToSpawn.Clear();
+        spawnTimer = 0f;
+        running = true;
         GenerateWave();
     }
 
+    public void Pause() => running = false;
+    public void Resume() => running = true;
+
+    public void SetSpawnPoints(Transform[] points) => overridePoints = points;
+
     private void FixedUpdate()
     {
-        if(waveTimer <= 0)
+        if (!running) return;
+
+        float dt = Time.fixedDeltaTime;
+        waveTimer -= dt;
+        spawnTimer -= dt;
+
+        if (waveTimer <= 0f)
         {
-            curWave += 1;
+            curWave++;
             GenerateWave();
-            waveTimer = waveInterval;
             Debug.Log($"Generating Wave {curWave}");
         }
-        if(spawnTimer <= 0)
+
+        if (spawnTimer <= 0f && enemiesToSpawn.Count > 0)
         {
-            if (enemiesToSpawn.Count > 0)
-            {
-                enemiesToSpawn[0].Spawn(spawnLocation);
-                enemiesToSpawn.RemoveAt(0);
-                spawnTimer = spawnInterval;
-            }
-            else
-            {
-                waveTimer =0f;
-            }
-        }
-        else
-        {
-            spawnTimer -= Time.deltaTime;
-            waveTimer -= Time.deltaTime;
+            Transform point = GetSpawnPoint();
+            if (point == null) return;   // spawn point destroyed (e.g. giant died) - keep queue
+
+            enemiesToSpawn[0].Spawn(point);
+            enemiesToSpawn.RemoveAt(0);
+            spawnTimer = spawnInterval;
         }
     }
 
-    void GenerateWave()
+    private Transform GetSpawnPoint()
     {
-        curCredits= curWave * 10;
+        if (overridePoints != null && overridePoints.Length > 0)
+        {
+            Transform p = overridePoints[Random.Range(0, overridePoints.Length)];
+            if (p != null) return p;
+        }
+        return spawnLocation;
+    }
+
+    private void GenerateWave()
+    {
+        curCredits = Mathf.RoundToInt(curWave * 10 * creditMultiplier);
         GenerateEnemies();
 
-        if(enemiesToSpawn.Count == 0) return;
-        spawnInterval = waveInterval / enemiesToSpawn.Count;
         waveTimer = waveInterval;
-
+        spawnInterval = enemiesToSpawn.Count > 0 ? waveInterval / enemiesToSpawn.Count : waveInterval;
     }
 
-    void GenerateEnemies()
+    private void GenerateEnemies()
     {
-        List<EnemyData> generatedEnemies = new List<EnemyData>();
-        while (curCredits> 0)
-        {
-            int randId = Random.Range(0, enemies.Count);
-            int randCost = enemies[randId].cost;
+        int credits = curCredits;
 
-            if (curCredits - randCost >= 0)
-            {
-                generatedEnemies.Add(enemies[randId]);
-                curCredits -= randCost;
-            }
-            else if(curCredits <= 0)
-            {
-                break;
-            }
+        while (credits > 0)
+        {
+            affordable.Clear();
+            foreach (var e in enemies)
+                if (e.cost > 0 && e.cost <= credits) affordable.Add(e);
+
+            if (affordable.Count == 0) break;
+
+            EnemyData pick = affordable[Random.Range(0, affordable.Count)];
+            enemiesToSpawn.Add(pick);
+            credits -= pick.cost;
         }
-        enemiesToSpawn.Clear();
-        enemiesToSpawn = generatedEnemies;
-        enemiesToSpawn.Add(enemies[1]);
+        curCredits = credits;
     }
 }
