@@ -9,5 +9,5 @@ public abstract class EnemyData : MonoBehaviour
 
     public abstract void Spawn(Transform pos);
     public  abstract void Behaviour();
-    public abstract void OnDeath();
+    public abstract void OnDeath(); 
 }
