@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,8 +8,8 @@ public class TeleporterZone : MonoBehaviour
     [SerializeField] private float radius = 15f;               
     [SerializeField] private float chargeDuration = 40f;       
     [Header("Visuals (optional)")]
-    [Tooltip("Flat disc/ring child of this object. Scaled automatically to match the radius.")]
     [SerializeField] private Transform radiusVisual;
+    [SerializeField] private float chargeProgress;
 
     [Header("UI hook")]
     public UnityEvent<float> onProgress;           
@@ -29,6 +30,7 @@ public class TeleporterZone : MonoBehaviour
     public void Activate()
     {
         if (IsActive) return;
+        chargeProgress = 0f;
         IsActive = true;
         SetVisual(true);
     }
@@ -49,8 +51,9 @@ public class TeleporterZone : MonoBehaviour
         PlayerInside = delta.sqrMagnitude <= radius * radius;
 
         if (!PlayerInside) return;
-
-        Progress = Mathf.Clamp01(Progress + Time.deltaTime / chargeDuration);
+        chargeProgress += Time.deltaTime;
+        Progress = Mathf.Clamp01(chargeProgress / chargeDuration);
+        UnityEngine.Debug.Log($"progress {Progress}");
         onProgress?.Invoke(Progress);
 
         if (Progress >= 1f)
