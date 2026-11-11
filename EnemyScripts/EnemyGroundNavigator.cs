@@ -1,0 +1,168 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyGroundNavigator : MonoBehaviour
+{
+    public enum NavMode { Chase, Wander }
+    
+    [Header("Target")]
+    public Transform target;
+    public NavMode Mode = NavMode.Chase;
+
+    [Header("Graph")]
+    public GroundNodeGraph groundGraph;
+
+    [Header("Movement")]
+    public float moveSpeed = 3f;
+    public float repathInterval = 0.5f;
+    public float waypointReachedDistance = 0.5f;
+    public float directChaseDistance = 1.5f;
+
+    [SerializeField] private Vector3 nodeFindOffset;
+
+    private ISurfaceWalker self;
+    private EnemyClimbController climbController;
+    private List<GroundNodeRef> path;
+    private int pathIndex;
+    private float repathTimer;
+    private int lastStartNode = -1;
+    private int lastGoalNode = -1;
+    private bool hasLastPath;
+
+    [SerializeField] private bool IsTitan = false;
+
+    private void Awake()
+    {
+        self = GetComponent<ISurfaceWalker>();
+        climbController = GetComponent<EnemyClimbController>();
+
+        if (climbController == null)
+            Debug.LogError($"{name}: EnemySurfaceNavigator needs an EnemyClimbController on the same object.");
+
+        if (self == null)
+            Debug.LogError($"{name}: EnemyGroundNavigator needs a component implementing ISurfaceWalker on the same object.");
+
+        if (groundGraph == null)
+        {
+            Debug.Log($"{name}: EnemyGroundNavigator assigning GroundGraph by tag.");
+            groundGraph = GameObject.FindWithTag("GroundGraphSmall").GetComponent<GroundNodeGraph>();
+        }
+            
+
+        // if (target == null)
+        //     Debug.LogError($"{name}: EnemyGroundNavigator has no target assigned.");
+    }
+
+    private void Update()
+    {
+        if (self == null || groundGraph == null) return;
+        if(!IsTitan){
+            if(climbController.IsClimbing == true) return;
+            target = climbController.CurrentTarget;
+        }
+
+        repathTimer -= Time.deltaTime;
+
+        if (repathTimer <= 0f)
+        {
+            Repath();
+            repathTimer = repathInterval;
+        }
+
+        FollowPath();
+    }
+    public void SetTarget(Transform newTarget, NavMode mode)
+    {
+        if (target != newTarget)
+        {
+            target = newTarget;
+            hasLastPath = false; 
+        }
+ 
+        Mode = mode;
+    }
+    private void Repath(){
+        int startIndex = FindNearestNode(self.Position + nodeFindOffset);
+        int goalIndex = FindNearestNode(target.position);
+
+        if (startIndex < 0 || goalIndex < 0) return;
+
+        if (hasLastPath &&
+            startIndex == lastStartNode &&
+            goalIndex == lastGoalNode &&
+            path != null)
+            return;
+
+        lastStartNode = startIndex;
+        lastGoalNode = goalIndex;
+        hasLastPath = true;
+
+        GroundNodeRef start = new(groundGraph, startIndex);
+        GroundNodeRef goal = new(groundGraph, goalIndex);
+
+        if (start == goal)
+        {
+            path = new List<GroundNodeRef> { start };
+            pathIndex = 0;
+            return;
+        }
+
+        path = Pathfinder.FindPath(start, goal);
+        //Debug.Log(path.Count);
+        pathIndex = 0;
+    }
+    private void FollowPath()
+    {
+        //Debug.Log("following target");
+        float distanceToTarget = Vector3.Distance(self.Position, target.position);
+
+        if (distanceToTarget <= directChaseDistance)
+        {
+            self.MoveTowards(target.position, moveSpeed);
+            return;
+        }
+
+        if (path == null || path.Count == 0) return;
+
+        if (pathIndex >= path.Count - 1)
+        {
+            self.MoveTowards(target.position, moveSpeed);
+            return;
+        }
+
+        Vector3 waypoint = path[pathIndex + 1].WorldPosition;
+
+        self.MoveTowards(waypoint, moveSpeed);
+
+        if (HasReachedWaypoint(waypoint))
+            pathIndex++;
+    }
+
+    private bool HasReachedWaypoint(Vector3 waypoint)
+    {
+        Vector3 planarOffset = Vector3.ProjectOnPlane(self.Position - waypoint, Vector3.up);
+        return planarOffset.magnitude <= waypointReachedDistance;
+    }
+
+    private int FindNearestNode(Vector3 position)
+    {
+        if (groundGraph == null || groundGraph.Nodes == null || groundGraph.Nodes.Count == 0)
+            return -1;
+
+        int bestIndex = -1;
+        float bestDistanceSqr = float.MaxValue;
+
+        for (int i = 0; i < groundGraph.Nodes.Count; i++)
+        {
+            float distanceSqr = (groundGraph.Nodes[i].position - position).sqrMagnitude;
+
+            if (distanceSqr < bestDistanceSqr)
+            {
+                bestDistanceSqr = distanceSqr;
+                bestIndex = i;
+            }
+        }
+
+        return bestIndex;
+    }
+}

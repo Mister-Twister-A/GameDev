@@ -1,0 +1,145 @@
+using UnityEngine;
+
+public class ClimbableSurface : MonoBehaviour
+{
+    [System.Serializable]
+    public class Face
+    {
+        public Vector3 normal;             
+        public Vector3[] vertices;         
+        public int[] neighborIndices;      
+
+        public ClimbableSurface[] externalNeighborSurface; 
+        public int[] externalNeighborFace;    
+        public FaceFlags flags = FaceFlags.None;
+        public bool IsUnwalkable => (flags & FaceFlags.NoTraverse) != 0;
+        public GroundNodeGraph linkedGroundGraph;
+        public int linkedGroundNodeIndex = -1;   
+    
+
+        public Face(Vector3 normal, Vector3[] vertices, int[] neighborIndices)
+        {
+            this.normal = normal;
+            this.vertices = vertices;
+            this.neighborIndices = neighborIndices;
+
+            externalNeighborSurface = new ClimbableSurface[vertices.Length];
+            externalNeighborFace = new int[vertices.Length];
+            for (int i = 0; i < externalNeighborFace.Length; i++) externalNeighborFace[i] = -1;
+        }
+        public bool IsEntryPoint => (flags & FaceFlags.EntryPoint) != 0;
+
+        public bool HasLinkedGroundNode =>linkedGroundGraph != null && linkedGroundNodeIndex >= 0 && linkedGroundNodeIndex < linkedGroundGraph.Nodes.Count;
+
+        public GroundNodeRef LinkedGroundNode =>HasLinkedGroundNode? new GroundNodeRef(linkedGroundGraph, linkedGroundNodeIndex): default;
+    }
+
+    public ClimbableSurfaceHolder climbableSurfaceHolder;      
+
+    public Face[] faces = System.Array.Empty<Face>();
+
+    public int[] triangleToFace = System.Array.Empty<int>();
+
+    public bool isDynamic = false; 
+    public int GetFaceFromTriangle(int triangleIndex)
+    {
+        if (triangleToFace == null || triangleIndex < 0 || triangleIndex >= triangleToFace.Length)
+            return -1;
+        return triangleToFace[triangleIndex];
+    }
+
+    public bool IsValid(){
+        if (faces == null || faces.Length == 0) return false;
+        foreach (var f in faces)
+        {
+            if (f.vertices == null || f.neighborIndices == null) return false;
+            if (f.vertices.Length != f.neighborIndices.Length) return false;
+            if (f.vertices.Length < 3) return false;
+        }
+        return true;
+    }
+
+    public Vector3 GetFaceWorldCentroid(int faceIndex){
+        var face = faces[faceIndex];
+        Vector3 c = Vector3.zero;
+        for (int i = 0; i < face.vertices.Length; i++)
+            c += transform.TransformPoint(face.vertices[i]);
+        return c / face.vertices.Length;
+    }
+
+    private void Awake()
+    {
+        climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
+        if (climbableSurfaceHolder == null) climbableSurfaceHolder = GetComponentInParent<ClimbableSurfaceHolder>();
+    }
+
+#if UNITY_EDITOR
+    void OnDrawGizmosSelected()
+    {
+        if (faces == null) return;
+
+        var centroids = new Vector3[faces.Length];
+        for (int i = 0; i < faces.Length; i++)
+        {
+            var face = faces[i];
+            if (face.vertices == null || face.vertices.Length == 0) continue;
+
+            Vector3 c = Vector3.zero;
+            foreach (var vtx in face.vertices) c += transform.TransformPoint(vtx);
+            c /= face.vertices.Length;
+            centroids[i] = c;
+
+            UnityEditor.Handles.Label(c, i.ToString());
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(c, 0.03f);
+
+            Gizmos.color = Color.green;
+            Vector3 worldNormal = transform.TransformDirection(face.normal);
+            Gizmos.DrawLine(c, c + worldNormal * 0.2f);
+        }
+
+        Gizmos.color = Color.cyan;
+        for (int i = 0; i < faces.Length; i++)
+        {
+            if (faces[i].neighborIndices == null) continue;
+            foreach (int n in faces[i].neighborIndices)
+            {
+                if (n < 0 || n >= faces.Length) continue;
+                Gizmos.DrawLine(centroids[i], centroids[n]);
+            }
+        }
+
+        Gizmos.color = Color.magenta;
+        for (int i = 0; i < faces.Length; i++)
+        {
+            var extSurfaces = faces[i].externalNeighborSurface;
+            var extFaces = faces[i].externalNeighborFace;
+            if (extSurfaces == null) continue;
+
+            for (int e = 0; e < extSurfaces.Length; e++)
+            {
+                var other = extSurfaces[e];
+                if (other == null || other.faces == null) continue;
+                int of = extFaces[e];
+                if (of < 0 || of >= other.faces.Length) continue;
+
+                Vector3 oc = Vector3.zero;
+                foreach (var vtx in other.faces[of].vertices) oc += other.transform.TransformPoint(vtx);
+                oc /= other.faces[of].vertices.Length;
+
+                Gizmos.DrawLine(centroids[i], oc);
+            }
+        }
+        Gizmos.color = Color.orange;
+        for (int i = 0; i < faces.Length; i++){
+            var face = faces[i];
+            if (!face.IsEntryPoint) continue;
+
+            Gizmos.DrawWireSphere(centroids[i], 0.18f);
+
+            if (face.HasLinkedGroundNode)
+                Gizmos.DrawLine(centroids[i], face.LinkedGroundNode.WorldPosition);
+        }
+    }
+#endif
+}
