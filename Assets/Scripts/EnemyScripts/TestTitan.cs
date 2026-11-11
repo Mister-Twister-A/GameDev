@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-public class TestTitan: EnemyData, ISurfaceWalker
+
+public class TestTitan : EnemyData, ISurfaceWalker
 {
     [Header("Ground Check")]
     public LayerMask groundMask = ~0;
@@ -12,14 +13,13 @@ public class TestTitan: EnemyData, ISurfaceWalker
     [Header("Attack")]
     public float expCoolDown = 3f;
 
-    
- 
     private SkillUser skillUser;
     [SerializeField] private float explosionForce = 30f;
 
     [Header("Facing")]
     public Transform modelRoot;
-    public float turnSpeed = 8f;    public float yawOffset = 0f;
+    public float turnSpeed = 8f;
+    public float yawOffset = 0f;
 
     [Header("Pivot Offset")]
     public float pivotHeightAboveFeet = 0f;
@@ -36,7 +36,7 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
     [SerializeField] public Transform curPlayerTarget;
     [SerializeField] private ClimbableSurfaceHolder climbableSurfaceHolder;
-    [SerializeField]private EnemyGroundNavigator enemyGroundNavigator;
+    [SerializeField] private EnemyGroundNavigator enemyGroundNavigator;
     private Transform wanderPointTransform;
 
     [SerializeField] private float waitTime = 2f;
@@ -45,16 +45,31 @@ public class TestTitan: EnemyData, ISurfaceWalker
     [SerializeField] private float wanderDistance = 15f;
     [SerializeField] private float wanderConeAngle = 150f;
 
+
+    [Header("Mission")]
+    [SerializeField] private WeakPointTest weakpoint;
+    [SerializeField] private TeleporterZone teleporterZone;
+    [SerializeField] private Transform enemySpawnPoint;
+
+    public event System.Action<TestTitan> WeakpointBroken;
+    public event System.Action<TestTitan> ChargeCompleted;
+
+    public Transform EnemySpawnPoint => enemySpawnPoint;
+    public bool IsWeakpointBroken { get; private set; }
+
     private void Awake()
     {
-        //climbableSurfaceHolder = GetComponent<ClimbableSurfaceHolder>();
         if(climbableSurfaceHolder == null) Debug.Log($"Titan {gameObject.name} did not find cimbablesurfaceHolder component");
 
         skillUser = GetComponent<SkillUser>();
         if(skillUser == null) Debug.Log($"Titan {gameObject.name} did not find skillUser component");
 
-        //enemyGroundNavigator = GetComponent<EnemyGroundNavigator>();
         if(enemyGroundNavigator == null) Debug.Log($"Titan {gameObject.name} did not find enemygroundNavigator component");
+
+        if (weakpoint == null) weakpoint = GetComponentInChildren<WeakPointTest>(true);
+        if (weakpoint == null) Debug.LogError($"Titan {name} has no Weakpoint.");
+        if (teleporterZone == null) teleporterZone = GetComponentInChildren<TeleporterZone>(true);
+        if (teleporterZone == null) Debug.LogError($"Titan {name} has no TeleporterZone.");
 
         var marker = new GameObject($"{name}_WanderPoint");
         wanderPointTransform = marker.transform;
@@ -62,6 +77,45 @@ public class TestTitan: EnemyData, ISurfaceWalker
         waiting = true;
         waitTimer = 0f;
     }
+
+    private void OnEnable()
+    {
+        if (weakpoint != null) weakpoint.Destroyed += OnWeakpointDestroyed;
+        if (teleporterZone != null) teleporterZone.FullyCharged += OnZoneCharged;
+    }
+
+    private void OnDisable()
+    {
+        if (weakpoint != null) weakpoint.Destroyed -= OnWeakpointDestroyed;
+        if (teleporterZone != null) teleporterZone.FullyCharged -= OnZoneCharged;
+    }
+
+    private void OnDestroy()
+    {
+        if (wanderPointTransform != null) Destroy(wanderPointTransform.gameObject);
+    }
+    public void Init(float weakpointHealthScale, float chargeSeconds, Transform player)
+    {
+        if (weakpoint != null) weakpoint.ApplyHealthScale(weakpointHealthScale);
+        if (teleporterZone != null) teleporterZone.Configure(chargeSeconds);
+        if (player != null) curPlayerTarget = player;
+    }
+
+    private void OnWeakpointDestroyed()
+    {
+        if (IsWeakpointBroken) return;
+        IsWeakpointBroken = true;
+
+        if (teleporterZone != null) teleporterZone.Activate();
+        WeakpointBroken?.Invoke(this);
+    }
+
+    private void OnZoneCharged()
+    {
+        ChargeCompleted?.Invoke(this);   
+        OnDeath();
+    }
+
 
     public void MoveTowards(Vector3 worldTargetPoint, float speed)
     {
@@ -107,7 +161,7 @@ public class TestTitan: EnemyData, ISurfaceWalker
 
         model.rotation = Quaternion.Euler(currentEuler.x, newYaw, currentEuler.z);
     }
-    
+
     private void Update()
     {
         Behaviour();
@@ -138,32 +192,33 @@ public class TestTitan: EnemyData, ISurfaceWalker
         }
         //skillUser.TryUseSkill(0);
     }
+
     private void PickNewWanderPoint()
     {
         waiting = false;
- 
+
         float halfAngle = wanderConeAngle * 0.5f;
         float randomAngle = Random.Range(-halfAngle, halfAngle);
- 
+
         Vector3 forward = transform.forward;
         forward.y = 0f;
         if (forward.sqrMagnitude < 0.0001f)
             forward = Vector3.forward;
         forward.Normalize();
- 
+
         Vector3 direction = Quaternion.AngleAxis(randomAngle, Vector3.up) * forward;
         Vector3 point = transform.position + direction * wanderDistance;
-        point.y = transform.position.y; 
- 
+        point.y = transform.position.y;
+
         wanderPointTransform.position = point;
- 
+
         enemyGroundNavigator.SetTarget(wanderPointTransform, EnemyGroundNavigator.NavMode.Wander);
     }
 
     public override void OnDeath()
     {
         climbableSurfaceHolder.unClimbable = true;
-        ICollection<ClimbableSurfaceHolder.ClimbEntry> ActiveClimbers = new List<ClimbableSurfaceHolder.ClimbEntry>(climbableSurfaceHolder.ActiveClimbers);;
+        ICollection<ClimbableSurfaceHolder.ClimbEntry> ActiveClimbers = new List<ClimbableSurfaceHolder.ClimbEntry>(climbableSurfaceHolder.ActiveClimbers);
         foreach (ClimbableSurfaceHolder.ClimbEntry entry in ActiveClimbers)
         {
             if(entry.controller is PlayerClimbController player)

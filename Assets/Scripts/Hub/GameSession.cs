@@ -5,6 +5,16 @@ public class GameSession : MonoBehaviour
 {
     public static GameSession Instance { get; private set; }
     public MissionData PendingMission { get; private set; } = new MissionData();
+    public bool IsLoading { get; private set; }
+
+    public string hubSceneName = "Hub";
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Bootstrap()
+    {
+        if (Instance == null)
+            new GameObject("GameSession").AddComponent<GameSession>();
+    }
 
     void Awake()
     {
@@ -16,26 +26,75 @@ public class GameSession : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-    public void StartMission(MissionData data, string missionSceneName = "Mission")
+    public void StartMission(MissionData data)
     {
+        if (data.levelScenes == null || data.levelScenes.Length == 0)
+        {
+            Debug.LogError("GameSession: MissionData has no levelScenes.");
+            return;
+        }
+        data.levelCount = data.levelScenes.Length;
+        data.levelIndex = 0;
         PendingMission = data;
-        SceneManager.LoadScene(missionSceneName, LoadSceneMode.Single);
-    }
-    public void StartMissionAsync(MissionData data, string missionSceneName = "Mission")
-    {
-        PendingMission = data;
-        StartCoroutine(LoadMissionRoutine(missionSceneName));
+        LoadScene(data.levelScenes[0]);
     }
 
-    IEnumerator LoadMissionRoutine(string missionSceneName)
+    public void CompleteLevel()
     {
-        AsyncOperation op = SceneManager.LoadSceneAsync(missionSceneName, LoadSceneMode.Single);
-        op.allowSceneActivation = true;
+        if (IsLoading) return;
+
+        if (PendingMission.IsLastLevel)
+        {
+            Debug.Log($"Mission '{PendingMission.missionId}' complete!");
+            ReturnToHub();
+            return;
+        }
+
+        PendingMission.levelIndex++;
+        LoadScene(PendingMission.levelScenes[PendingMission.levelIndex]);
+    }
+
+    public void FailMission()
+    {
+        Debug.Log("Mission failed.");
+        ReturnToHub();
+    }
+
+    public void ReturnToHub()
+    {
+        PendingMission = new MissionData();
+        LoadScene(hubSceneName);
+    }
+
+    public static string[] PickLevelMaps(string[] pool, int count, int seed)
+    {
+        var rng = new System.Random(seed);
+        var result = new string[count];
+        int last = -1;
+        for (int i = 0; i < count; i++)
+        {
+            int idx = rng.Next(pool.Length);
+            if (pool.Length > 1 && idx == last)
+                idx = (idx + 1 + rng.Next(pool.Length - 1)) % pool.Length;
+            result[i] = pool[idx];
+            last = idx;
+        }
+        return result;
+    }
+
+    void LoadScene(string sceneName)
+    {
+        if (IsLoading) return;
+        StartCoroutine(LoadRoutine(sceneName));
+    }
+
+    IEnumerator LoadRoutine(string sceneName)
+    {
+        IsLoading = true;
+        Time.timeScale = 1f;
+        AsyncOperation op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         while (!op.isDone)
             yield return null;
-    }
-    public void ReturnToHub(string hubSceneName = "Hub")
-    {
-        SceneManager.LoadScene(hubSceneName, LoadSceneMode.Single);
+        IsLoading = false;
     }
 }

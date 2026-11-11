@@ -24,7 +24,6 @@ public class EnemySpawner : MonoBehaviour
     private readonly List<EnemyData> affordable = new List<EnemyData>();
 
     public bool IsRunning => running;
-
     public void Begin(int startWave)
     {
         curWave = Mathf.Max(1, startWave);
@@ -57,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer <= 0f && enemiesToSpawn.Count > 0)
         {
             Transform point = GetSpawnPoint();
-            if (point == null) return;   // spawn point destroyed (e.g. giant died) - keep queue
+            if (point == null) return;  
 
             enemiesToSpawn[0].Spawn(point);
             enemiesToSpawn.RemoveAt(0);

@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class HubMissionLauncher : MonoBehaviour
 {
-    [SerializeField] private Slider difficultySlider;  
+    [SerializeField] private Slider difficultySlider;
     [SerializeField] private Button startButton;
     [SerializeField] private string missionId = "1";
-    [SerializeField] private string missionSceneName = "MissionTest";
+    [SerializeField] private string[] mapScenes = { "MissionTest"};   
+    [SerializeField] private int levelCount = 3;
 
     void Start()
     {
@@ -15,12 +16,15 @@ public class HubMissionLauncher : MonoBehaviour
 
     void OnStartPressed()
     {
+        int seed = Random.Range(int.MinValue, int.MaxValue);
         var data = new MissionData
         {
             difficulty = Mathf.RoundToInt(difficultySlider.value),
             missionId = missionId,
-            seed = Random.Range(int.MinValue, int.MaxValue),
+            seed = seed,
+            levelCount = levelCount,
+            levelScenes = GameSession.PickLevelMaps(mapScenes, levelCount, seed),
         };
-        GameSession.Instance.StartMissionAsync(data, missionSceneName);
+        GameSession.Instance.StartMission(data);
     }
 }

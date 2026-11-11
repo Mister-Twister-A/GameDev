@@ -1,29 +1,49 @@
+using System;
+using System.Diagnostics;
 using UnityEngine;
 
 public class WeakPointTest : EnemyData
 {
-    public override void Behaviour()
+    [SerializeField] private float baseHealth = 10f;
+
+    public event Action Destroyed;
+    public float MaxHealth { get; private set; }
+    public bool IsDestroyed { get; private set; }
+
+    void Awake()
     {
-        if (health <= 0)
-        {
-            OnDeath();
-        }
+        UnityEngine.Debug.Log("awaked");
+        MaxHealth = baseHealth;
+        health = Mathf.RoundToInt(MaxHealth);
     }
-    private void Update()
+    public void ApplyHealthScale(float scale)
     {
-        Behaviour();
+        MaxHealth = baseHealth * scale;
+        health = Mathf.RoundToInt(MaxHealth);
     }
 
-    public override void Spawn(Transform pos)
+
+    public void TakeDamage(float amount) => health -= amount;
+
+    void Update()
     {
-        throw new System.NotImplementedException();
+        if (!IsDestroyed && health <= 0)
+            OnDeath();
     }
 
     public override void OnDeath()
     {
-        EnemyData data = transform.parent.GetComponentInParent<EnemyData>();
-        data.OnDeath();
-        Destroy(gameObject);
+        if (IsDestroyed) return;
+        IsDestroyed = true;
+        gameObject.SetActive(false);
+        Destroyed?.Invoke();
     }
-
+    public override void Behaviour()
+    {
+        throw new System.NotImplementedException();
+    }
+    public override void Spawn(Transform pos)
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -127,8 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeakPointTest
   enemyName: weakpoint
-  health: 20
+  health: 0
   cost: 0
+  baseHealth: 10
 --- !u!114 &3972593658801782384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7591367042009644106}
+    - targetCorrespondingSourceObject: {fileID: 7036213049465896255, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2477182416823581407}
     - targetCorrespondingSourceObject: {fileID: 8230192803570288750, guid: 6e3b768cabc44f84db899c96ac65b59e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2418380830273886288}
@@ -813,6 +817,9 @@ MonoBehaviour:
   waitTime: 2
   wanderDistance: 15
   wanderConeAngle: 60
+  weakpoint: {fileID: 2504557084704408364}
+  teleporterZone: {fileID: 2477182416823581407}
+  enemySpawnPoint: {fileID: 0}
 --- !u!114 &4296316262996428033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7193,4 +7200,23 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: f323fdc6df36361b1aa8f4ca58310cce, type: 2}
     collisionTags:
     - enemy
+    key: 0
     cooldownTimer: 0
+--- !u!114 &2477182416823581407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214481732044926027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78511eda187a9b08a97a8d480eb5d1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleporterZone
+  radius: 15
+  chargeDuration: 40
+  radiusVisual: {fileID: 0}
+  onProgress:
+    m_PersistentCalls:
+      m_Calls: []

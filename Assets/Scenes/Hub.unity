@@ -562,6 +562,9 @@ MonoBehaviour:
   collisionPadding: 0.15
   lockCursorOnStart: 1
   toggleCursorWithEscape: 1
+  aimShoulderOffset: {x: 0.7, y: 0.1, z: 0}
+  aimDistance: 2.8
+  aimBlendTime: 0.12
 --- !u!114 &439080782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,6 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484a8209d5c01fa9582e26dccab8b5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameSession
+  hubSceneName: Hub
 --- !u!4 &850541931
 Transform:
   m_ObjectHideFlags: 0
@@ -1065,6 +1069,7 @@ GameObject:
   - component: {fileID: 986480178}
   - component: {fileID: 986480177}
   - component: {fileID: 986480176}
+  - component: {fileID: 986480180}
   m_Layer: 0
   m_Name: playerCharater
   m_TagString: Player
@@ -1102,6 +1107,7 @@ MonoBehaviour:
   controller: {fileID: 986480178}
   camera: {fileID: 439080781}
   playerModel: {fileID: 1687960246}
+  playerAnimator: {fileID: 986480180}
   walkSpeed: 12
   climbSpeed: 6
   jumpForce: 6
@@ -1121,6 +1127,10 @@ MonoBehaviour:
   surfaceOffset: 0.05
   edgeEpsilon: 0.0001
   verticalVelocity: {x: 0, y: 0, z: 0}
+  isAiming: 0
+  canAttachToSurfaces: 1
+  inputControlMultiplier: 1
+  leapTrigger: Backflip
 --- !u!143 &986480178
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1163,6 +1173,28 @@ Transform:
   - {fileID: 1687960246}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &986480180
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986480175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f01b78073e2f5c5f9c7ecd12b5f1455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1031277839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,7 +1896,9 @@ MonoBehaviour:
   difficultySlider: {fileID: 1190028257}
   startButton: {fileID: 1890133557}
   missionId: 1
-  missionSceneName: MissionTest
+  mapScenes:
+  - MissionTest
+  levelCount: 3
 --- !u!4 &1448969837
 Transform:
   m_ObjectHideFlags: 0
@@ -1932,6 +1966,7 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: a9fdd186fc004ad279f50e3b0bbc0f1f, type: 2}
     collisionTags:
     - Player
+    key: 0
     cooldownTimer: 0
 --- !u!23 &1687960248
 MeshRenderer:
