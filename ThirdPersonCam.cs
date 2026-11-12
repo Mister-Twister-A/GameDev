@@ -76,6 +76,7 @@ public class ThirdPersonCam : MonoBehaviour
         if (toggleCursorWithEscape && Input.GetKeyDown(KeyCode.Escape))
         {
             bool locked = Cursor.lockState == CursorLockMode.Locked;
+            Debug.Log($"{locked}");
             Cursor.lockState = locked ? CursorLockMode.None : CursorLockMode.Locked;
             Cursor.visible = locked;
         }

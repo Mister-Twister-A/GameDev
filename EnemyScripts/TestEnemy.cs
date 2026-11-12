@@ -47,8 +47,8 @@ public class TestEnemy : EnemyData
         Destroy(gameObject);
     }
 
-    public override void Spawn(Transform pos)
+    public override void Spawn(Vector3 pos)
     {
-        Instantiate(gameObject, pos.position, Quaternion.identity);
+        Instantiate(gameObject, pos, Quaternion.identity);
     }
 }

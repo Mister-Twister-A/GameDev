@@ -6,11 +6,16 @@ public class EnemySpawner : MonoBehaviour
     [Header("References")]
     public List<EnemyData> enemies = new List<EnemyData>();
     public List<EnemyData> enemiesToSpawn = new List<EnemyData>();
+    [SerializeField] private GroundNodeGraph graph;
+    [SerializeField] private Transform player;
 
     [Header("Spawning")]
     public int curCredits = 0;
     public int curWave = 1;
     public Transform spawnLocation;
+    [SerializeField] private float minDistance = 20f;
+    [SerializeField] private float maxDistance = 60f;
+
 
     public float waveInterval = 20f;
     public float spawnInterval;
@@ -55,7 +60,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnTimer <= 0f && enemiesToSpawn.Count > 0)
         {
-            Transform point = GetSpawnPoint();
+            Vector3 point = GetSpawnPoint();
             if (point == null) return;  
 
             enemiesToSpawn[0].Spawn(point);
@@ -64,14 +69,14 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private Transform GetSpawnPoint()
+    private Vector3 GetSpawnPoint()
     {
-        if (overridePoints != null && overridePoints.Length > 0)
+        if (!graph.TryPickSpawnNode(player.position, minDistance, maxDistance,requiredFlags: NodeFlags.None,forbiddenFlags: NodeFlags.NoCharacterSpawn,out int nodeIndex))
         {
-            Transform p = overridePoints[Random.Range(0, overridePoints.Length)];
-            if (p != null) return p;
+            //Debug.Log($"something went wrong in Get Spawn Point {nodeIndex}, {player.position}");
+            return new Vector3(0f,0f,0f);
         }
-        return spawnLocation;
+        return graph.GetNode(nodeIndex).position;
     }
 
     private void GenerateWave()
