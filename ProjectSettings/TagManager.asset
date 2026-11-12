@@ -19,8 +19,8 @@ TagManager:
   - enemySmall
   - Hitbox
   - Hurtbox
-  - 
-  - 
+  - EnemyProjectileHitbox
+  - EnemyHurtbox
   - 
   - 
   - 
