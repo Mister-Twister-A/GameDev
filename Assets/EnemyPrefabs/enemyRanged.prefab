@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4551698331941144224}
   - component: {fileID: 7855138836550867288}
   - component: {fileID: 2680688110801618850}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: hurtbox
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -374,6 +374,7 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: 4490603dddae9e2099d25221770b7672, type: 2}
     collisionTags:
     - enemy
+    key: 0
     cooldownTimer: 0
 --- !u!1 &8936971338279489100
 GameObject:

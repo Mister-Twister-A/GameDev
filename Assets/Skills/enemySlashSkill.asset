@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlashSkill
   skillName: 
   cooldown: 1
-  hitboxPrefab: {fileID: 3735298145516147414, guid: f26556111f76941a59b5dceea11971a4, type: 3}
+  hitboxPrefab: {fileID: 3735298145516147414, guid: ef2abfe89c7f760598f95fe816d81053, type: 3}
   spawnDistance: 1
   duration: 0.1
   damage: 7

@@ -30,6 +30,15 @@ public class GroundGraphBaker : MonoBehaviour
     [SerializeField]private LayerMask obstacleMask = ~0;
     [SerializeField]private GroundNodeGraph graph;
 
+    [Header("Spatial Grid")]
+    [SerializeField] private float spatialCellSize = 16f;
+
+    [Header("Node Flags")]
+    [SerializeField] private LayerMask noSpawnMask;
+    [SerializeField] private float noSpawnCheckRadius = 0.5f;
+    [SerializeField] private float ceilingCheckHeight = 50f; 
+    [SerializeField] private LayerMask ceilingMask = ~0;
+
     public void Bake()
     {
         if (graph == null){
@@ -53,7 +62,7 @@ public class GroundGraphBaker : MonoBehaviour
 
         BuildConnections(nodes);
 
-        graph.SetNodes(nodes);
+        graph.SetNodes(nodes, spatialCellSize);
 
         Debug.Log($"Ground graph baked. Nodes: {nodes.Count}",graph);
 
@@ -95,13 +104,27 @@ public class GroundGraphBaker : MonoBehaviour
  
                     nodes.Add(new GroundNode
                     {
-                        position = navHit.position
+                        position = navHit.position,
+                        flags = ComputeFlags(navHit.position)
                     });
                 }
             }
         }
  
         return nodes;
+    }
+
+    private NodeFlags ComputeFlags(Vector3 pos)
+    {
+        NodeFlags flags = NodeFlags.None;
+
+        if (noSpawnMask.value != 0 &&
+            Physics.CheckSphere(pos, noSpawnCheckRadius, noSpawnMask, QueryTriggerInteraction.Collide))
+            flags |= NodeFlags.NoCharacterSpawn;
+        if (!Physics.Raycast(pos + Vector3.up * 0.1f, Vector3.up, ceilingCheckHeight, ceilingMask, QueryTriggerInteraction.Ignore))
+            flags |= NodeFlags.NoCeiling;
+
+        return flags;
     }
     private List<RaycastHit> CollectColumnSurfaces(float x, float z, Bounds bounds, float skinWidth)
     {

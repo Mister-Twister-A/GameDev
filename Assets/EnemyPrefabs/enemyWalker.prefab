@@ -109,6 +109,7 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: e2421eddcfc48eee5a55edad5fbad3af, type: 2}
     collisionTags:
     - enemy
+    key: 0
     cooldownTimer: 0
 --- !u!1 &1315476033153480051
 GameObject:
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 9041838054350293973}
   - component: {fileID: 6726252198691803794}
   - component: {fileID: 7572646321440893281}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: hurtbox
   m_TagString: enemy
   m_Icon: {fileID: 0}

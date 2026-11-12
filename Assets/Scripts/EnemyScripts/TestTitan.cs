@@ -167,7 +167,7 @@ public class TestTitan : EnemyData, ISurfaceWalker
         Behaviour();
     }
 
-    public override void Spawn(Transform pos)
+    public override void Spawn(Vector3 pos)
     {
         throw new System.NotImplementedException();
     }

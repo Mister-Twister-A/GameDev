@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1378667908649096379}
   - component: {fileID: 2200732030405916822}
   - component: {fileID: 2707582809361283965}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: EnenmyProjectilePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +146,9 @@ MonoBehaviour:
   owner: {fileID: 0}
   tagsToExclude:
   - Respawn
+  useFalloff: 0
+  falloffRadius: 4
+  edgeDamageMultiplier: 0.4
 --- !u!54 &2707582809361283965
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8726548276707575344}
   - component: {fileID: 2504557084704408364}
   - component: {fileID: 3972593658801782384}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: weakpoint
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -7217,6 +7217,7 @@ MonoBehaviour:
   radius: 15
   chargeDuration: 40
   radiusVisual: {fileID: 0}
+  chargeProgress: 0
   onProgress:
     m_PersistentCalls:
       m_Calls: []

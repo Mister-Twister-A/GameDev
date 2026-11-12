@@ -19,9 +19,7 @@ public class RangedEnemy : EnemyData
     [SerializeField] private float maxTimeWithoutLineOfSight = 2f;
 
     [Header("Shooting")]
-    [Tooltip("Index of the ProjectileSkill in this enemy's SkillUser.")]
     [SerializeField] private int shootSkillIndex = 0;
-    [Tooltip("Used for line-of-sight and lead calculation. Put it where the projectile spawns.")]
     [SerializeField] private Transform muzzle;
     [SerializeField] private Vector2 firstShotDelayRange = new Vector2(0.5f, 1.5f);
     [SerializeField, Range(0f, 1f)] private float leadAmount = 0.7f;
@@ -241,9 +239,9 @@ public class RangedEnemy : EnemyData
         Destroy(gameObject);
     }
 
-    public override void Spawn(Transform pos)
+    public override void Spawn(Vector3 pos)
     {
-        Instantiate(gameObject, pos.position, Quaternion.identity);
+        Instantiate(gameObject, pos, Quaternion.identity);
     }
 
 #if UNITY_EDITOR
