@@ -21,9 +21,9 @@ Kernel version:          7.2.14-arch1-1
 Architecture:            x86_64
 Window Protocol:         Wayland (XWayland)
 Available memory:        7657 MB
-Date:                    2026-11-12T17:06:06Z
+Date:                    2026-11-13T16:42:58Z
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio" at "2026-11-12T17:06:06.35956Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio" at "2026-11-13T16:42:58.263064Z"
 [SignatureVerifier] Application signature verification not supported on this platform.
 Selected window backend: (null) 
 [Licensing::Client] Error: HandshakeResponse reported an error:
@@ -31,17 +31,8 @@ Selected window backend: (null)
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-usio"
 [Licensing::IpcConnector] LicenseClient-usio channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio-6000.5.8" at "2026-11-12T17:06:06.51302Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio-6000.5.8" at "2026-11-13T16:42:58.623936Z"
 [SignatureVerifier] Application signature verification not supported on this platform.
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              0f2c5abd0711412ca31420726592736f
-  Correlation Id:          5fabaf879ffcafea6581dfadebb2d1fc
-  External correlation Id: 5982945024132553404
-  Machine Id:              x91t/QJmnuGXpQYOdGXOE63eCBU=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-usio-6000.5.8" (connect: 0.00s, validation: 0.05s, handshake: 0.00s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio-6000.5.8-notifications" at "2026-11-12T17:06:06.558826Z"
-[Licensing::Module] Licensing Background thread has ended after 0.20s
 Desktop is 1920 x 1200 @ 60 Hz
 Initialize udev device monitor.
 
@@ -57,9 +48,9 @@ AssetImportWorkerHW3
 -logFile
 Logs/AssetImportWorkerHW3.log
 -srvPort
-37685
+45721
 -parentPid
-296538
+135866
 -analyticsCloudUserId
 10170777712478
 -analyticsCloudProjectId
@@ -120,14 +111,14 @@ Successfully changed project path to: /home/usio/Titan test
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [140245776075968]  Target information:
+Player connection [140381690698944]  Target information:
 
-Player connection [140245776075968]  * "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 1823319264 [EditorId] 1823319264 [Version] 1048832 [Id] LinuxEditor(16,172.19.0.1) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [140381690698944]  * "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 2521687022 [EditorId] 2521687022 [Version] 1048832 [Id] LinuxEditor(16,172.19.0.1) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [140245776075968]  * "[IP] 172.19.0.1 [Port] 0 [Flags] 2 [Guid] 1823319264 [EditorId] 1823319264 [Version] 1048832 [Id] LinuxEditor(16,172.19.0.1) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [140381690698944]  * "[IP] 172.19.0.1 [Port] 0 [Flags] 2 [Guid] 2521687022 [EditorId] 2521687022 [Version] 1048832 [Id] LinuxEditor(16,172.19.0.1) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [140245776075968] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [140245776075968] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [140381690698944] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [140381690698944] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -139,7 +130,16 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 9,38 ms, found 0 plugins.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              5d23c2b6b8ca4808ad93529c2d086fda
+  Correlation Id:          bd9af2ea9cb1635bf5483238c7774398
+  External correlation Id: 458223155519736901
+  Machine Id:              x91t/QJmnuGXpQYOdGXOE63eCBU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-usio-6000.5.8" (connect: 0.00s, validation: 0.23s, handshake: 0.00s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-usio-6000.5.8-notifications" at "2026-11-13T16:42:58.857913Z"
+[Licensing::Module] Licensing Background thread has ended after 0.59s
+Refreshing native plugins compatible for Editor in 17,01 ms, found 0 plugins.
 Initialize engine version: 6000.5.8f1 (5cb7df797b7d)
 [Subsystems] Discovering subsystems at path /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /home/usio/Titan test/Assets
@@ -183,7 +183,7 @@ GfxDevice: creating device client; kGfxThreadingModeThreaded
 [vulkan] Loaded instance function vkGetPhysicalDeviceProperties
 [vulkan] Loaded instance function vkEnumeratePhysicalDevices
 [Vulkan init] SelectPhysicalDevice requestedDeviceIndex=-1 xrDevice=(nil)
-[Vulkan init] Physical Device 0x561fece90c50 [0]: "Intel(R) Graphics (ADL GT2)" deviceType=1 vendorID=8086 deviceID=46a3
+[Vulkan init] Physical Device 0x555f9d581840 [0]: "Intel(R) Graphics (ADL GT2)" deviceType=1 vendorID=8086 deviceID=46a3
 Vulkan detection: 2
 [Vulkan init] extensions: count=27
 [Vulkan init] extensions: name=VK_EXT_acquire_drm_display [enabled=0, external=0]
@@ -275,8 +275,8 @@ Vulkan detection: 2
 [vulkan] Loaded instance function vkCmdEndDebugUtilsLabelEXT
 [vulkan] Loaded instance function vkCmdInsertDebugUtilsLabelEXT
 [Vulkan init] SelectPhysicalDevice requestedDeviceIndex=-1 xrDevice=(nil)
-[Vulkan init] Physical Device 0x561fece42170 [0]: "Intel(R) Graphics (ADL GT2)" deviceType=1 vendorID=8086 deviceID=46a3
-[Vulkan init] Selected physical device 0x561fece42170
+[Vulkan init] Physical Device 0x555f9d57fac0 [0]: "Intel(R) Graphics (ADL GT2)" deviceType=1 vendorID=8086 deviceID=46a3
+[Vulkan init] Selected physical device 0x555f9d57fac0
 [Vulkan init] Graphics queue count=1
 [Vulkan init] extensions: count=196
 [Vulkan init] extensions: name=VK_AMD_buffer_marker [enabled=0, external=0]
@@ -625,18 +625,18 @@ Vulkan renderer=[Intel(R) Graphics (ADL GT2)] id=[46a3]
 Vulkan device type 1
 Vulkan driverversion=[26.2.6 (0x06802006)] uint=[109060102]
 Vulkan driverLibraryString=[Intel open-source Mesa driver (6), Mesa 26.2.6-arch1.1]
-Vulkan PSO: Cache data successfully loaded [size=1192207,path=/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin]
+Vulkan PSO: Cache data successfully loaded [size=272948,path=/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin]
 Initialize mono
 Mono path[0] = '/home/usio/Unity/Hub/Editor/6000.5.8f1/Data/Managed'
 Mono path[1] = '/home/usio/Unity/Hub/Editor/6000.5.8f1/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = '/home/usio/Unity/Hub/Editor/6000.5.8f1/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/usio/Unity/Hub/Editor/6000.5.8f1/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56194
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/usio/Unity/Hub/Editor/6000.5.8f1/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,001506 seconds.
+Registered in 0,003051 seconds.
 Native extension for LinuxStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -647,22 +647,23 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2,331 seconds
-Domain Reload Profiling: 2806ms
-	BeginReloadAssembly (125ms)
-	RebuildCommonClasses (4ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (276ms)
-		LoadAssemblies (123ms)
-		AnalyzeDomain (205ms)
-			TypeCache.Refresh (204ms)
-				TypeCache.ScanAssembly (189ms)
-	FinalizeReload (2332ms)
+- Finished resetting the current domain, in  4,242 seconds
+Domain Reload Profiling: 7068ms
+	BeginReloadAssembly (2098ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (275ms)
+	LoadAllAssembliesAndSetupDomain (430ms)
+		LoadAssemblies (2097ms)
+		AnalyzeDomain (313ms)
+			TypeCache.Refresh (309ms)
+				TypeCache.ScanAssembly (274ms)
+	FinalizeReload (4243ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (98ms)
-			ProcessInitializeOnLoadMethodAttributes (2074ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (92ms)
+			ProcessInitializeOnLoadMethodAttributes (3970ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
@@ -686,7 +687,6 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2,75 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -699,280 +699,168 @@ Native extension for LinuxStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0,700 seconds
-Domain Reload Profiling: 1495ms
-	BeginReloadAssembly (194ms)
-		DisableScriptedObjects (7ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (9ms)
+- Finished resetting the current domain, in  1,081 seconds
+Domain Reload Profiling: 3864ms
+	BeginReloadAssembly (146ms)
+		DisableScriptedObjects (6ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (7ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (523ms)
-		LoadAssemblies (332ms)
-		AnalyzeDomain (221ms)
-			TypeCache.Refresh (161ms)
-				TypeCache.ScanAssembly (146ms)
-			BuildScriptInfoCaches (53ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (700ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (2580ms)
+		LoadAssemblies (946ms)
+		AnalyzeDomain (1617ms)
+			TypeCache.Refresh (1125ms)
+				TypeCache.ScanAssembly (1110ms)
+			BuildScriptInfoCaches (485ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1082ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (68ms)
-			ProcessInitializeOnLoadAttributes (293ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+			BeforeProcessingInitializeOnLoad (125ms)
+			ProcessInitializeOnLoadAttributes (454ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 AcceleratorClientConnectionCallback - disconnected - :0
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-AutoLocale: current locale expects 'C' but got 'ru_RU.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+AutoLocale: current locale expects 'C' but got 'ru_RU.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.06 seconds
+Refreshing native plugins compatible for Editor in 3.39 ms, found 0 plugins.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
 Curl error 3: URL rejected: Error
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7086 unused Assets / (8.3 MB). Loaded Objects now: 8145.
-Memory consumption went from 227.5 MB to 219.2 MB.
-Total: 18.059175 ms (FindLiveObjects: 0.636298 ms CreateObjectMapping: 3.140352 ms MarkObjects: 7.577707 ms  DeleteObjects: 6.702417 ms)
+Unloading 7089 unused Assets / (8.0 MB). Loaded Objects now: 8148.
+Memory consumption went from 227.5 MB to 219.5 MB.
+Total: 24.024772 ms (FindLiveObjects: 2.784785 ms CreateObjectMapping: 3.198577 ms MarkObjects: 9.464482 ms  DeleteObjects: 8.574346 ms)
 
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8145.
-Memory consumption went from 220.8 MB to 218.1 MB.
-Total: 12.962895 ms (FindLiveObjects: 0.915490 ms CreateObjectMapping: 1.544114 ms MarkObjects: 9.602126 ms  DeleteObjects: 0.896471 ms)
+Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8148.
+Memory consumption went from 220.7 MB to 218.0 MB.
+Total: 8.021428 ms (FindLiveObjects: 0.391236 ms CreateObjectMapping: 1.225772 ms MarkObjects: 5.970098 ms  DeleteObjects: 0.432856 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time of request: 2026-11-12T17:08:35.559814Z
-  Time since last request: 58011.68912748299772 seconds.
-  importAddress: GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: PreviewImporter
-Importing 'GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: eb9f92fcced5a781cac2f4d06636fe93' -> (Import Result ID: 'ec1357cb83a8d94ec4fba9c74ce201a6') in 0.488 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09d43c32bce853ff19a3f4dceb02c4d1 DependenciesID=8d50e00d18c2fcaf10c4b17cbccd11ea StaticDependenciesID=cdb8a463b5a827918565122d1395e5ef 
+  Time of request: 2026-11-13T16:43:30.014447Z
+  Time since last request: 29923.11241768300169 seconds.
+  importAddress: GUID: ce0beb8151ba41eb98b5e90f86aa768f - Path: Assets/Prefabs/SpearProjectilePrefab.prefab - Importer: PreviewImporter
+Importing 'GUID: ce0beb8151ba41eb98b5e90f86aa768f - Path: Assets/Prefabs/SpearProjectilePrefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: ce0beb8151ba41eb98b5e90f86aa768f' -> (Import Result ID: '7a6a3e7635dc715a9f4ef0c5b2d596b2') in 0.852 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6ab44ca0f32084450d2c2228fdc0dca DependenciesID=28c958618afb941ebe8f9dd29abfa8dc StaticDependenciesID=08cbf959f99837d587a4bc2fb33be698 
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 15
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:08:36.344613Z
-  Time since last request: 0.281793916 seconds.
-  importAddress: GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: eb9f92fcced5a781cac2f4d06636fe93' -> (Import Result ID: 'd92383faae7803a41615f93eb766aa7a') in 0.101 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6b5582dcd826fbf691558b3474d63ce DependenciesID=ba45a805ee9bcb9041c05719e7cc7402 StaticDependenciesID=de7b5de7073dd40fd28ab9f8f01515e0 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:09.085027Z
-  Time since last request: 32.624577227 seconds.
-  importAddress: GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/SlashHitbox 1.prefab - Importer: PreviewImporter
-Importing 'GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/SlashHitbox 1.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ef2abfe89c7f760598f95fe816d81053' -> (Import Result ID: 'b5fb933220244f04f4c7072971c8125d') in 0.053 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62a6c7384cc215bcd49e627645d61bf5 DependenciesID=35f4ec1ce3e070fa94a4d84e5103ba52 StaticDependenciesID=2f32b13b823c79288c50e1addcf77491 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:10.053069Z
-  Time since last request: 0.905644786 seconds.
-  importAddress: GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/SlashHitbox 1.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/SlashHitbox 1.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: ef2abfe89c7f760598f95fe816d81053' -> (Import Result ID: '9b7d31087e1a4963dfa9bb5268a124be') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=661a564879c27b9d6b4d7c7deba8a417 DependenciesID=d916732c2165e6ccc39c0b0d85dad469 StaticDependenciesID=36648c1b4d3b59661772f2a584c0cdd2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
+Number of asset objects unloaded after import = 48
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 10170777712478-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.66 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.015 seconds
+Domain Reload Profiling: 3304ms
+	BeginReloadAssembly (877ms)
+		ExecutionOrderSort (3ms)
+		DisableScriptedObjects (200ms)
+		CreateAndSetChildDomain (179ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (1305ms)
+		LoadAssemblies (1205ms)
+		AnalyzeDomain (288ms)
+			TypeCache.Refresh (20ms)
+			BuildScriptInfoCaches (241ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1016ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (362ms)
+			ProcessInitializeOnLoadMethodAttributes (136ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8269.
-Memory consumption went from 228.5 MB to 225.8 MB.
-Total: 10.117994 ms (FindLiveObjects: 0.415254 ms CreateObjectMapping: 1.123164 ms MarkObjects: 8.076683 ms  DeleteObjects: 0.497174 ms)
+Unloading 7086 unused Assets / (6.3 MB). Loaded Objects now: 8225.
+Memory consumption went from 234.8 MB to 228.5 MB.
+Total: 50.791380 ms (FindLiveObjects: 2.588676 ms CreateObjectMapping: 3.085538 ms MarkObjects: 41.065347 ms  DeleteObjects: 3.903181 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time of request: 2026-11-12T17:09:27.003386Z
-  Time since last request: 16.932113301 seconds.
+  Time of request: 2026-11-13T16:44:35.903025Z
+  Time since last request: 65.01923836500001 seconds.
   importAddress: GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/EnemySlashHitbox.prefab - Importer: PreviewImporter
 Importing 'GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/EnemySlashHitbox.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ef2abfe89c7f760598f95fe816d81053' -> (Import Result ID: '0ed79d33d9fc933bdb7480d241683b0e') in 0.008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62a6c7384cc215bcd49e627645d61bf5 DependenciesID=c84fccb35d87e09b86b65b0d645b75a2 StaticDependenciesID=eb8b78893d5d958f43e957a0aeb8e365 
+Imported 'GUID: ef2abfe89c7f760598f95fe816d81053' -> (Import Result ID: '82a7454969a7e4ab0439ddbfa20f7bbf') in 0.819 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=62a6c7384cc215bcd49e627645d61bf5 DependenciesID=6aac8f6bd7fc72f032aa990f631b10e3 StaticDependenciesID=eb8b78893d5d958f43e957a0aeb8e365 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 11
 ========================================================================
 Received Import Request.
-  Time of request: 2026-11-12T17:09:27.886008Z
-  Time since last request: 0.864517178 seconds.
-  importAddress: GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/EnemySlashHitbox.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: ef2abfe89c7f760598f95fe816d81053 - Path: Assets/Prefabs/EnemySlashHitbox.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: ef2abfe89c7f760598f95fe816d81053' -> (Import Result ID: 'e66bb4900b74753ef79548107880e8a7') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc26329d097aa08966eeccd7cf0a1052 DependenciesID=e17f46093bf40c78075b801d809453e6 StaticDependenciesID=d802fd8bfabd46e2012d53c5bddcae93 
+  Time of request: 2026-11-13T16:44:36.742818Z
+  Time since last request: 0.00205076 seconds.
+  importAddress: GUID: f26556111f76941a59b5dceea11971a4 - Path: Assets/Prefabs/SlashHitbox.prefab - Importer: PreviewImporter
+Importing 'GUID: f26556111f76941a59b5dceea11971a4 - Path: Assets/Prefabs/SlashHitbox.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: f26556111f76941a59b5dceea11971a4' -> (Import Result ID: '7b771bc76ff20d6c0dbb009f65b140b0') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b5aab095e3cb17f32b1c7e0406b4bd79 DependenciesID=0d08329a1699e8eb9fc343a3e35daf39 StaticDependenciesID=81967d5ce91287e0c85cf6ca25cd14c5 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 11
 ========================================================================
 Received Import Request.
-  Time of request: 2026-11-12T17:09:33.99399Z
-  Time since last request: 6.093184474 seconds.
-  importAddress: GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter
-Importing 'GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 882f64c417dc3941f8f8269197c60339' -> (Import Result ID: '5b445bca35653f347901544e2305805c') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5eb5f7b11f8c1ba7a23559aa5f0c9210 DependenciesID=fd1194ae84548f73479786f0e574fbaf StaticDependenciesID=f9b63865bced5d69418b9ded75078ce8 
+  Time of request: 2026-11-13T16:44:36.792687Z
+  Time since last request: 0.001256125 seconds.
+  importAddress: GUID: 83277d58cacc5d23fa8605e6d46c7f1c - Path: Assets/Prefabs/ShpereHitbox.prefab - Importer: PreviewImporter
+Importing 'GUID: 83277d58cacc5d23fa8605e6d46c7f1c - Path: Assets/Prefabs/ShpereHitbox.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 83277d58cacc5d23fa8605e6d46c7f1c' -> (Import Result ID: '017fe9dd61df51128cc6de979704aced') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b197e47655b6f83cdb43b3907d05734 DependenciesID=1df0f691c9f91bf359356e5c6a2ef1ea StaticDependenciesID=1d8cfe4820ad85cd9ccecba9da1c86a5 
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 44
+Number of asset objects unloaded after import = 11
 ========================================================================
 Received Import Request.
-  Time of request: 2026-11-12T17:09:34.027952Z
-  Time since last request: 0.000267708 seconds.
-  importAddress: GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: PreviewImporter
-Importing 'GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6110faf3d8cf2d0d7911ed559006667c' -> (Import Result ID: '37f41c75d3d7ab85f5443f661ce66a5e') in 0.044 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80dc0e44163ae56ea39188800a9dca38 DependenciesID=1180b43b70d41583d76eff467fe95a61 StaticDependenciesID=723656481e5c896c3c1b997c99ee92e7 
+  Time of request: 2026-11-13T16:44:36.826833Z
+  Time since last request: 0.002696497 seconds.
+  importAddress: GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: PreviewImporter
+Importing 'GUID: eb9f92fcced5a781cac2f4d06636fe93 - Path: Assets/Prefabs/EnenmyProjectilePrefab.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: eb9f92fcced5a781cac2f4d06636fe93' -> (Import Result ID: '1d74120de425f17ec4d8192863452178') in 0.026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09d43c32bce853ff19a3f4dceb02c4d1 DependenciesID=c4efa9c8343366bae218d4bf6eee67f3 StaticDependenciesID=cdb8a463b5a827918565122d1395e5ef 
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 318
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8270.
-Memory consumption went from 229.1 MB to 226.4 MB.
-Total: 10.900149 ms (FindLiveObjects: 0.421292 ms CreateObjectMapping: 1.400398 ms MarkObjects: 8.609775 ms  DeleteObjects: 0.466643 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:46.24479Z
-  Time since last request: 12.162776879 seconds.
-  importAddress: GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter
-Importing 'GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 882f64c417dc3941f8f8269197c60339' -> (Import Result ID: '0abfb41d6b907ff9b151ecc6ac53737e') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5eb5f7b11f8c1ba7a23559aa5f0c9210 DependenciesID=a3caa7e07027dbee7ffe9f4a5cc69023 StaticDependenciesID=e38c6ce450a8a96852846a62eb5ab001 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 44
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:47.11356Z
-  Time since last request: 0.850389585 seconds.
-  importAddress: GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 882f64c417dc3941f8f8269197c60339' -> (Import Result ID: '77c9c3934aa978496c34dec9a3e6b65e') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c77c66f9d6431c15bfd8fa025f979757 DependenciesID=54b9a71ba9ea59778fe2dcc22d926e86 StaticDependenciesID=8c0a67f5a65e872b22c9da18995ccb3a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 37
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8270.
-Memory consumption went from 229.2 MB to 226.6 MB.
-Total: 10.842800 ms (FindLiveObjects: 0.476784 ms CreateObjectMapping: 1.299581 ms MarkObjects: 8.556993 ms  DeleteObjects: 0.507825 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:51.896972Z
-  Time since last request: 4.747948812 seconds.
-  importAddress: GUID: 7b3b909ec35e168d3bb156145373b2c2 - Path: Assets/EnemyPrefabs/enemyWalker.prefab - Importer: PreviewImporter
-Importing 'GUID: 7b3b909ec35e168d3bb156145373b2c2 - Path: Assets/EnemyPrefabs/enemyWalker.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7b3b909ec35e168d3bb156145373b2c2' -> (Import Result ID: '5dfcb1b84d70e4b88371b3a720963245') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=390f4406f7a5bed3c551f22d44e9ec82 DependenciesID=c5c42aae9bdac37ff4a76219ab4e857a StaticDependenciesID=cae861c1461d25977de800b961a5de2e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 42
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:52.765814Z
-  Time since last request: 0.846637128 seconds.
-  importAddress: GUID: 7b3b909ec35e168d3bb156145373b2c2 - Path: Assets/EnemyPrefabs/enemyWalker.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 7b3b909ec35e168d3bb156145373b2c2 - Path: Assets/EnemyPrefabs/enemyWalker.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 7b3b909ec35e168d3bb156145373b2c2' -> (Import Result ID: '7f5dcbccd4152bff7937273cfa1b16b7') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8f607a559201ddc43270b08a3e3fe13 DependenciesID=46a93253a66d0166474a51fb51aca33d StaticDependenciesID=61e7a6e8fdfaa88a22e98d4fa8df1b53 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 37
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8270.
-Memory consumption went from 229.5 MB to 226.8 MB.
-Total: 12.691243 ms (FindLiveObjects: 0.488847 ms CreateObjectMapping: 1.205296 ms MarkObjects: 10.474312 ms  DeleteObjects: 0.521144 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:57.584229Z
-  Time since last request: 4.802583403 seconds.
-  importAddress: GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: PreviewImporter
-Importing 'GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6110faf3d8cf2d0d7911ed559006667c' -> (Import Result ID: 'dbd3341ad8aa39f9536f36348d9dad31') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80dc0e44163ae56ea39188800a9dca38 DependenciesID=0d8c7e121ea8b4a3875a4cda93ad27a6 StaticDependenciesID=cb6124946ae4065383fee45845b716a6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 318
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:09:58.459871Z
-  Time since last request: 0.848819326 seconds.
-  importAddress: GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 6110faf3d8cf2d0d7911ed559006667c - Path: Assets/EnemyPrefabs/TestTitan.prefab - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 6110faf3d8cf2d0d7911ed559006667c' -> (Import Result ID: '26e089da4163d4238788c27ccf97215e') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=29126fb4a91686f7b85a3d5d531e5ca0 DependenciesID=d5babb5ee6711ed25fba92ed9ca718c9 StaticDependenciesID=d853ec9f0cd11d1716a92d0859cdd606 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 311
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8270.
-Memory consumption went from 229.7 MB to 227.0 MB.
-Total: 15.221388 ms (FindLiveObjects: 0.515789 ms CreateObjectMapping: 1.306340 ms MarkObjects: 12.847767 ms  DeleteObjects: 0.544136 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:10:17.057117Z
-  Time since last request: 18.56749187 seconds.
-  importAddress: GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/SlashSkill 1.asset - Importer: PreviewImporter
-Importing 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/SlashSkill 1.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7' -> (Import Result ID: 'd3b5bf7984ecbc2d10a2a93e637defa5') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0e6e668250adcb78f989d60f6fd0322 DependenciesID=a1aa622bc9491fef2ed0c885e1c51890 StaticDependenciesID=8e5841b9eb1877989718b98ccebf01c4 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:10:17.926269Z
-  Time since last request: 0.858092044 seconds.
-  importAddress: GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/SlashSkill 1.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/SlashSkill 1.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7' -> (Import Result ID: 'bb3552c1f81693e2c3964e43611770e8') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d7806d4790ba0c63d4279691c9f8f2b3 DependenciesID=f177555dbc4e76d75e26dfc3bbeb7e53 StaticDependenciesID=0b3d2a21b418361d633aefb47a87b73b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:10:42.993198Z
-  Time since last request: 25.041992839 seconds.
-  importAddress: GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/EnemtSlash.asset - Importer: PreviewImporter
-Importing 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/EnemtSlash.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7' -> (Import Result ID: '33fe40ccd4da62110bd6808c807e47b4') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0e6e668250adcb78f989d60f6fd0322 DependenciesID=f1ea437288041d55054db98ad213994e StaticDependenciesID=b9da477a799e8e54ee6786d54557f702 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:10:43.985498Z
-  Time since last request: 0.979377625 seconds.
-  importAddress: GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/EnemtSlash.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7 - Path: Assets/Skills/EnemtSlash.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 53f62b3aa2a3d239c9f6960fa0b1bfe7' -> (Import Result ID: '2f3614c580b77c1b7fb8baf68c494914') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=20bb0c040564dc1b7deae41ad3901c80 DependenciesID=7266e066a54075db28b42d5f6b04629a StaticDependenciesID=1cfdab911527506b493fdaa67140cef9 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 14
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
 Begin MonoManager ReloadAssembly
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 149.70 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -985,498 +873,30 @@ Native extension for LinuxStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.182 seconds
-Domain Reload Profiling: 2331ms
-	BeginReloadAssembly (440ms)
-		DisableScriptedObjects (39ms)
-		CreateAndSetChildDomain (114ms)
-	RebuildCommonClasses (8ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (609ms)
-		LoadAssemblies (699ms)
-		AnalyzeDomain (25ms)
-			TypeCache.Refresh (11ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (1183ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (375ms)
-			ProcessInitializeOnLoadMethodAttributes (117ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.7 MB). Loaded Objects now: 8223.
-Memory consumption went from 232.7 MB to 226.0 MB.
-Total: 16.500608 ms (FindLiveObjects: 2.296778 ms CreateObjectMapping: 3.438978 ms MarkObjects: 6.956978 ms  DeleteObjects: 3.799259 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.751 seconds
-Domain Reload Profiling: 1916ms
-	BeginReloadAssembly (602ms)
-		DisableScriptedObjects (40ms)
-		CreateAndSetChildDomain (132ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (468ms)
-		LoadAssemblies (647ms)
-		AnalyzeDomain (25ms)
-			TypeCache.Refresh (10ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (753ms)
+- Finished resetting the current domain, in  1.061 seconds
+Domain Reload Profiling: 3792ms
+	BeginReloadAssembly (462ms)
+		DisableScriptedObjects (42ms)
+		CreateAndSetChildDomain (118ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (2163ms)
+		LoadAssemblies (2181ms)
+		AnalyzeDomain (61ms)
+			TypeCache.Refresh (43ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1062ms)
 		SetupLoadedEditorAssemblies (0ms)
 			BeforeProcessingInitializeOnLoad (77ms)
-			ProcessInitializeOnLoadAttributes (305ms)
-			ProcessInitializeOnLoadMethodAttributes (113ms)
-			AfterProcessingInitializeOnLoad (3ms)
-		AwakeInstancesAfterBackupRestoration (29ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (7.4 MB). Loaded Objects now: 8226.
-Memory consumption went from 232.7 MB to 225.3 MB.
-Total: 15.218286 ms (FindLiveObjects: 0.741218 ms CreateObjectMapping: 3.350020 ms MarkObjects: 7.103580 ms  DeleteObjects: 4.021094 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8226.
-Memory consumption went from 228.8 MB to 226.1 MB.
-Total: 49.910255 ms (FindLiveObjects: 2.600012 ms CreateObjectMapping: 1.351747 ms MarkObjects: 45.252904 ms  DeleteObjects: 0.704206 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 222.75 ms, found 0 plugins.
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.821 seconds
-Domain Reload Profiling: 2438ms
-	BeginReloadAssembly (462ms)
-		DisableScriptedObjects (44ms)
-		CreateAndSetChildDomain (122ms)
-	RebuildCommonClasses (9ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (64ms)
-	LoadAllAssembliesAndSetupDomain (1073ms)
-		LoadAssemblies (1132ms)
-		AnalyzeDomain (19ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (822ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (419ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.0 MB). Loaded Objects now: 8229.
-Memory consumption went from 233.2 MB to 227.2 MB.
-Total: 13.235773 ms (FindLiveObjects: 1.281045 ms CreateObjectMapping: 2.588450 ms MarkObjects: 6.171931 ms  DeleteObjects: 3.192788 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.757 seconds
-Domain Reload Profiling: 1859ms
-	BeginReloadAssembly (177ms)
-		DisableScriptedObjects (9ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (8ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (870ms)
-		LoadAssemblies (815ms)
-		AnalyzeDomain (18ms)
-			TypeCache.Refresh (8ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (758ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (350ms)
-			ProcessInitializeOnLoadMethodAttributes (89ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.2 MB). Loaded Objects now: 8232.
-Memory consumption went from 233.5 MB to 227.2 MB.
-Total: 11.673497 ms (FindLiveObjects: 0.678843 ms CreateObjectMapping: 2.822119 ms MarkObjects: 5.724026 ms  DeleteObjects: 2.446729 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.649 seconds
-Domain Reload Profiling: 1158ms
-	BeginReloadAssembly (152ms)
-		DisableScriptedObjects (8ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (307ms)
-		LoadAssemblies (236ms)
-		AnalyzeDomain (18ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (650ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (66ms)
-			ProcessInitializeOnLoadAttributes (257ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.1 MB). Loaded Objects now: 8235.
-Memory consumption went from 233.8 MB to 227.6 MB.
-Total: 12.168018 ms (FindLiveObjects: 1.349880 ms CreateObjectMapping: 2.587367 ms MarkObjects: 5.704067 ms  DeleteObjects: 2.524657 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.874 seconds
-Domain Reload Profiling: 1835ms
-	BeginReloadAssembly (360ms)
-		DisableScriptedObjects (10ms)
-		CreateAndSetChildDomain (60ms)
-	RebuildCommonClasses (10ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (489ms)
-		LoadAssemblies (536ms)
-		AnalyzeDomain (21ms)
-			TypeCache.Refresh (10ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (876ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (94ms)
-			ProcessInitializeOnLoadAttributes (337ms)
-			ProcessInitializeOnLoadMethodAttributes (134ms)
-			AfterProcessingInitializeOnLoad (3ms)
-		AwakeInstancesAfterBackupRestoration (32ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (7.6 MB). Loaded Objects now: 8238.
-Memory consumption went from 234.1 MB to 226.4 MB.
-Total: 20.196616 ms (FindLiveObjects: 0.997376 ms CreateObjectMapping: 5.379602 ms MarkObjects: 8.506113 ms  DeleteObjects: 5.311516 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.739 seconds
-Domain Reload Profiling: 2023ms
-	BeginReloadAssembly (632ms)
-		DisableScriptedObjects (53ms)
-		CreateAndSetChildDomain (124ms)
-	RebuildCommonClasses (9ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (585ms)
-		LoadAssemblies (757ms)
-		AnalyzeDomain (27ms)
-			TypeCache.Refresh (11ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (740ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (74ms)
-			ProcessInitializeOnLoadAttributes (292ms)
-			ProcessInitializeOnLoadMethodAttributes (112ms)
-			AfterProcessingInitializeOnLoad (3ms)
-		AwakeInstancesAfterBackupRestoration (30ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.1 MB). Loaded Objects now: 8241.
-Memory consumption went from 234.3 MB to 228.1 MB.
-Total: 18.219077 ms (FindLiveObjects: 0.873418 ms CreateObjectMapping: 4.692485 ms MarkObjects: 8.879835 ms  DeleteObjects: 3.771659 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.933 seconds
-Domain Reload Profiling: 2282ms
-	BeginReloadAssembly (483ms)
-		DisableScriptedObjects (50ms)
-		CreateAndSetChildDomain (100ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (782ms)
-		LoadAssemblies (833ms)
-		AnalyzeDomain (23ms)
-			TypeCache.Refresh (13ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (934ms)
-		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (99ms)
-			ProcessInitializeOnLoadAttributes (361ms)
-			ProcessInitializeOnLoadMethodAttributes (134ms)
-			AfterProcessingInitializeOnLoad (3ms)
-		AwakeInstancesAfterBackupRestoration (31ms)
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.7 MB). Loaded Objects now: 8244.
-Memory consumption went from 234.6 MB to 227.9 MB.
-Total: 19.630580 ms (FindLiveObjects: 2.155770 ms CreateObjectMapping: 3.670016 ms MarkObjects: 9.453263 ms  DeleteObjects: 4.349223 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-M77M-HXW8-HJ67-XE8W-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 10170777712478-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-Begin MonoManager ReloadAssembly
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for LinuxStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.881 seconds
-Domain Reload Profiling: 2326ms
-	BeginReloadAssembly (441ms)
-		DisableScriptedObjects (26ms)
-		CreateAndSetChildDomain (74ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (948ms)
-		LoadAssemblies (886ms)
-		AnalyzeDomain (215ms)
-			TypeCache.Refresh (26ms)
-			BuildScriptInfoCaches (179ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (881ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (92ms)
-			ProcessInitializeOnLoadAttributes (413ms)
+			ProcessInitializeOnLoadAttributes (648ms)
 			ProcessInitializeOnLoadMethodAttributes (110ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (6.9 MB). Loaded Objects now: 8247.
-Memory consumption went from 238.2 MB to 231.3 MB.
-Total: 13.207387 ms (FindLiveObjects: 0.589207 ms CreateObjectMapping: 2.962367 ms MarkObjects: 6.054710 ms  DeleteObjects: 3.598941 ms)
+Unloading 7086 unused Assets / (6.7 MB). Loaded Objects now: 8249.
+Memory consumption went from 235.0 MB to 228.2 MB.
+Total: 37.094202 ms (FindLiveObjects: 5.867423 ms CreateObjectMapping: 2.962912 ms MarkObjects: 18.861339 ms  DeleteObjects: 9.400501 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
@@ -1501,58 +921,41 @@ Native extension for LinuxStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.677 seconds
-Domain Reload Profiling: 1411ms
-	BeginReloadAssembly (258ms)
-		DisableScriptedObjects (9ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (7ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (419ms)
-		LoadAssemblies (430ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (678ms)
+- Finished resetting the current domain, in  1.203 seconds
+Domain Reload Profiling: 2486ms
+	BeginReloadAssembly (513ms)
+		DisableScriptedObjects (43ms)
+		CreateAndSetChildDomain (108ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (655ms)
+		LoadAssemblies (759ms)
+		AnalyzeDomain (34ms)
+			TypeCache.Refresh (16ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1204ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (264ms)
-			ProcessInitializeOnLoadMethodAttributes (104ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (633ms)
+			ProcessInitializeOnLoadMethodAttributes (133ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (37ms)
 Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.75 ms, found 0 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7083 unused Assets / (5.9 MB). Loaded Objects now: 8250.
-Memory consumption went from 238.5 MB to 232.6 MB.
-Total: 11.424678 ms (FindLiveObjects: 0.708136 ms CreateObjectMapping: 2.627356 ms MarkObjects: 5.557416 ms  DeleteObjects: 2.530046 ms)
+Unloading 7086 unused Assets / (7.2 MB). Loaded Objects now: 8252.
+Memory consumption went from 235.2 MB to 228.0 MB.
+Total: 24.173985 ms (FindLiveObjects: 2.065201 ms CreateObjectMapping: 3.611997 ms MarkObjects: 12.821038 ms  DeleteObjects: 5.668144 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AcceleratorClientConnectionCallback - disconnected - :0
-Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 4.21 ms, found 0 plugins.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8250.
-Memory consumption went from 234.6 MB to 232.0 MB.
-Total: 133.853570 ms (FindLiveObjects: 4.694214 ms CreateObjectMapping: 2.259404 ms MarkObjects: 125.162615 ms  DeleteObjects: 1.732042 ms)
+AssetImportWorker is now disconnected from the server
+Process exiting
 
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:34:53.692052Z
-  Time since last request: 1449.62960014700002 seconds.
-  importAddress: GUID: e2421eddcfc48eee5a55edad5fbad3af - Path: Assets/Skills/enemySlashSkill.asset - Importer: PreviewImporter
-Importing 'GUID: e2421eddcfc48eee5a55edad5fbad3af - Path: Assets/Skills/enemySlashSkill.asset - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: e2421eddcfc48eee5a55edad5fbad3af' -> (Import Result ID: '95a9fb992f4f76d738f7386eb0ffc280') in 0.125 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=325a1680a09195b421ed424ae92968f6 DependenciesID=3ed840610f74be74ae858427585efcac StaticDependenciesID=d859497f242905476bde2793ea457eb4 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-12T17:34:58.273379Z
-  Time since last request: 4.426956899 seconds.
-  importAddress: GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter
-Importing 'GUID: 882f64c417dc3941f8f8269197c60339 - Path: Assets/EnemyPrefabs/enemyRanged.prefab - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 882f64c417dc3941f8f8269197c60339' -> (Import Result ID: 'a4423f12e21a01e110ca46e44905ead6') in 0.660 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5eb5f7b11f8c1ba7a23559aa5f0c9210 DependenciesID=a79fc1b1844d14632d5d5014fac9d09d StaticDependenciesID=e38c6ce450a8a96852846a62eb5ab001 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 44
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=272948, old size=272948, incomplete=0]
+Vulkan PSO: Pipeline cache has not changed skipping save handle[9d3d8f30]
+Internal: Possible leak. All render target surfaces should be removed from IdMap when destructed using RenderTargetMap::Remove(RenderSurfaceBase* rs).

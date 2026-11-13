@@ -459,7 +459,8 @@ MonoBehaviour:
   climbSpeed: 4
   gravity: -20
   airDrag: 3
-  rotationSpeed: 10
+  turnSpeed: 120
+  minTurnSpeedFactor: 0.3
   jumpForce: 6
   retargetInterval: 0.4
   climbableLayer:
@@ -470,6 +471,7 @@ MonoBehaviour:
   ArrivalThreshold: 2
   WallPushDistance: 0.5
   verticalVelocity: {x: 0, y: 0, z: 0}
+  knockbackProfile: {fileID: 11400000, guid: e6bb5e5641d9e4fc295fce89c29cd284, type: 2}
 --- !u!114 &1221297319453003425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +488,7 @@ MonoBehaviour:
   moveSpeed: 3
   repathInterval: 0.5
   waypointReachedDistance: 0.3
+  forceRepathInterval: 1.5
 --- !u!114 &8522534031530354238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +509,7 @@ MonoBehaviour:
   waypointReachedDistance: 0.5
   directChaseDistance: 1
   nodeFindOffset: {x: 0, y: 0, z: 0}
+  forceRepathInterval: 1.5
   IsTitan: 0
 --- !u!114 &1739981364110423415
 MonoBehaviour:

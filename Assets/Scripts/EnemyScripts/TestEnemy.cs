@@ -7,10 +7,12 @@ public class TestEnemy : EnemyData
     public float slashRange = 2f;
 
     private SkillUser skillUser;
+    private EnemyClimbController climb;
 
     void Start()
     {
         skillUser = GetComponentInChildren<SkillUser>();
+        climb = GetComponent<EnemyClimbController>();
         player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -26,7 +28,7 @@ public class TestEnemy : EnemyData
     public override void Behaviour()
     {
         float dist = Vector3.Distance(transform.position, player.position);
-        if (dist <= slashRange)
+        if (dist <= slashRange && (climb == null || climb.CanAct))
         {
             if (skillUser != null)
             {

@@ -133,6 +133,9 @@ MonoBehaviour:
   useFalloff: 1
   falloffRadius: 4
   edgeDamageMultiplier: 0.4
+  canKnockback: 1
+  knockbackPower: 150
+  knockbackRadius: 4
 --- !u!54 &3382567140151711326
 Rigidbody:
   m_ObjectHideFlags: 0

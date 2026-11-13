@@ -69,6 +69,12 @@ public class RangedEnemy : EnemyData
 
         TrackPlayerVelocity();
 
+        if (!climb.CanAct)   // launched or stunned
+        {
+            climb.FacingOverride = null;
+            return;
+        }
+
         Vector3 toPlayer = player.position - transform.position;
         float dist = toPlayer.magnitude;
         bool sameMode = playerClimb == null || climb.IsClimbing == playerClimb.IsClimbing;

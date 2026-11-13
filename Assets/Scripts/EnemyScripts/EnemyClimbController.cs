@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 {
-    public enum State { Normal, Climbing }
+    public enum State { Normal, Climbing, Launched }
 
     [Header("References")]
     public CharacterController controller;
@@ -19,7 +20,8 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     public float climbSpeed = 4f;
     public float gravity = -9.81f;
     public float airDrag = 3f;
-    public float rotationSpeed = 10f;
+    public float turnSpeed = 120f;   // max yaw speed, degrees/sec
+    [Range(0.05f, 1f)] public float minTurnSpeedFactor = 0.3f;   // speed multiplier when facing away from move direction
     public float jumpForce = 6f;
     public Vector3? FacingOverride;
     [SerializeField] private float retargetInterval = 0.4f;
@@ -45,8 +47,20 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
     Vector3 localSurfacePoint;
 
+    [Header("Knockback")]
+    [SerializeField] private KnockbackProfile knockbackProfile;
+    float stunTimer;
+    float airTime;
+    Vector3 trackedVelocity;
+    Vector3 lastPos;
+
     public State CurrentBehaviourState => state;
     public bool IsClimbing => state == State.Climbing;
+    public bool CanAct => state != State.Launched && stunTimer <= 0f;
+
+    public static readonly List<EnemyClimbController> All = new();
+    void OnEnable() => All.Add(this);
+    void OnDisable() => All.Remove(this);
 
     // ISurfaceWalker
     public ClimbableSurface CurrentSurface => currentSurface;
@@ -55,6 +69,8 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
     public void MoveTowards(Vector3 worldTargetPoint, float speed)
     {
+        if (!CanAct) { desiredWorldDirection = Vector3.zero; desiredSpeed = 0f; return; }
+
         Vector3 toTarget = worldTargetPoint - transform.position;
 
         if (state == State.Climbing && currentSurface != null &&
@@ -76,6 +92,8 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     {
         if (controller == null) controller = GetComponent<CharacterController>();
         surfaceOffset = controller.height * 0.5f;
+        if (knockbackProfile == null) knockbackProfile = ScriptableObject.CreateInstance<KnockbackProfile>();
+        lastPos = transform.position;
 
         var markerGO = new GameObject($"{name}_EntryMarker")
         {
@@ -87,6 +105,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     private float retargetTimer;
     void Update()
     {
+        if (stunTimer > 0f) stunTimer -= Time.deltaTime;
         retargetTimer -= Time.deltaTime;
         if (retargetTimer <= 0f)
         {
@@ -94,6 +113,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             RefreshTarget();
         }
         if (state == State.Normal) NormalUpdate();
+        else if (state == State.Launched) LaunchedUpdate();
         else ClimbingUpdate();
     }
 
@@ -137,18 +157,16 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
         Vector3 flatDir = Vector3.ProjectOnPlane(desiredWorldDirection, transform.up);
         if (flatDir.sqrMagnitude > 0.0001f) flatDir.Normalize();
 
-        float speed = Mathf.Min(desiredSpeed, walkSpeed);
+        float speed = Mathf.Min(desiredSpeed, walkSpeed) * AlignmentFactor(flatDir);
         Vector3 move = flatDir * speed;
 
-        if (move.sqrMagnitude > 0.01f || FacingOverride.HasValue)
+        if (flatDir.sqrMagnitude > 0.0001f || FacingOverride.HasValue)
 {
             Vector3 faceDir = FacingOverride.HasValue? Vector3.ProjectOnPlane(FacingOverride.Value, transform.up): flatDir;
 
             if (faceDir.sqrMagnitude > 0.0001f)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(faceDir.normalized, transform.up);
-                Transform model = enemyModel != null ? enemyModel : transform;
-                model.rotation = Quaternion.Slerp(model.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                TurnModel(faceDir.normalized, transform.up);
             }
         }
 
@@ -168,7 +186,11 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (state != State.Normal) return;
+        if (state == State.Launched)
+        {
+            if (!knockbackProfile.grabSurfaceInFlight || airTime < knockbackProfile.minAirTime) return;
+        }
+        else if (state != State.Normal) return;
         if (((1 << hit.gameObject.layer) & climbableLayer) == 0) return;
 
         var surface = hit.collider.GetComponent<ClimbableSurface>();
@@ -189,6 +211,7 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
     {
         if(surface.climbableSurfaceHolder.unClimbable) return;
         state = State.Climbing;
+        verticalVelocity = Vector3.zero;
         currentSurface = surface;
         currentFaceIndex = faceIndex;
         controller.enabled = false;
@@ -233,24 +256,89 @@ public class EnemyClimbController : MonoBehaviour, ISurfaceWalker
             return;
         }
 
-        float speed = Mathf.Min(desiredSpeed, climbSpeed);
+        float speed = Mathf.Min(desiredSpeed, climbSpeed) * AlignmentFactor(desiredWorldDirection);
         Vector3 move = desiredWorldDirection * speed * Time.deltaTime;
 
-        if (move.sqrMagnitude >= 0.0001f)
+        if (desiredWorldDirection.sqrMagnitude >= 0.0001f)
         {
             Vector3 normal = currentSurface.transform.TransformDirection(currentSurface.faces[currentFaceIndex].normal).normalized;
-            Vector3 forward = Vector3.ProjectOnPlane(FacingOverride ?? move, normal);
+            Vector3 forward = Vector3.ProjectOnPlane(FacingOverride ?? desiredWorldDirection, normal);
             if (forward.sqrMagnitude >= 0.0001f)
             {
                 forward.Normalize();
-                Quaternion targetRotation = Quaternion.LookRotation(forward, normal);
-                float rotT = 1f - Mathf.Exp(-rotationSpeed * Time.deltaTime);
-                Transform model = enemyModel != null ? enemyModel : transform;
-                model.rotation = Quaternion.Slerp(model.rotation, targetRotation, rotT);
+                TurnModel(forward, normal);
             }
         }
 
         TryMove(move);
+    }
+
+    void LateUpdate()
+    {
+        if (Time.deltaTime > 0f) trackedVelocity = (transform.position - lastPos) / Time.deltaTime;
+        lastPos = transform.position;
+    }
+
+    // Yaw is rate-limited; tilt always follows the surface instantly, so the turn is always around the normal.
+    void TurnModel(Vector3 faceDir, Vector3 up)
+    {
+        Transform model = enemyModel != null ? enemyModel : transform;
+        model.rotation = Quaternion.FromToRotation(model.up, up) * model.rotation;
+        Quaternion target = Quaternion.LookRotation(faceDir, up);
+        model.rotation = Quaternion.RotateTowards(model.rotation, target, turnSpeed * Time.deltaTime);
+    }
+
+    // Sharp turns are slow turns. Strafing enemies (FacingOverride) are exempt.
+    float AlignmentFactor(Vector3 moveDir)
+    {
+        if (FacingOverride.HasValue || moveDir.sqrMagnitude < 0.0001f) return 1f;
+        Transform model = enemyModel != null ? enemyModel : transform;
+        float dot = Vector3.Dot(model.forward, moveDir.normalized);
+        return Mathf.Lerp(minTurnSpeedFactor, 1f, Mathf.Clamp01(dot));
+    }
+
+    // ---------------- Knockback ----------------
+    public void Launch(Vector3 direction, float force)
+    {
+        KnockbackProfile p = knockbackProfile;
+        if (p.immune || direction.sqrMagnitude < 0.0001f) return;
+
+        Vector3 deltaV = direction.normalized * (force / Mathf.Max(0.01f, p.mass));
+
+        bool wasLaunched = state == State.Launched;
+        if (state == State.Climbing) DetachFromSurface(0f);
+
+        // Re-entrant: a second hit while airborne adds to the current velocity.
+        Vector3 start = wasLaunched ? verticalVelocity : trackedVelocity * p.inheritMomentum;
+        verticalVelocity = Vector3.ClampMagnitude(start + deltaV, p.maxSpeed);
+
+        state = State.Launched;
+        airTime = 0f;
+        desiredWorldDirection = Vector3.zero;
+        desiredSpeed = 0f;
+    }
+
+    void LaunchedUpdate()
+    {
+        KnockbackProfile p = knockbackProfile;
+        airTime += Time.deltaTime;
+
+        verticalVelocity.y += gravity * p.gravityScale * Time.deltaTime;
+        Vector3 h = new Vector3(verticalVelocity.x, 0f, verticalVelocity.z);
+        h = Vector3.MoveTowards(h, Vector3.zero, p.airDrag * Time.deltaTime);
+        verticalVelocity = new Vector3(h.x, verticalVelocity.y, h.z);
+
+        CollisionFlags flags = controller.Move(verticalVelocity * Time.deltaTime);
+        if ((flags & CollisionFlags.Above) != 0 && verticalVelocity.y > 0f) verticalVelocity.y = 0f;
+
+        if (airTime >= p.minAirTime && controller.isGrounded) Land();
+    }
+
+    void Land()
+    {
+        state = State.Normal;   // OnControllerColliderHit re-grabs the giant on the next frame if we landed on it
+        verticalVelocity = Vector3.zero;
+        stunTimer = knockbackProfile.stunDuration;
     }
 
     void TryMove(Vector3 worldMove, int depth = 0)

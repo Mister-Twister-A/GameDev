@@ -7,9 +7,20 @@ public class HitBox : MonoBehaviour
     public GameObject owner;
 
     public List<string> tagsToExclude = new List<string>();
+
+    [Header("Falloff")]
     public bool useFalloff;
     public float falloffRadius = 4f;
     [Range(0f, 1f)] public float edgeDamageMultiplier = 0.4f;
+    
+    [Header("Knockback")]
+    public bool canKnockback;
+    public float knockbackPower;
+    public float knockbackRadius;
+    private bool knockbackTriggered = false;
+
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +34,11 @@ public class HitBox : MonoBehaviour
         if (other.TryGetComponent<HurtBox>(out HurtBox hurtbox))
         {
             hurtbox.TakeDamage((int)CalculateDamage(other));
+            if (canKnockback && other.transform && !knockbackTriggered){
+                knockbackTriggered= true;
+                Debug.Log("Triggering Kockback");
+                Knockback.Explosion(transform.position, knockbackRadius, knockbackPower);
+            }
         }
     }
 
