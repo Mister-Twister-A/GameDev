@@ -1465,3 +1465,23 @@ Importing 'GUID: ce0beb8151ba41eb98b5e90f86aa768f - Path: Assets/Prefabs/SpearPr
 Imported 'GUID: ce0beb8151ba41eb98b5e90f86aa768f' -> (Import Result ID: 'ae768856d5727e11117639f902737eec') in 0.653 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6ab44ca0f32084450d2c2228fdc0dca DependenciesID=caba6de91b3a089265266c59b5ca7b9c StaticDependenciesID=08cbf959f99837d587a4bc2fb33be698 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 47
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (2.7 MB). Loaded Objects now: 8425.
+Memory consumption went from 239.4 MB to 236.8 MB.
+Total: 39.637570 ms (FindLiveObjects: 2.262683 ms CreateObjectMapping: 1.677884 ms MarkObjects: 34.668679 ms  DeleteObjects: 1.026154 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=272948, old size=0, incomplete=0]
+Vulkan PSO: Saved size[272948] path[/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin] success=1 headerChanged=1 sizeChanged=1
+Internal: Possible leak. All render target surfaces should be removed from IdMap when destructed using RenderTargetMap::Remove(RenderSurfaceBase* rs).

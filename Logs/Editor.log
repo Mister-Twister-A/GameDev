@@ -206064,3 +206064,55 @@ Total: 35.200810 ms (FindLiveObjects: 0.692834 ms CreateObjectMapping: 1.530693 
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
+
+Asset Pipeline Refresh (id=fdd761050a031174788e789de2e82fd3): Total: 0.338 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=336 ms
+		Asset DB Callback time: managed=0 ms, native=1 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1493, non-scripts=2749
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 1.370ms
+	ApplyChangesToAssetFolders: 0.260ms
+	Scan: 325.304ms
+	Collect global state as custom dependencies: 0.876ms
+	GatherAllCurrentPrimaryImportResultRevisions: 6.358ms
+	UnloadStreamsBegin: 0.165ms
+	UnloadStreamsEnd: 0.082ms
+	Untracked: 3.278ms
+
+MonoPathRemapper: Attempts to remap: 171043; Successful remaps: 30
+Serialized file version minimum: 22, current 23
+[LAYOUT] About to save layout /home/usio/Titan test/UserSettings/Layouts/default-6000.dwlt
+[LAYOUT] About to save layout /home/usio/.config/unity3d/Preferences/Editor-5.x/Layouts/current/default-6000.dwlt
+Importing 'GUID: dc101b2d260b16cce8dccc2140e5aef7 - Path: Assets/Animations/Armature.controller' with importer (NativeFormatImporter)
+Imported 'GUID: dc101b2d260b16cce8dccc2140e5aef7' -> (Import Result ID: '364c23562e38e1f20c118821d65bafdd') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=4df604e143d888420226aac4e16f4a9a DependenciesID=03f0118c7e58a1be63214fa64b20dd7e StaticDependenciesID=c0055fdb0e1e3d113ce5da561b738cad 
+Asset Pipeline Refresh (id=c6db2480762cb1459b8130a3453d1e96): Total: 0.099 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Shutting down MSBuild server...
+Shutting down VB/C# compiler server...
+VB/C# compiler server shut down successfully.
+MSBuild server shut down successfully.
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-usio-6000.5.8 channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 160
+
+SDL leaked 2 allocations
+Turn on UNITY_SDL_ALLOCATION_TRACKING for detailed information.
+Vulkan PSO: data extracted [new size=1141383, old size=0, incomplete=0]
+Vulkan PSO: Saved size[1141383] path[/tmp/DefaultCompany/Titan test/vulkan_pso_cache.bin] success=1 headerChanged=1 sizeChanged=1
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1794588625295,"processId":135866,"allocatedMemory":53386698,"memoryLabels":[{"Default":314970},{"Permanent":16152},{"Thread":1054072},{"Manager":813977},{"VertexData":8},{"Geometry":408},{"Texture":24},{"Shader":854179},{"Material":24},{"GfxDevice":41992},{"Animation":180480},{"Audio":1176},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":4264},{"Input":60256},{"JobScheduler":256},{"TextLib":18987},{"Mono":80},{"MonoCode":192},{"ScriptingNativeRuntime":155088},{"BaseObject":1624688},{"Resource":1032},{"Renderer":3072},{"Transform":4717},{"File":42430},{"WebCam":80},{"Culling":32},{"Terrain":11346},{"Wind":24},{"String":39843},{"StaticString":4140},{"Utility":2674928},{"PoolAlloc":2152},{"AI":80},{"TypeTree":1449293},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7408},{"CloudService":9640},{"WebRequest":8323},{"VR":47018},{"SceneManager":640},{"Video":64},{"LazyScriptCache":32},{"NativeArray":33073300},{"Camera":17},{"Secure":7961},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57552},{"StaticSafetyDebugInfo":278528},{"Analytics":760},{"Hierarchy":1424},{"UIElements":1065496},{"CoreStats":13688},{"Identifiers":6768},{"Gui":4302187},{"EditorUtility":180977},{"VersionControl":8},{"Undo":963},{"AssetDatabase":5053243},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":35385},{"Upm":1836},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":156},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2400},{"Windowing":480},{"Licensing":1096},{"AssetReference":32},{"IPCStream":32}]}
