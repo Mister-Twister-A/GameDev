@@ -20,6 +20,10 @@ public class EnemySurfaceNavigator : MonoBehaviour
     private FaceRef lastGoal;
     private bool hasLastPath;
 
+    [SerializeField] private float forceRepathInterval = 1.5f;   // re-run A* periodically so crowd costs get re-evaluated
+    private float forceRepathTimer;
+    private float edgeT;   // per-enemy spot along shared edges (0.25-0.75), so enemies do not all funnel through the midpoint
+
     void Awake()
     {
         if(targetBehaviour == null)
@@ -28,6 +32,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
             Debug.Log($" {name}: Getting Target Behaviour by tag");
         }
         self = GetComponent<ISurfaceWalker>();
+        edgeT = Random.Range(0.25f, 0.75f);
         target = targetBehaviour as ISurfaceLocator;
         climbController = GetComponent<EnemyClimbController>();
 
@@ -45,7 +50,14 @@ public class EnemySurfaceNavigator : MonoBehaviour
     {
         if (self == null || target == null) return;
 
-        if(!climbController.IsClimbing) return;
+        if (!climbController.IsClimbing) { Crowd.Faces.Remove(this); return; }
+        forceRepathTimer -= Time.deltaTime;
+        if (forceRepathTimer <= 0f)
+        {
+            forceRepathTimer = forceRepathInterval * Random.Range(0.8f, 1.2f);
+            hasLastPath = false;
+        }
+
         repathTimer -= Time.deltaTime;
         if (repathTimer <= 0f){
             Repath();
@@ -60,6 +72,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
         var start = new FaceRef(self.CurrentSurface, self.CurrentFaceIndex);
         var goal = new FaceRef(target.CurrentSurface, target.CurrentFaceIndex);
 
+        if (start.IsValid) Crowd.Faces.Report(this, start);
         if (!start.IsValid || !goal.IsValid) return;
 
         if (hasLastPath && start == lastStart && goal == lastGoal && path != null) return;
@@ -117,6 +130,8 @@ public class EnemySurfaceNavigator : MonoBehaviour
         return planarOffset.magnitude <= waypointReachedDistance;
     }
 
+    void OnDisable() => Crowd.Faces.Remove(this);
+
     public void InvalidatePath()
     {
         path = null;
@@ -146,7 +161,7 @@ public class EnemySurfaceNavigator : MonoBehaviour
             {
                 Vector3 a = from.surface.transform.TransformPoint(face.vertices[i]);
                 Vector3 b = from.surface.transform.TransformPoint(face.vertices[(i + 1) % edgeCount]);
-                return (a + b) * 0.5f;
+                return Vector3.Lerp(a, b, edgeT);
             }
         }
 

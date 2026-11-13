@@ -33,9 +33,8 @@ public readonly struct GroundNodeRef : IPathNode<GroundNodeRef>, IEquatable<Grou
             if (edge.neighborIndex < 0 || edge.neighborIndex >= graph.Nodes.Count)
                 continue;
 
-            edges.Add(new PathEdge<GroundNodeRef>(
-                new GroundNodeRef(graph, edge.neighborIndex),
-                edge.cost));
+            var neighbor = new GroundNodeRef(graph, edge.neighborIndex);
+            edges.Add(new PathEdge<GroundNodeRef>(neighbor, Crowd.WithGroundPenalty(edge.cost, neighbor)));
         }
     }
 

@@ -29,6 +29,9 @@ public class EnemyGroundNavigator : MonoBehaviour
     private int lastGoalNode = -1;
     private bool hasLastPath;
 
+    [SerializeField] private float forceRepathInterval = 1.5f;   // re-run A* even if start/goal are unchanged, so crowd costs get re-evaluated
+    private float forceRepathTimer;
+
     [SerializeField] private bool IsTitan = false;
 
     private void Awake()
@@ -57,8 +60,15 @@ public class EnemyGroundNavigator : MonoBehaviour
     {
         if (self == null || groundGraph == null) return;
         if(!IsTitan){
-            if(climbController.IsClimbing == true) return;
+            if (climbController.IsClimbing) { Crowd.Ground.Remove(this); return; }
             target = climbController.CurrentTarget;
+        }
+
+        forceRepathTimer -= Time.deltaTime;
+        if (forceRepathTimer <= 0f)
+        {
+            forceRepathTimer = forceRepathInterval * Random.Range(0.8f, 1.2f);
+            hasLastPath = false;
         }
 
         repathTimer -= Time.deltaTime;
@@ -71,6 +81,8 @@ public class EnemyGroundNavigator : MonoBehaviour
 
         FollowPath();
     }
+    private void OnDisable() => Crowd.Ground.Remove(this);
+
     public void SetTarget(Transform newTarget, NavMode mode)
     {
         if (target != newTarget)
@@ -86,6 +98,8 @@ public class EnemyGroundNavigator : MonoBehaviour
         int goalIndex = FindNearestNode(target.position);
 
         if (startIndex < 0 || goalIndex < 0) return;
+
+        Crowd.Ground.Report(this, new GroundNodeRef(groundGraph, startIndex));
 
         if (hasLastPath &&
             startIndex == lastStartNode &&

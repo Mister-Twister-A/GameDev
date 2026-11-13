@@ -96,7 +96,7 @@ public struct FaceRef : IPathNode<FaceRef>, IEquatable<FaceRef>
         if ((neighbor.Face.flags & FaceFlags.Slow) != 0)   
         dist *= SlowCostMultiplier;                     
 
-        return dist;
+        return Crowd.WithFacePenalty(dist, neighbor);
     }
 
     public bool Equals(FaceRef other) =>
